@@ -1,0 +1,24 @@
+.faq {
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .faq {
+        display: grid;
+        grid-template-columns: 4fr 7fr;
+        column-gap: 32px;
+        row-gap: 48px;
+    }
+
+    .question, .answer {
+        margin-bottom: 0;
+    }
+}
+
+.question {
+    padding-right: calc(20% + 32px);
+}

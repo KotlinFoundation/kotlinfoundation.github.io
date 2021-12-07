@@ -9,7 +9,7 @@ function checkExternal (link, base = null) {
     const url = new URL(link , base);
     const baseUrl = new URL(base || '');
 
-    return url.hostname === baseUrl.hostname;
+    return url.hostname === '' || url.hostname === baseUrl.hostname;
 }
 
 type IProps = {

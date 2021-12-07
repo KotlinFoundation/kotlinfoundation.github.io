@@ -31,3 +31,8 @@ body, #___gatsby, #gatsby-focus-wrapper, .layout {
 .layout__cta-link:hover {
     border-bottom: 2px solid currentColor;
 }
+
+.layout__list {
+    margin: 0;
+    padding: 0;
+}
