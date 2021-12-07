@@ -7,9 +7,9 @@ import * as styles from "./style.module.css";
 function StructurePage() {
     return (
         <Layout withoutCta={true}>
-            <h1 className={'ktl-hero'}>Structure</h1>
+            <h1 className={'ktl-h1 ktl-offset-bottom-l'}>Structure</h1>
 
-            <p className={cn('ktl-text-1', styles.intro)}>The Kotlin Foundation is a nonprofit nonstock corporation registered in the state of Delaware, USA.</p>
+            <p className={'ktl-text-1 ktl-offset-bottom-l'}>The Kotlin Foundation is a nonprofit nonstock corporation registered in the state of Delaware, USA.</p>
 
             <Structure>
                 <Structure.Department
