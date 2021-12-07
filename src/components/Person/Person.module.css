@@ -1,0 +1,48 @@
+@media (min-width: 560px) {
+    .person {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    border-radius: 1000px;
+    margin-right: 16px;
+    height: 94px;
+    width: 80px;
+    min-width: 80px;
+
+    transform: translateZ(0); /* Safari and (radius + overflow:hidden) bug fix */
+}
+
+.person_size_xl {
+    display: flex;
+    flex-direction: column;
+}
+
+.person_size_xl > .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person_size_xl > .photo {
+    border-radius: 200px;
+    margin: 0;
+    height: 190px;
+    width: 152px;
+
+    filter: drop-shadow(0px 10px 30px #DED5E1) drop-shadow(0px 25px 70px rgba(209, 197, 212, 0.8));
+}
+
+@media (min-width: 960px) {
+    .person_size_xl > .photo {
+        width: 220px;
+        height: 280px;
+    }
+}
