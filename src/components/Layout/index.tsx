@@ -16,6 +16,8 @@ const shortcodes = {
     a: props => <a {...props}/>,
 };
 
+const contactEmail = 'hello@kotlinfoundation.org';
+
 const Layout = ({ withoutCta = false, children }) => (
     <MDXProvider components={shortcodes}>
         <div className="layout">
@@ -29,7 +31,7 @@ const Layout = ({ withoutCta = false, children }) => (
                         Have any questions? <br/>Contact us!
                     </>}
                     mainTitle={
-                        <a href="mailto:hello@kotlinfoundation.org" className="layout__cta-link">hello@kotlinfoundation.org</a>
+                        <a href={`mailto:${contactEmail}`} className="layout__cta-link">{contactEmail}</a>
                     }
                 />
             )}
