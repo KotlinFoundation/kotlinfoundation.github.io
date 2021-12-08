@@ -1,9 +1,12 @@
 import cn from 'classnames';
 import { MDXProvider} from "@mdx-js/react";
+
 import { CtaBlock } from "@jetbrains/kotlin-web-site-ui/dist/ctaBlock";
 import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
 
 import './layout.css';
+
+import { Footer } from "../Footer";
 
 const shortcodes = {
     p: props => <p {...props} className={cn(props.className, 'ktl-text-1')}/>,
@@ -35,6 +38,7 @@ export const Layout = ({ withoutCta = false, children }) => (
                     }
                 />
             )}
+            <Footer/>
         </div>
     </MDXProvider>
 );
