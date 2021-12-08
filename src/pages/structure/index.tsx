@@ -21,7 +21,7 @@ function StructurePage() {
                         { name: 'Anwar Ghuloum', company: 'Google' },
                     ]}
                 >
-                    The Foundation is governed by the Board of Directors that makes all decisions by voting. The Board appoints the Lead Language Designer and the members of the Language Committee
+                    The Foundation is governed by the Board of Directors that makes all decisions by voting. The Board appoints the Lead Language Designer and the members of the Language Committee.
                 </Structure.Department>
 
                 <Structure.Department
