@@ -46,3 +46,52 @@
         height: 280px;
     }
 }
+
+.photo_mascot_1,
+.photo_mascot_2,
+.photo_mascot_3,
+.photo_mascot_4 {
+    position: relative;
+}
+
+.photo_mascot_1::after,
+.photo_mascot_2::after,
+.photo_mascot_3::after,
+.photo_mascot_4::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background: transparent top center no-repeat;
+}
+
+.photo_mascot_1:hover::after,
+.photo_mascot_2:hover::after,
+.photo_mascot_3:hover::after,
+.photo_mascot_4:hover::after {
+    display: block;
+}
+
+.photo_mascot_1::after {
+    background-image: url("../../images/mascots/1.svg");
+    background-position-y: 0;
+}
+
+.photo_mascot_2::after {
+    background-image: url("../../images/mascots/2.svg");
+    background-position-y: -10px;
+}
+
+.photo_mascot_3::after {
+    background-image: url("../../images/mascots/3.svg");
+    background-position-x: 40px;
+}
+
+.photo_mascot_4::after {
+    background-image: url("../../images/mascots/4.svg");
+    background-position-y: -30px;
+}

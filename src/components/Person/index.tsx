@@ -3,7 +3,7 @@ import * as style from "./Person.module.css";
 import {graphql, StaticQuery} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-export const Person = ({ size= null, className = null, name, company }) => <StaticQuery
+export const Person = ({ mascot = null, size= null, className = null, name, company }) => <StaticQuery
     query={graphql`
       query {
         images: allFile(filter: {relativePath: {glob: "persons/*.png"}}) {
@@ -26,7 +26,9 @@ export const Person = ({ size= null, className = null, name, company }) => <Stat
             [style[`person_size_${size}`]]: Boolean(size),
         })}>
             <GatsbyImage
-                className={style.photo}
+                className={cn(style.photo, {
+                    [style[`photo_mascot_${mascot}`]]: Boolean(mascot),
+                })}
                 image={file.node.childImageSharp.gatsbyImageData}
                 alt={`${name}'s face.`}
             />

@@ -14,7 +14,7 @@ export const Department = ({ hero = false, name, members, children }) => {
             <h2 className={cn('ktl-h2', style.title)}>{name}</h2>
 
             <ul className={style.members}>{persons.map((person, i) => (
-                <li><Person key={i} size={hero ? 'xl' : null} {...person}/></li>
+                <li><Person key={i} { ...(hero ? { size: 'xl', mascot: i+1 } : {})} {...person}/></li>
             ))}</ul>
 
             <div className={cn('ktl-text-1', style.description)}>
