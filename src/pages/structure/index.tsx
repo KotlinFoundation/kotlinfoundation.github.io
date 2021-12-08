@@ -1,4 +1,3 @@
-import cn from "classnames";
 import Layout from "../../components/Layout";
 import Structure from "../../components/Structure";
 
@@ -17,7 +16,7 @@ function StructurePage() {
                     name={'Board of Directors'}
                     members={[
                         { name: 'Maxim Shafirov', company: 'JetBrains' },
-                        { name: 'Roman Elizarow', company: 'JetBrains' },
+                        { name: 'Roman Elizarov', company: 'JetBrains' },
                         { name: 'Grace Kloba', company: 'Google' },
                         { name: 'Anwar Ghuloum', company: 'Google' },
                     ]}
@@ -41,7 +40,7 @@ function StructurePage() {
 
                 <Structure.Department
                     name={'Lead Language Designer'}
-                    members={{ name: 'Roman Elizarow', company: 'JetBrains' }}
+                    members={{ name: 'Roman Elizarov', company: 'JetBrains' }}
                 >
                     This person is in charge of all decisions regarding the development of the project and evolution of the language. The Foundation appoints the Lead Language Designer, but does not directly make decisions about the course of the project.
                 </Structure.Department>
@@ -49,15 +48,15 @@ function StructurePage() {
                 <Structure.Department
                     name={'Language Committee'}
                     members={[
-                        { name: 'Roman Elizarow', company: 'JetBrains' },
+                        { name: 'Roman Elizarov', company: 'JetBrains' },
                         { name: 'Jeffrey van Gogh', company: 'Google' },
                     ]}
                 >
                     A special Language Committee appointed by the Foundation reviews the changes proposed by the Lead Language Designer and has the power to reject incompatible changes or require certain deprecation procedures to be carried out.
 
                     <ul className={styles.list}>
-                        <li><a className="layout-link ktl-text-2" href="" target="_blank" rel="noopener noreferrer">Language Committee</a></li>
-                        <li><a className="layout-link ktl-text-2" href="" target="_blank" rel="noopener noreferrer">Submitting Incompatible changed</a></li>
+                        <li><a className="layout-link ktl-text-2" href="https://kotlinlang.org/docs/guidelines.html" target="_blank" rel="noopener noreferrer">Language Committee</a></li>
+                        <li><a className="layout-link ktl-text-2" href="https://kotlinlang.org/docs/submitting-incompatible-changes.html" target="_blank" rel="noopener noreferrer">Submitting Incompatible changed</a></li>
                     </ul>
                 </Structure.Department>
 
@@ -74,7 +73,7 @@ function StructurePage() {
                     The Trademark committee is responsible for managing the proper use of the Kotlin trademark, which includes its general purpose use as outlined by the Trademark Usage Guidelines, as well as handling specific use-cases that may fall out of the norm. The trademark committee reports directly to the Foundation’s board of directors albeit mostly has autonomy on matters regarding trademarks.
 
                     <ul className={styles.list}>
-                        <li><a className="layout-link ktl-text-2" href="" target="_blank" rel="noopener noreferrer">Kotlin Brand Usage guidelines</a></li>
+                        <li><a className="layout-link ktl-text-2" href="https://kotlinlang.org/docs/guidelines.html" target="_blank" rel="noopener noreferrer">Kotlin Brand Usage guidelines</a></li>
                     </ul>
                 </Structure.Department>
 
