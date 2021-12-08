@@ -67,6 +67,7 @@
     left: 0;
 
     background: transparent top center no-repeat;
+    background-size: 75%;
 }
 
 .photo_mascot_1:hover::after,
@@ -78,20 +79,20 @@
 
 .photo_mascot_1::after {
     background-image: url("../../images/mascots/1.svg");
-    background-position-y: 0;
+    background-position: 40% 6%;
 }
 
 .photo_mascot_2::after {
     background-image: url("../../images/mascots/2.svg");
-    background-position-y: -10px;
+    background-position: 70% -5%;
 }
 
 .photo_mascot_3::after {
     background-image: url("../../images/mascots/3.svg");
-    background-position-x: 40px;
+    background-position: 74% 3%;
 }
 
 .photo_mascot_4::after {
     background-image: url("../../images/mascots/4.svg");
-    background-position-y: -30px;
+    background-position: 63% -5%;
 }
