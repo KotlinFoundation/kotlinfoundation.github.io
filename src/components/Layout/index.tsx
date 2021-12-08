@@ -18,7 +18,7 @@ const shortcodes = {
 
 const contactEmail = 'hello@kotlinfoundation.org';
 
-const Layout = ({ withoutCta = false, children }) => (
+export const Layout = ({ withoutCta = false, children }) => (
     <MDXProvider components={shortcodes}>
         <div className="layout">
             <article className="ktl-container">
@@ -38,5 +38,3 @@ const Layout = ({ withoutCta = false, children }) => (
         </div>
     </MDXProvider>
 );
-
-export default Layout;

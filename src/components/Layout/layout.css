@@ -40,3 +40,8 @@ body, #___gatsby, #gatsby-focus-wrapper, .layout {
 .layout-link:hover {
     border-bottom: 1px solid currentColor;
 }
+
+.layout-link::after {
+    display: inline;
+    content: '→';
+}

@@ -1,9 +1,9 @@
-import Layout from "../../components/Layout";
-import Structure from "../../components/Structure";
+import { Layout } from "../../components/Layout";
+import { Structure } from "../../components/Structure";
 
 import * as styles from "./style.module.css";
 
-function StructurePage() {
+export default function StructurePage() {
     return (
         <Layout withoutCta={true}>
             <h1 className={'ktl-h1 ktl-offset-bottom-l'}>Structure</h1>
@@ -92,5 +92,3 @@ function StructurePage() {
         </Layout>
     );
 }
-
-export default StructurePage;

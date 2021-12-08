@@ -1,5 +1,5 @@
 import cn from "classnames";
-import Person from "../Person";
+import { Person } from "../Person";
 import * as style from "./structure.module.css";
 
 export const Department = ({ hero = false, name, members, children }) => {
@@ -24,4 +24,3 @@ export const Department = ({ hero = false, name, members, children }) => {
     );
 }
 
-export default Department;
