@@ -31,17 +31,3 @@ body, #___gatsby, #gatsby-focus-wrapper, .layout {
 .layout__cta-link:hover {
     border-bottom: 2px solid currentColor;
 }
-
-.layout-link {
-    color: var(--ktl-color-primary-light-theme, #7f52ff);
-    text-decoration: none;
-}
-
-.layout-link:hover {
-    border-bottom: 1px solid currentColor;
-}
-
-.layout-link::after {
-    display: inline;
-    content: '→';
-}
