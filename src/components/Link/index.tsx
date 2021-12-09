@@ -1,6 +1,6 @@
 import cn from "classnames";
 import {useTextStyles} from "@rescui/typography";
-import {HTMLAttributes} from "react";
+import {AnchorHTMLAttributes, useMemo} from "react";
 import {useSiteURL} from "../../utlis/hooks";
 
 import * as styles from "./link.module.css";
@@ -17,10 +17,16 @@ type IProps = {
     external?: boolean
 }
 
-export function Link({ standalone = false, external = true, ...props } : IProps & HTMLAttributes<HTMLAnchorElement>) {
+export function Link({ className, standalone = false, external = true, ...props } : IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
     const base = useSiteURL();
     const textCn = useTextStyles();
-    const isExternal = typeof external === "boolean" ? external : checkExternal(props.href, base);
+
+    const { href } = props;
+
+    const isExternal = useMemo(
+        () => typeof external === "boolean" ? external : checkExternal(href, base),
+        [ href, base ]
+    );
 
     const additionalProps = !isExternal ? {} : {
         target: '_blank',
@@ -37,7 +43,7 @@ export function Link({ standalone = false, external = true, ...props } : IProps 
     });
 
     return (
-        <a {...additionalProps} {...props} className={cn(props.className, linkClassName, linkHardnessClassName)}/>
+        <a {...additionalProps} {...props} className={cn(className, linkClassName, linkHardnessClassName)}/>
     );
 }
 

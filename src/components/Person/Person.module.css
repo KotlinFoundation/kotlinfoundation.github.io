@@ -29,6 +29,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* under drop-shadow from photo */
+    position: relative;
 }
 
 .person_size_xl > .photo {

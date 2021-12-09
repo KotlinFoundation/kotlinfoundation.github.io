@@ -5,6 +5,7 @@
 .typeStandalone {
     border-color: transparent;
 }
+
 .typeStandalone:hover {
     border-image: linear-gradient(to right, currentColor calc(100% - 1.1em), transparent 1.1em) 1;
 
