@@ -9,48 +9,50 @@ function FooterMarkup() {
 
     return (
         <footer className={styles.footer}>
-            <ul className={cn(styles.nav, 'ktl-text-2')}>
-                <li className={styles.navitem}>
-                    <a
-                        className={cn(styles.link,
-                            textCn('rs-text-2'),
-                            textCn('rs-link', { hardness: 'average', mode: 'nude' })
-                        )}
-                        href="" target="_blank" rel="noreferrer noopener"
-                    >Submitting incompatible changes</a>
-                </li>
-                <li className={styles.navitem}>
-                    <a
-                        className={cn(styles.link,
-                            textCn('rs-text-2'),
-                            textCn('rs-link', { hardness: 'average', mode: 'nude' })
-                        )}
-                        href="" target="_blank" rel="noreferrer noopener"
-                    >Language Committee guidelines</a>
-                </li>
-                <li className={styles.navitem}>
-                    <a
-                        className={cn(styles.link,
-                            textCn('rs-text-2'),
-                            textCn('rs-link', { hardness: 'average', mode: 'nude' })
-                        )}
-                        href="" target="_blank" rel="noreferrer noopener"
-                    >Brand usage</a>
-                </li>
-                <li className={styles.navitem}>
-                    <a
-                        className={cn(styles.link,
-                            textCn('rs-text-2'),
-                            textCn('rs-link', { hardness: 'average', mode: 'nude' })
-                        )}
-                        href="" target="_blank" rel="noreferrer noopener"
-                    >Kotlin website</a>
-                </li>
-            </ul>
-            <p className={cn('ktl-text-3', styles.support)}>
-                <span className={styles.supportlabel}>Supported and developed by</span>
-                <a href="https://jetbrains.com" target="_blank" rel="noreferrer noopener"><img src={svgLogo}/></a>
-            </p>
+            <div className={cn('ktl-container', styles.inner)}>
+                <ul className={cn(styles.nav, 'ktl-text-2')}>
+                    <li className={styles.navitem}>
+                        <a
+                            className={cn(styles.link,
+                                textCn('rs-text-2'),
+                                textCn('rs-link', { hardness: 'average', mode: 'nude' })
+                            )}
+                            href="" target="_blank" rel="noreferrer noopener"
+                        >Submitting incompatible changes</a>
+                    </li>
+                    <li className={styles.navitem}>
+                        <a
+                            className={cn(styles.link,
+                                textCn('rs-text-2'),
+                                textCn('rs-link', { hardness: 'average', mode: 'nude' })
+                            )}
+                            href="" target="_blank" rel="noreferrer noopener"
+                        >Language Committee guidelines</a>
+                    </li>
+                    <li className={styles.navitem}>
+                        <a
+                            className={cn(styles.link,
+                                textCn('rs-text-2'),
+                                textCn('rs-link', { hardness: 'average', mode: 'nude' })
+                            )}
+                            href="" target="_blank" rel="noreferrer noopener"
+                        >Brand usage</a>
+                    </li>
+                    <li className={styles.navitem}>
+                        <a
+                            className={cn(styles.link,
+                                textCn('rs-text-2'),
+                                textCn('rs-link', { hardness: 'average', mode: 'nude' })
+                            )}
+                            href="" target="_blank" rel="noreferrer noopener"
+                        >Kotlin website</a>
+                    </li>
+                </ul>
+                <p className={cn('ktl-text-3', styles.support)}>
+                    <span className={styles.supportlabel}>Supported and developed by</span>
+                    <a href="https://jetbrains.com" target="_blank" rel="noreferrer noopener"><img src={svgLogo}/></a>
+                </p>
+            </div>
         </footer>
     );
 }
