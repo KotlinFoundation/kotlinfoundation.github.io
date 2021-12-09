@@ -4,6 +4,7 @@ import { CtaBlock } from "@jetbrains/kotlin-web-site-ui/dist/ctaBlock";
 import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
 
 import './layout.css';
+import {VideoGallery} from '../VideoGallery';
 
 const shortcodes = {
     p: props => <p {...props} className={cn(props.className, 'ktl-text-1')}/>,
@@ -24,6 +25,8 @@ const Layout = ({ withoutCta = false, children }) => (
             <article className="ktl-container">
                 {children}
             </article>
+
+            <VideoGallery />
 
             {!withoutCta && (
                 <CtaBlock
