@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { MDXProvider} from "@mdx-js/react";
 import { CtaBlock } from "@jetbrains/kotlin-web-site-ui/dist/ctaBlock";
 import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
+import { Header } from '../Header/'
 
 import './layout.css';
 
@@ -21,6 +22,7 @@ const contactEmail = 'hello@kotlinfoundation.org';
 export const Layout = ({ withoutCta = false, children }) => (
     <MDXProvider components={shortcodes}>
         <div className="layout">
+            <Header />
             <article className="ktl-container">
                 {children}
             </article>
