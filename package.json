@@ -13,7 +13,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@jetbrains/kotlin-web-site-ui": "^2.9.1",
+    "@jetbrains/kotlin-web-site-ui": "^2.10.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@rescui/button": "^0.4.0",
@@ -45,6 +45,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-remove-scroll-bar": "^2.2.0",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.5.2",
     "typescript-plugin-css-modules": "^3.4.0"
   }
