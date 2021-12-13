@@ -1,0 +1,47 @@
+:root {
+    --rs-color-primary-light-theme: rgba(127, 82, 255, 1);
+    --rs-color-primary-t-dim-light-theme: rgba(127, 82, 255, 0.8);
+}
+
+html, body, :global(#___gatsby, #gatsby-focus-wrapper), .layout {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 320px;
+}
+
+body, :global(#___gatsby, #gatsby-focus-wrapper), .layout {
+    min-height: 100vh;
+}
+
+body {
+    font-family: var(--ktl-font-family-inter);
+}
+
+.layout {
+    background: #F4F4F4;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.layout > :global(.ktl-container) {
+    flex-grow: 1;
+}
+
+.ctaLink {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ctaLink:hover {
+    border-bottom: 2px solid currentColor;
+}
+
+@media (max-width: 550px) {
+    .ctaLink {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+

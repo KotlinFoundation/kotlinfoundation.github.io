@@ -2,11 +2,15 @@ import cn from 'classnames';
 import { MDXProvider} from "@mdx-js/react";
 
 import { CtaBlock } from "@jetbrains/kotlin-web-site-ui/dist/ctaBlock";
+
+import "@rescui/typography/lib/font-inter.css";
+import "@jetbrains/kotlin-web-site-ui/dist/typography.css";
+import "@jetbrains/kotlin-web-site-ui/dist/grid.css";
 import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
-import { Header } from '../Header/';
 
-import './layout.css';
+import * as styles from "./layout.module.css";
 
+import { Header } from "../Header";
 import { Footer } from "../Footer";
 
 const shortcodes = {
@@ -24,8 +28,9 @@ const contactEmail = 'hello@kotlinfoundation.org';
 
 export const Layout = ({ withoutCta = false, children, whiteHeader = false }) => (
     <MDXProvider components={shortcodes}>
-        <div className="layout">
+        <div className={styles.layout}>
             <Header whiteBg={whiteHeader} />
+
             <article className="ktl-container">
                 {children}
             </article>
@@ -36,7 +41,7 @@ export const Layout = ({ withoutCta = false, children, whiteHeader = false }) =>
                         Have any questions? <br/>Contact us!
                     </>}
                     mainTitle={
-                        <a href={`mailto:${contactEmail}`} className="layout__cta-link">{contactEmail}</a>
+                        <a href={`mailto:${contactEmail}`} className={styles.ctaLink}>{contactEmail}</a>
                     }
                 />
             )}
