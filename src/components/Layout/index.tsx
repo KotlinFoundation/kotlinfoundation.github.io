@@ -38,3 +38,5 @@ export const Layout = ({ withoutCta = false, children }) => (
         </div>
     </MDXProvider>
 );
+
+export default Layout;
