@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import Button from "@rescui/button";
-import { MobileMenu } from "./mobile-menu/";
+import { MobileMenu } from "./mobile-menu";
 import { DesktopMenu } from "./desktop-menu";
 import KotlinLogo from "../../images/kotlin-logo.inline.svg";
 import * as style from "./header.module.css";
@@ -18,11 +18,6 @@ const menuItems = [
     title: "FAQ",
   },
 ];
-
-export type MenuItem = {
-  url: string;
-  title: string;
-};
 
 type Props = {
   whiteBg: boolean;

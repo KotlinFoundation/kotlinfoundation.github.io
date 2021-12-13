@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import * as style from "./desktop-menu.module.css";
-import { MenuItem } from "../index";
+import { MenuItem } from "../types";
 
 type Props = {
   menuItems: MenuItem[];

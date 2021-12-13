@@ -1,13 +1,13 @@
 import * as React from "react";
 import { MenuTrigger } from "./menu-trigger";
 import { MenuList } from "./menu-list";
-import { MenuItem } from "../index";
+import { MenuItem } from "../types";
 
 type Props = {
   toggleMenu: () => void;
   isMenuOpened: boolean;
   menuItems: MenuItem[];
-  whiteBg: boolean
+  whiteBg: boolean;
 };
 
 export const MobileMenu: React.FC<Props> = ({ toggleMenu, isMenuOpened, menuItems, whiteBg }) => {
