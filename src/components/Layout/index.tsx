@@ -26,11 +26,13 @@ const shortcodes = {
 
 const contactEmail = 'hello@kotlinfoundation.org';
 
-export const Layout = ({ withoutCta = false, children, whiteHeader = false }) => (
+export const Layout = ({ intro=null, children, whiteHeader = false, withoutCta = false,  }) => (
     <MDXProvider components={shortcodes}>
-        <div className={styles.layout}>
-            <Header whiteBg={whiteHeader} />
+        <Header whiteBg={whiteHeader} />
 
+        { intro }
+
+        <div className={styles.layout}>
             <article className="ktl-container">
                 {children}
             </article>

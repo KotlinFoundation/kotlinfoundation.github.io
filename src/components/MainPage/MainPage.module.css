@@ -1,0 +1,122 @@
+@media (min-width: 1084px) {
+    .intro {
+        position: relative;
+    }
+
+    .introContent {
+        margin-right: 632px;
+    }
+
+    .intro::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 632px;
+        height: 798px;
+        background: url("./logo.png") no-repeat top center;
+        background-size: 130%;
+    }
+}
+
+.companies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 16px 94px;
+}
+
+.company {
+
+}
+
+@media (min-width: 1024px) {
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 58px;
+        grid-row-gap: 64px;
+    }
+}
+
+.goalsList, .nowList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+.goal {
+    display: flex;
+    flex-direction: column;
+    max-width: 210px;
+}
+
+.goal::before {
+    display: block;
+    content: '';
+    height: 48px;
+    width: 48px;
+    background: transparent no-repeat center;
+    margin-bottom: 32px;
+}
+
+.numbers {
+    max-width: 320px;
+}
+
+@supports (-webkit-background-clip: text) {
+    .numbers > :global(.ktl-hero) {
+        background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #EF4857 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (min-width: 1024px) {
+    .goals, .now {
+        display: contents;
+    }
+
+    .goalsList, .nowList {
+        display: contents;
+    }
+
+    .numbers, .goal {
+        max-width: inherit;
+    }
+}
+
+.goalTrademark::before {
+    background-image: url("./keys/trademark.svg");
+}
+
+.goalDesigner::before {
+    background-image: url("./keys/design.svg");
+}
+
+.goalControl::before {
+    background-image: url("./keys/control.svg");
+}
+
+@media (min-width: 1024px) {
+    .structureButton {
+        display: contents;
+    }
+
+    .structureButton::before {
+        display: block;
+        content: '';
+    }
+
+    .structureButton::after {
+        display: block;
+        content: '';
+        grid-column: span 2;
+    }
+}

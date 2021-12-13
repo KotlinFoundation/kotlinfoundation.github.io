@@ -24,7 +24,7 @@ export default function FAQPage() {
                         <li className="ktl-offset-bottom-s">Filing issues or suggestions. Please use the{' '}
                             <Link href="https://youtrack.jetbrains.com/issues/KT">Kotlin{'\u00A0'}Issue{'\u00A0'}Tracker</Link> to file issues or suggestions.
                         </li>
-                    </ul>
+                    </ul>to
 
                     Other types of contributions are described in the{' '}
                     <Link href="https://kotlinlang.org/docs/contribute.html">Kotlin{'\u00A0'}documentation</Link>.
