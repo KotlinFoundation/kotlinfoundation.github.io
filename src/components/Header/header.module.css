@@ -50,16 +50,7 @@
 }
 
 .button {
-    background: rgba(127, 82, 255, 1);
     padding: 6px 16px;
-}
-
-.button:hover {
-    background: rgba(127, 82, 255, 0.8);
-}
-
-.button:focus {
-    background: rgba(127, 82, 255, 0.8);
 }
 
 @media (min-width: 768px) {
