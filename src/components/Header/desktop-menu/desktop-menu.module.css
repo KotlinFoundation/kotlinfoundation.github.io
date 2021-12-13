@@ -1,9 +1,5 @@
 .menu {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin-right: 32px;
+    display: none;
 }
 
 .menuItem:not(:last-child) {
@@ -19,6 +15,10 @@
     position: relative;
 }
 
+.menuLink:hover {
+    color: rgba(39, 40, 44, 1);
+}
+
 .menuLinkActive {
     color: rgba(39, 40, 44, 1);
 }
@@ -32,8 +32,11 @@
     background: rgba(39, 40, 44, 1);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .menu {
-        display: none;
+        display: flex;
+        padding: 0;
+        list-style-type: none;
+        margin: 0 32px 0 0;
     }
 }

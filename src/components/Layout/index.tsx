@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { MDXProvider} from "@mdx-js/react";
 import { CtaBlock } from "@jetbrains/kotlin-web-site-ui/dist/ctaBlock";
 import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
-import { Header } from '../Header/'
+import { Header } from '../Header/';
 
 import './layout.css';
 
@@ -19,10 +19,10 @@ const shortcodes = {
 
 const contactEmail = 'hello@kotlinfoundation.org';
 
-export const Layout = ({ withoutCta = false, children }) => (
+export const Layout = ({ withoutCta = false, children, whiteHeader = false }) => (
     <MDXProvider components={shortcodes}>
         <div className="layout">
-            <Header />
+            <Header whiteBg={whiteHeader} />
             <article className="ktl-container">
                 {children}
             </article>

@@ -8,10 +8,14 @@
 }
 
 .menu {
-    background: #fff;
+    background: #F4F4F4;
     margin: 0;
     list-style-type: none;
     padding: 16px 0;
+}
+
+.menuWhiteBg {
+    background: #fff;
 }
 
 .link {

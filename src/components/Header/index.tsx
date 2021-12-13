@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link } from "gatsby";
+import { ThemeProvider } from "@rescui/ui-contexts";
 import Button from "@rescui/button";
 import { MobileMenu } from "./mobile-menu/";
 import { DesktopMenu } from "./desktop-menu";
@@ -21,7 +23,11 @@ export type MenuItem = {
   title: string;
 };
 
-export const Header: React.FC = () => {
+type Props = {
+  whiteBg: boolean;
+};
+
+export const Header: React.FC<Props> = ({ whiteBg }) => {
   const [isMenuOpened, setIsMenuOpened] = React.useState<boolean>(false);
 
   const toggleMenu = React.useCallback(() => {
@@ -29,16 +35,16 @@ export const Header: React.FC = () => {
   }, [isMenuOpened]);
 
   return (
-    <div className={style.header}>
+    <div className={`${style.header} ${whiteBg && style.headerWhite}`}>
       <div className={style.nav}>
-        <div className={style.logo}>
+        <Link className={style.logo} to="/">
           <div className={style.logoImage}>
             <KotlinLogo />
           </div>
           <div className={style.logoText}>
             Kotlin <br className={style.mobileBr} /> Foundation
           </div>
-        </div>
+        </Link>
         <a
           href="https://kotlinlang.org/"
           className={style.headerLink}
@@ -51,11 +57,16 @@ export const Header: React.FC = () => {
 
       <div className={style.group}>
         <DesktopMenu menuItems={menuItems} />
-        <Button className={style.button}>Write Us</Button>
+        <a href="mailto:hello@kotlinfoundation.org">
+          <Button className={style.button}>
+            Write Us
+          </Button>
+        </a>
         <MobileMenu
           toggleMenu={toggleMenu}
           isMenuOpened={isMenuOpened}
           menuItems={menuItems}
+          whiteBg={whiteBg}
         />
       </div>
     </div>

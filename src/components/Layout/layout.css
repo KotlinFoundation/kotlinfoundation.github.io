@@ -12,6 +12,10 @@ body, #___gatsby, #gatsby-focus-wrapper, .layout {
     min-height: 100vh;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .layout {
     background: #F4F4F4;
     display: flex;
