@@ -14,7 +14,7 @@ export default function FAQPage() {
                     <ul className="ktl-offset-top-s">
                         <li className="ktl-offset-bottom-s">Language features. Please use the{' '}
                             <Link href="https://github.com/Kotlin/KEEP">
-                                Kotlin{'\u00A0'}Evolution and{'\u00A0'}Enhancement{'\u00A0'}process{'\u00A0'}(KEEP)
+                                Kotlin{'\u00A0'}Evolution and{'\u00A0'}Enhancement process{'\u00A0'}(KEEP)
                             </Link>{' '}
                             if you'd like to make a proposal for the Kotlin programming language.
                         </li>
