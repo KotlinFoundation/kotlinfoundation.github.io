@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "node_modules/@jetbrains/kotlin-web-site-ui/dist/svg/kotlin_64.svg",
       },
     },
     {
