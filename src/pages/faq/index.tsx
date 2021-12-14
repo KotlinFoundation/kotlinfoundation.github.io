@@ -5,7 +5,7 @@ import { Link } from "../../components/Link";
 export default function FAQPage() {
     return (
         <Layout>
-            <h1 className={'ktl-h1 ktl-offset-bottom-l'}>FAQ</h1>
+            <h1 className={'ktl-h1 ktl-offset-bottom-l ktl-offset-top-xl'}>FAQ</h1>
             <FAQ className={'ktl-offset-bottom-xxl'}>
                 <FAQ.Question>How can I contribute or provide feedback to Kotlin?</FAQ.Question>
                 <FAQ.Answer>

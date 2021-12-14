@@ -16,7 +16,7 @@ export default function MainPage() {
         intro={
             <section className={cn(styles.intro, "ktl-container")}>
                 <div className={styles.introContent}>
-                    <h1 className="ktl-hero">
+                    <h1 className="ktl-hero ktl-offset-top-xl">
                         Protect, promote and{'\u00A0'}advance the{'\u00A0'}development of{'\u00A0'}the{'\u00A0'}Kotlin programming language
                     </h1>
                     <div className="ktl-offset-top-xxl">
