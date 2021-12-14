@@ -1,0 +1,42 @@
+.menu {
+    display: none;
+}
+
+.menuItem:not(:last-child) {
+    margin-right: 32px;
+}
+
+.menuLink {
+    text-decoration: none;
+    color: rgba(39, 40, 44, 0.7);
+    display: flex;
+    align-items: center;
+    height: 64px;
+    position: relative;
+}
+
+.menuLink:hover {
+    color: rgba(39, 40, 44, 1);
+}
+
+.menuLinkActive {
+    color: rgba(39, 40, 44, 1);
+}
+
+.menuLinkActive::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: rgba(39, 40, 44, 1);
+}
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        padding: 0;
+        list-style-type: none;
+        margin: 0 32px 0 0;
+    }
+}
