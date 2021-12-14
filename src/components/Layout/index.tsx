@@ -1,4 +1,4 @@
-import * as React from "react";
+import { ReactNode} from "react";
 import cn from 'classnames';
 import { MDXProvider} from "@mdx-js/react";
 
@@ -11,9 +11,9 @@ import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
 
 import * as styles from "./layout.module.css";
 
+import { SEO } from "../Seo";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-import {SEO} from "../Seo";
 
 const shortcodes = {
     p: props => <p {...props} className={cn(props.className, 'ktl-text-1')}/>,
@@ -30,23 +30,32 @@ const contactEmail = 'hello@kotlinfoundation.org';
 
 interface LayoutProps {
     title: string;
-    intro?: null | string;
+    intro?: null | ReactNode;
+    outro?: null | ReactNode;
     whiteHeader?: boolean;
     withoutCta?: boolean;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ intro=null, children, whiteHeader = false, withoutCta = false, title }) => (
+export const Layout: React.FC<LayoutProps> = ({
+    title,
+    intro = null,
+    children,
+    outro = null,
+    whiteHeader = false,
+    withoutCta = false,
+}) => (
     <MDXProvider components={shortcodes}>
         <SEO title={title} />
-
         <Header whiteBg={whiteHeader} />
 
-        { intro }
+        {intro}
 
         <div className={styles.layout}>
             <article className="ktl-container">
                 {children}
             </article>
+
+            {outro}
 
             {!withoutCta && (
                 <CtaBlock
