@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import googleLogoSvg from "../components/MainPage/companies/google.svg";
 import jbLogoSvg from  "../components/MainPage/companies/jb.svg";
 import {Link} from "gatsby";
+import {VideoGallery} from "../components/VideoGallery";
 
 const SPONSORS = [
     { name: 'JetBrains', image: jbLogoSvg },
@@ -76,7 +77,7 @@ export default function MainPage() {
         outro={
             <section>
                 <h2 className="ktl-h2 ktl-container ktl-offset-top-xxl">Look How We’ve<br/>Grown Up</h2>
-                ...
+                <VideoGallery/>
             </section>
         }
     />;

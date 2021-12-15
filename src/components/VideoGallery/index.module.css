@@ -1,0 +1,85 @@
+.wrapper {
+    margin-bottom: 36px;
+}
+
+:global .slick-arrow {
+    display: none !important;
+}
+
+.item {
+    padding: 0 8px;
+}
+
+.media {
+    width: 320px;
+    position: relative;
+    padding-top: 54.8%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    display: none;
+}
+
+.navigation {
+    display: none;
+}
+
+.arrow {
+    position: absolute;
+    color: rgba(39, 40, 44, 0.7);
+}
+
+.prev {
+    right: 38px;
+}
+
+.next {
+    right: 0;
+}
+
+@media (min-width: 480px) {
+    .media {
+        width: 420px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        margin-bottom: 96px;
+    }
+
+    .media {
+        width: 600px;
+        border-radius: 16px;
+    }
+
+    .player {
+        width: calc(100% - 64px);
+    }
+
+    .title {
+        display: block;
+        margin-top: 24px;
+    }
+
+    .navigation {
+        display: block;
+    }
+}
