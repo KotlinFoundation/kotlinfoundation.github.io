@@ -76,11 +76,7 @@ export const VideoGallery = () => {
     }, []);
 
     return (
-        <div className={classnames(styles.wrapper, 'ktl-offset-top-xxl')}>
-            <h2 className="ktl-h2 ktl-container">
-                Look How We’ve<br /> Grown Up
-            </h2>
-
+        <div className={styles.wrapper}>
             <Slider ref={sliderRef} {...settings} className={'ktl-offset-top-l'}>
                 {videos.map((video, i) => (
                     <div key={video.url} className={styles.item}>
