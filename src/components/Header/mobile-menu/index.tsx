@@ -2,7 +2,7 @@ import * as React from "react";
 import { MenuTrigger } from "./menu-trigger";
 import { MenuList } from "./menu-list";
 import { MenuItem } from "../types";
-import Helmet from "react-helmet";
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
 
 type Props = {
   toggleMenu: () => void;
@@ -22,9 +22,7 @@ export const MobileMenu: React.FC<Props> = ({
       <MenuTrigger toggleMenu={toggleMenu} isMenuOpened={isMenuOpened} />
       {isMenuOpened && (
         <>
-          <Helmet>
-            <body className="overlay-locked" />
-          </Helmet>
+          <RemoveScrollBar gapMode="margin" />
           <MenuList
             menuItems={menuItems}
             whiteBg={whiteBg}
