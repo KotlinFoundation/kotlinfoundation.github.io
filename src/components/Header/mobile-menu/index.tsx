@@ -22,7 +22,7 @@ export const MobileMenu: React.FC<Props> = ({
       <MenuTrigger toggleMenu={toggleMenu} isMenuOpened={isMenuOpened} />
       {isMenuOpened && (
         <>
-          <RemoveScrollBar gapMode="margin" />
+          <RemoveScrollBar />
           <MenuList
             menuItems={menuItems}
             whiteBg={whiteBg}
