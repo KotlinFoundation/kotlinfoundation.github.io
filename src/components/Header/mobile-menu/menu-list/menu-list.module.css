@@ -21,6 +21,7 @@
 .link {
     display: block;
     padding: 8px 16px;
+    line-height: 24px;
     text-decoration: none;
     color: rgba(39, 40, 44, 1);
 }
@@ -38,4 +39,11 @@
 .linkActive:hover {
     background: rgba(39, 40, 44, 1);
     color: #fff;
+}
+
+
+@media (min-width: 768px) {
+    .wrapper {
+        display: none;
+    }
 }

@@ -10,8 +10,8 @@ type Props = {
 export const DesktopMenu: React.FC<Props> = ({ menuItems }) => {
   return (
     <ul className={style.menu}>
-      {menuItems.map((item) => (
-        <li className={style.menuItem}>
+      {menuItems.map((item, index) => (
+        <li key={index} className={style.menuItem}>
           <Link
             to={item.url}
             className={style.menuLink}
