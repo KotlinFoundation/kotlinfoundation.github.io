@@ -59,6 +59,12 @@
     margin: 0;
 }
 
+@media (max-width: 640px) {
+    .goalsList {
+        flex-direction: column;
+    }
+}
+
 .goal, .numbers {
     margin-right: 32px;
     margin-bottom: 32px;
