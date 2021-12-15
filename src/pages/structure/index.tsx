@@ -7,7 +7,7 @@ import { LinkStandalone } from "../../components/Link";
 
 export default function StructurePage() {
     return (
-        <Layout withoutCta={true}>
+        <Layout withoutCta={true} title={'Structure'}>
             <h1 className={'ktl-h1 ktl-offset-bottom-l ktl-offset-top-xl'}>Structure</h1>
 
             <p className={'ktl-text-1 ktl-offset-bottom-l'}>The Kotlin Foundation is a nonprofit nonstock corporation registered in the state of Delaware, USA.</p>
