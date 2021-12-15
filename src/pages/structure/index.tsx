@@ -12,7 +12,7 @@ export default function StructurePage() {
 
             <p className={'ktl-text-1 ktl-offset-bottom-l'}>The Kotlin Foundation is a nonprofit nonstock corporation registered in the state of Delaware, USA.</p>
 
-            <Structure>
+            <Structure className={'ktl-offset-bottom-xxl'}>
                 <Structure.Department
                     hero
                     name={'Board of Directors'}
