@@ -47,7 +47,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 58px;
-        grid-row-gap: 64px;
     }
 }
 
@@ -70,7 +69,7 @@
     margin-bottom: 32px;
 }
 
-.goal:last-of-type, .numbers:last-of-type {
+.numbers:last-of-type {
     margin-right: 0;
     margin-bottom: 0;
 }
@@ -126,6 +125,10 @@
 
 .goalControl::before {
     background-image: url("./keys/control.svg");
+}
+
+.structureButtonLink {
+    display: inline-block;
 }
 
 @media (min-width: 1024px) {

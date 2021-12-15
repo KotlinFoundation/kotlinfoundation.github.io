@@ -48,10 +48,8 @@ export default function MainPage() {
                     </ul>
                 </section>
 
-                <section className={cn(styles.structureButton, 'ktl-offset-bottom-xl', 'ktl-offset-top-xl')}>
-                    <p>
-                        <Link to="/structure/"><Button mode="outline">Foundation Structure →</Button></Link>
-                    </p>
+                <section className={styles.structureButton}>
+                    <Link className={styles.structureButtonLink} to="/structure/" className={'ktl-offset-bottom-xl'}><Button mode="outline" size="l">Foundation Structure →</Button></Link>
                 </section>
 
                 <section className={styles.now}>
