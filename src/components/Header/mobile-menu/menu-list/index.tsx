@@ -1,16 +1,23 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { MenuItem } from "../../index";
+import { MenuItem } from "../../types";
 import * as style from "./menu-list.module.css";
 
 type Props = {
   menuItems: MenuItem[];
   whiteBg: boolean;
+  toggleMenu: () => void;
 };
 
-export const MenuList: React.FC<Props> = ({ menuItems, whiteBg }) => {
+export const MenuList: React.FC<Props> = ({ menuItems, whiteBg, toggleMenu }) => {
+
+  const handleWrapperClick = (e) => {
+    if(e.currentTarget != e.target ) return;
+    toggleMenu();
+  }
+
   return (
-    <nav className={style.wrapper}>
+    <nav className={style.wrapper} onClick={handleWrapperClick}>
       <ul className={`${style.menu} ${whiteBg && style.menuWhiteBg}`}>
         <li>
           <Link
