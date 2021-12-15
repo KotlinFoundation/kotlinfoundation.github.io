@@ -1,22 +1,21 @@
+.introImage {
+    display: none;
+}
+
 @media (min-width: 1084px) {
     .intro {
         position: relative;
     }
 
     .introContent {
-        margin-right: 632px;
+        margin-right: 645px;
     }
 
-    .intro::after {
+    .intro > .introImage {
         display: block;
-        content: '';
         position: absolute;
         top: 0;
-        right: 0;
-        width: 632px;
-        height: 798px;
-        background: url("./logo.png") no-repeat top center;
-        background-size: 130%;
+        right: -45px;
     }
 }
 

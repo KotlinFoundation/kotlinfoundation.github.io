@@ -4,8 +4,9 @@ import * as styles from "../components/MainPage/MainPage.module.css";
 import Layout from "../components/Layout";
 import googleLogoSvg from "../components/MainPage/companies/google.svg";
 import jbLogoSvg from  "../components/MainPage/companies/jb.svg";
-import {Link} from "gatsby";
-import {VideoGallery} from "../components/VideoGallery";
+import { Link } from "gatsby";
+import { VideoGallery } from "../components/VideoGallery";
+import { StaticImage } from "gatsby-plugin-image";
 
 const SPONSORS = [
     { name: 'JetBrains', image: jbLogoSvg },
@@ -34,6 +35,15 @@ export default function MainPage() {
                         </ul>
                     </div>
                 </div>
+                <StaticImage
+                    className={styles.introImage}
+                    src="../images/intro.png"
+                    alt="A dinosaur"
+                    placeholder="blurred"
+                    layout="fixed"
+                    height={841}
+                    width={798}
+                />
             </section>
         }
 
