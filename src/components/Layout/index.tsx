@@ -1,3 +1,4 @@
+import * as React from "react";
 import cn from 'classnames';
 import { MDXProvider} from "@mdx-js/react";
 
@@ -12,6 +13,7 @@ import * as styles from "./layout.module.css";
 
 import { Header } from "../Header";
 import { Footer } from "../Footer";
+import {SEO} from "../Seo";
 
 const shortcodes = {
     p: props => <p {...props} className={cn(props.className, 'ktl-text-1')}/>,
@@ -26,8 +28,17 @@ const shortcodes = {
 
 const contactEmail = 'hello@kotlinfoundation.org';
 
-export const Layout = ({ intro=null, children, whiteHeader = false, withoutCta = false,  }) => (
+interface LayoutProps {
+    title: string;
+    intro?: null | string;
+    whiteHeader?: boolean;
+    withoutCta?: boolean;
+}
+
+export const Layout: React.FC<LayoutProps> = ({ intro=null, children, whiteHeader = false, withoutCta = false, title }) => (
     <MDXProvider components={shortcodes}>
+        <SEO title={title} />
+
         <Header whiteBg={whiteHeader} />
 
         { intro }

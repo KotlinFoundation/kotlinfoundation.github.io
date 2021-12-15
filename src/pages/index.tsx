@@ -13,6 +13,7 @@ const SPONSORS = [
 
 export default function MainPage() {
     return <Layout
+        title="Kotlin Foundation"
         intro={
             <section className={cn(styles.intro, "ktl-container")}>
                 <div className={styles.introContent}>
