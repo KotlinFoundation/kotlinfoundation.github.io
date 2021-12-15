@@ -25,13 +25,15 @@ export const Person = ({ mascot = null, size= null, className = null, name, comp
         return <div className={cn(style.person, 'vcard', className, {
             [style[`person_size_${size}`]]: Boolean(size),
         })}>
-            <GatsbyImage
-                className={cn(style.photo, {
-                    [style[`photo_mascot_${mascot}`]]: Boolean(mascot),
-                })}
-                image={file.node.childImageSharp.gatsbyImageData}
-                alt={`${name}'s face.`}
-            />
+            <div className={cn(style.photoWrap, {
+                [style[`photoWrap_mascot_${mascot}`]]: Boolean(mascot),
+            })}>
+                <GatsbyImage
+                    className={style.photo}
+                    image={file.node.childImageSharp.gatsbyImageData}
+                    alt={`${name}'s face.`}
+                />
+            </div>
             <p className={style.info}>
                 <span className={cn('ktl-h4', 'n')}>{name}</span>
                 <span className={cn('ktl-text-2', 'org')}>{company}</span>
