@@ -26,7 +26,16 @@
     align-items: center;
     list-style: none;
     padding: 0;
-    gap: 16px 94px;
+}
+
+.company {
+    margin-right: 94px;
+    margin-bottom: 16px;
+}
+
+.company:last-of-type {
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .company {
@@ -46,9 +55,18 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 32px;
     padding: 0;
     margin: 0;
+}
+
+.goal, .numbers {
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+.goal:last-of-type, .numbers:last-of-type {
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .goal {
