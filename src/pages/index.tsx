@@ -26,7 +26,7 @@ export default function MainPage() {
                         <h2 className="ktl-h3">Сompanies Behind Kotlin</h2>
                         <ul className={cn(styles.companies, 'ktl-offset-top-l', 'ktl-offset-bottom-l')}>
                             {SPONSORS.map(({ name, image }) => (
-                                <li className={styles.company}>
+                                <li key={name} className={styles.company}>
                                     <img alt={`${name} Logo`} src={image}/>
                                 </li>
                             ))}
