@@ -1,6 +1,13 @@
 .footer {
     background: #27282c;
-    padding: 32px;
+    padding: 32px 16px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 @media (min-width: 520px) {
@@ -65,3 +72,4 @@
         margin-right: 16px;
     }
 }
+

@@ -4,6 +4,7 @@ import {AnchorHTMLAttributes, useMemo} from "react";
 import {useSiteURL} from "../../utlis/hooks";
 
 import * as styles from "./link.module.css";
+import {ILink} from "@rescui/typography/lib/create-text-cn";
 
 function checkExternal (link, base = null) {
     const url = new URL(link , base);
@@ -12,12 +13,11 @@ function checkExternal (link, base = null) {
     return url.hostname === '' || url.hostname === baseUrl.hostname;
 }
 
-type IProps = {
+type IProps =  ILink & {
     standalone?: boolean,
-    external?: boolean
-}
+};
 
-export function Link({ className, standalone = false, external = true, ...props } : IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
+export function Link({ className, hardness = null, standalone = false, external = true, ...props } : IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
     const base = useSiteURL();
     const textCn = useTextStyles();
 
@@ -39,7 +39,7 @@ export function Link({ className, standalone = false, external = true, ...props 
     });
 
     const linkHardnessClassName = textCn('rs-link', {
-        hardness: 'average',
+        hardness: hardness || 'hard',
     });
 
     return (
