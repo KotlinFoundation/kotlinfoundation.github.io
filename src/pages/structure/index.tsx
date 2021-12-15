@@ -57,8 +57,12 @@ export default function StructurePage() {
                     A special Language Committee appointed by the Foundation reviews the changes proposed by the Lead Language Designer and has the power to reject incompatible changes or require certain deprecation procedures to be carried out.
 
                     <ul className={cn(styles.list, 'rs-text-2')}>
-                        <li><LinkStandalone href="https://kotlinlang.org/docs/guidelines.html">Language Committee</LinkStandalone></li>
-                        <li><LinkStandalone href="https://kotlinlang.org/docs/submitting-incompatible-changes.html">Submitting Incompatible changed</LinkStandalone></li>
+                        <li className={'ktl-offset-bottom-xs'}>
+                            <LinkStandalone href="https://kotlinlang.org/docs/guidelines.html">Language Committee</LinkStandalone>
+                        </li>
+                        <li className={'ktl-offset-bottom-xs'}>
+                            <LinkStandalone href="https://kotlinlang.org/docs/submitting-incompatible-changes.html">Submitting Incompatible changed</LinkStandalone>
+                        </li>
                     </ul>
                 </Structure.Department>
 
@@ -75,7 +79,9 @@ export default function StructurePage() {
                     The Trademark committee is responsible for managing the proper use of the Kotlin trademark, which includes its general purpose use as outlined by the Trademark Usage Guidelines, as well as handling specific use-cases that may fall out of the norm. The trademark committee reports directly to the Foundation’s board of directors albeit mostly has autonomy on matters regarding trademarks.
 
                     <ul className={cn(styles.list, 'rs-text-2')}>
-                        <li><LinkStandalone href="https://kotlinlang.org/docs/guidelines.html">Kotlin Brand Usage guidelines</LinkStandalone></li>
+                        <li className={'ktl-offset-bottom-xs'}>
+                            <LinkStandalone href="https://kotlinlang.org/docs/guidelines.html">Kotlin Brand Usage guidelines</LinkStandalone>
+                        </li>
                     </ul>
                 </Structure.Department>
 
