@@ -4,8 +4,8 @@ import { Link } from "../../components/Link";
 
 export default function FAQPage() {
     return (
-        <Layout>
-            <h1 className={'ktl-h1 ktl-offset-bottom-l'}>FAQ</h1>
+        <Layout title={'FAQ'}>
+            <h1 className={'ktl-h1 ktl-offset-bottom-l ktl-offset-top-xl'}>FAQ</h1>
             <FAQ className={'ktl-offset-bottom-xxl'}>
                 <FAQ.Question>How can I contribute or provide feedback to Kotlin?</FAQ.Question>
                 <FAQ.Answer>
@@ -14,7 +14,7 @@ export default function FAQPage() {
                     <ul className="ktl-offset-top-s">
                         <li className="ktl-offset-bottom-s">Language features. Please use the{' '}
                             <Link href="https://github.com/Kotlin/KEEP">
-                                Kotlin{'\u00A0'}Evolution and{'\u00A0'}Enhancement{'\u00A0'}process{'\u00A0'}(KEEP)
+                                Kotlin{'\u00A0'}Evolution and{'\u00A0'}Enhancement process{'\u00A0'}(KEEP)
                             </Link>{' '}
                             if you'd like to make a proposal for the Kotlin programming language.
                         </li>

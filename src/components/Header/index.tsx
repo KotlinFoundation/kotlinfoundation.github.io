@@ -42,7 +42,7 @@ export const Header: React.FC<Props> = ({ whiteBg }) => {
           </div>
         </GatsbyLink>
         <div className={style.headerLink}>
-          <Link href="https://kotlinlang.org/" standalone external>
+          <Link href="https://kotlinlang.org/" standalone external hardness="average">
             kotlinlang.org
           </Link>
         </div>

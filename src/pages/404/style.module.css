@@ -1,0 +1,35 @@
+.notFound {
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.image {
+    width: 240px;
+}
+
+.text {
+    max-width: 480px;
+}
+
+.btn {
+    margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+    .image {
+        width: 336px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .notFound {
+        text-align: left;
+        margin: 64px auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .content {
+        margin-left: 32px;
+    }
+}

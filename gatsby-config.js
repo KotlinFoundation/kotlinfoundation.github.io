@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://kotlinfoundation.org/",
     title: "Kotlin Foundation – official site",
+    description: `Kotlin Foundation – protect, promote and advance the development of the Kotlin programming language.`,
+    author: `@kotlin`,
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -17,7 +19,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "node_modules/@jetbrains/kotlin-web-site-ui/dist/svg/kotlin_64.svg",
       },
     },
     {

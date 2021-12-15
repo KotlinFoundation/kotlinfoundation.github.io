@@ -20,7 +20,7 @@ const FooterMarkup = () => (
     <footer className={styles.footer}>
         <ul className={cn(styles.nav, 'ktl-text-2')}>
             {FOOTER_LINKS.map(({ name, url }) => (
-                <li className={styles.navitem}>
+                <li key={name} className={styles.navitem}>
                     <FooterLink href={url} className={styles.link}>{name}</FooterLink>
                 </li>
             ))}
