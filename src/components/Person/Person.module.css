@@ -11,6 +11,7 @@
 }
 
 .photoWrap {
+    position: relative;
     margin-right: 16px;
 }
 
@@ -37,9 +38,12 @@
     position: relative;
 }
 
+.person_size_xl > .photoWrap {
+    margin: 0;
+}
+
 .person_size_xl > .photoWrap > .photo {
     border-radius: 200px;
-    margin: 0;
     height: 190px;
     width: 152px;
 
@@ -51,10 +55,6 @@
         width: 220px;
         height: 280px;
     }
-}
-
-.photoWrap {
-    position: relative;
 }
 
 .photoWrap_mascot_1::after,
