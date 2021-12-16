@@ -26,7 +26,7 @@ export default function MainPage() {
             <section className={cn(styles.intro, "ktl-container")}>
                 <div className={styles.introContent}>
                     <h1 className="ktl-hero ktl-offset-top-xl">
-                        Protect, promote and{'\u00A0'}advance the{'\u00A0'}development of{'\u00A0'}the{'\u00A0'}Kotlin programming language
+                        Promote and{'\u00A0'}advance the{'\u00A0'}development of{'\u00A0'}the{'\u00A0'}Kotlin programming language
                     </h1>
                     <div className="ktl-offset-top-xxl">
                         <h2 className="ktl-h3">Сompanies Behind Kotlin</h2>
@@ -58,7 +58,7 @@ export default function MainPage() {
                 <section className={styles.goals}>
                     <h2 className="ktl-h2 ktl-offset-bottom-l">Key Goals</h2>
                     <ul className={cn(styles.goalsList, 'ktl-text-1')}>
-                        <li className={cn(styles.goal, styles.goalTrademark)}>Protect the Kotlin trademarks</li>
+                        <li className={cn(styles.goal, styles.goalTrademark)}>Preserve the Kotlin trademarks</li>
                         <li className={cn(styles.goal, styles.goalDesigner)}>Appoint the Lead Language Designer</li>
                         <li className={cn(styles.goal, styles.goalControl)}>Control incompatible changes to the language</li>
                     </ul>
