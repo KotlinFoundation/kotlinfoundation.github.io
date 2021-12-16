@@ -6,7 +6,11 @@ import googleLogoSvg from "../components/MainPage/companies/google.svg";
 import jbLogoSvg from  "../components/MainPage/companies/jb.svg";
 import { Link } from "gatsby";
 import { VideoGallery } from "../components/VideoGallery";
-import { StaticImage } from "gatsby-plugin-image";
+
+import introPng from "../images/intro/intro.png";
+import intro2xPng from "../images/intro/intro@2x.png";
+import introWebp from "../images/intro/intro.webp";
+import intro2xWebp from "../images/intro/intro@2x.webp";
 
 const SPONSORS = [
     { name: 'JetBrains', image: jbLogoSvg },
@@ -35,15 +39,17 @@ export default function MainPage() {
                         </ul>
                     </div>
                 </div>
-                <StaticImage
-                    className={styles.introImage}
-                    src="../images/intro.png"
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                    layout="fixed"
-                    height={841}
-                    width={798}
-                />
+                <picture className={styles.introImage}>
+                    <source type="image/webp" srcSet={`${introWebp} 798w, ${intro2xWebp} 1596w`} sizes="798px"/>
+                    <img
+                        width="798"
+                        height="841"
+                        sizes="798px"
+                        src={introPng}
+                        srcSet={`${introPng} 798w, ${intro2xPng} 1596w`}
+                        alt="Funny Kotlin Constructor"
+                    />
+                </picture>
             </section>
         }
 
