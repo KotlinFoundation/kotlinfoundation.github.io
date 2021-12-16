@@ -65,7 +65,9 @@ export default function MainPage() {
                 </section>
 
                 <section className={styles.structureButton}>
-                    <Link className={styles.structureButtonLink} to="/structure/" className={'ktl-offset-bottom-xl'}><Button mode="outline" size="l">Foundation Structure →</Button></Link>
+                    <Link className={cn(styles.structureButtonLink, 'ktl-offset-bottom-xl')} to="/structure/">
+                        <Button mode="outline" size="l">Foundation Structure →</Button>
+                    </Link>
                 </section>
 
                 <section className={styles.now}>
