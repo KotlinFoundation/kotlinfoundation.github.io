@@ -1,22 +1,21 @@
+.introImage {
+    display: none;
+}
+
 @media (min-width: 1084px) {
     .intro {
         position: relative;
     }
 
     .introContent {
-        margin-right: 632px;
+        margin-right: 645px;
     }
 
-    .intro::after {
+    .intro > .introImage {
         display: block;
-        content: '';
         position: absolute;
         top: 0;
-        right: 0;
-        width: 632px;
-        height: 798px;
-        background: url("./logo.png") no-repeat top center;
-        background-size: 130%;
+        right: -45px;
     }
 }
 
@@ -47,7 +46,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 58px;
-        grid-row-gap: 64px;
     }
 }
 
@@ -59,12 +57,18 @@
     margin: 0;
 }
 
+@media (max-width: 640px) {
+    .goalsList {
+        flex-direction: column;
+    }
+}
+
 .goal, .numbers {
     margin-right: 32px;
     margin-bottom: 32px;
 }
 
-.goal:last-of-type, .numbers:last-of-type {
+.numbers:last-of-type {
     margin-right: 0;
     margin-bottom: 0;
 }
@@ -120,6 +124,10 @@
 
 .goalControl::before {
     background-image: url("./keys/control.svg");
+}
+
+.structureButtonLink {
+    display: inline-block;
 }
 
 @media (min-width: 1024px) {

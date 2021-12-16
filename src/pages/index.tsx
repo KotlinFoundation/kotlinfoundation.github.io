@@ -4,8 +4,13 @@ import * as styles from "../components/MainPage/MainPage.module.css";
 import Layout from "../components/Layout";
 import googleLogoSvg from "../components/MainPage/companies/google.svg";
 import jbLogoSvg from  "../components/MainPage/companies/jb.svg";
-import {Link} from "gatsby";
-import {VideoGallery} from "../components/VideoGallery";
+import { Link } from "gatsby";
+import { VideoGallery } from "../components/VideoGallery";
+
+import introPng from "../images/intro/intro.png";
+import intro2xPng from "../images/intro/intro@2x.png";
+import introWebp from "../images/intro/intro.webp";
+import intro2xWebp from "../images/intro/intro@2x.webp";
 
 const SPONSORS = [
     { name: 'JetBrains', image: jbLogoSvg },
@@ -21,7 +26,7 @@ export default function MainPage() {
             <section className={cn(styles.intro, "ktl-container")}>
                 <div className={styles.introContent}>
                     <h1 className="ktl-hero ktl-offset-top-xl">
-                        Protect, promote and{'\u00A0'}advance the{'\u00A0'}development of{'\u00A0'}the{'\u00A0'}Kotlin programming language
+                        Promote and{'\u00A0'}advance the{'\u00A0'}development of{'\u00A0'}the{'\u00A0'}Kotlin programming language
                     </h1>
                     <div className="ktl-offset-top-xxl">
                         <h2 className="ktl-h3">Сompanies Behind Kotlin</h2>
@@ -34,6 +39,17 @@ export default function MainPage() {
                         </ul>
                     </div>
                 </div>
+                <picture className={styles.introImage}>
+                    <source type="image/webp" srcSet={`${introWebp} 798w, ${intro2xWebp} 1596w`} sizes="798px"/>
+                    <img
+                        width="798"
+                        height="841"
+                        sizes="798px"
+                        src={introPng}
+                        srcSet={`${introPng} 798w, ${intro2xPng} 1596w`}
+                        alt="Funny Kotlin Constructor"
+                    />
+                </picture>
             </section>
         }
 
@@ -42,16 +58,16 @@ export default function MainPage() {
                 <section className={styles.goals}>
                     <h2 className="ktl-h2 ktl-offset-bottom-l">Key Goals</h2>
                     <ul className={cn(styles.goalsList, 'ktl-text-1')}>
-                        <li className={cn(styles.goal, styles.goalTrademark)}>Protect the Kotlin trademarks</li>
+                        <li className={cn(styles.goal, styles.goalTrademark)}>Preserve the Kotlin trademarks</li>
                         <li className={cn(styles.goal, styles.goalDesigner)}>Appoint the Lead Language Designer</li>
                         <li className={cn(styles.goal, styles.goalControl)}>Control incompatible changes to the language</li>
                     </ul>
                 </section>
 
-                <section className={cn(styles.structureButton, 'ktl-offset-bottom-xl', 'ktl-offset-top-xl')}>
-                    <p>
-                        <Link to="/structure/"><Button mode="outline">Foundation Structure →</Button></Link>
-                    </p>
+                <section className={styles.structureButton}>
+                    <Link className={cn(styles.structureButtonLink, 'ktl-offset-bottom-xl')} to="/structure/">
+                        <Button mode="outline" size="l">Foundation Structure →</Button>
+                    </Link>
                 </section>
 
                 <section className={styles.now}>

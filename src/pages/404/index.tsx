@@ -5,6 +5,7 @@ import {ArrowRightIcon} from '@rescui/icons';
 import Layout from '../../components/Layout';
 import Mascot404 from '../../images/404.png';
 import * as styles from './style.module.css';
+import {Link} from '../../components/Link';
 
 const NotFoundPage = () => {
     return (
@@ -17,8 +18,9 @@ const NotFoundPage = () => {
                         The page has another address or doesn't exist at all. Check that it’s written correctly or just
                         try to start from the homepage.
                     </div>
-                    <Button href="/" mode="outline" className={styles.btn} icon={<ArrowRightIcon/>}
-                            iconPosition="right">Homepage</Button>
+                    <Link to="/">
+                        <Button mode="outline" className={styles.btn} icon={<ArrowRightIcon/>} iconPosition="right">Homepage</Button>
+                    </Link>
                 </div>
             </div>
         </Layout>
