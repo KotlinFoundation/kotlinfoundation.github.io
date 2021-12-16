@@ -39,6 +39,7 @@
 
 .navigation {
     display: none;
+    position: relative;
 }
 
 .arrow {
