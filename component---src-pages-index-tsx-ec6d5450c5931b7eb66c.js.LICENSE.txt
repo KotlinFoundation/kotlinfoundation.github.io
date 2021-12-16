@@ -1,0 +1,3 @@
+/*! For license information please see popup.js.LICENSE.txt */
+
+/*! For license information please see youtubePlayer.js.LICENSE.txt */
