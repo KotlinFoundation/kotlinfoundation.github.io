@@ -1,11 +1,11 @@
 import * as React from 'react';
 import cn from 'classnames';
+import { Link } from "gatsby";
 import Button from '@rescui/button';
 import {ArrowRightIcon} from '@rescui/icons';
 import Layout from '../../components/Layout';
 import Mascot404 from '../../images/404.png';
 import * as styles from './style.module.css';
-import {Link} from '../../components/Link';
 
 const NotFoundPage = () => {
     return (
