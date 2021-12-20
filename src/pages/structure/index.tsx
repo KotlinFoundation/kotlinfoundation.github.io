@@ -76,7 +76,7 @@ export default function StructurePage() {
                         { name: 'Isabella Fiterman', company: 'Google' },
                     ]}
                 >
-                    The Trademark committee is responsible for managing the proper use of the Kotlin trademark, which includes its general purpose use as outlined by the Trademark Usage Guidelines, as well as handling specific use-cases that may fall out of the norm. The trademark committee reports directly to the Foundation’s board of directors albeit mostly has autonomy on matters regarding trademarks.
+                    The Trademark Committee is responsible for managing the proper use of the Kotlin trademark, which includes its general purpose use as outlined by the Trademark Usage Guidelines, as well as handling specific use-cases that may fall out of the norm. The Trademark Committee reports directly to the Foundation’s board of directors, albeit mostly has autonomy on matters regarding trademarks.
 
                     <ul className={cn(styles.list, 'rs-text-2')}>
                         <li className={'ktl-offset-bottom-xs'}>
@@ -94,7 +94,7 @@ export default function StructurePage() {
                         { name: 'Egor Tolstoy', company: 'JetBrains' },
                     ]}
                 >
-                    The operating committee goal is to ensure the functioning of the Kotlin Foundation by executing different operational tasks. The trademark committee reports directly to the Foundation’s board of directors.
+                    The Operating Committee goal is to ensure the functioning of the Kotlin Foundation by executing different operational tasks. The Trademark Committee reports directly to the Foundation’s board of directors.
                 </Structure.Department>
             </Structure>
         </Layout>
