@@ -94,7 +94,7 @@ export default function StructurePage() {
                         { name: 'Egor Tolstoy', company: 'JetBrains' },
                     ]}
                 >
-                    The Operating Committee goal is to ensure the functioning of the Kotlin Foundation by executing different operational tasks. The Trademark Committee reports directly to the Foundation’s board of directors.
+                    The Operating Committee goal is to ensure the functioning of the Kotlin Foundation by executing different operational tasks. The Operating Committee reports directly to the Foundation’s board of directors.
                 </Structure.Department>
             </Structure>
         </Layout>
