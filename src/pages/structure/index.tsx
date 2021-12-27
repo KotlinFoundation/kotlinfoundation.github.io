@@ -61,7 +61,7 @@ export default function StructurePage() {
                             <LinkStandalone href="/guidelines/">Language Committee</LinkStandalone>
                         </li>
                         <li className={'ktl-offset-bottom-xs'}>
-                            <LinkStandalone href="/submitting-incompatible-changes/">Submitting Incompatible changed</LinkStandalone>
+                            <LinkStandalone href="/submitting-incompatible-changes/">Submitting Incompatible changes</LinkStandalone>
                         </li>
                     </ul>
                 </Structure.Department>
