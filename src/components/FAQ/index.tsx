@@ -7,11 +7,11 @@ function Question({className, ...props}: HTMLAttributes<HTMLDListElement>) {
 }
 
 function Answer({className, ...props}: HTMLAttributes<HTMLDListElement>) {
-    return <dl {...props} className={cn(style.answer, 'ktl-text-1 ktl-offset-bottom-l', className)}/>;
+    return <dd {...props} className={cn(style.answer, 'ktl-text-1 ktl-offset-bottom-l', className)}/>;
 }
 
 export function FAQ({ className, ...props }: HTMLAttributes<HTMLDListElement>) {
-    return <dd {...props} className={cn(style.faq, className)}/>;
+    return <dl {...props} className={cn(style.faq, className)}/>;
 }
 
 FAQ.Answer = Answer;

@@ -51,3 +51,23 @@ body {
     }
 }
 
+.codeInner {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    overflow: auto;
+    white-space: pre;
+    background: rgba(25,25,28,.05);
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.codeInner > code {
+    display: block;
+}
+
+/* reset "margin: 0 auto" centring and use flex, cause pre tag expand body size without px:
+    */
+:global(.ktl-container) {
+    box-sizing: border-box;
+}
