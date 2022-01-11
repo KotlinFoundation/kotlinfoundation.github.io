@@ -58,7 +58,7 @@ export default function StructurePage() {
 
                     <ul className={cn(styles.list, 'rs-text-2')}>
                         <li className={'ktl-offset-bottom-xs'}>
-                            <LinkStandalone href="/guidelines/">Language Committee</LinkStandalone>
+                            <LinkStandalone href="/language-committee-guidelines/">Language Committee</LinkStandalone>
                         </li>
                         <li className={'ktl-offset-bottom-xs'}>
                             <LinkStandalone href="/submitting-incompatible-changes/">Submitting Incompatible changes</LinkStandalone>
