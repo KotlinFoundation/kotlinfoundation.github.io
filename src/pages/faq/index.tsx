@@ -52,7 +52,7 @@ export default function FAQPage() {
 
                 <FAQ.Question>Can I license the Kotlin trademark?</FAQ.Question>
                 <FAQ.Answer>Yes. You are free to use the Kotlin trademark in accordance with our{' '}
-                    <Link href="https://kotlinlang.org/docs/guidelines.html">Kotlin brand usage guidelines</Link>.
+                    <Link href="/guidelines/">Kotlin brand usage guidelines</Link>.
                     Any use of the Trademark other than those described in the Guidelines must be approved in advance.
                     If you need a specific license, please{' '}
                     <Link href="https://surveys.jetbrains.com/s3/request-for-permission-of-kotlin-trademark-usage">refer to the request</Link> form

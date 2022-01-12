@@ -6,13 +6,13 @@ import {Link} from "../Link";
 import * as styles from "./footer.module.css";
 
 function FooterLink({...props}) {
-    return <Link {...props} external={false} target="_blank"/>
+    return <Link {...props} external={false}/>
 }
 
 const FOOTER_LINKS = [
-    { name: 'Submitting incompatible changes', url: 'https://kotlinlang.org/docs/submitting-incompatible-changes.html'},
-    { name: 'Language Committee guidelines', url: 'https://kotlinlang.org/docs/language-committee-guidelines.html'},
-    { name: 'Brand Usage', url: 'https://kotlinlang.org/docs/guidelines.html'},
+    { name: 'Submitting incompatible changes', url: '/submitting-incompatible-changes/'},
+    { name: 'Language Committee guidelines', url: '/language-committee-guidelines/'},
+    { name: 'Brand Usage', url: '/guidelines/'},
     { name: 'Kotlin website', url: 'http://kotlinlang.org'},
 ];
 

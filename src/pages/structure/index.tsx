@@ -58,10 +58,10 @@ export default function StructurePage() {
 
                     <ul className={cn(styles.list, 'rs-text-2')}>
                         <li className={'ktl-offset-bottom-xs'}>
-                            <LinkStandalone href="https://kotlinlang.org/docs/guidelines.html">Language Committee</LinkStandalone>
+                            <LinkStandalone href="/language-committee-guidelines/">Language Committee</LinkStandalone>
                         </li>
                         <li className={'ktl-offset-bottom-xs'}>
-                            <LinkStandalone href="https://kotlinlang.org/docs/submitting-incompatible-changes.html">Submitting Incompatible changed</LinkStandalone>
+                            <LinkStandalone href="/submitting-incompatible-changes/">Submitting Incompatible changes</LinkStandalone>
                         </li>
                     </ul>
                 </Structure.Department>
@@ -80,7 +80,7 @@ export default function StructurePage() {
 
                     <ul className={cn(styles.list, 'rs-text-2')}>
                         <li className={'ktl-offset-bottom-xs'}>
-                            <LinkStandalone href="https://kotlinlang.org/docs/guidelines.html">Kotlin Brand Usage guidelines</LinkStandalone>
+                            <LinkStandalone href="/guidelines/">Kotlin Brand Usage guidelines</LinkStandalone>
                         </li>
                     </ul>
                 </Structure.Department>
