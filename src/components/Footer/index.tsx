@@ -10,10 +10,10 @@ function FooterLink({...props}) {
 }
 
 const FOOTER_LINKS = [
-    { name: 'Submitting incompatible changes', url: '/submitting-incompatible-changes/'},
     { name: 'Language Committee guidelines', url: '/language-committee-guidelines/'},
+    { name: 'Submitting incompatible changes', url: '/submitting-incompatible-changes/'},
     { name: 'Brand Usage', url: '/guidelines/'},
-    { name: 'Kotlin website', url: 'http://kotlinlang.org'},
+    { name: 'Kotlin website', url: 'https://kotlinlang.org'},
 ];
 
 const FooterMarkup = () => (
