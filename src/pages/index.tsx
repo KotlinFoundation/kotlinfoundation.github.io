@@ -29,7 +29,7 @@ export default function MainPage() {
                         Promote and{'\u00A0'}advance the{'\u00A0'}development of{'\u00A0'}the{'\u00A0'}Kotlin programming language
                     </h1>
                     <div className="ktl-offset-top-xxl">
-                        <h2 className="ktl-h3">Сompanies Behind Kotlin</h2>
+                        <h2 className="ktl-h3">Companies Behind Kotlin</h2>
                         <ul className={cn(styles.companies, 'ktl-offset-top-l', 'ktl-offset-bottom-l')}>
                             {SPONSORS.map(({ name, image }) => (
                                 <li key={name} className={styles.company}>
