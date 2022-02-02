@@ -28,9 +28,7 @@ const shortcodes = {
     ul: props => <ul {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-top-s')}/>,
     ol: props => <ol {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-top-s')}/>,
     li: props => <li {...props} className={cn(props.className, 'ktl-offset-bottom-s')}/>,
-    pre: props => <div className={styles.code}>
-        <pre {...props} className={cn(props.className, 'ktl-text-2', styles.codeInner)}/>
-    </div>,
+    pre: props => <div><pre {...props} className={cn(props.className, 'ktl-text-2', styles.codeInner)}/></div>,
     a: props => <Link {...props}/>,
     img: props => <img {...props}/>,
 
