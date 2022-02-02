@@ -27,7 +27,7 @@ module.exports = {
       options: {
         extensions: [ '.md', '.mdx' ],
         defaultLayouts: {
-          default: require.resolve("./src/components/Layout/Markdown.tsx"),
+          default: require.resolve("./src/components/Layout/MarkdownLayout.tsx")
         },
       },
     },
