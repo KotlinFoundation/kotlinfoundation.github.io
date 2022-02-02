@@ -15,7 +15,7 @@ import { SEO } from "../Seo";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
 import {Link} from "../Link";
-import {StaticImage} from "gatsby-plugin-image";
+import {graphql} from "gatsby";
 
 const shortcodes = {
     p: props => <p {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-bottom-m')}/>,
@@ -55,6 +55,11 @@ export interface LayoutProps {
     outro?: null | ReactNode;
     whiteHeader?: boolean;
     withoutCta?: boolean;
+    pageContext?: undefined | {
+        frontmatter?: {
+            title?: string
+        }
+    }
 }
 
 export const Layout: React.FC<LayoutProps> = ({
@@ -64,33 +69,52 @@ export const Layout: React.FC<LayoutProps> = ({
     outro = null,
     whiteHeader = false,
     withoutCta = false,
-}) => (
-    <MDXProvider components={shortcodes}>
-        <SEO title={title} />
-        <Header whiteBg={whiteHeader} />
+    pageContext
+}) => {
+    const pageTitle = pageContext?.frontmatter?.title ?? title;
 
-        {intro}
+    return (
+        <MDXProvider components={shortcodes}>
+            <SEO title={pageTitle} />
+            <Header whiteBg={whiteHeader} />
 
-        <div className={styles.layout}>
-            <article className="ktl-container">
-                {children}
-            </article>
+            {intro}
 
-            {outro}
+            <div className={styles.layout}>
+                <article className="ktl-container">
+                    {children}
+                </article>
 
-            {!withoutCta && (
-                <CtaBlock
-                    topTitle={<>
-                        Have any questions? <br/>Contact us!
-                    </>}
-                    mainTitle={
-                        <a href={`mailto:${contactEmail}`} className={styles.ctaLink}>{contactEmail}</a>
-                    }
-                />
-            )}
-            <Footer/>
-        </div>
-    </MDXProvider>
-);
+                {outro}
+
+                {!withoutCta && (
+                    <CtaBlock
+                        topTitle={<>
+                            Have any questions? <br/>Contact us!
+                        </>}
+                        mainTitle={
+                            <a href={`mailto:${contactEmail}`} className={styles.ctaLink}>{contactEmail}</a>
+                        }
+                    />
+                )}
+                <Footer/>
+            </div>
+        </MDXProvider>
+    );
+};
+
+export const pageQuery = graphql`
+query {
+  allMdx {
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+`
 
 export default Layout;
