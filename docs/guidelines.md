@@ -1,3 +1,7 @@
+---
+title: "Kotlin brand usage guidelines"
+---
+
 # Kotlin brand usage guidelines
 
 One of the goals of The Kotlin Foundation is to protect the use of the Kotlin word and to make sure it is not misused. The following guidelines provide guidance on how to reference the Kotlin word trademark (“Trademark”) in an approved manner while ensuring the Trademark remains subject to protection under applicable laws around the world, and continues to serve as a source indicator for the Kotlin programming language and related offerings.  

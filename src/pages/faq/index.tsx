@@ -1,10 +1,12 @@
 import { Layout } from "../../components/Layout";
 import { FAQ } from "../../components/FAQ";
 import { Link } from "../../components/Link";
+import {ContactUs} from "../../components/ContactUs/ContactUs";
 
 export default function FAQPage() {
     return (
         <Layout title={'FAQ'}>
+            <div className={'ktl-container'}>
             <h1 className={'ktl-h1 ktl-offset-bottom-l ktl-offset-top-xl'}>FAQ</h1>
             <FAQ className={'ktl-offset-bottom-xxl'}>
                 <FAQ.Question>How can I contribute or provide feedback to Kotlin?</FAQ.Question>
@@ -70,6 +72,8 @@ export default function FAQPage() {
                     the <Link href="https://www.youtube.com/c/kotlin">official YouTube{'\u00A0'}channel</Link>.
                 </FAQ.Answer>
             </FAQ>
+            </div>
+            <ContactUs />
         </Layout>
     );
 }
