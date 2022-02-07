@@ -1,4 +1,4 @@
-import {useCallback, useMemo, useRef, useState} from 'react';
+import {FC, ReactNode, useCallback, useMemo, useRef, useState} from 'react';
 
 import {ArrowLeftIcon, ArrowRightIcon, RightIcon} from '@rescui/icons';
 
@@ -16,30 +16,15 @@ import '@jetbrains/kotlin-web-site-ui/dist/youtubePlayer.css';
 import * as styles from './index.module.css';
 import classnames from 'classnames';
 
-const videos = [
-    {
-        title: 'Kotlin Anniversary Documentary',
-        url: 'https://www.youtube.com/watch?v=uE-1oF9PyiY'
-    },
-    {
-        title: 'Kotlin 2021 Keynote',
-        url: 'https://www.youtube.com/watch?v=3uVUDsoE_5U'
-    },
-    {
-        title: 'Kotlin 2020 Keynote',
-        url: 'https://www.youtube.com/watch?v=pD58Dw17CLk'
-    },
-    {
-        title: 'Kotlin 2019 Keynote',
-        url: 'https://www.youtube.com/watch?v=0xKTM0A8gdI'
-    },
-    {
-        title: 'Kotlin 2018 Keynote',
-        url: 'https://www.youtube.com/watch?v=PsaFVLr8t4E&list=PLQ176FUIyIUbVvFMqDc2jhxS-t562uytr&index=2'
-    }
-];
+export interface VideoGalleryProps {
+    videos: {
+        title: string;
+        url: string;
+    }[],
+    children: ReactNode
+}
 
-export const VideoGallery = () => {
+export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
     let [currentId, setCurrentId] = useState('');
     const sliderRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -76,33 +61,36 @@ export const VideoGallery = () => {
     }, []);
 
     return (
-        <div className={styles.wrapper}>
-            <Slider ref={sliderRef} {...settings} className={'ktl-offset-top-l'}>
-                {videos.map((video, i) => (
-                    <div key={video.url} className={styles.item}>
-                        <div className={styles.media}>
-                            <img src={preview(video.url)} alt={video.title} className={styles.image}/>
-                            <Button icon={<RightIcon/>} className={styles.btn} onClick={() => clickHandle(i)}
-                                    mode="rock" size="l" theme="dark"/>
+        <>
+            <h2 className="ktl-h2 ktl-container ktl-offset-top-xxl">{children}</h2>
+            <div className={styles.wrapper}>
+                <Slider ref={sliderRef} {...settings} className={'ktl-offset-top-l'}>
+                    {videos.map((video, i) => (
+                        <div key={video.url} className={styles.item}>
+                            <div className={styles.media}>
+                                <img src={preview(video.url)} alt={video.title} className={styles.image}/>
+                                <Button icon={<RightIcon/>} className={styles.btn} onClick={() => clickHandle(i)}
+                                        mode="rock" size="l" theme="dark"/>
+                            </div>
+                            <span className={classnames(styles.title, 'ktl-text-2')}>{video.title}</span>
                         </div>
-                        <span className={classnames(styles.title, 'ktl-text-2')}>{video.title}</span>
-                    </div>
-                ))}
-            </Slider>
+                    ))}
+                </Slider>
 
-            <div className={classnames(styles.navigation, 'ktl-container')}>
-                <Button icon={<ArrowLeftIcon />} className={classnames(styles.arrow, styles.prev)} size='xs' mode='clear' onClick={handlePrev} />
-                <Button icon={<ArrowRightIcon />} className={classnames(styles.arrow, styles.next)} size='xs' mode='clear' onClick={handleNext} />
+                <div className={classnames(styles.navigation, 'ktl-container')}>
+                    <Button icon={<ArrowLeftIcon />} className={classnames(styles.arrow, styles.prev)} size='xs' mode='clear' onClick={handlePrev} />
+                    <Button icon={<ArrowRightIcon />} className={classnames(styles.arrow, styles.next)} size='xs' mode='clear' onClick={handleNext} />
+                </div>
+
+                <Popup
+                    isOpen={isOpen}
+                    onRequestClose={handleClick}
+                    showOuterCloseButton
+                >
+                    <YoutubePlayer id={currentId} autoplay className={styles.player}/>
+                </Popup>
             </div>
-
-            <Popup
-                isOpen={isOpen}
-                onRequestClose={handleClick}
-                showOuterCloseButton
-            >
-                <YoutubePlayer id={currentId} autoplay className={styles.player}/>
-            </Popup>
-        </div>
+        </>
     );
 };
 

@@ -1,0 +1,42 @@
+.introWrap {
+    background: #fff;
+}
+
+.introImage {
+    display: none;
+}
+
+.companies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.company {
+    margin-right: 94px;
+    margin-bottom: 16px;
+}
+
+.company:last-of-type {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: 1084px) {
+    .intro {
+        position: relative;
+    }
+
+    .introContent {
+        margin-right: 645px;
+    }
+
+    .introImage {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -45px;
+    }
+}
