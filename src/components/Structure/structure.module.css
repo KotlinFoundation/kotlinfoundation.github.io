@@ -33,6 +33,10 @@
     margin: 0;
 }
 
+.description {
+    padding-bottom: 0;
+}
+
 .title::before {
     background: rgba(39, 40, 44, 0.2);
     display: block;
