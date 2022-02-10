@@ -1,3 +1,9 @@
+/*!
+  Copyright (c) 2018 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
 /*! For license information please see ctaBlock.js.LICENSE.txt */
 
 /*! For license information please see popup.js.LICENSE.txt */
