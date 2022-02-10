@@ -27,7 +27,7 @@ module.exports = {
       options: {
         extensions: [ '.md', '.mdx' ],
         defaultLayouts: {
-          default: require.resolve("./src/components/Layout/MarkdownLayout.tsx")
+          default: require.resolve("./src/components/Layout/index.tsx")
         },
       },
     },
@@ -48,20 +48,6 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `docs`,
-        path: `${__dirname}/docs/`,
-      },
-      __key: "docs",
-    },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `${__dirname}/docs/`,
-      },
     },
     {
       resolve: "gatsby-plugin-react-svg",

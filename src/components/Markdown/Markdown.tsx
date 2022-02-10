@@ -1,12 +1,15 @@
-import {FC, ReactNode} from "react";
-import cn from 'classnames';
-import { MDXProvider} from "@mdx-js/react";
-
-import * as styles from "./markdownLayout.module.css";
+import cn from "classnames";
+import * as styles from "./markdown.module.css";
 
 import {Link} from "../Link";
-import {graphql} from "gatsby";
-import Layout from "./index";
+import { MDXProvider} from "@mdx-js/react";
+import {FAQ, Answer, Question} from "../FAQ";
+import {Structure} from "../Structure";
+import {Department} from "../Structure/Department";
+import {VideoGallery} from "../VideoGallery";
+import {IntroBanner} from "../IntroBanner";
+import {ProductHighlight, ProductHighlightItem} from "../ProductHighlight";
+import {NotFound} from "../NotFound";
 
 const shortcodes = {
     p: props => <p {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-bottom-m')}/>,
@@ -22,7 +25,16 @@ const shortcodes = {
     pre: props => <div><pre {...props} className={cn(props.className, 'ktl-text-2', styles.codeInner)}/></div>,
     a: props => <Link {...props}/>,
     img: props => <img {...props}/>,
-
+    FAQ,
+    Question,
+    Answer,
+    Structure,
+    Department,
+    VideoGallery,
+    IntroBanner,
+    ProductHighlight,
+    ProductHighlightItem,
+    NotFound
     // blockquote: props => <blockquote {...props} className={cn(props.className, 'ktl-')}/>,
     // strong: props => <strong {...props} className={cn(props.className, 'ktl-')}/>,
     // hr: props => <hr {...props} className={cn(props.className, 'ktl-')}/>,
@@ -35,48 +47,10 @@ const shortcodes = {
     //  inlineCode: props => <inlineCode {...props} className={cn(props.className, 'ktl-')}/>,
 };
 
-export interface MarkdownLayoutProps {
-    children: null | ReactNode;
-    pageContext?: undefined | {
-        frontmatter?: {
-            title?: string
-        }
-    }
-}
+const Markdown = ({children}) => (
+    <MDXProvider components={shortcodes}>
+        {children}
+    </MDXProvider>
+);
 
-export const MarkdownLayout: FC<MarkdownLayoutProps> = ({
-      children,
-      pageContext
-  }) => {
-    const pageTitle = pageContext?.frontmatter?.title;
-
-    return (
-        <Layout title={pageTitle}>
-            <MDXProvider components={shortcodes}>
-                <div className={'ktl-container ktl-container-fluid'}>
-                    <div className={'ktl-row'}>
-                        <div className={'ktl-col ktl-col-sm-12 ktl-col-md-offset-2 ktl-col-md-8 ktl-offset-bottom-xl'}>
-                            {children}
-                        </div>
-                    </div>
-                </div>
-            </MDXProvider>
-        </Layout>
-    );
-};
-
-export const pageQuery = graphql`
-query {
-  allMdx {
-    edges {
-      node {
-        frontmatter {
-          title
-        }
-      }
-    }
-  }
-}
-`
-
-export default MarkdownLayout;
+export default Markdown;

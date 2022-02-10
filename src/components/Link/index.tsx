@@ -40,8 +40,10 @@ export function Link({ className, hardness = null, standalone = false, external 
                 target: '_blank',
                 rel: 'noopener noreferrer',
             }
-            : {},
-        [ isExternal ],
+            : {
+                to: href
+            },
+        [ isExternal, href ],
     );
 
     const linkClassName = textCn('rs-link', {

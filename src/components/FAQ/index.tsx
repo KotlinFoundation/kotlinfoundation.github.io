@@ -1,18 +1,15 @@
+import {FC, HTMLAttributes} from "react";
 import cn from "classnames";
 import * as style from "./faq.module.css";
-import {HTMLAttributes} from "react";
 
-function Question({className, ...props}: HTMLAttributes<HTMLDListElement>) {
-    return <dt {...props} className={cn(style.question, 'ktl-h3 ktl-offset-bottom-s', className)}/>;
-}
+export const Question: FC<HTMLAttributes<HTMLDListElement>> = ({className, children, ...props}) => (
+    <dt {...props} className={cn(style.question, 'ktl-h3 ktl-offset-bottom-s', className)}>{children}</dt>
+);
 
-function Answer({className, ...props}: HTMLAttributes<HTMLDListElement>) {
-    return <dd {...props} className={cn(style.answer, 'ktl-text-1 ktl-offset-bottom-l', className)}/>;
-}
+export const Answer: FC<HTMLAttributes<HTMLDListElement>> = ({className, children, ...props}) => (
+    <dd {...props} className={cn(style.answer, 'ktl-text-1 ktl-offset-bottom-l', className)}>{children}</dd>
+);
 
-export function FAQ({ className, ...props }: HTMLAttributes<HTMLDListElement>) {
-    return <dl {...props} className={cn(style.faq, className)}/>;
-}
-
-FAQ.Answer = Answer;
-FAQ.Question = Question;
+export const FAQ: FC<HTMLAttributes<HTMLDListElement>> = ({ className, children, ...props }) => (
+    <dl {...props} className={cn(style.faq, className)}>{children}</dl>
+);
