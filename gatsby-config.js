@@ -8,12 +8,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "GOOGLE_TRACK_ID",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
