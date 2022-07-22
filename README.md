@@ -6,7 +6,7 @@
 - [Deploy Changes](#deploy-changes)
 - [How to Run the Site Locally](#how-to-run-the-site-locally)
 - [Set up Your Development Environment](#set-up-your-development-environment)
-- [How to Deal with MDX Files](#how-to-deal-with-mdx-files)
+- [How to Deal with MDX](#how-to-deal-with-mdx-files)
 
 ## How to Make Changes on a Page
 Basically, pages are written with Markdown markup. You can find all pages in the "src/pages" directory.
@@ -19,7 +19,7 @@ For these, an extended version of the Markdown is used - MDX.
 MDX allows you to use JSX in a markdown content. You can find more details in the [MDX documentation](https://mdxjs.com/).
 
 ### FAQ Editing
-- find the `faq.mdx` page in the pages folder (`src/pages`);
+- find the `faq.md` page in the pages folder (`src/pages`);
 - Write a question using the `Question` tag as a wrapper;
 - Write an answer using the `Answer` tag as a wrapper;
 - Pay attention:
@@ -27,7 +27,7 @@ MDX allows you to use JSX in a markdown content. You can find more details in th
   - indent one line before and after the markdown text inside the answer tag to get the markdown istead of plain text. More details are [here](#how-to-deal-with-mdx-files).
 
 ### Structure Editing
-- find the `structure.mdx` page in the pages folder (`src/pages`);
+- find the `structure.md` page in the pages folder (`src/pages`);
 - each department of organization described as a React Component that receives members and description as following:
   ```jsx
   <Department name="A name of department" members={[{name: "a person name", company: "a company name"}]}>
@@ -92,13 +92,13 @@ Then open http://localhost:8082/ in a browser.
 Make changes in a page in `src/pages`.
 Saved changes will live reload in the browser.
 
-## How to Deal with MDX Files
+## How to Deal with MDX
 MDX lets you write JSX inside a markdown file.
 Just create a React component inside the `components` directory, register it in the Markdown component, located it `src/components/Markdown` folder.
 Then you can call the component in a mdx file.
 Try not to complicate MDX files with components, and encapsulate logic inside components itself.
 To pass a Markdown as a content of React Component, it is necessary to indent one line before and after the markdown text:
-```mdx
+```md
 regular *markdown*
 
 <YouComponent>
