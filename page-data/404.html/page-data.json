@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-404-mdx",
-    "path": "/404.html",
-    "result": {"pageContext":{"frontmatter":{"title":"404 Not Found","layout":"narrow"}}},
-    "staticQueryHashes": ["1271460761","3542200954","3764592887"]}
+{"componentChunkName":"component---src-pages-404-md","path":"/404.html","result":{"pageContext":{"frontmatter":{"title":"404 Not Found","layout":"narrow"}}},"staticQueryHashes":["1271460761","3542200954","3764592887"]}

@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-faq-mdx",
-    "path": "/faq/",
-    "result": {"pageContext":{"frontmatter":{"title":"FAQ","layout":"regular","contactUs":true}}},
-    "staticQueryHashes": ["1271460761","3542200954","3764592887"]}
+{"componentChunkName":"component---src-pages-faq-md","path":"/faq/","result":{"pageContext":{"frontmatter":{"title":"FAQ","layout":"regular","contactUs":true}}},"staticQueryHashes":["1271460761","3542200954","3764592887"]}
