@@ -15,7 +15,7 @@ export const Department = ({ hero = false, name, members, children }) => {
 
             <ul className={style.members}>{persons.map((person, i) => (
                 <li key={i} className={style.member}>
-                    <Person { ...(hero ? { size: 'xl', mascot: i+1 } : {})} {...person}/>
+                    <Person { ...(hero ? { size: 'xl' } : {})} {...person}/>
                 </li>
             ))}</ul>
 

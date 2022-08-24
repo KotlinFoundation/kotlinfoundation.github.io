@@ -1,6 +1,5 @@
 import * as styles from "./notFound.module.css";
 import Mascot404 from "../../images/404.png";
-import cn from "classnames";
 import {Link} from "gatsby";
 import Button from "@rescui/button";
 import {ArrowRightIcon} from "@rescui/icons";
