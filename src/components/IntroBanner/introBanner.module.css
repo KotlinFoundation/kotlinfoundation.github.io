@@ -2,7 +2,7 @@
     background: #fff;
 }
 
-.introImage {
+.introPicture {
     display: none;
 }
 
@@ -24,19 +24,33 @@
     margin-bottom: 0;
 }
 
-@media (min-width: 1084px) {
+@media (min-width: 1080px) {
     .intro {
         position: relative;
     }
 
     .introContent {
+        margin-right: 439px;
+    }
+
+    .introPicture {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .introImage {
+        width: 460px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .introContent {
         margin-right: 645px;
     }
 
     .introImage {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: -45px;
+        width: 732px;
     }
 }
