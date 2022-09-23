@@ -3,7 +3,6 @@ import cn from "classnames";
 import introWebp from "../../images/intro/intro.webp";
 import intro2xWebp from "../../images/intro/intro@2x.webp";
 import introPng from "../../images/intro/intro.png";
-import intro2xPng from "../../images/intro/intro@2x.png";
 import jbLogoSvg from "../../images/companies/jb.svg";
 import googleLogoSvg from "../../images/companies/google.svg";
 
@@ -33,16 +32,9 @@ export const IntroBanner: FC = ({children}) => (
                     </ul>
                 </div>
             </div>
-            <picture className={styles.introImage}>
-                <source type="image/webp" srcSet={`${introWebp} 798w, ${intro2xWebp} 1596w`} sizes="798px"/>
-                <img
-                    width="798"
-                    height="841"
-                    sizes="798px"
-                    src={introPng}
-                    srcSet={`${introPng} 798w, ${intro2xPng} 1596w`}
-                    alt="Funny Kotlin Constructor"
-                />
+            <picture className={styles.introPicture}>
+                <source type="image/webp" srcSet={`${introWebp} 1x, ${intro2xWebp} 2x`} />
+                <img src={introPng} alt="Funny Kotlin Constructor" className={styles.introImage}/>
             </picture>
         </div>
     </section>
