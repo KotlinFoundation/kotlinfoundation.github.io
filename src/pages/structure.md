@@ -16,6 +16,7 @@ The Kotlin Foundation is a nonprofit nonstock corporation registered in the stat
         { name: 'Roman Elizarov', company: 'JetBrains' },
         { name: 'Grace Kloba', company: 'Google' },
         { name: 'Jeffrey van Gogh', company: 'Google' },
+        { name: 'Werner Dietl', company: 'Independent Director' }
     ]}
 >
 
@@ -59,6 +60,7 @@ The Foundation appoints the Lead Language Designer, but does not directly make d
     members={[
         { name: 'Roman Elizarov', company: 'JetBrains' },
         { name: 'Jeffrey van Gogh', company: 'Google' },
+        { name: 'Werner Dietl', company: 'Independent Director' }
     ]}
 >
 
