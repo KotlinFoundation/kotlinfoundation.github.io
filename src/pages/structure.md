@@ -15,7 +15,7 @@ The Kotlin Foundation is a nonprofit nonstock corporation registered in the stat
         { name: 'Maxim Shafirov', company: 'JetBrains' },
         { name: 'Roman Elizarov', company: 'JetBrains' },
         { name: 'Grace Kloba', company: 'Google' },
-        { name: 'Anwar Ghuloum', company: 'Google' },
+        { name: 'Jeffrey van Gogh', company: 'Google' },
     ]}
 >
 
