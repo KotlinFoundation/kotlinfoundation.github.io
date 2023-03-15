@@ -5,7 +5,7 @@ import {useTextStyles} from "@rescui/typography";
 import {useSiteURL} from "../../utlis/hooks";
 
 import * as styles from "./link.module.css";
-import {ILink} from "@rescui/typography/lib/create-text-cn";
+import {LinkParams} from "@rescui/typography/lib/create-text-cn";
 
 function checkExternal (link, base = null) {
     const url = new URL(link , base);
@@ -14,7 +14,7 @@ function checkExternal (link, base = null) {
     return !(url.hostname === '' || url.hostname === baseUrl.hostname);
 }
 
-type IProps =  ILink & {
+type IProps =  LinkParams & {
     standalone?: boolean,
 };
 
@@ -48,7 +48,7 @@ export function Link({ className, hardness = null, standalone = false, external 
 
     const linkClassName = textCn('rs-link', {
         external: externalDecorator,
-        mode: standalone ?  'standalone' : 'text',
+        mode: standalone ?  'standalone' : 'rock',
     });
 
     const linkHardnessClassName = textCn('rs-link', {
