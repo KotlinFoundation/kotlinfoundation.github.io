@@ -1,6 +1,6 @@
 import {FC} from "react";
 import * as styles from "./contactUs.module.css";
-import { CtaBlock } from "@jetbrains/kotlin-web-site-ui/dist/ctaBlock";
+import CtaBlock from "@jetbrains/kotlin-web-site-ui/out/components/cta-block";
 
 const contactEmail = 'hello@kotlinfoundation.org';
 

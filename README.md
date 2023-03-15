@@ -103,7 +103,7 @@ regular *markdown*
 
 <YouComponent>
 
-A markdown text that will passed inside the YouComponent
+A markdown text that will passed inside the YouComponent \{ text inside curly brackets \}
 
 </YouComponent>
 ```

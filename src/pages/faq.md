@@ -4,6 +4,8 @@ layout: "regular"
 contactUs: true
 ---
 
+export {Layout as default} from '../components/Layout';
+
 # FAQ
 
 <FAQ>

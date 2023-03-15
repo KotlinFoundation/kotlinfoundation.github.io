@@ -13,16 +13,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "node_modules/@jetbrains/kotlin-web-site-ui/dist/svg/kotlin_64.svg",
+        icon: "node_modules/@jetbrains/kotlin-web-site-ui/out/svg/kotlin_64.svg",
       },
     },
     {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [ '.md' ],
-        defaultLayouts: {
-          default: require.resolve("./src/components/Layout/index.tsx")
-        },
       },
     },
     "gatsby-plugin-sharp",
