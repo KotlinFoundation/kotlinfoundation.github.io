@@ -1,4 +1,5 @@
 @import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
+@import "./section-shadow.module.css";
 
 .section {
     padding-bottom: 72px;
@@ -6,16 +7,8 @@
 }
 
 .shadow {
-    position: relative;
+    composes: shadow from "./section-shadow.module.css";
     margin: 0 0 25px;
-}
-
-.shadow::before {
-    display: block;
-    position: absolute;
-    content: url("./section-shadow.svg");
-    width: 200px;
-    height: 200px;
 }
 
 .image {

@@ -21,6 +21,7 @@
 
 
     .shadow {
+        composes: shadow from "../section-shadow.module.css";
         display: block;
         position: absolute;
         top: 50%;
@@ -30,11 +31,9 @@
     }
 
     .shadow::before {
-        display: block;
-        content: '';
-        position: absolute;
-        background:  url("../section-shadow.svg") center center no-repeat;
-        background-size: 400px;
+        opacity: 1;
+        filter: blur(25px);
+
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);

@@ -18,9 +18,8 @@
     }
 
     .shadow {
+        composes: shadow from "../section-shadow.module.css";
         display: block;
-        content: '';
-
         position: absolute;
         top: -316px;
         right: -54px;
@@ -29,11 +28,6 @@
     }
 
     .shadow::before {
-        display: block;
-        content: '';
-        position: absolute;
-        background: url("./images/shadow.svg") center center no-repeat;
-        background-size: 480px;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
