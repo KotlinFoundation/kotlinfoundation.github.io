@@ -52,11 +52,17 @@
  * Sometimes I think Pasha is trolling me! 😅*/
 @media (--ktl-tm) and (--ktl-ts-min) {
     .title {
-        letter-spacing: -0.003em;
+        letter-spacing: -1px;
     }
 }
 
-@media (--ktl-ts-min) or (--ktl-ms) {
+@media (--ktl-ts-min) {
+    .title-br {
+        display: none;
+    }
+}
+
+@media (--ktl-ms) {
     .title-br {
         display: none;
     }
