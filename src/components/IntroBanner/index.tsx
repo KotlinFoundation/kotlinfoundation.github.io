@@ -8,7 +8,7 @@ import {KtlLayout} from "../KtlLayout";
 
 import introJPG from "./intro/intro.jpg";
 
-import jbLogoSvg from "./companies/jb.svg";
+import jbLogoSvg from "../../images/jb.svg";
 import googleLogoSvg from "./companies/google.svg";
 
 import * as styles from "./introBanner.module.css";

@@ -1,6 +1,7 @@
 @import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
 
 :root {
+    --ktf-bg-dark: #27282c;
     --ktf-para-spacing: 12px;
     --ktf-fuild-spacing-xl: 72px;
 }
