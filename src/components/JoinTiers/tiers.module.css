@@ -6,7 +6,6 @@
 
     padding-top: var(--ktf-fuild-spacing-xl);
     padding-bottom: var(--ktf-fuild-spacing-xl);
-    margin-bottom: var(--ktf-fuild-spacing-xl);
 
     border-bottom: 1px solid rgba(39, 40, 44, 0.2);
 }

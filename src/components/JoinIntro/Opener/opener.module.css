@@ -1,8 +1,6 @@
 @import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
 
 .section {
-    --into-section-image: url("./section.png");
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +22,11 @@
     .section {
         padding-top: 16px;
     }
+}
+
+.image::before {
+    left: -48px;
+    top: -24px;
 }
 
 .description {

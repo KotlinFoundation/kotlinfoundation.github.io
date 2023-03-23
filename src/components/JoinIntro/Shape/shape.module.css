@@ -1,6 +1,14 @@
 .section {
-    --into-section-image: url("./images/section.png");
     padding-top: 72px;
+}
+
+.image::before {
+    top: -9px;
+    left: -24px;
+}
+
+.shadow {
+    display: none;
 }
 
 @media (--ktl-tm-min) {
@@ -9,7 +17,7 @@
         width: 600px;
     }
 
-    .wrap::before {
+    .shadow {
         display: block;
         content: '';
 
@@ -18,11 +26,23 @@
         right: -54px;
         transform: translate(100%);
         margin: 0;
+    }
 
-        background: url("./images/section-large.png") center center no-repeat;
-        background-size: 400px;
-        height: 400px;
-        width: 400px;
+    .shadow::before {
+        display: block;
+        content: '';
+        position: absolute;
+        background: url("./images/shadow.svg") center center no-repeat;
+        background-size: 480px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 480px;
+        width: 480px;
+    }
+
+    .image {
+        position: relative;
     }
 
     .titleBr {
@@ -31,13 +51,13 @@
 }
 
 @media (--ktl-ds) {
-    .wrap::before {
+    .shadow {
         right: 0;
     }
 }
 
 @media (--ktl-tl) {
-    .wrap:before {
+    .shadow {
         right: 56px;
     }
 }

@@ -1,36 +1,35 @@
 @import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
 
 .section {
-    padding-top: 72px;
     padding-bottom: 72px;
+    padding-top: 0;
 }
 
-.section::before {
+.shadow {
+    position: relative;
+    margin: 0 0 25px;
+}
+
+.shadow::before {
     display: block;
+    position: absolute;
+    content: url("./section-shadow.svg");
+    width: 200px;
+    height: 200px;
+}
 
-    background: var(--into-section-image) center center no-repeat;
-    background-size: 100%;
-
-    margin-bottom: 25px;
-
+.image {
+    position: relative;
     height: 152px;
     width: 152px;
 }
 
-.image-always {
-    padding-top: 0;
-}
-
-.image-always::before {
-    content: '';
-}
-
-@media (--ktl-tm) {
-    .section {
-        padding-top: 0;
+@media (--ktl-tm-min) {
+    .section:not(.show-image) {
+        padding-top: 72px;
     }
 
-    .section::before {
-        content: '';
+    .section:not(.show-image) .shadow {
+        display: none;
     }
 }

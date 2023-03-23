@@ -1,5 +1,10 @@
-.section {
-    --into-section-image: url("./images/section.png");
+.image::before {
+    top: -9px;
+    left: -24px;
+}
+
+.shadow {
+    display: none;
 }
 
 @media (--ktl-tm-min) {
@@ -14,20 +19,31 @@
         width: 600px;
     }
 
-    .wrap::before {
-        display: block;
-        content: '';
 
+    .shadow {
+        display: block;
         position: absolute;
         top: 50%;
         left: 0;
         transform: translate(-100%, -50%);
-        margin-left: -136px;
+        margin: 0 0 0 -136px;
+    }
 
-        background: url("./images/section-large.png") center center no-repeat;
-        background-size: 328px;
-        height: 328px;
-        width: 328px;
+    .shadow::before {
+        display: block;
+        content: '';
+        position: absolute;
+        background:  url("../section-shadow.svg") center center no-repeat;
+        background-size: 400px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 400px;
+        width: 400px;
+    }
+
+    .image {
+        position: relative;
     }
 }
 

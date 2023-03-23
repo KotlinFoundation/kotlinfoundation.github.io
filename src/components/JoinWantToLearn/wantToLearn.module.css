@@ -1,19 +1,40 @@
 @import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
 
+.outter {
+    padding-top: var(--ktf-fuild-spacing-xl);
+    overflow: hidden;
+}
+
 .sildes {
     display: flex;
     align-items: center;
     margin-bottom: var(--ktf-fuild-spacing-xl);
 }
 
-.sildes::before {
+.image {
+    position: relative;
+    max-width: 416px;
+    width: 100%;
+}
+
+.image::before {
+    display: block;
+    content: url("./shadow.svg");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 456px   ;
+    width: 456px;
+}
+
+.image::after {
     display: block;
     content: '';
+    position: relative;
     background: url("./slides.png") center center no-repeat;
     background-size: 416px 276px;
     height: 276px;
-    max-width: 416px;
-    width: 100%;
 }
 
 .text {
@@ -22,7 +43,7 @@
 }
 
 @media (--ktl-tl-min) {
-    .sildes::before {
+    .image {
         margin: 0 34px;
     }
 }
@@ -33,7 +54,7 @@
         align-items: center;
     }
 
-    .sildes::before {
+    .image {
         margin-bottom: 48px;
     }
 

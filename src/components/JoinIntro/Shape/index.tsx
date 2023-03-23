@@ -5,9 +5,15 @@ import cn from "classnames";
 import * as list from "../highlights.module.css";
 import * as styles from "./shape.module.css";
 
+import imgSection from './images/section.png';
+import imgSectionLarge from "./images/section-large.png";
+
 export function ShapeSection() {
-    return <IntroSection className={styles.section}>
+    return <IntroSection className={styles.section} imageClassName={styles.image} image={imgSection}>
         <div className={styles.wrap}>
+            <p className={cn(styles.shadow)} role="none">
+                <img className={styles.image} src={imgSectionLarge} alt="" height="400" width="400"/>
+            </p>
             <h2 className={cn("ktf-h2 ktf-h2_style_rainbow")}>Shape the future<br className={styles.titleBr}/>of the
                 ecosystem</h2>
             <ul className={list.highlights}>
