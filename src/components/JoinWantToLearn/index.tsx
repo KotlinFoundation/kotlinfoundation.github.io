@@ -1,5 +1,6 @@
 import cn from "classnames";
 import Button from "@rescui/button";
+import '@jetbrains/kotlin-web-site-ui/out/components/layout/index.css';
 
 import * as styles from "./wantToLearn.module.css";
 

@@ -1,4 +1,5 @@
 import cn from "classnames";
+import '@jetbrains/kotlin-web-site-ui/out/components/layout/index.css';
 
 import {Tier} from "./Tier";
 import * as styles from "./tiers.module.css";

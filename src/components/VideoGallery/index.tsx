@@ -1,4 +1,5 @@
 import {FC, ReactNode, useCallback, useMemo, useRef, useState} from 'react';
+import cn from 'classnames';
 
 import {ArrowLeftIcon, ArrowRightIcon, RightIcon} from '@rescui/icons';
 
@@ -14,7 +15,6 @@ import YoutubePlayer from '@jetbrains/kotlin-web-site-ui/out/components/youtube-
 import '@jetbrains/kotlin-web-site-ui/out/components/youtube-player/index.css';
 
 import * as styles from './index.module.css';
-import classnames from 'classnames';
 
 export interface VideoGalleryProps {
     videos: {
@@ -62,7 +62,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
 
     return (
         <>
-            <h2 className="ktl-h2 ktl-container ktl-offset-top-xxl">{children}</h2>
+            <h2 className="ktl-h2 ktl-layout ktl-layout--center ktl-offset-top-xxl">{children}</h2>
             <div className={styles.wrapper}>
                 <Slider ref={sliderRef} {...settings} className={'ktl-offset-top-l'}>
                     {videos.map((video, i) => (
@@ -72,14 +72,14 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
                                 <Button icon={<RightIcon/>} className={styles.btn} onClick={() => clickHandle(i)}
                                         mode="rock" size="l" theme="dark"/>
                             </div>
-                            <span className={classnames(styles.title, 'ktl-text-2')}>{video.title}</span>
+                            <span className={cn(styles.title, 'ktl-text-2')}>{video.title}</span>
                         </div>
                     ))}
                 </Slider>
 
-                <div className={classnames(styles.navigation, 'ktl-container')}>
-                    <Button icon={<ArrowLeftIcon />} className={classnames(styles.arrow, styles.prev)} size='xs' mode='clear' onClick={handlePrev} />
-                    <Button icon={<ArrowRightIcon />} className={classnames(styles.arrow, styles.next)} size='xs' mode='clear' onClick={handleNext} />
+                <div className={cn(styles.navigation, 'ktl-layout ktl-layout--center')}>
+                    <Button icon={<ArrowLeftIcon />} className={cn(styles.arrow, styles.prev)} size='xs' mode='clear' onClick={handlePrev} />
+                    <Button icon={<ArrowRightIcon />} className={cn(styles.arrow, styles.next)} size='xs' mode='clear' onClick={handleNext} />
                 </div>
 
                 <Popup

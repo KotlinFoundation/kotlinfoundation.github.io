@@ -5,35 +5,38 @@ whiteHeader: true
 contactUs: true
 ---
 export {Layout as default} from '../components/Layout';
+import {KtlLayout} from "../components/KtlLayout";
 import trademarkIcon from "../images/highlights/trademark.svg";
 import designIcon from "../images/highlights/design.svg";
 import controlIcon from "../images/highlights/control.svg";
 
 <IntroBanner>Promote and&nbsp;advance the&nbsp;development of&nbsp;the&nbsp;Kotlin programming language</IntroBanner>
 
-<ProductHighlight title="Key Goals" link={{title: 'Foundation Structure →', href: '/structure/'}}>
-    <ProductHighlightItem icon={trademarkIcon}>
-        Preserve the Kotlin trademarks
-    </ProductHighlightItem>
-    <ProductHighlightItem icon={designIcon}>
-        Appoint the Lead Language Designer
-    </ProductHighlightItem>
-    <ProductHighlightItem icon={controlIcon}>
-        Control incompatible changes to&nbsp;the&nbsp;language
-    </ProductHighlightItem>
-</ProductHighlight>
+<KtlLayout>
+    <ProductHighlight title="Key Goals" link={{title: 'Foundation Structure →', href: '/structure/'}}>
+        <ProductHighlightItem icon={trademarkIcon}>
+            Preserve the Kotlin trademarks
+        </ProductHighlightItem>
+        <ProductHighlightItem icon={designIcon}>
+            Appoint the Lead Language Designer
+        </ProductHighlightItem>
+        <ProductHighlightItem icon={controlIcon}>
+            Control incompatible changes to&nbsp;the&nbsp;language
+        </ProductHighlightItem>
+    </ProductHighlight>
 
-<ProductHighlight title="Kotlin Now">
-    <ProductHighlightItem value="5M">
-        developers used Kotlin over the last 12 months
-    </ProductHighlightItem>
-    <ProductHighlightItem value="250K">
-        new repositories were created on GitHub in 2021
-    </ProductHighlightItem>
-    <ProductHighlightItem value="190">
-        universities all over the world are teaching Kotlin
-    </ProductHighlightItem>
-</ProductHighlight>
+    <ProductHighlight title="Kotlin Now">
+        <ProductHighlightItem value="5M">
+            developers used Kotlin over the last 12 months
+        </ProductHighlightItem>
+        <ProductHighlightItem value="250K">
+            new repositories were created on GitHub in 2021
+        </ProductHighlightItem>
+        <ProductHighlightItem value="190">
+            universities all over the world are teaching Kotlin
+        </ProductHighlightItem>
+    </ProductHighlight>
+</KtlLayout>
 
 <VideoGallery videos={
   [

@@ -1,8 +1,9 @@
-import * as styles from "./productHighlight.module.css";
 import cn from "classnames";
 import {FC, ReactNode} from "react";
 import Button from "@rescui/button";
 import {Link} from "gatsby";
+
+import * as styles from "./productHighlight.module.css";
 
 export interface ProductHighlightProps {
     title: string;
@@ -13,8 +14,8 @@ export interface ProductHighlightProps {
     };
 }
 export const ProductHighlight: FC<ProductHighlightProps> = ({title, children, link}) => (
-    <section className={cn('ktl-offset-top-xxl', 'ktl-container')}>
-        <div className={cn(styles.productHighlight)}>
+    <section className={'ktl-offset-top-xxl'}>
+        <div className={styles.productHighlight}>
             <h2 className="ktl-h2 ktl-offset-bottom-l">{title}</h2>
             <ul className={cn(styles.items, 'ktl-text-1')}>
                 {children}
