@@ -44,7 +44,19 @@
     .image {
         position: relative;
     }
+}
 
+/* The current style requires an additional 2 pixels to be added to “Shape the future
+ * of the ecosystem” text so that it can fit in a single line for TM layout.
+ *
+ * Sometimes I think Pasha is trolling me! 😅*/
+@media (--ktl-tm) and (--ktl-ts-min) {
+    .title {
+        letter-spacing: -0.003em;
+    }
+}
+
+@media (--ktl-ts-min) or (--ktl-ms) {
     .titleBr {
         display: none;
     }

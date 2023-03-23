@@ -14,7 +14,7 @@ export function ShapeSection() {
             <p className={cn(styles.shadow)} role="none">
                 <img className={styles.image} src={imgSectionLarge} alt="" height="400" width="400"/>
             </p>
-            <h2 className={cn("ktf-h2 ktf-h2_style_rainbow")}>Shape the future<br className={styles.titleBr}/>of the
+            <h2 className={cn("ktf-h2 ktf-h2_style_rainbow", styles.title)}>Shape the future <br className={styles.titleBr}/>of the
                 ecosystem</h2>
             <ul className={list.highlights}>
                 <li className={cn("ktl-text-2", list.highlight, styles.sustain)}>Help sustain the Kotlin ecosystem by

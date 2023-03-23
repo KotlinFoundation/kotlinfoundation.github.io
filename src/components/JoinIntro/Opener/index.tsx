@@ -17,7 +17,7 @@ export function OpenerSection() {
             <p className={cn("ktl-text-2 ktf-para", styles.description)}>Shape the future of the language ecosystem and
                 create a brand connection between Kotlin and your company.</p>
             <p className={styles.contact}>
-                <span className={styles.mobile}>Want to apply? Contact<br/>{contactLink}</span>
+                <span className={styles.mobile}>Want to apply? Contact <br/>{contactLink}</span>
                 <span className={styles.desktop}>Contact {contactLink} to apply.</span>
             </p>
         </IntroSection>
