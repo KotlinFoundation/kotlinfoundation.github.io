@@ -11,10 +11,18 @@
     }
 }
 
-.ktf-h2 {
+.ktf-h1 {
+    font-size: 43px;
+    line-height: 49px;
     font-weight: 600;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.ktf-h2 {
     font-size: 35px;
     line-height: 42px;
+    font-weight: 600;
     margin: 0;
 }
 

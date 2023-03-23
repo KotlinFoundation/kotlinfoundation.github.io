@@ -11846,6 +11846,13 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==
 
+the-platform@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/the-platform/-/the-platform-0.10.1.tgz#a704cfdd5ee1c5b7123c7ea6885bebbcf8b08e76"
+  integrity sha512-aeoAQh20/dQPiF7bqG9A4Q5kyLs/qfJAvADEXmMAgqLdzcWgtmRfTPUUvCB4sz3a9xKO5vu7AY6jaA+efE/zfQ==
+  dependencies:
+    json2mq "^0.2.0"
+
 through@^2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"

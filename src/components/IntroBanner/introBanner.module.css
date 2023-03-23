@@ -1,56 +1,129 @@
-.introWrap {
+.section {
     background: #fff;
 }
 
-.introPicture {
-    display: none;
+.intro {
+    display: grid;
+    grid-template:
+            "title image" 1fr
+            "companies image";
+}
+
+@media (--ktl-tl) {
+    .intro {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (--ktl-mm) {
+    .title-desktop {
+        display: none;
+    }
+}
+
+@media (--ktl-mm-min) {
+    .title-mobile {
+        display: none;
+    }
 }
 
 .companies {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    list-style: none;
-    padding: 0;
+
+    grid-area: companies;
+    order: 1;
 }
 
 .company {
-    margin-right: 94px;
-    margin-bottom: 16px;
+    font-size: 0.001em;
+    line-height: 0.001em;
 }
 
-.company:last-of-type {
-    margin-right: 0;
-    margin-bottom: 0;
+.companies-label, .company {
+    padding: 0;
+    margin: 0 24px 0 0;
 }
 
-@media (min-width: 1080px) {
-    .intro {
-        position: relative;
+@media (--ktl-ts-min) {
+    .companies-label, .company {
+        display: flex;
+        align-items: center;
     }
 
-    .introContent {
-        margin-right: 439px;
-    }
-
-    .introPicture {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .introImage {
-        width: 460px;
+    .companies-label::after, .company::after {
+        display: inline-block;
+        content: '';
+        background: rgba(25, 25, 28, 0.2);
+        margin-left: 24px;
+        height: 48px;
+        width: 1px;
     }
 }
 
-@media (min-width: 1280px) {
-    .introContent {
-        margin-right: 645px;
+@media (--ktl-ts) {
+    .companies-label {
+        flex-grow: 1;
+    }
+    .company:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.company--google > .company-image {
+    height: 56px;
+}
+
+.company--jetbrains > .company-image {
+    height: 72px;
+}
+
+@media (--ktl-ts) {
+    .company--google > .company-image {
+        height: 32px;
     }
 
-    .introImage {
-        width: 732px;
+    .company--jetbrains > .company-image {
+        height: 48px;
+    }
+}
+
+@media (--ktl-ms) {
+    .companies-label, .company {
+        padding: 0;
+        margin: 0;
+    }
+
+    .company--google > .company-image {
+        margin: 0 12px 0 8px;
+    }
+}
+
+.picture {
+    grid-area: image;
+}
+
+.image {
+    height: 400px;
+    width: 400px;
+}
+
+@media (--ktl-ds-min) {
+    .image {
+        margin: 0 50px;
+    }
+}
+
+@media (--ktl-tl) {
+    .image {
+        margin: 48px 0;
+    }
+}
+
+@media (--ktl-mm) {
+    .image {
+        margin: 24px 0;
+        height: 272px;
+        width: 272px;
     }
 }

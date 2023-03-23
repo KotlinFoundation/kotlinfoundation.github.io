@@ -3,6 +3,7 @@ import * as styles from "./markdown.module.css";
 
 import {Link} from "../Link";
 import { MDXProvider} from "@mdx-js/react";
+import {KtlLayout} from "../KtlLayout";
 import {FAQ, Answer, Question} from "../FAQ";
 import {Structure} from "../Structure";
 import {Department} from "../Structure/Department";
@@ -25,6 +26,7 @@ const shortcodes = {
     pre: props => <div><pre {...props} className={cn(props.className, 'ktl-text-2', styles.codeInner)}/></div>,
     a: props => <Link {...props}/>,
     img: props => <img {...props}/>,
+    KtlLayout,
     FAQ,
     Question,
     Answer,
