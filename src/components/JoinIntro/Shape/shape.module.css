@@ -57,7 +57,7 @@
 }
 
 @media (--ktl-ts-min) or (--ktl-ms) {
-    .titleBr {
+    .title-br {
         display: none;
     }
 }
