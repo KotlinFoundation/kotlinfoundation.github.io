@@ -1,10 +1,11 @@
 import {FC, ReactNode} from "react";
 
-import "@rescui/typography/lib/font-inter.css";
+import "@rescui/typography/lib/font-jb-sans-auto.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/cta-block/index.css";
 
+import "./typography.css";
 import * as styles from "./layout.module.css";
 
 import { SEO } from "../Seo";

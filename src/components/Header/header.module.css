@@ -1,3 +1,7 @@
+:root {
+    --ktf-header-height: 48px;
+}
+
 .header {
     box-sizing: border-box;
     display: flex;
@@ -60,6 +64,10 @@
 }
 
 @media (min-width: 768px) {
+    :root {
+        --ktf-header-height: 64px;
+    }
+
     .header {
         padding: 0 32px;
         height: 64px;

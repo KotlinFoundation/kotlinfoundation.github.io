@@ -1,0 +1,36 @@
+.tier {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    box-shadow: 5px 2px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 32px 24px;
+
+    width: 376px;
+    min-height: 432px;
+}
+
+@media (--ktl-tl) {
+    .tier {
+        width: 372px;
+    }
+}
+
+@media (--ktl-mm) {
+    .tier {
+        width: 328px;
+        padding: 24px 16px;
+    }
+}
+
+@media (--ktl-ms) {
+    .tier {
+        width: 272px;
+    }
+}
+
+.content {
+    flex-grow: 1;
+}

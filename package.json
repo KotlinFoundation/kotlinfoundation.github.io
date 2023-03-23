@@ -13,6 +13,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@csstools/postcss-global-data": "^1.0.3",
     "@jetbrains/kotlin-web-site-ui": "^4.5.0",
     "@rescui/button": "^0.8.0",
     "@rescui/checkbox": "^0.4.10",
@@ -23,6 +24,7 @@
     "@rescui/typography": "^0.8.3",
     "@rescui/ui-contexts": "^0.3.5",
     "classnames": "^2.3.2",
+    "postcss-custom-media": "^9.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

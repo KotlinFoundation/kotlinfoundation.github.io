@@ -1,0 +1,36 @@
+@import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
+
+.section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.section::before {
+    display: block;
+
+    background: var(--into-section-image) center center no-repeat;
+    background-size: 100%;
+
+    margin-bottom: 25px;
+
+    height: 152px;
+    width: 152px;
+}
+
+.image-always {
+    padding-top: 0;
+}
+
+.image-always::before {
+    content: '';
+}
+
+@media (--ktl-tm) {
+    .section {
+        padding-top: 0;
+    }
+
+    .section::before {
+        content: '';
+    }
+}

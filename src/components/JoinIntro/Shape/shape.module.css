@@ -1,0 +1,51 @@
+.section {
+    --into-section-image: url("./images/section.png");
+    padding-top: 72px;
+}
+
+@media (--ktl-tm-min) {
+    .wrap {
+        position: relative;
+        width: 600px;
+    }
+
+    .wrap::before {
+        display: block;
+        content: '';
+
+        position: absolute;
+        top: -316px;
+        right: -54px;
+        transform: translate(100%);
+        margin: 0;
+
+        background: url("./images/section-large.png") center center no-repeat;
+        background-size: 400px;
+        height: 400px;
+        width: 400px;
+    }
+
+    .titleBr {
+        display: none;
+    }
+}
+
+@media (--ktl-ds) {
+    .wrap::before {
+        right: 0;
+    }
+}
+
+@media (--ktl-tl) {
+    .wrap:before {
+        right: 56px;
+    }
+}
+
+.sustain {
+    --into-highlight-image: url("./images/sustain.svg");
+}
+
+.contribute {
+    --into-highlight-image: url("./images/contribute.svg");
+}

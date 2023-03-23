@@ -1,0 +1,13 @@
+.intro {
+    background: none white top right no-repeat;
+    overflow: hidden;
+
+    padding-bottom: 72px;
+}
+
+@media (--ktl-tm-min) {
+    .intro {
+        background-image: url("./bg.svg");
+    }
+}
+

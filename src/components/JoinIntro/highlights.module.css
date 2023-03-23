@@ -1,0 +1,30 @@
+.highlights {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    max-width: 608px;
+}
+
+.highlight {
+    margin-top: 32px;
+}
+
+@media (--ktl-mm-min) {
+    .highlight {
+        display: flex;
+    }
+
+    .highlight::before {
+        --into-highlight-image-size: 48px;
+
+        display: inline-block;
+        content: '';
+        background: var(--into-highlight-image) center center no-repeat;
+        background-size: var(--into-highlight-image-size);
+        margin-right: 24px;
+        flex: 0 0 var(--into-highlight-image-size);
+        height: var(--into-highlight-image-size);
+        width: var(--into-highlight-image-size);
+    }
+}

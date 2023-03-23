@@ -1,0 +1,32 @@
+@import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
+
+:root {
+    --ktf-para-spacing: 12px;
+    --ktf-fuild-spacing-xl: 72px;
+}
+
+@media (--ktl-ms) {
+    :root {
+        --ktf-fuild-spacing-xl: 48px;
+    }
+}
+
+.ktf-h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    margin: 0;
+}
+
+.ktf-h2_style_rainbow {
+    background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #ED495B 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.ktf-para {
+    margin-top: var(--ktf-para-spacing);
+    margin-bottom: var(--ktf-para-spacing);
+}
