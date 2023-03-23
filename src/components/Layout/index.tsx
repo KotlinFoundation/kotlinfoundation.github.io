@@ -17,7 +17,6 @@ import {ContactUs} from "../ContactUs/ContactUs";
 
 enum LayoutSize {
     Narrow = 'narrow',
-    Regular = 'regular',
     Wide = 'wide'
 }
 
@@ -42,11 +41,9 @@ export const Layout: FC<LayoutProps> = ({
     const whiteHeader = pageContext?.frontmatter?.whiteHeader ?? false;
     const contactBlock = pageContext?.frontmatter?.contactUs ?? false;
 
-    let LayoutComponent = NarrowLayout;
+    let LayoutComponent = RegularLayout;
 
-    if (layout === LayoutSize.Regular) {
-        LayoutComponent = RegularLayout;
-    } else if (layout === LayoutSize.Wide) {
+    if (layout === LayoutSize.Wide) {
         LayoutComponent = WideLayout;
     }
 
@@ -64,20 +61,8 @@ export const Layout: FC<LayoutProps> = ({
     );
 };
 
-const NarrowLayout = ({children}) => (
-    <div className={'ktl-container ktl-container-fluid'}>
-        <div className={'ktl-row'}>
-            <div className={'ktl-col ktl-col-sm-12 ktl-col-md-offset-2 ktl-col-md-8 ktl-offset-bottom-xl'}>
-                <Markdown>
-                    {children}
-                </Markdown>
-            </div>
-        </div>
-    </div>
-);
-
 const RegularLayout = ({children}) => (
-    <div className={'ktl-container ktl-offset-bottom-xxl'}>
+    <div className={'ktl-layout ktl-layout--center ktl-offset-bottom-xl'}>
         <Markdown>
             {children}
         </Markdown>

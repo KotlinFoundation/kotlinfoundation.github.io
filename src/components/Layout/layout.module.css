@@ -27,19 +27,8 @@ body {
     flex-direction: column;
 }
 
-.layout > :global(.ktl-container) {
-    flex-grow: 1;
-    width: 100%;
-}
-
 @media (max-width: 767px) {
     :global body.overlay-locked {
         overflow: hidden;
     }
-}
-
-/* reset "margin: 0 auto" centring and use flex, cause pre tag expand body size without px:
-    */
-:global(.ktl-container) {
-    box-sizing: border-box;
 }

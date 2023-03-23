@@ -10,7 +10,7 @@ import trademarkIcon from "../images/highlights/trademark.svg";
 import designIcon from "../images/highlights/design.svg";
 import controlIcon from "../images/highlights/control.svg";
 
-<IntroBanner>Promote and&nbsp;advance the&nbsp;development of&nbsp;the&nbsp;Kotlin programming language</IntroBanner>
+<IntroBanner>Promote and advance the development of the Kotlin programming language</IntroBanner>
 
 <KtlLayout>
     <ProductHighlight title="Key Goals" link={{title: 'Foundation Structure →', href: '/structure/'}}>

@@ -1,6 +1,5 @@
 ---
 title: "FAQ"
-layout: "regular"
 contactUs: true
 ---
 

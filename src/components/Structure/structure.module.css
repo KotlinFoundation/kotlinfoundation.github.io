@@ -92,6 +92,11 @@
     margin-right: 16px;
     margin-bottom: 16px;
 }
+@media(--ktl-ds-min) {
+    .hero > .members > .member {
+        margin-right: 11px;
+    }
+}
 
 .hero > .members > .member:last-of-type {
     margin-right: 0;

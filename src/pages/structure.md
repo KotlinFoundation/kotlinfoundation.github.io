@@ -1,6 +1,5 @@
 ---
 title: "Structure"
-layout: "regular"
 ---
 
 export {Layout as default} from '../components/Layout';
