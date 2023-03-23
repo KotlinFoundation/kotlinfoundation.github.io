@@ -7,20 +7,13 @@
     align-items: flex-start;
 
     box-sizing: border-box;
-    min-height: calc(100vh - var(--ktf-header-height));
     padding-top: 72px;
     padding-bottom: 0;
 }
 
-@media (--ktl-mm-min) {
+@media (--ktl-tm-min) {
     .section {
         min-height: min(660px, calc(100vh - var(--ktf-header-height)));
-    }
-}
-
-@media (--ktl-ms) {
-    .section {
-        padding-top: 16px;
     }
 }
 
