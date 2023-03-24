@@ -16,7 +16,7 @@
     padding: var(--ktl-box-block-l) 0;
 }
 
-.menuWhiteBg {
+.menu--white-bg {
     background: #fff;
 }
 
@@ -33,12 +33,12 @@
     cursor: pointer
 }
 
-.linkActive {
+.link--active {
     background: rgba(39, 40, 44, 1);
     color: #fff;
 }
 
-.linkActive:hover {
+.link--active:hover {
     background: rgba(39, 40, 44, 1);
     color: #fff;
 }

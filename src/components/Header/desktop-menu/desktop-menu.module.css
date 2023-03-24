@@ -4,11 +4,11 @@
     display: none;
 }
 
-.menuItem:not(:last-child) {
+.menu-item:not(:last-child) {
     margin-right: var(--ktl-box-section-l);
 }
 
-.menuLink {
+.menu-link {
     text-decoration: none;
     color: rgba(39, 40, 44, 0.7);
     display: flex;
@@ -17,15 +17,15 @@
     position: relative;
 }
 
-.menuLink:hover {
+.menu-link:hover {
     color: rgba(39, 40, 44, 1);
 }
 
-.menuLinkActive {
+.menu-link--active {
     color: rgba(39, 40, 44, 1);
 }
 
-.menuLinkActive::after {
+.menu-link--active::after {
     content: '';
     position: absolute;
     bottom: 0;

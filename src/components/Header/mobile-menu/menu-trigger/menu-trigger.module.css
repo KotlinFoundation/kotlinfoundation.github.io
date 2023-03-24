@@ -1,6 +1,6 @@
 @import "../../../Layout/spacing.css";
 
-.menuTrigger {
+.menu-trigger {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 768px) {
-    .menuTrigger {
+    .menu-trigger {
         display: none;
     }
 }

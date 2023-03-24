@@ -1,6 +1,6 @@
 @import "../Layout/spacing.css";
 
-.notFound {
+.not-found {
     margin: 0 auto var(--ktl-box-page-s);
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: 1024px) {
-    .notFound {
+    .not-found {
         margin: var(--ktl-box-page-s) auto;
         flex-direction: row;
     }

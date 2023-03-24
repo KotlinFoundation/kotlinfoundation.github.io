@@ -1,4 +1,4 @@
-.codeInner {
+.code-inner {
     display: inline-block;
     box-sizing: border-box;
     padding: var(--ktl-box-block-l);
@@ -9,6 +9,6 @@
     max-width: 100%;
 }
 
-.codeInner > code {
+.code-inner > code {
     display: block;
 }

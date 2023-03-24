@@ -18,7 +18,7 @@
     border-bottom: 1px solid rgba(39, 40, 44, 0.2);
 }
 
-.headerWhite {
+.header--white {
     background: #fff;
 }
 
@@ -39,19 +39,19 @@
     text-decoration: none;
 }
 
-.logoImage {
+.logo-image {
     margin-right: var(--ktl-box-block-m);
     display: flex;
 }
 
-.logoText {
+.logo-text {
     color: #27282C;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
 }
 
-.headerLink {
+.header-link {
     display: none;
 }
 
@@ -65,25 +65,25 @@
         height: 64px;
     }
 
-    .logoText {
+    .logo-text {
         font-size: 20px;
         line-height: 20px;
     }
 
-    .logoImage {
+    .logo-image {
         margin-right: var(--ktl-box-block-l);
     }
 }
 
 @media (min-width: 1024px) {
-    .headerLink {
+    .header-link {
         display: block;
         color: rgba(39, 40, 44, 0.7);
         text-decoration: none;
         font-size: 16px;
     }
 
-    .headerLink:hover {
+    .header-link:hover {
         color: rgba(39, 40, 44, 1);
     }
 }

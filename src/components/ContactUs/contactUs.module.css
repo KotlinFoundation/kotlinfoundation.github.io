@@ -1,14 +1,14 @@
-.ctaLink {
+.cta-link {
     color: #fff;
     text-decoration: none;
 }
 
-.ctaLink:hover {
+.cta-link:hover {
     border-bottom: 2px solid currentColor;
 }
 
 @media (max-width: 550px) {
-    .ctaLink {
+    .cta-link {
         font-size: 24px;
         line-height: 32px;
     }
