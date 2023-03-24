@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 .section {
     background: #fff;
 }
@@ -42,7 +44,7 @@
 
 .companies-label, .company {
     padding: 0;
-    margin: 0 24px 0 0;
+    margin: 0 var(--ktl-box-section-s) 0 0;
 }
 
 @media (--ktl-ts-min) {
@@ -55,7 +57,7 @@
         display: inline-block;
         content: '';
         background: rgba(25, 25, 28, 0.2);
-        margin-left: 24px;
+        margin-left: var(--ktl-box-section-s);
         height: 48px;
         width: 1px;
     }
@@ -95,7 +97,7 @@
     }
 
     .company--google > .company-image {
-        margin: 0 12px 0 8px;
+        margin: 0 0 0 var(--ktl-box-block-m);
     }
 }
 
@@ -110,19 +112,19 @@
 
 @media (--ktl-ds-min) {
     .image {
-        margin: 0 50px;
+        margin: 0 var(--ktl-box-section-m);
     }
 }
 
 @media (--ktl-tl) {
     .image {
-        margin: 48px 0;
+        margin: var(--ktl-box-section-m) 0;
     }
 }
 
 @media (--ktl-mm) {
     .image {
-        margin: 24px 0;
+        margin: var(--ktl-box-section-s) 0;
         height: 272px;
         width: 272px;
     }

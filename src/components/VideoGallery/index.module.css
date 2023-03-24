@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 .wrapper {
     margin-bottom: 36px;
 }
@@ -7,7 +9,7 @@
 }
 
 .item {
-    padding: 0 8px;
+    padding: 0 var(--ktl-box-block-m);
 }
 
 .media {
@@ -63,7 +65,7 @@
 
 @media (min-width: 768px) {
     .wrapper {
-        margin-bottom: 96px;
+        margin-bottom: var(--ktl-box-page-l);
     }
 
     .media {
@@ -72,12 +74,12 @@
     }
 
     .player {
-        width: calc(100% - 64px);
+        width: calc(100% - var(--ktl-box-page-s));
     }
 
     .title {
         display: block;
-        margin-top: 24px;
+        margin-top: var(--ktl-box-section-s);
     }
 
     .navigation {

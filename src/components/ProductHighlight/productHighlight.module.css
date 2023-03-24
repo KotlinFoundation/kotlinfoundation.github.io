@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 .items {
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +9,7 @@
 }
 
 .item {
-    margin-bottom: 32px;
+    margin-bottom: var(--ktl-box-section-l);
 }
 
 .icon {
@@ -17,7 +19,7 @@
 }
 
 .desc {
-    margin-top: 16px;
+    margin-top: var(--ktl-box-block-l);
 }
 
 .number {
@@ -35,7 +37,7 @@
 @media (min-width: 640px) {
     .item {
         max-width: 210px;
-        margin-right: 32px;
+        margin-right: var(--ktl-box-section-l);
     }
 
     .withNumber {
@@ -47,7 +49,7 @@
     }
 
     .desc {
-        margin-top: 32px;
+        margin-top: var(--ktl-box-section-l);
     }
 }
 
@@ -67,7 +69,7 @@
     }
 
     .appendix {
-        padding-left: calc(25% + 16px);
+        padding-left: calc(25% + var(--ktl-box-block-l));
     }
 }
 

@@ -12,7 +12,7 @@
 
 @media (--ktl-tm-min) {
     .item {
-        margin-left: 16px;
+        margin-left: var(--ktl-box-block-l);
     }
 
     .item:first-of-type {
@@ -22,7 +22,7 @@
 
 @media (--ktl-tm) {
     .item {
-        margin-top: 16px;
+        margin-top: var(--ktl-box-block-l);
     }
 
     .item:first-of-type {

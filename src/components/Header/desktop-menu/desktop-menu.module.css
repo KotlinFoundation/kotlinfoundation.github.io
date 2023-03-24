@@ -1,9 +1,11 @@
+@import "../../Layout/spacing.css";
+
 .menu {
     display: none;
 }
 
 .menuItem:not(:last-child) {
-    margin-right: 32px;
+    margin-right: var(--ktl-box-section-l);
 }
 
 .menuLink {
@@ -37,6 +39,6 @@
         display: flex;
         padding: 0;
         list-style-type: none;
-        margin: 0 32px 0 0;
+        margin: 0 var(--ktl-box-section-l) 0 0;
     }
 }

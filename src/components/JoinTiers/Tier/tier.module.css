@@ -1,3 +1,5 @@
+@import "../../Layout/spacing.css";
+
 .tier {
     display: flex;
     flex-direction: column;
@@ -6,7 +8,7 @@
     background: #fff;
     box-shadow: 5px 2px 24px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 32px 24px;
+    padding: var(--ktl-box-section-l) var(--ktl-box-section-s);
 
     width: 376px;
     min-height: 432px;
@@ -21,7 +23,7 @@
 @media (--ktl-mm) {
     .tier {
         width: 328px;
-        padding: 24px 16px;
+        padding: var(--ktl-box-section-s) var(--ktl-box-block-l);
     }
 }
 

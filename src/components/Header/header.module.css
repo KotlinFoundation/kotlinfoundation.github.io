@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 :root {
     --ktf-header-height: 48px;
 }
@@ -8,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     height: 48px;
-    padding: 0 16px;
+    padding: 0 var(--ktl-box-block-l);
     position: sticky;
     top: 0;
     background: #F4F4F4;
@@ -33,12 +35,12 @@
 .logo {
     display: flex;
     align-items: center;
-    margin-right: 32px;
+    margin-right: var(--ktl-box-section-l);
     text-decoration: none;
 }
 
 .logoImage {
-    margin-right: 8px;
+    margin-right: var(--ktl-box-block-m);
     display: flex;
 }
 
@@ -53,23 +55,13 @@
     display: none;
 }
 
-.button {
-    padding: 6px 16px;
-}
-
-@media (min-width: 768px) {
-    .mobileBr {
-        display: none;
-    }
-}
-
 @media (min-width: 768px) {
     :root {
         --ktf-header-height: 64px;
     }
 
     .header {
-        padding: 0 32px;
+        padding: 0 var(--ktl-box-section-l);
         height: 64px;
     }
 
@@ -79,7 +71,7 @@
     }
 
     .logoImage {
-        margin-right: 16px;
+        margin-right: var(--ktl-box-block-l);
     }
 }
 

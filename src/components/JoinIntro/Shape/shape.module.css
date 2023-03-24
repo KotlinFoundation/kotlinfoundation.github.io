@@ -1,5 +1,7 @@
+@import "../../Layout/spacing.css";
+
 .section {
-    padding-top: 72px;
+    padding-top: var(--ktl-box-page-m);
 }
 
 .image::before {

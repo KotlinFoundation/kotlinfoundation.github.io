@@ -1,8 +1,10 @@
+@import "../Layout/spacing.css";
+
 .intro {
     background: none white top right no-repeat;
     overflow: hidden;
 
-    padding-bottom: 72px;
+    padding-bottom: var(--ktl-box-page-m);
 }
 
 @media (--ktl-tm-min) {

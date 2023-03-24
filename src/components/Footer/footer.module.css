@@ -1,11 +1,13 @@
+@import "../Layout/spacing.css";
+
 .outer {
     background: var(--ktf-bg-dark);
-    padding: 48px 0;
+    padding: var(--ktl-box-section-m) 0;
 }
 
 .footer {
     display: flex;
-    margin-top: -48px;
+    margin-top: calc(-1 * var(--ktl-box-section-m));
 }
 
 .nav {
@@ -15,7 +17,7 @@
 }
 
 .nav, .support {
-    margin-top: 48px;
+    margin-top: var(--ktl-box-section-m);
 }
 
 @media (--ktl-tl-min) {
@@ -54,7 +56,7 @@
     }
 
     .nav-item {
-        margin-top: 16px;
+        margin-top: var(--ktl-box-block-l);
     }
 
     .nav-item:first-of-type {
@@ -76,6 +78,6 @@
 }
 
 .support-label {
-    margin-right: 8px;
+    margin-right: var(--ktl-box-block-m);
     text-align: right;
 }

@@ -1,3 +1,5 @@
+@import "../../../Layout/spacing.css";
+
 .menuTrigger {
     display: flex;
     align-items: center;
@@ -5,7 +7,7 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
-    margin-left: 16px;
+    margin-left: var(--ktl-box-block-l);
 }
 
 @media (min-width: 768px) {

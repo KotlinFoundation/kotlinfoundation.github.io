@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 .highlights {
     list-style: none;
     margin: 0;
@@ -7,7 +9,7 @@
 }
 
 .highlight {
-    margin-top: 32px;
+    margin-top: var(--ktl-box-section-l);
 }
 
 @media (--ktl-mm-min) {
@@ -22,7 +24,7 @@
         content: '';
         background: var(--into-highlight-image) center center no-repeat;
         background-size: var(--into-highlight-image-size);
-        margin-right: 24px;
+        margin-right: var(--ktl-box-section-s);
         flex: 0 0 var(--into-highlight-image-size);
         height: var(--into-highlight-image-size);
         width: var(--into-highlight-image-size);

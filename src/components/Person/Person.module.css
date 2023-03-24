@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 @media (min-width: 560px) {
     .person {
         display: flex;
@@ -12,7 +14,7 @@
 
 .photoWrap {
     position: relative;
-    margin-right: 16px;
+    margin-right: var(--ktl-box-block-l);
 }
 
 .photo {

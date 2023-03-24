@@ -1,4 +1,5 @@
 @import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
+@import "../Layout/spacing.css";
 
 .outter {
     padding-top: var(--ktf-fuild-spacing-xl);
@@ -41,13 +42,13 @@
 }
 
 .text {
-    margin-top: 12px;
-    margin-bottom: 48px;
+    margin-top: var(--ktl-box-block-l);
+    margin-bottom: var(--ktl-box-section-m);
 }
 
 @media (--ktl-tl-min) {
     .image {
-        margin: 0 34px;
+        margin: 0 var(--ktl-box-section-l);
     }
 }
 
@@ -58,7 +59,7 @@
     }
 
     .image {
-        margin-bottom: 48px;
+        margin-bottom: var(--ktl-box-section-m);
     }
 
     .section {
@@ -74,7 +75,7 @@
     }
 
     .text {
-        margin-top: 24px;
+        margin-top: var(--ktl-box-section-s);
     }
 
 }

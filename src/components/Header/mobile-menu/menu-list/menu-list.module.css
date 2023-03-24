@@ -1,3 +1,5 @@
+@import "../../../Layout/spacing.css";
+
 .wrapper {
     position: fixed;
     top: 48px;
@@ -11,7 +13,7 @@
     background: #F4F4F4;
     margin: 0;
     list-style-type: none;
-    padding: 16px 0;
+    padding: var(--ktl-box-block-l) 0;
 }
 
 .menuWhiteBg {
@@ -20,7 +22,7 @@
 
 .link {
     display: block;
-    padding: 8px 16px;
+    padding: var(--ktl-box-block-m) var(--ktl-box-block-l);
     line-height: 24px;
     text-decoration: none;
     color: rgba(39, 40, 44, 1);
