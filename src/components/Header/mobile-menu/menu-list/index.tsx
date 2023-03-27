@@ -1,17 +1,18 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import cn from "classnames";
 import { MenuItem } from "../../types";
 import * as style from "./menu-list.module.css";
 
 type Props = {
+  className?: null;
   menuItems: MenuItem[];
-  whiteBg: boolean;
   toggleMenu: () => void;
 };
 
 export const MenuList: React.FC<Props> = ({
+  className = null,
   menuItems,
-  whiteBg,
   toggleMenu,
 }) => {
   const handleWrapperClick = React.useCallback((e) => {
@@ -20,15 +21,15 @@ export const MenuList: React.FC<Props> = ({
   }, []);
 
   return (
-    <nav className={style.wrapper} onClick={handleWrapperClick}>
-      <ul className={`${style.menu} ${whiteBg && style.menuWhiteBg}`}>
+    <nav className={cn(style.wrapper, className)} onClick={handleWrapperClick}>
+      <ul className={`${style.menu}`}>
         <li>
           <Link
             className={style.link}
             activeClassName={style.linkActive}
             to="/"
           >
-            Overview
+            Home
           </Link>
         </li>
 

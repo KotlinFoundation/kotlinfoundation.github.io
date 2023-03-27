@@ -1,7 +1,6 @@
 ---
 title: "Kotlin Foundation"
 layout: "wide"
-whiteHeader: true
 contactUs: true
 ---
 export {Layout as default} from '../components/Layout';

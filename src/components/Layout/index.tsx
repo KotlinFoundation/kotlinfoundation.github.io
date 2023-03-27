@@ -21,12 +21,12 @@ enum LayoutSize {
 }
 
 export interface LayoutProps {
+    path: string;
     children: null | ReactNode;
     pageContext?: undefined | {
         frontmatter?: {
             title?: string;
             layout?: LayoutSize;
-            whiteHeader?: boolean;
             contactUs?: boolean;
         }
     }
@@ -34,11 +34,11 @@ export interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = ({
     children,
-    pageContext
+    pageContext,
+    path,
 }) => {
     const pageTitle = pageContext?.frontmatter?.title;
     const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
-    const whiteHeader = pageContext?.frontmatter?.whiteHeader ?? false;
     const contactBlock = pageContext?.frontmatter?.contactUs ?? false;
 
     let LayoutComponent = RegularLayout;
@@ -50,7 +50,7 @@ export const Layout: FC<LayoutProps> = ({
     return (
         <>
             <SEO title={pageTitle} />
-            <Header whiteBg={whiteHeader} />
+            <Header path={path}/>
 
             <div className={styles.layout}>
                 <LayoutComponent>{children}</LayoutComponent>
@@ -81,7 +81,6 @@ query {
         frontmatter {
           title
           layout
-          whiteHeader
           contactUs
         }
       }

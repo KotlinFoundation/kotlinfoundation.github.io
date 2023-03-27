@@ -4,6 +4,7 @@
 .outter {
     padding-top: var(--ktf-fuild-spacing-xl);
     overflow: hidden;
+    background: #F4F4F4;
 }
 
 .sildes {

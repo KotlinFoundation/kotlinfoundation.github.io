@@ -1,3 +1,7 @@
+.outer {
+    background: #F4F4F4;
+}
+
 .tiers {
     display: flex;
     flex-wrap: wrap;

@@ -1,7 +1,6 @@
 ---
 title: "Join to Kotlin Foundation"
 layout: "wide"
-whiteHeader: true
 contactUs: true
 ---
 

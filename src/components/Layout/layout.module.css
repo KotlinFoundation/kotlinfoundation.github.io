@@ -22,7 +22,7 @@ body {
 }
 
 .layout {
-    background: #F4F4F4;
+    background: #fff;
     display: flex;
     flex-direction: column;
 }

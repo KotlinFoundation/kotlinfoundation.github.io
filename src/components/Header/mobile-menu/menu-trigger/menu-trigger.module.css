@@ -7,11 +7,4 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
-    margin-left: var(--ktl-box-block-l);
-}
-
-@media (min-width: 768px) {
-    .menu-trigger {
-        display: none;
-    }
 }

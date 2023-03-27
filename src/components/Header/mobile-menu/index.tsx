@@ -5,27 +5,29 @@ import { MenuItem } from "../types";
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
 
 type Props = {
+  className?: string;
+  classNameMenu?: string;
   toggleMenu: () => void;
   isMenuOpened: boolean;
   menuItems: MenuItem[];
-  whiteBg: boolean;
 };
 
 export const MobileMenu: React.FC<Props> = ({
+  className=null,
+  classNameMenu=null,
   toggleMenu,
   isMenuOpened,
   menuItems,
-  whiteBg,
 }) => {
   return (
     <>
-      <MenuTrigger toggleMenu={toggleMenu} isMenuOpened={isMenuOpened} />
+      <MenuTrigger className={className} toggleMenu={toggleMenu} isMenuOpened={isMenuOpened} />
       {isMenuOpened && (
         <>
           <RemoveScrollBar />
           <MenuList
+            className={classNameMenu}
             menuItems={menuItems}
-            whiteBg={whiteBg}
             toggleMenu={toggleMenu}
           />
         </>

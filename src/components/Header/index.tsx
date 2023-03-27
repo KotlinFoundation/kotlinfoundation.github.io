@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Link as GatsbyLink } from "gatsby";
-import Button from "@rescui/button";
+import cn from "classnames";
 import { MobileMenu } from "./mobile-menu";
 import { DesktopMenu } from "./desktop-menu";
 import KotlinLogo from "../../images/kotlin-logo.inline.svg";
-import * as style from "./header.module.css";
 
 import { Link } from "../Link";
+import * as style from "./header.module.css";
 
 const menuItems = [
   {
@@ -17,49 +17,58 @@ const menuItems = [
     url: "/faq/",
     title: "FAQ",
   },
+  {
+    url: "/grants/",
+    title: "Grants",
+  },
+  {
+    url: "/news/",
+    title: "News",
+  },
+  {
+    url: "/join/",
+    title: "Join Foundation",
+  },
 ];
 
-type Props = {
-  whiteBg: boolean;
-};
-
-export const Header: React.FC<Props> = ({ whiteBg }) => {
-  const [isMenuOpened, setIsMenuOpened] = React.useState<boolean>(false);
+export function Header({ path }) {
+  const [isMenuOpened, setIsMenuOpened] = React.useState(false);
 
   const toggleMenu = React.useCallback(() => {
     setIsMenuOpened(!isMenuOpened);
   }, [isMenuOpened]);
 
   return (
-    <div className={`${style.header} ${whiteBg && style.headerWhite}`}>
-      <div className={style.nav}>
-        <GatsbyLink className={style.logo} to="/">
-          <div className={style.logoImage}>
-            <KotlinLogo />
+      <div className={style.header}>
+        <div className={style.nav}>
+          <GatsbyLink className={style.logo} to="/">
+            <div className={style.logoImage}>
+              <KotlinLogo/>
+            </div>
+            <div className={cn('ktl-h3', style.logoText)}>
+              Kotlin Foundation
+            </div>
+          </GatsbyLink>
+          <div className={style.headerLink}>
+            <Link href="https://kotlinlang.org/" standalone external hardness="average">
+              kotlinlang.org
+            </Link>
           </div>
-          <div className={style.logoText}>
-            Kotlin <br className={style.mobileBr} /> Foundation
-          </div>
-        </GatsbyLink>
-        <div className={style.headerLink}>
-          <Link href="https://kotlinlang.org/" standalone external hardness="average">
-            kotlinlang.org
+        </div>
+
+        <div className={style.group}>
+          <DesktopMenu className={style.desktopMenu} menuItems={menuItems}/>
+          <Link to="/join/" className={style.joinLink} activeClassName={style.joinLinkActive}>
+            Join
           </Link>
+          <MobileMenu
+              className={style.mobileMenu}
+              classNameMenu={style.mobileMenu}
+              toggleMenu={toggleMenu}
+              isMenuOpened={isMenuOpened}
+              menuItems={menuItems}
+          />
         </div>
       </div>
-
-      <div className={style.group}>
-        <DesktopMenu menuItems={menuItems} />
-        <a href="mailto:hello@kotlinfoundation.org">
-          <Button className={style.button}>Write Us</Button>
-        </a>
-        <MobileMenu
-          toggleMenu={toggleMenu}
-          isMenuOpened={isMenuOpened}
-          menuItems={menuItems}
-          whiteBg={whiteBg}
-        />
-      </div>
-    </div>
   );
-};
+}

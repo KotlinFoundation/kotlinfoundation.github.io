@@ -1,25 +1,37 @@
 @import "../Layout/spacing.css";
 
 :root {
-    --ktf-header-height: 48px;
+    --ktf-header-height: 64px;
+}
+
+@media (--ktl-tm) {
+    :root {
+        --ktf-header-height: 52px;
+    }
 }
 
 .header {
     box-sizing: border-box;
     display: flex;
+    background: #fff;
     justify-content: space-between;
     align-items: center;
-    height: 48px;
-    padding: 0 var(--ktl-box-block-l);
+    height: var(--ktf-header-height);
+    padding: 0 var(--ktl-box-section-l);
     position: sticky;
     top: 0;
-    background: #F4F4F4;
     z-index: 900;
     border-bottom: 1px solid rgba(39, 40, 44, 0.2);
-}
 
-.header--white {
-    background: #fff;
+    @media (--ktl-tm) {
+        padding-left: var(--ktl-box-section-s);
+        padding-right: var(--ktl-box-section-s);
+    }
+
+    @media (--ktl-tm) {
+        padding-left: var(--ktl-box-block-l);
+        padding-right: var(--ktl-box-block-l);
+    }
 }
 
 .nav {
@@ -40,50 +52,57 @@
 }
 
 .logo-image {
-    margin-right: var(--ktl-box-block-m);
     display: flex;
+    margin-right: var(--ktl-box-block-s);
 }
 
 .logo-text {
-    color: #27282C;
+    color: var(--ktf-bg-dark);
+
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+
+    @media (--ktl-ts) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .header-link {
+    color: rgba(39, 40, 44, 0.7);
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--ktf-bg-dark);
+    }
+
+    @media (--ktl-tl) {
+        display: none;
+    }
+}
+
+.join-link {
+    border: none;
+    text-decoration: none;
+    margin-right: var(--ktl-box-section-l);
+}
+
+.join-link--active {
     display: none;
 }
 
-@media (min-width: 768px) {
-    :root {
-        --ktf-header-height: 64px;
-    }
+.desktop-menu {
+    margin-bottom: -1px;
 
-    .header {
-        padding: 0 var(--ktl-box-section-l);
-        height: 64px;
-    }
-
-    .logo-text {
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    .logo-image {
-        margin-right: var(--ktl-box-block-l);
+    @media (--ktl-tm) {
+        display: none;
     }
 }
 
-@media (min-width: 1024px) {
-    .header-link {
-        display: block;
-        color: rgba(39, 40, 44, 0.7);
-        text-decoration: none;
-        font-size: 16px;
-    }
-
-    .header-link:hover {
-        color: rgba(39, 40, 44, 1);
+@media (--ktl-tm-min) {
+    .join-link, .mobile-menu {
+        display: none;
     }
 }
