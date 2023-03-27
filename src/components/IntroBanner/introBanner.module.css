@@ -9,14 +9,13 @@
     grid-template:
             "title image" 1fr
             "companies image";
-}
 
-@media (--ktl-tl) {
-    .intro {
+    @media (--ktl-tl) {
         display: flex;
         flex-direction: column;
     }
 }
+
 @media (--ktl-mm) {
     .title-desktop {
         display: none;
@@ -45,21 +44,19 @@
 .companies-label, .company {
     padding: 0;
     margin: 0 var(--ktl-box-section-s) 0 0;
-}
 
-@media (--ktl-ts-min) {
-    .companies-label, .company {
+    @media (--ktl-ts-min) {
         display: flex;
         align-items: center;
-    }
 
-    .companies-label::after, .company::after {
-        display: inline-block;
-        content: '';
-        background: rgba(25, 25, 28, 0.2);
-        margin-left: var(--ktl-box-section-s);
-        height: 48px;
-        width: 1px;
+        &::after {
+            display: inline-block;
+            content: '';
+            background: rgba(25, 25, 28, 0.2);
+            margin-left: var(--ktl-box-section-s);
+            height: 48px;
+            width: 1px;
+        }
     }
 }
 
@@ -71,22 +68,15 @@
         margin-right: 0;
     }
 }
-
-.company--google > .company-image {
-    height: 56px;
-}
-
-.company--jetbrains > .company-image {
-    height: 72px;
-}
-
-@media (--ktl-ts) {
-    .company--google > .company-image {
-        height: 32px;
+.company-image {
+    .company--google > & {
+        height: 56px;
+        @media (--ktl-ts) { height: 32px; }
     }
 
-    .company--jetbrains > .company-image {
-        height: 48px;
+    .company--jetbrains > & {
+        height: 72px;
+        @media (--ktl-ts) { height: 48px; }
     }
 }
 
@@ -108,22 +98,16 @@
 .image {
     height: 400px;
     width: 400px;
-}
 
-@media (--ktl-ds-min) {
-    .image {
+    @media (--ktl-ds-min) {
         margin: 0 var(--ktl-box-section-m);
     }
-}
 
-@media (--ktl-tl) {
-    .image {
+    @media (--ktl-tl) {
         margin: var(--ktl-box-section-m) 0;
     }
-}
 
-@media (--ktl-mm) {
-    .image {
+    @media (--ktl-mm) {
         margin: var(--ktl-box-section-s) 0;
         height: 272px;
         width: 272px;

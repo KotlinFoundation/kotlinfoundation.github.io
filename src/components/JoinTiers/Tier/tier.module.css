@@ -12,23 +12,17 @@
 
     width: 376px;
     min-height: 432px;
-}
 
-@media (--ktl-tl) {
-    .tier {
+    @media (--ktl-tl) {
         width: 372px;
     }
-}
 
-@media (--ktl-mm) {
-    .tier {
+    @media (--ktl-mm) {
         width: 328px;
         padding: var(--ktl-box-section-s) var(--ktl-box-block-l);
     }
-}
 
-@media (--ktl-ms) {
-    .tier {
+    @media (--ktl-ms) {
         width: 272px;
     }
 }

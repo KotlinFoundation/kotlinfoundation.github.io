@@ -7,7 +7,7 @@
     position: absolute;
     content: '';
     filter: blur(15px);
-    background: radial-gradient( 50% 50% at 50% 50%, #6100ff 0, #6100ff 10%, #6100ffaa 20%, transparent 75% );
+    background: radial-gradient(50% 50% at 50% 50%, #6100ff 0, #6100ff 10%, #6100ffaa 20%, transparent 75%);
     opacity: 0.9;
     width: 200px;
     height: 200px;

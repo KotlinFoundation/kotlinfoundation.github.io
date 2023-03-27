@@ -10,22 +10,20 @@
     border-bottom: 1px solid rgba(39, 40, 44, 0.2);
 }
 
-@media (--ktl-tm-min) {
-    .item {
+.item {
+    @media (--ktl-tm-min) {
         margin-left: var(--ktl-box-block-l);
+
+        :first-of-type {
+            margin-left: 0;
+        }
     }
 
-    .item:first-of-type {
-        margin-left: 0;
-    }
-}
-
-@media (--ktl-tm) {
-    .item {
+    @media (--ktl-tm) {
         margin-top: var(--ktl-box-block-l);
-    }
 
-    .item:first-of-type {
-        margin-top: 0;
+        :first-of-type {
+            margin-top: 0;
+        }
     }
 }

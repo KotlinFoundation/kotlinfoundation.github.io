@@ -46,32 +46,24 @@
  * of the ecosystem” text so that it can fit in a single line for TM layout.
  *
  * Sometimes I think Pasha is trolling me! 😅*/
-@media (--ktl-tm) and (--ktl-ts-min) {
-    .title {
+.title {
+    @media (--ktl-tm) and (--ktl-ts-min) {
         letter-spacing: -1px;
     }
 }
 
-@media (--ktl-ts-min) {
-    .title-br {
-        display: none;
-    }
+.title-br {
+    /* there is no support "or" in @media for safari :( */
+    @media (--ktl-ts-min) { display: none; }
+    @media (--ktl-ms) { display: none; }
 }
 
-@media (--ktl-ms) {
-    .title-br {
-        display: none;
-    }
-}
-
-@media (--ktl-ds) {
-    .shadow {
+.shadow {
+    @media (--ktl-ds) {
         right: 0;
     }
-}
 
-@media (--ktl-tl) {
-    .shadow {
+    @media (--ktl-tl) {
         right: 56px;
     }
 }

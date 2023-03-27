@@ -5,11 +5,8 @@
     overflow: hidden;
 
     padding-bottom: var(--ktl-box-page-m);
-}
 
-@media (--ktl-tm-min) {
-    .intro {
+    @media (--ktl-tm-min) {
         background-image: url("./bg.svg");
     }
 }
-

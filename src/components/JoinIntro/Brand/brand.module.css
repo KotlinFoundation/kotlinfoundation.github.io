@@ -19,7 +19,6 @@
         width: 600px;
     }
 
-
     .shadow {
         composes: shadow from "../section-shadow.module.css";
         display: block;
@@ -28,17 +27,17 @@
         left: 0;
         transform: translate(-100%, -50%);
         margin: 0 0 0 -136px;
-    }
 
-    .shadow::before {
-        opacity: 1;
-        filter: blur(25px);
+        &::before {
+            opacity: 1;
+            filter: blur(25px);
 
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        height: 400px;
-        width: 400px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 400px;
+        }
     }
 
     .image {
@@ -46,14 +45,12 @@
     }
 }
 
-@media (--ktl-ds) {
-    .wrap::before {
+.wrap::before {
+    @media (--ktl-ds) {
         margin-left: -116px;
     }
-}
 
-@media (--ktl-tl) {
-    .wrap::before {
+    @media (--ktl-tl) {
         margin-left: -108px;
     }
 }

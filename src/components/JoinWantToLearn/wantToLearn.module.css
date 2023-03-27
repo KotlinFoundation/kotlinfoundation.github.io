@@ -1,4 +1,4 @@
-@import "@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
+@import "~@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss";
 @import "../Layout/spacing.css";
 
 .outter {
@@ -16,29 +16,29 @@
     position: relative;
     max-width: 416px;
     width: 100%;
-}
 
-.image::before {
-    display: block;
-    content: ''; /*url("./shadow.svg");*/
-    position: absolute;
-    filter: blur(12px);
-    background: radial-gradient(50% 50% at 50% 50%, #000 0, #000 10%, #000000aa 20%, transparent 85%);
-    opacity: 0.5;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 456px   ;
-    width: 456px;
-}
+    &::before {
+        display: block;
+        content: ''; /*url("./shadow.svg");*/
+        position: absolute;
+        filter: blur(12px);
+        background: radial-gradient(50% 50% at 50% 50%, #000 0, #000 10%, #000000aa 20%, transparent 85%);
+        opacity: 0.5;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 456px;
+        width: 456px;
+    }
 
-.image::after {
-    display: block;
-    content: '';
-    position: relative;
-    background: url("./slides.png") center center no-repeat;
-    background-size: 416px 276px;
-    height: 276px;
+    &::after {
+        display: block;
+        content: '';
+        position: relative;
+        background: url("./slides.png") center center no-repeat;
+        background-size: 416px 276px;
+        height: 276px;
+    }
 }
 
 .text {
@@ -80,8 +80,8 @@
 
 }
 
-@media (--ktl-ts) {
-    .br {
+.br {
+    @media (--ktl-ts) {
         display: none;
     }
 }
