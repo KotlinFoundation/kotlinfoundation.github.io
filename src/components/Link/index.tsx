@@ -49,9 +49,6 @@ export function Link({ className, hardness = null, standalone = false, external 
     const linkClassName = textCn('rs-link', {
         external: externalDecorator,
         mode: standalone ?  'standalone' : 'rock',
-    });
-
-    const linkHardnessClassName = textCn('rs-link', {
         hardness: hardness || 'hard',
     });
 
@@ -60,7 +57,7 @@ export function Link({ className, hardness = null, standalone = false, external 
         GatsbyLink;
 
     return (
-        <Tag {...additionalProps} {...props} className={cn(className, linkClassName, linkHardnessClassName)}/>
+        <Tag {...additionalProps} {...props} className={cn(className, linkClassName)}/>
     );
 }
 
