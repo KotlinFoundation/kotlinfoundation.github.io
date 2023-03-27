@@ -1,10 +1,10 @@
 import cn from "classnames";
 import * as style from "./Person.module.css";
-import {graphql, StaticQuery} from "gatsby";
+import {graphql, useStaticQuery} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-export const Person = ({ size= null, className = null, name, company }) => <StaticQuery
-    query={graphql`
+export function Person({size = null, className = null, name, company}) {
+    const { images }= useStaticQuery(graphql`
       query {
         images: allFile(filter: {relativePath: {glob: "persons/*.png"}}) {
           edges {
@@ -18,13 +18,16 @@ export const Person = ({ size= null, className = null, name, company }) => <Stat
             }
           }
         }
-    `}
-    render={({ images }) => {
-        const file = images.edges.find(({node}) => node.relativePath === `persons/${name}.png`);
+    `);
 
-        return <div className={cn(style.person, 'vcard', className, {
-            [style[`person_size_${size}`]]: Boolean(size),
-        })}>
+    const file = images.edges.find(({node}) => node.relativePath === `persons/${name}.png`);
+
+    const classes = cn(style.person, 'vcard', className, {
+        [style[`person_size_${size}`]]: Boolean(size),
+    });
+
+    return (
+        <div className={classes}>
             <div className={style.photoWrap}>
                 <GatsbyImage
                     className={style.photo}
@@ -37,5 +40,5 @@ export const Person = ({ size= null, className = null, name, company }) => <Stat
                 <span className={cn('ktl-text-2', 'org')}>{company}</span>
             </p>
         </div>
-    }}
-/>;
+    );
+}
