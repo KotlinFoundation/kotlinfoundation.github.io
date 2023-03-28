@@ -1,3 +1,4 @@
+@import "@rescui/colors/lib/index.css";
 @import "../Layout/spacing.css";
 
 :root {
@@ -21,7 +22,7 @@
     position: sticky;
     top: 0;
     z-index: 900;
-    border-bottom: 1px solid rgba(39, 40, 44, 0.2);
+    border-bottom: 1px solid var(--rs-color-grey-20);
 
     @media (--ktl-tm) {
         padding-left: var(--ktl-box-section-s);

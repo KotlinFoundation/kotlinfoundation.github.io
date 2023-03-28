@@ -14,7 +14,7 @@ export const MenuList: React.FC<Props> = ({
   className = null,
   menuItems,
   toggleMenu,
-}) => {
+} : Props) => {
   const handleWrapperClick = React.useCallback((e) => {
     if (e.currentTarget != e.target) return;
     toggleMenu();

@@ -2,7 +2,7 @@
 
 .wrapper {
     position: fixed;
-    top: 48px;
+    top: var(--ktf-header-height);
     left: 0;
     right: 0;
     bottom: 0;
