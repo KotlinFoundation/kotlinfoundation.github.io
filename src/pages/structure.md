@@ -2,8 +2,6 @@
 title: "Structure"
 ---
 
-export {Layout as default} from '../components/Layout';
-
 # Structure
 
 The Kotlin Foundation is a nonprofit nonstock corporation registered in the state of Delaware, USA.

@@ -3,8 +3,6 @@ title: "FAQ"
 contactUs: true
 ---
 
-export {Layout as default} from '../components/Layout';
-
 # FAQ
 
 <FAQ>

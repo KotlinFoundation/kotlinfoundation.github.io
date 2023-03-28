@@ -61,7 +61,7 @@ export const Layout: FC<LayoutProps> = ({
 };
 
 const RegularLayout = ({children}) => (
-    <div className={'ktl-layout ktl-layout--center ktl-offset-bottom-xl'}>
+    <div className="ktl-layout ktl-layout--center ktl-offset-bottom-xl">
         <Markdown>
             {children}
         </Markdown>
