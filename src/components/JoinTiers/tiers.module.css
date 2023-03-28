@@ -1,5 +1,5 @@
 .outer {
-    background: #F4F4F4;
+    background: var(--ktl-light-grey);
 }
 
 .tiers {

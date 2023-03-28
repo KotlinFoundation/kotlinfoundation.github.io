@@ -5,15 +5,14 @@ import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/cta-block/index.css";
 
-import "./typography.css";
-import * as styles from "./layout.module.css";
-
 import { SEO } from "../Seo";
 import { Header } from "../Header";
-import { Footer } from "../Footer";
 import Markdown from "../Markdown/Markdown";
-import {graphql} from "gatsby";
 import {ContactUs} from "../ContactUs/ContactUs";
+import { Footer } from "../Footer";
+
+import "./typography.css";
+import * as styles from "./layout.module.css";
 
 enum LayoutSize {
     Narrow = 'narrow',
@@ -72,21 +71,5 @@ const RegularLayout = ({children}) => (
 const WideLayout = ({children}) => (
     <Markdown>{children}</Markdown>
 );
-
-export const pageQuery = graphql`
-query {
-  allMdx {
-    edges {
-      node {
-        frontmatter {
-          title
-          layout
-          contactUs
-        }
-      }
-    }
-  }
-}
-`
 
 export default Layout;
