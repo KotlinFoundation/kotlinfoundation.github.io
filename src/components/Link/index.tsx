@@ -18,7 +18,7 @@ type IProps =  LinkParams & {
     standalone?: boolean,
 };
 
-export function Link({ className, hardness = null, standalone = false, external = null, ...props } : IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
+export function Link({ className, hardness = null, standalone = false, external = null, mode=null, ...props } : IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
     const base = useSiteURL();
     const textCn = useTextStyles();
 
@@ -48,11 +48,11 @@ export function Link({ className, hardness = null, standalone = false, external 
 
     const linkClassName = textCn('rs-link', {
         external: externalDecorator,
-        mode: standalone ?  'standalone' : 'rock',
+        mode: standalone ?  'standalone' : mode || 'classic',
         hardness: hardness || 'hard',
     });
 
-    const Tag = isExternal ?
+    const Tag = isExternal || href.startsWith('mailto:') ?
         'a' :
         GatsbyLink;
 

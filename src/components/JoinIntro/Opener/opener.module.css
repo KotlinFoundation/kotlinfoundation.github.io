@@ -27,7 +27,7 @@
 
 .contact {
     display: inline-block;
-    background: #e8e8e8;
+    background: var(--rs-color-grey-10);
     border-radius: 8px;
     margin: var(--ktl-box-section-m) 0 0;
     padding: var(--ktl-box-block-l) 18px;

@@ -70,14 +70,6 @@
 }
 
 .header-link {
-    color: rgba(39, 40, 44, 0.7);
-    font-size: 16px;
-    text-decoration: none;
-
-    &:hover {
-        color: var(--ktf-bg-dark);
-    }
-
     @media (--ktl-tl) {
         display: none;
     }

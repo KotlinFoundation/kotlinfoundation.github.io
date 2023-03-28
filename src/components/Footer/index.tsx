@@ -22,7 +22,7 @@ const FooterMarkup = () => {
                 <ul className={cn(styles.nav, 'ktl-text-2')}>
                     {FOOTER_LINKS.map(({name, url}) => (
                         <li key={name} className={styles.navItem}>
-                            <Link external={false} href={url} className={styles.link}>{name}</Link>
+                            <Link mode="clear" external={false} href={url} hardness="average">{name}</Link>
                         </li>
                     ))}
                 </ul>

@@ -3,39 +3,33 @@
 .menu {
     display: flex;
     padding: 0;
-    margin: 0;
+    margin: 0 calc(-1px * var(--ktl-box-section-s));
     list-style-type: none;
-}
-
-.item {
-    margin-right: var(--ktl-box-section-s);
-    &:last-child { margin-right: 0; }
 }
 
 .link {
     display: flex;
     position: relative;
     align-items: center;
-    height: var(--ktf-header-height);
 
-    color: rgba(39, 40, 44, 0.7);
-    text-decoration: none;
+    padding-left: calc(var(--ktl-box-section-s) / 2);
+    padding-right: calc(var(--ktl-box-section-s) / 2);
 
+    &:hover { background: var(--ktl-menu-item-active-bg); }
 
-    &:hover {
-        color: var(--ktf-bg-dark);
+    &:not(.link--active) {
+        text-decoration: none;
+        border-bottom-color: transparent;
     }
 }
 
 .link--active {
-    color: var(--ktf-bg-dark);
+    padding-bottom: 0;
+    border-bottom-color: var(--rs-underline-color-hover);
+    border-bottom-width: 2px;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        height: 2px;
-        width: 100%;
-        background: var(--ktf-bg-dark);
-    }
+.menu, .link, .item {
+    box-sizing: border-box;
+    height: var(--ktf-header-height);
 }

@@ -58,7 +58,7 @@ export function Header({ path }) {
 
         <div className={style.group}>
           <DesktopMenu className={style.desktopMenu} menuItems={menuItems}/>
-          <Link to="/join/" className={style.joinLink} activeClassName={style.joinLinkActive}>
+          <Link href="/join/" className={style.joinLink} activeClassName={style.joinLinkActive}>
             Join
           </Link>
           <MobileMenu

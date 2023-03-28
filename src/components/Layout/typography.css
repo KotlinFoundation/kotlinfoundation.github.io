@@ -1,9 +1,11 @@
+@import "@rescui/colors/lib/index.css";
 @import "./spacing.css";
 
 :root {
     --ktf-bg-dark: #27282c;
     --ktf-para-spacing: 12px;
     --ktf-fuild-spacing-xl: var(--ktl-box-page-m);
+    --ktl-menu-item-active-bg: rgba(25,25,28,.1);
 }
 
 @media (--ktl-ms) {

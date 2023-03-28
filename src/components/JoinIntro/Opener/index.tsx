@@ -1,15 +1,13 @@
 import cn from "classnames";
-import {useTextStyles} from "@rescui/typography";
 
+import {Link} from "../../Link";
 import {IntroSection} from "../section";
 
 import * as styles from "./opener.module.css";
 import imgSection from './images/section.png';
 
 export function OpenerSection() {
-    const textCn = useTextStyles();
-    const contactLink = <a className={textCn('rs-link')}
-                           href="mailto:hello@kotlinfoundation.org">hello@kotlinfoundation.org</a>;
+    const contactLink = <Link href="mailto:hello@kotlinfoundation.org">hello@kotlinfoundation.org</Link>;
 
     return (
         <IntroSection className={styles.section} imageClassName={styles.image} image={imgSection} showImage={true}>
