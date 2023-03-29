@@ -28,7 +28,7 @@ const FooterMarkup = () => {
                 </ul>
                 <div className={cn(textCn('ktl-text-3'), styles.support)}>
                     <p className={styles.supportLabel}>Supported and developed<br/>by JetBrains</p>
-                    <a href="https://jetbrains.com" target="_blank" rel="noreferrer noopener">
+                    <a className={styles.logoLink} href="https://jetbrains.com" target="_blank" rel="noreferrer noopener">
                         <img alt="JetBrains Logo" src={svgLogo}/>
                     </a>
                 </div>

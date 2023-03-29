@@ -20,6 +20,11 @@
     margin-top: var(--ktl-box-section-m);
 }
 
+.logo-link {
+    font-size: 0;
+    line-height: 0;
+}
+
 @media (--ktl-tl-min) {
     .footer {
         flex-wrap: wrap;
