@@ -8,7 +8,7 @@ const layoutTemplate = resolve(`./src/components/Layout/index.tsx`);
 
 function isBlogPost(url) {
     const match = url.match(/^\/news\/(.*)$/);
-    return match ? match[1] : false;
+    return match ? Boolean(match[1]) : false;
 }
 
 exports.onCreateBabelConfig = ({actions}) => {
