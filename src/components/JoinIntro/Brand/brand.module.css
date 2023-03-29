@@ -61,7 +61,7 @@
     }
 }
 
-@media (--ktl-ts) {
+@media (--ktl-mm) {
     .text-br {
         display: none;
     }

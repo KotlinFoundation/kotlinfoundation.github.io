@@ -24,9 +24,9 @@ export function Tiers() {
                     title="Gold tier"
                     price="$150,000/year"
                 >
-                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>All Silver tier benefits, except when superseded by Gold level benefits.</p>
-                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>1 seat for every gold member in the Foundation board.</p>
-                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>Eligible for role of Secretary.</p>
+                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>All Silver tier benefits, except when superseded by Gold tier benefits.</p>
+                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>1 seat for every gold member on the Foundation board.</p>
+                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>Eligible for the role of Secretary.</p>
                 </Tier>
             </div>
         </section>

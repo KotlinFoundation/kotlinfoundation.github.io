@@ -22,7 +22,7 @@ export function BrandSection() {
                     Foundation.
                 </li>
                 <li className={cn(textCn("ktl-text-2"), list.highlight, styles.addLogo)}>Add your logo to kotlinfoundation.org
-                    and to <br className={styles.textBr}/>a specific kotlinlang.org section.
+                    <br className={styles.textBr}/> and to a specific kotlinlang.org section.
                 </li>
             </ul>
         </div>
