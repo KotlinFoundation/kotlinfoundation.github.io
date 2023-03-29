@@ -1,7 +1,7 @@
-import cn from "classnames";
 import {FC, ReactNode} from "react";
-import Button from "@rescui/button";
 import {Link} from "gatsby";
+import cn from "classnames";
+import Button from "@rescui/button";
 
 import * as styles from "./productHighlight.module.css";
 

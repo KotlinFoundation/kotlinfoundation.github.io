@@ -19,57 +19,65 @@ enum LayoutSize {
     Wide = 'wide'
 }
 
-export interface LayoutProps {
-    path: string;
-    children: null | ReactNode;
-    pageContext?: undefined | {
-        frontmatter?: {
-            title?: string;
-            layout?: LayoutSize;
-            contactUs?: boolean;
-        }
-    }
+interface MDLayoutProps {
+    title?: string;
+    layout?: LayoutSize;
+    contactUs?: boolean;
 }
 
-export const Layout: FC<LayoutProps> = ({
-    children,
-    pageContext,
-    path,
-}) => {
-    const pageTitle = pageContext?.frontmatter?.title;
-    const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
-    const contactBlock = pageContext?.frontmatter?.contactUs ?? false;
+export interface BaseLayoutProps {
+    path: string;
+    children: null | ReactNode;
+}
 
-    let LayoutComponent = RegularLayout;
-
-    if (layout === LayoutSize.Wide) {
-        LayoutComponent = WideLayout;
+type MarkdownLayoutProps = BaseLayoutProps & {
+    pageContext?: undefined | {
+        frontmatter?: MDLayoutProps
     }
+};
+
+type LayoutProps = BaseLayoutProps & MDLayoutProps;
+
+export function Layout({ children, path, title, layout, contactUs }: LayoutProps) {
+    const content = layout === LayoutSize.Wide
+        ? children
+        : <RegularLayout>{children}</RegularLayout>;
 
     return (
         <>
-            <SEO title={pageTitle} />
+            <SEO title={title}/>
             <Header path={path}/>
-
             <div className={styles.layout}>
-                <LayoutComponent>{children}</LayoutComponent>
-                {contactBlock && <ContactUs />}
+                {content}
+                {contactUs && <ContactUs/>}
                 <Footer/>
             </div>
         </>
     );
-};
+}
 
 const RegularLayout = ({children}) => (
     <div className="ktl-layout ktl-layout--center ktl-offset-bottom-xl">
-        <Markdown>
-            {children}
-        </Markdown>
+        {children}
     </div>
 );
 
-const WideLayout = ({children}) => (
-    <Markdown>{children}</Markdown>
-);
+export function MarkdownLayout({children, ...props} : LayoutProps) {
+    return (
+        <Layout {...props}>
+            <Markdown>{children}</Markdown>
+        </Layout>
+    );
+}
 
-export default Layout;
+export function PageMarkdownLayout({pageContext, ...props } : MarkdownLayoutProps) {
+    const title = pageContext?.frontmatter?.title;
+    const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
+    const contact = pageContext?.frontmatter?.contactUs ?? false;
+
+    return (
+        <MarkdownLayout {...props} title={title} layout={layout} contactUs={contact}/>
+    );
+}
+
+export default PageMarkdownLayout;
