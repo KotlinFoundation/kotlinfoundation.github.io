@@ -15,16 +15,16 @@
 
 .image {
     position: relative;
-    max-width: 416px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &::before {
         display: block;
         content: ''; /*url("./shadow.svg");*/
         position: absolute;
-        filter: blur(12px);
-        background: radial-gradient(50% 50% at 50% 50%, #000 0, #000 10%, #000000aa 20%, transparent 85%);
-        opacity: 0.5;
+        background: radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(255, 255, 255, 0) 90%);
+        opacity: 0.25;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -39,6 +39,7 @@
         background: url("./slides.png") center center no-repeat;
         background-size: 416px 276px;
         height: 276px;
+        width: 416px;
     }
 }
 
@@ -48,8 +49,8 @@
 }
 
 @media (--ktl-tl-min) {
-    .image {
-        margin: 0 var(--ktl-box-section-l);
+    .image, .wrap {
+        width: 50%;
     }
 }
 
@@ -78,7 +79,6 @@
     .text {
         margin-top: var(--ktl-box-section-s);
     }
-
 }
 
 .br {

@@ -11,9 +11,10 @@ export function WantToLearn() {
                 <div className={styles.image} role="none"/>
                 <div className={styles.wrap}>
                     <h2 className="ktf-h2">Want to learn more?</h2>
-                    <p className={cn("ktl-text-2", styles.text)}>See our presentation slides that contain latest information <br
-                        className={styles.br}/>and insights related to the Kotlin Foundation.</p>
-                    <Button mode="outline" href="" target="_blank">View
+                    <p className={cn("ktl-text-2", styles.text)}>
+                        See our presentation with the latest information <br
+                        className={styles.br}/>and insights about the Kotlin Foundation.</p>
+                    <Button mode="outline" size="l" href="" target="_blank">View
                         presentation</Button>
                 </div>
             </section>
