@@ -3,6 +3,10 @@
 .outer {
     background: var(--ktf-bg-dark);
     padding: var(--ktl-box-section-m) 0;
+
+    @media (--ktl-mm) {
+        padding-bottom: var(--ktl-box-section-s);
+    }
 }
 
 .footer {
@@ -18,11 +22,6 @@
 
 .nav, .support {
     margin-top: var(--ktl-box-section-m);
-}
-
-.logo-link {
-    font-size: 0;
-    line-height: 0;
 }
 
 @media (--ktl-tl-min) {
@@ -79,4 +78,9 @@
 .support-label {
     margin-right: var(--ktl-box-block-m);
     text-align: right;
+}
+
+.support-link {
+    font-size: 0;
+    line-height: 0;
 }
