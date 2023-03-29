@@ -16,7 +16,7 @@
 @media (--ktl-tm-min) {
     .wrap {
         position: relative;
-        width: 600px;
+        width: 608px;
     }
 
     .shadow {
@@ -24,7 +24,7 @@
         display: block;
         position: absolute;
         top: -316px;
-        right: -54px;
+        right: -46px;
         transform: translate(100%);
         margin: 0;
     }
@@ -60,11 +60,11 @@
 
 .shadow {
     @media (--ktl-ds) {
-        right: 0;
+        right: 8px;
     }
 
     @media (--ktl-tl) {
-        right: 56px;
+        right: 64px;
     }
 }
 
