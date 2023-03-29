@@ -18,7 +18,7 @@
     @media (--ktl-tm-min) {
         margin-left: var(--ktl-box-block-l);
 
-        :first-of-type {
+        &:first-of-type {
             margin-left: 0;
         }
     }
@@ -26,7 +26,7 @@
     @media (--ktl-tm) {
         margin-top: var(--ktl-box-block-l);
 
-        :first-of-type {
+        &:first-of-type {
             margin-top: 0;
         }
     }
