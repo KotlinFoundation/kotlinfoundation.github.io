@@ -1,7 +1,6 @@
 const {resolve} = require("path");
 const {createFilePath} = require("gatsby-source-filesystem");
 
-
 const MD_EXTS = ['md', 'mdx'];
 const postTemplate = resolve(`./src/components/Post/index.tsx`);
 const layoutTemplate = resolve(`./src/components/Layout/index.tsx`);
@@ -27,7 +26,8 @@ exports.onCreatePage = ({ page, actions }) => {
     if (MD_EXTS.some(ext => componentPath.endsWith(`.${ext}`))) {
         deletePage(page);
 
-        const component = isBlogPost(page.path) ? postTemplate : layoutTemplate;
+        const isPost = isBlogPost(page.path);
+        const component = isPost ? postTemplate : layoutTemplate;
 
         createPage({
             ...page,

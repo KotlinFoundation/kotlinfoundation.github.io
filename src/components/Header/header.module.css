@@ -77,8 +77,6 @@
 }
 
 .join-link {
-    border: none;
-    text-decoration: none;
     margin-right: var(--ktl-box-section-l);
 }
 
