@@ -1,9 +1,12 @@
 import cn from "classnames";
-import * as style from "./Person.module.css";
 import {graphql, useStaticQuery} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
+
+import * as style from "./Person.module.css";
 
 export function Person({size = null, className = null, name, company}) {
+    const textCn = useTextStyles();
     const { images }= useStaticQuery(graphql`
       query {
         images: allFile(filter: {relativePath: {glob: "persons/*.png"}}) {
@@ -37,7 +40,7 @@ export function Person({size = null, className = null, name, company}) {
             </div>
             <p className={style.info}>
                 <span className={cn('ktl-h4', 'n')}>{name}</span>
-                <span className={cn('ktl-text-2', 'org')}>{company}</span>
+                <span className={cn(textCn('ktl-text-2'), 'org')}>{company}</span>
             </p>
         </div>
     );

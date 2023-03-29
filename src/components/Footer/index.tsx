@@ -19,7 +19,7 @@ const FooterMarkup = () => {
     return (
         <footer className={styles.outer}>
             <div className={cn('ktl-layout ktl-layout--center', styles.footer)}>
-                <ul className={cn(styles.nav, 'ktl-text-2')}>
+                <ul className={cn(styles.nav, textCn('ktl-text-2'))}>
                     {FOOTER_LINKS.map(({name, url}) => (
                         <li key={name} className={styles.navItem}>
                             <Link mode="clear" external={false} href={url} hardness="average">{name}</Link>

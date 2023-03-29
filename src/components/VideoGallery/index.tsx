@@ -1,5 +1,6 @@
 import {FC, ReactNode, useCallback, useMemo, useRef, useState} from 'react';
 import cn from 'classnames';
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
 import {ArrowLeftIcon, ArrowRightIcon, RightIcon} from '@rescui/icons';
 
@@ -25,6 +26,7 @@ export interface VideoGalleryProps {
 }
 
 export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
+    const textCn = useTextStyles();
     let [currentId, setCurrentId] = useState('');
     const sliderRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +74,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
                                 <Button icon={<RightIcon/>} className={styles.btn} onClick={() => clickHandle(i)}
                                         mode="rock" size="l" theme="dark"/>
                             </div>
-                            <span className={cn(styles.title, 'ktl-text-2')}>{video.title}</span>
+                            <span className={cn(styles.title, textCn('ktl-text-2'))}>{video.title}</span>
                         </div>
                     ))}
                 </Slider>

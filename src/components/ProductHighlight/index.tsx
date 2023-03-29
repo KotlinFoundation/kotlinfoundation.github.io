@@ -2,6 +2,7 @@ import {FC, ReactNode} from "react";
 import {Link} from "gatsby";
 import cn from "classnames";
 import Button from "@rescui/button";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
 import * as styles from "./productHighlight.module.css";
 
@@ -13,21 +14,24 @@ export interface ProductHighlightProps {
         href: string;
     };
 }
-export const ProductHighlight: FC<ProductHighlightProps> = ({title, children, link}) => (
-    <section className={'ktl-offset-top-xxl'}>
-        <div className={styles.productHighlight}>
-            <h2 className="ktl-h2 ktl-offset-bottom-l">{title}</h2>
-            <ul className={cn(styles.items, 'ktl-text-1')}>
-                {children}
-            </ul>
-        </div>
-        {link && <div className={styles.appendix}>
-          <Link to={link.href}>
-            <Button mode="outline" size="l">{link.title}</Button>
-          </Link>
-        </div>}
-    </section>
-);
+export const ProductHighlight: FC<ProductHighlightProps> = ({title, children, link}) => {
+    const textCn = useTextStyles();
+    return (
+        <section className={'ktl-offset-top-xxl'}>
+            <div className={styles.productHighlight}>
+                <h2 className="ktl-h2 ktl-offset-bottom-l">{title}</h2>
+                <ul className={cn(styles.items, textCn('ktl-text-1'))}>
+                    {children}
+                </ul>
+            </div>
+            {link && <div className={styles.appendix}>
+                <Link to={link.href}>
+                    <Button mode="outline" size="l">{link.title}</Button>
+                </Link>
+            </div>}
+        </section>
+    );
+};
 
 export interface ProductHighlightItemProps {
     value?: null | string;
