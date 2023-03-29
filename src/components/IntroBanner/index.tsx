@@ -18,7 +18,6 @@ const SPONSORS = [
     { name: 'JetBrains', image: jbLogoSvg },
 ];
 
-
 export const IntroBanner: FC = ({titleDesktop, titleMobile}) => {
     const [isTL, isTS] = [useTL(), useTS()];
     return (
