@@ -14,7 +14,7 @@ import { Footer } from "../Footer";
 import "./typography.css";
 import * as styles from "./layout.module.css";
 
-enum LayoutSize {
+export enum LayoutSize {
     Narrow = 'narrow',
     Wide = 'wide'
 }

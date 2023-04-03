@@ -1,4 +1,4 @@
-const {resolve} = require("path");
+const {join, relative, resolve} = require("path");
 const {createFilePath} = require("gatsby-source-filesystem");
 
 const MD_EXTS = ['md', 'mdx'];
@@ -19,6 +19,35 @@ exports.onCreateBabelConfig = ({actions}) => {
     });
 };
 
+exports.createPages = async ({ graphql, actions, reporter }) => {
+    const {createPage} = actions
+
+    // Get all the Markdown nodes that posts that are on the blog folder
+    const result = await graphql(`{
+        posts: allMarkdownRemark {
+            nodes {
+                id
+                fileAbsolutePath
+                fields {
+                    slug
+                }
+            }
+        }
+    }`);
+
+    if (result && result.data && result.data.posts && result.data.posts.nodes) {
+        result.data.posts.nodes.forEach(post => {
+            createPage({
+                path: post.fields.slug,
+                component: post.fileAbsolutePath,
+                context: {
+                    id: post.id,
+                },
+            })
+        });
+    }
+}
+
 exports.onCreatePage = ({ page, actions }) => {
     const { createPage, deletePage } = actions
     const { componentPath } = page;
@@ -38,15 +67,22 @@ exports.onCreatePage = ({ page, actions }) => {
 
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-    const { createNodeField } = actions
+    const { createNodeField } = actions;
 
-    if (node.internal.type === `Mdx`) {
+    if (["Mdx", "MarkdownRemark"].some(type => node.internal.type === type)) {
         const value = createFilePath({ node, getNode })
 
-        node.frontmatter = {
-            ...node.frontmatter,
-            isPost: isBlogPost(value),
-        };
+        createNodeField({
+            name: 'isPost',
+            node,
+            value: isBlogPost(value)
+        });
+
+        createNodeField({
+            name: 'contentRelativePath',
+            node,
+            value: relative(join(__dirname, 'src'), node.fileAbsolutePath || node.internal.contentFilePath)
+        });
 
         createNodeField({
             name: `slug`,

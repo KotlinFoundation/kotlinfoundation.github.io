@@ -1,20 +1,22 @@
 import {graphql, useStaticQuery} from "gatsby";
 
 import {Layout} from "../../components/Layout";
-import {Link} from "../../components/Link";
+import {Posts} from "../../components/Posts";
 
 export default function NewsList(props) {
     const { allMdx: { nodes: posts } } = useStaticQuery(graphql`
         query {
-            allMdx(filter: {frontmatter: {isPost: {eq: true}}}) {
+            allMdx(
+                sort: {frontmatter: {date: DESC}}
+                filter: {fields: {isPost: {eq: true}}}
+            ) {
                 nodes {
-                    id,
-                    excerpt
+                    id
+                    excerpt(pruneLength: 10000)
                     fields {
                         slug
                     }
                     frontmatter {
-                        isPost
                         date(formatString: "MMMM DD, YYYY")
                         title
                     }
@@ -25,15 +27,8 @@ export default function NewsList(props) {
 
     return (
         <Layout {...props}>
-            <ul>
-                {posts.map(post => (
-                    <li>
-                        <p>{post.frontmatter.date}</p>
-                        <p>{post.frontmatter.title}</p>
-                        <Link href={post.fields.slug}>{post.excerpt}</Link>
-                    </li>
-                ))}
-            </ul>
+            <h1>News</h1>
+            <Posts posts={posts}/>
         </Layout>
     );
 }
