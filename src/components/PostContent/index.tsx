@@ -1,10 +1,13 @@
-import Button from "@rescui/button";
+import cn from "classnames";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
-const DEFAULT_EXCERPT_SIZE = 200;
+import * as styles from './post-content.module.css';
 
-export function PostContent({ excerpt, fields, frontmatter }) {
+const DEFAULT_EXCERPT_SIZE = 300;
+
+export function PostContent({ more, excerpt, fields, frontmatter }) {
     const { date, title, spoilerSize } = frontmatter;
-    const url = fields.url;
+    const url = fields.slug;
 
     const cutContent = excerpt
         .substring(0, spoilerSize || DEFAULT_EXCERPT_SIZE);
@@ -13,18 +16,26 @@ export function PostContent({ excerpt, fields, frontmatter }) {
 
     const content = cutContent
         .split('\n\n')
-        .map((text, i, list) => (
-            <p key={text}>{text}{isTrimmed && i === list.length - 1 && '…'}</p>
-        ));
+        .map((text, i, list) => {
+            const isLastTrimmed = isTrimmed && i === list.length - 1;
+
+            if (isLastTrimmed && typeof spoilerSize === 'undefined') {
+                text = text.replace(/^(.+)\s+.*$/g, '$1');
+            }
+
+            return (
+                <p key={text}>{text}{isLastTrimmed && '…'}</p>
+            );
+        });
+
+    const textCn = useTextStyles();
 
     return (
         <>
-            <p>{date}</p>
-            <h2>{title}</h2>
-            <p>{content}</p>
-            {isTrimmed && (
-                <Button size="l" mode="outline" href={url}>Read more</Button>
-            )}
+            <p className={cn(styles.date, textCn('ktl-text-3'), 'ktf-text--gray')}>{date}</p>
+            <h2 className={cn(styles.title, textCn('ktl-h3'))}>{title}</h2>
+            <div className={cn(styles.content, textCn('ktl-text-2'))}>{content}</div>
+            {isTrimmed && more}
         </>
     );
 }

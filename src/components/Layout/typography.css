@@ -41,3 +41,7 @@
     margin-top: var(--ktf-para-spacing);
     margin-bottom: var(--ktf-para-spacing);
 }
+
+.ktf-text--gray {
+    color: rgba(25, 25, 28, 0.7);
+}

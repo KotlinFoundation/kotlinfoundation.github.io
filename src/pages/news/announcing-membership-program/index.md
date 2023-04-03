@@ -1,6 +1,7 @@
 ---
 title: "Announcing the Kotlin Foundation Membership Program"
-date: 2020-09-01
+date: 2023-04-14
+coverImage: "./cover.jpg"
 ---
 
 Originally, the Kotlin Foundation’s mission was to preserve the Kotlin trademark, control incompatible changes to the language, and assign a lead language designer. But as of 2023, the Foundation is taking on more responsibility, which include advancing the Kotlin ecosystem and promoting Kotlin in education.
@@ -16,11 +17,3 @@ The program offers different tiers to distinguish your business, so you can pick
 **Silver membership** is designed for businesses and organizations that wish to get their name out there as big contributors to the Foundation. Silver members gain an opportunity to sit on the Foundation's board. For every five Silver members, you'll get one seat. You’ll also be able to take part in the [Operating, Trademark, and Ecosystem Committees](https://kotlinfoundation.org/structure/).
 
 Join other Foundation members to help us shape and develop the Kotlin ecosystem. If you want to apply or have any questions about the Kotlin Foundation and its membership program, you can drop us a line at [hello@kotlinfoundation.org](mailto:hello@kotlinfoundation.org). We’ll be happy to help.
-
-We'd also like to extend a warm welcome to all the new Foundation members! Gradle, TouchLab, and Shopify have already stepped up to help us achieve the Foundation's goals.
-
-**Gradle** is the company that developed the most widely-used build tool for Kotlin.
-
-**TouchLab** believed in Kotlin Multiplatform from the very beginning and has been advocating and creating developer tooling for it.
-
-**Shopify** uses Kotlin Multiplatform to share business logic for its flagship application and understands the specific requirements for large-scale apps.

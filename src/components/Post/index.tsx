@@ -29,9 +29,14 @@ export default function PageTemplate({ children, ...props } : PageProps) {
 
     const { title, date } = post.frontmatter;
 
+    props.pageContext.frontmatter = {
+        ...props.pageContext.frontmatter,
+        contactUs:true
+    };
+
     return (
         <Layout {...props}>
-            <p className={cn(textCn('ktl-text-3'), style.date)}>{date}</p>
+            <p className={cn(textCn('ktl-text-3'), 'ktf-text--gray', style.date)}>{date}</p>
             <h1 className={cn("ktf-h2 ktf-h3--mm", style.title)}>{title}</h1>
             {children}
         </Layout>

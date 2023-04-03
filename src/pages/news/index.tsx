@@ -19,6 +19,11 @@ export default function NewsList(props) {
                     frontmatter {
                         date(formatString: "MMMM DD, YYYY")
                         title
+                        coverImage {
+                            childImageSharp {
+                                gatsbyImageData(width: 328)
+                            }
+                        }
                     }
                 }
             }
@@ -26,9 +31,10 @@ export default function NewsList(props) {
     `);
 
     return (
-        <Layout {...props}>
-            <h1>News</h1>
-            <Posts posts={posts}/>
+        <Layout {...props} contactUs layout="wide">
+            <div className="ktl-layout ktl-layout--center">
+                <Posts posts={posts}/>
+            </div>
         </Layout>
     );
 }
