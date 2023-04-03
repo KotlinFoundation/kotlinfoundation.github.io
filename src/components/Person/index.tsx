@@ -9,7 +9,7 @@ export function Person({size = null, className = null, name, company}) {
     const textCn = useTextStyles();
     const { images }= useStaticQuery(graphql`
       query {
-        images: allFile(filter: {relativePath: {glob: "persons/*.png"}}) {
+        images: allFile(filter: {relativePath: {glob: "persons/*.{png,jpg}"}}) {
           edges {
             node {
               relativePath
@@ -23,7 +23,10 @@ export function Person({size = null, className = null, name, company}) {
         }
     `);
 
-    const file = images.edges.find(({node}) => node.relativePath === `persons/${name}.png`);
+    const file = images.edges.find(
+        ({node}) =>
+            [`persons/${name}.jpg`, `persons/${name}.png`].includes(node.relativePath)
+    );
 
     const classes = cn(style.person, 'vcard', className, {
         [style[`person_size_${size}`]]: Boolean(size),
