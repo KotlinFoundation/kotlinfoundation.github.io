@@ -2,10 +2,10 @@ import {AnchorHTMLAttributes, useMemo} from "react";
 import cn from "classnames";
 import { Link as GatsbyLink } from 'gatsby';
 import {useTextStyles} from "@rescui/typography";
+import {LinkParams} from "@rescui/typography/lib/create-text-cn";
 import {useSiteURL} from "../../utlis/hooks";
 
 import * as styles from "./link.module.css";
-import {LinkParams} from "@rescui/typography/lib/create-text-cn";
 
 function checkExternal (link, base = null) {
     const url = new URL(link , base);
