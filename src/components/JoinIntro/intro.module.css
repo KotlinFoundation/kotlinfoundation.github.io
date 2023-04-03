@@ -4,11 +4,8 @@
     background: none white top right no-repeat;
     overflow: hidden;
 
-    @media (--ktl-tl-min) {
-        padding-bottom: var(--ktl-box-page-m);
-    }
-
     @media (--ktl-tm-min) {
+        padding-bottom: var(--ktl-box-page-m);
         background-image: url("./bg.svg");
     }
 }

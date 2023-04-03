@@ -21,10 +21,10 @@ export function ShapeSection() {
                 ecosystem</h2>
             <ul className={list.highlights}>
                 <li className={cn(textCn("ktl-text-2"), list.highlight, styles.sustain)}>Help sustain the Kotlin ecosystem by
-                    providing financial support and guidance to the maintainers of open-source projects.
+                    providing financial support and <br className={styles.brGuidance}/>guidance to the maintainers of open-source projects.
                 </li>
                 <li className={cn(textCn("ktl-text-2"), list.highlight, styles.contribute)}>Contribute to the boards,
-                    committees, and workgroups that make decisions on funding distribution and the Foundation’s overall
+                    committees, <br className={styles.brFunding}/>and workgroups that <br className={styles.brMake}/>make decisions on <br className={styles.brFunding}/>funding distribution and the Foundation’s overall
                     strategy.
                 </li>
             </ul>

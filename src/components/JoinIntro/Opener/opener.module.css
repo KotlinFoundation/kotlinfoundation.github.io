@@ -38,6 +38,7 @@
 
     @media (--ktl-mm) {
         align-self: stretch;
+        margin-bottom: var(--ktl-box-section-l);
     }
 }
 

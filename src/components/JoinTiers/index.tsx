@@ -16,7 +16,7 @@ export function Tiers() {
                     price="$30,000/year"
                 >
                     <p className={cn(textCn("ktl-text-2"), "ktf-para")}>Opportunity for a seat on the Foundation’s board (1 seat for every 5 Silver members).</p>
-                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>Eligible to participate in the Operating/Ecosystem/Trademark Committee.</p>
+                    <p className={cn(textCn("ktl-text-2"), "ktf-para")}>Eligible to participate in the Operating/<br className={styles.brOperating}/>Ecosystem/<br className={styles.brTrademark}/>Trademark Committee.</p>
                     <p className={cn(textCn("ktl-text-2"), "ktf-para")}>Your logo can appear on both the Kotlin and Kotlin Foundation websites.</p>
                 </Tier>
                 <Tier

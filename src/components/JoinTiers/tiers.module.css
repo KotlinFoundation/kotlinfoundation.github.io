@@ -30,3 +30,15 @@
         }
     }
 }
+
+.br-operating {
+    @media (--ktl-ms) {
+        display: none;
+    }
+}
+
+.br-trademark {
+    @media (--ktl-ms-min) {
+        display: none;
+    }
+}

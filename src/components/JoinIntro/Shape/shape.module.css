@@ -75,3 +75,24 @@
 .contribute {
     --into-highlight-image: url("./images/contribute.svg");
 }
+
+.br-guidance {
+    display: none;
+    @media (--ktl-mm) and (--ktl-ms-min) {
+        display: inline;
+    }
+}
+
+.br-make {
+    display: none;
+    @media (--ktl-tm) and (--ktl-ts-min) {
+        display: inline;
+    }
+}
+
+.br-funding {
+    display: none;
+    @media (--ktl-ts) and (--ktl-ms-min) {
+        display: inline;
+    }
+}
