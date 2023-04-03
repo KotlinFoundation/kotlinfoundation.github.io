@@ -16,8 +16,7 @@ export function WantToLearn() {
                     <p className={cn(textCn("ktl-text-2"), styles.text)}>
                         See our presentation with the latest information <br
                         className={styles.br}/>and insights about the Kotlin Foundation.</p>
-                    <Button mode="outline" size="l" href="" target="_blank">View
-                        presentation</Button>
+                    <Button mode="outline" size="l" href="/kotlin-foundation-presentation.pdf" target="_blank">View presentation</Button>
                 </div>
             </section>
         </div>
