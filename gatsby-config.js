@@ -15,22 +15,7 @@ module.exports = {
       options: {
         icon: "node_modules/@jetbrains/kotlin-web-site-ui/out/svg/kotlin_64.svg",
       },
-    },/*
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        extensions: [ '.md' ],
-        excerpt_separator: `<!-- end -->`,
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              linkImagesToOriginal: false,
-            },
-          },
-        ]
-      }
-    },*/
+    },
     {
       resolve: "gatsby-plugin-mdx",
       options: {

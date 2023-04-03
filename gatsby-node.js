@@ -19,35 +19,6 @@ exports.onCreateBabelConfig = ({actions}) => {
     });
 };
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-    const {createPage} = actions
-
-    // Get all the Markdown nodes that posts that are on the blog folder
-    const result = await graphql(`{
-        posts: allMarkdownRemark {
-            nodes {
-                id
-                fileAbsolutePath
-                fields {
-                    slug
-                }
-            }
-        }
-    }`);
-
-    if (result && result.data && result.data.posts && result.data.posts.nodes) {
-        result.data.posts.nodes.forEach(post => {
-            createPage({
-                path: post.fields.slug,
-                component: post.fileAbsolutePath,
-                context: {
-                    id: post.id,
-                },
-            })
-        });
-    }
-}
-
 exports.onCreatePage = ({ page, actions }) => {
     const { createPage, deletePage } = actions
     const { componentPath } = page;
