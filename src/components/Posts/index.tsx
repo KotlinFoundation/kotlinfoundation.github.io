@@ -23,10 +23,10 @@ export function Posts({ posts }) {
                     const coverImage = getImage(post.frontmatter.coverImage?.childImageSharp?.gatsbyImageData)
 
                     return (
-                        <li key={post.id} className={styles.wrap}>
+                        <li key={post.id} className={styles.wrap} id={url}>
                             <div className={styles.item}>
                                 <div className={styles.content}>
-                                    <PostContent key={post.fields.slug} {...post} more={
+                                    <PostContent {...post} more={
                                         <Button className={styles.more} size="l" mode="outline" href={url} onClick={onReadMore}>Read more</Button>
                                     }/>
                                 </div>
