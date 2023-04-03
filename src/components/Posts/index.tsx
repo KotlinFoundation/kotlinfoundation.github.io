@@ -5,7 +5,7 @@ import Button from "@rescui/button";
 
 import {PostContent} from "../PostContent";
 
-import * as styles from './news.module.css';
+import * as styles from './posts.module.css';
 
 export function Posts({ posts }) {
     return (

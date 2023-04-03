@@ -26,6 +26,7 @@
 .item {
     @media (--ktl-tl-min) {
         display: flex;
+        width: 100%;
     }
 }
 
