@@ -4,7 +4,7 @@ date: 2023-04-14
 coverImage: "./cover.jpg"
 ---
 
-e're excited to announce the Kotlin Foundation's Grants Program! This initiative will be held on a regular basis and will provide financial awards to developers who contribute to the Kotlin ecosystem.
+We're excited to announce the Kotlin Foundation's Grants Program! This initiative will be held on a regular basis and will provide financial awards to developers who contribute to the Kotlin ecosystem.
 
 At the Kotlin Foundation, we understand the effort that goes into maintaining active and valuable libraries, tools, and frameworks. We want to support these contributors, acknowledge their hard work, and encourage them to invest more time and energy in their projects and continue to make a difference. One of the program's essential aspects is that we do not claim any intellectual property rights or trademarks from the authors we support. We believe that contributors should retain ownership of their work.
 
