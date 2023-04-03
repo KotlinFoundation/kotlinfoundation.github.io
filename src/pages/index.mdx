@@ -7,9 +7,31 @@ import trademarkIcon from "../images/highlights/trademark.svg";
 import designIcon from "../images/highlights/design.svg";
 import controlIcon from "../images/highlights/control.svg";
 
+import jetbrainsLogo from "../images/partners/jetbrains.svg";
+import googleLogo from "../images/partners/google.svg";
+import gradleLogo from "../images/partners/gradle.svg";
+import shopifyLogo from "../images/partners/shopify.svg";
+
 <IntroBanner
-  titleDesktop="Protect, promote and&nbsp;advance the development of the&nbsp;Kotlin programming language"
-  titleMobile={<>Advance the development <br/>of Kotlin</>}
+  title="Protect, promote and advance the&nbsp;development of the&nbsp;Kotlin programming language"
+  members={
+    [
+      {
+        groupName: 'Founding members',
+        companies: [
+          { name: 'JetBrains', image: jetbrainsLogo },
+          { name: 'Google', image: googleLogo },
+        ]
+      },
+      {
+        groupName: 'Silver members',
+        companies: [
+          { name: 'Gradle', image: gradleLogo },
+          { name: 'Shopify', image: shopifyLogo },
+        ]
+      },
+    ]
+  }
 />
 
 <Layout>
