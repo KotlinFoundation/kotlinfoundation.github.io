@@ -67,6 +67,12 @@
     }
 }
 
+@media (--ktl-ts) {
+    .text-br-logo {
+        display: none;
+    }
+}
+
 .use-logo {
     --into-highlight-image: url("./images/use-logo.svg");
 }

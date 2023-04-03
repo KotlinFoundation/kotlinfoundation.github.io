@@ -36,7 +36,7 @@ export default function PageTemplate({ children, ...props } : PageProps) {
 
     return (
         <Layout {...props}>
-            <p className={cn(textCn('ktl-text-3'), 'ktf-text--gray', style.date)}>{date}</p>
+            <p className={cn(textCn('ktl-text-3'), 'ktl-text--gray', style.date)}>{date}</p>
             <h1 className={cn("ktf-h2 ktf-h3--mm", style.title)}>{title}</h1>
             {children}
         </Layout>

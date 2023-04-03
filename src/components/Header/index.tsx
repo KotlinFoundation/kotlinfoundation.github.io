@@ -45,7 +45,7 @@ export function Header({ path }) {
             <div className={style.logoImage}>
               <KotlinLogo/>
             </div>
-            <div className={cn('ktl-h3', style.logoText)}>
+            <div className={cn('ktf-h3 ktf-h4--tm', style.logoText)}>
               Kotlin Foundation
             </div>
           </GatsbyLink>

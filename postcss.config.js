@@ -7,6 +7,8 @@ module.exports = {
         "node_modules/@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss",
       ]
     }),
+    require('postcss-mixins'),
+    require('postcss-each'),
     postcssPresetEnv({
       stage: 3,
       preserve: true,

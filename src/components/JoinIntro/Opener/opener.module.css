@@ -15,12 +15,16 @@
     }
 }
 
+.image {
+    margin-bottom: var(--ktl-box-section-m);
+}
+
 .image::before {
     left: -48px;
     top: -24px;
 }
 
-.description {
+.section > .description {
     margin-bottom: 0;
     max-width: 479px;
 }

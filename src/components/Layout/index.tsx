@@ -5,13 +5,15 @@ import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/cta-block/index.css";
 
+import "./typography.css";
+import "./heading.css";
+
 import { SEO } from "../Seo";
 import { Header } from "../Header";
 import Markdown from "../Markdown/Markdown";
 import {ContactUs} from "../ContactUs/ContactUs";
 import { Footer } from "../Footer";
 
-import "./typography.css";
 import * as styles from "./layout.module.css";
 
 export enum LayoutSize {

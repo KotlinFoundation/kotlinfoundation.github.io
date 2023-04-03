@@ -32,7 +32,7 @@ export function PostContent({ more, excerpt, fields, frontmatter }) {
 
     return (
         <>
-            <p className={cn(styles.date, textCn('ktl-text-3'), 'ktf-text--gray')}>{date}</p>
+            <p className={cn(styles.date, textCn('ktl-text-3'), 'ktl-text--gray')}>{date}</p>
             <h2 className={cn(styles.title, textCn('ktl-h3'))}>{title}</h2>
             <div className={cn(styles.content, textCn('ktl-text-2'))}>{content}</div>
             {isTrimmed && more}
