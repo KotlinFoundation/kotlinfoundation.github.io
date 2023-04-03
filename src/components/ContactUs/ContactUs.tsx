@@ -14,7 +14,7 @@ export function ContactUs() {
 
     return (
         <CtaBlock
-            topTitle={<>Ready to apply or still have questions?<br/>Contact us!</>}
+            topTitle={<>Ready to apply or still have questions? <br className={styles.br}/>Contact us!</>}
             mainTitle={
                 <Link href={`mailto:${contactEmail}`} mode="clear" className={classes}>
                     {contactEmail}
