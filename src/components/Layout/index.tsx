@@ -1,4 +1,5 @@
-import {FC, ReactNode} from "react";
+import {ReactNode} from "react";
+import '@rescui/focus-manager/lib/autorun';
 
 import "@rescui/typography/lib/font-jb-sans-auto.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";

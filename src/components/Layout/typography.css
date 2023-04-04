@@ -14,6 +14,11 @@
     }
 }
 
+:focus-visible, :focus[data-focus-method=key] {
+    outline: none;
+    box-shadow: var(--rs-color-primary-dim-light-theme) 0 0 0 4px;
+}
+
 .ktl-text--rainbow {
     background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #ED495B 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
     -webkit-background-clip: text;
