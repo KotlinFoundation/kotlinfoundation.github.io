@@ -5,9 +5,8 @@ import * as styles from './post-content.module.css';
 
 const DEFAULT_EXCERPT_SIZE = 300;
 
-export function PostContent({ more, excerpt, fields, frontmatter }) {
+export function PostContent({ more, excerpt, frontmatter }) {
     const { date, title, spoilerSize } = frontmatter;
-    const url = fields.slug;
 
     const cutContent = excerpt
         .substring(0, spoilerSize || DEFAULT_EXCERPT_SIZE);
@@ -34,7 +33,7 @@ export function PostContent({ more, excerpt, fields, frontmatter }) {
         <>
             <p className={cn(styles.date, textCn('ktl-text-3'), 'ktl-text--gray')}>{date}</p>
             <h2 className={cn(styles.title, textCn('ktf-h3'))}>{title}</h2>
-            <div className={cn(styles.content, textCn('ktl-text-2'))}>{content}</div>
+            <div className={cn(styles.content, textCn('ktl-text-2'), 'ktl-text--gray')}>{content}</div>
             {isTrimmed && more}
         </>
     );

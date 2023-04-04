@@ -1,0 +1,7 @@
+.h1, .h2, .h3 {
+    margin-bottom: var(--ktl-box-section-m);
+}
+
+.para:has(+ *) {
+    margin-bottom: 1.5em;
+}

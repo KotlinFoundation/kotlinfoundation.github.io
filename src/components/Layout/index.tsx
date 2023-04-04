@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import '@rescui/focus-manager/lib/autorun';
+import cn from "classnames";
 
 import "@rescui/typography/lib/font-jb-sans-auto.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
@@ -11,8 +11,8 @@ import "./heading.css";
 
 import { SEO } from "../Seo";
 import { Header } from "../Header";
-import Markdown from "../Markdown/Markdown";
-import {ContactUs} from "../ContactUs/ContactUs";
+import { Markdown } from "../Markdown/Markdown";
+import { ContactUs } from "../ContactUs/ContactUs";
 import { Footer } from "../Footer";
 
 import * as styles from "./layout.module.css";
@@ -60,7 +60,7 @@ export function Layout({ children, path, title, layout, contactUs }: LayoutProps
 }
 
 const RegularLayout = ({children}) => (
-    <div className="ktl-layout ktl-layout--center ktl-offset-bottom-xl">
+    <div className={cn('ktl-layout ktl-layout--center ktl-layout--spacing')}>
         {children}
     </div>
 );

@@ -1,10 +1,10 @@
+import {ReactNode} from "react";
 import cn from "classnames";
-import {getImage, GatsbyImage} from "gatsby-plugin-image";
-import { MDXProvider} from "@mdx-js/react";
+import {MDXProvider} from "@mdx-js/react";
 
 import {Link} from "../Link";
 import {KtlLayout} from "../KtlLayout";
-import {FAQ, Answer, Question} from "../FAQ";
+import {Answer, FAQ, Question} from "../FAQ";
 import {Structure} from "../Structure";
 import {Department} from "../Structure/Department";
 import {VideoGallery} from "../VideoGallery";
@@ -14,20 +14,26 @@ import {NotFound} from "../NotFound";
 
 import * as styles from "./markdown.module.css";
 
-const shortcodes = {
-    p: props => <p {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-bottom-m')}/>,
-    h1: props => <h1 {...props} className={cn(props.className, 'ktl-h1 ktl-offset-top-xl ktl-offset-bottom-l')}/>,
-    h2: props => <h2 {...props} className={cn(props.className, 'ktl-h2 ktl-offset-top-l ktl-offset-bottom-m')}/>,
-    h3: props => <h3 {...props} className={cn(props.className, 'ktl-h3 ktl-offset-top-l ktl-offset-bottom-m')}/>,
-    h4: props => <h4 {...props} className={cn(props.className, 'ktl-h4 ktl-offset-top-l ktl-offset-bottom-m')}/>,
-    h5: props => <h5 {...props} className={cn(props.className, 'ktl-h5 ktl-offset-top-l ktl-offset-bottom-m')}/>,
-    h6: props => <h6 {...props} className={cn(props.className, 'ktl-h6 ktl-offset-top-l ktl-offset-bottom-m')}/>,
-    ul: props => <ul {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-top-s')}/>,
-    ol: props => <ol {...props} className={cn(props.className, 'ktl-text-1 ktl-offset-top-s')}/>,
-    li: props => <li {...props} className={cn(props.className, 'ktl-offset-bottom-s')}/>,
-    pre: props => <div><pre {...props} className={cn(props.className, 'ktl-text-2', styles.codeInner)}/></div>,
+export function cls({ className, ...props }, ...classes: cn.ArgumentArray) {
+    return {
+        ...props,
+        className: cn(className, ...classes)
+    };
+}
+
+export const DEFAULT_SHORT_CODES = {
+    h1: props => <h1 {...cls(props, 'ktl-h1 ktl-offset-top-xl ktl-offset-bottom-l')}/>,
+    h2: props => <h2 {...cls(props, 'ktl-h2 ktl-offset-top-l ktl-offset-bottom-m')}/>,
+    h3: props => <h3 {...cls(props, 'ktl-h3 ktl-offset-top-l ktl-offset-bottom-m')}/>,
+    h4: props => <h4 {...cls(props, 'ktl-h4 ktl-offset-top-l ktl-offset-bottom-m')}/>,
+    h5: props => <h5 {...cls(props, 'ktl-h5 ktl-offset-top-l ktl-offset-bottom-m')}/>,
+    h6: props => <h6 {...cls(props, 'ktl-h6 ktl-offset-top-l ktl-offset-bottom-m')}/>,
+    p: props => <p {...cls(props, 'ktl-text-1 ktl-offset-bottom-m')}/>,
+    ul: props => <ul {...cls(props, 'ktl-text-1 ktl-offset-top-s')}/>,
+    ol: props => <ol {...cls(props, 'ktl-text-1 ktl-offset-top-s')}/>,
+    li: props => <li {...cls(props, 'ktl-offset-bottom-s')}/>,
+    pre: props => <div><pre {...cls(props, 'ktl-text-2', styles.codeInner)}/></div>,
     a: props => <Link {...props}/>,
-    // img: props => <img {...props}/>,
     Layout: KtlLayout,
     FAQ,
     Question,
@@ -39,21 +45,29 @@ const shortcodes = {
     ProductHighlight,
     ProductHighlightItem,
     NotFound
-    // blockquote: props => <blockquote {...props} className={cn(props.className, 'ktl-')}/>,
-    // strong: props => <strong {...props} className={cn(props.className, 'ktl-')}/>,
-    // hr: props => <hr {...props} className={cn(props.className, 'ktl-')}/>,
-    // table: props => <table {...props} className={cn(props.className, 'ktl-')}/>,
-    // tr: props => <tr {...props} className={cn(props.className, 'ktl-')}/>,
-    // td: props => <td {...props} className={cn(props.className, 'ktl-')}/>,
-    // pre: props => <pre {...props} className={cn(props.className, 'ktl-')}/>,
-    //  delete: props => <delete {...props} className={cn(props.className, 'ktl-')}/>,
-    // thematicBreak: props => <thematicBreak {...props} className={cn(props.className, 'ktl-')}/>,
-    //  inlineCode: props => <inlineCode {...props} className={cn(props.className, 'ktl-')}/>,
+    // blockquote: props => <blockquote {...cls(props, 'ktl-')}/>,
+    // strong: props => <strong {...cls(props, 'ktl-')}/>,
+    // hr: props => <hr {...cls(props, 'ktl-')}/>,
+    // table: props => <table {...cls(props, 'ktl-')}/>,
+    // tr: props => <tr {...cls(props, 'ktl-')}/>,
+    // td: props => <td {...cls(props, 'ktl-')}/>,
+    // pre: props => <pre {...cls(props, 'ktl-')}/>,
+    //  delete: props => <delete {...cls(props, 'ktl-')}/>,
+    // thematicBreak: props => <thematicBreak {...cls(props, 'ktl-')}/>,
+    //  inlineCode: props => <inlineCode {...cls(props, 'ktl-')}/>,
 };
 
-const Markdown = ({children}) => (
-    <MDXProvider components={shortcodes}>
-        {children}
+export type SHORT_CODES_TYPE = Partial<typeof DEFAULT_SHORT_CODES>
+
+export type MarkdownProps = {
+    className?: string,
+    shortcodes?: SHORT_CODES_TYPE,
+    children: ReactNode,
+}
+
+export const Markdown = ({className, shortcodes, children} : MarkdownProps) => (
+    <MDXProvider components={{...DEFAULT_SHORT_CODES, ...(shortcodes || {})}}>
+        <div className={cn(className, styles.markdown)}>{children}</div>
     </MDXProvider>
 );
 

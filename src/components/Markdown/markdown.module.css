@@ -1,3 +1,7 @@
+.markdown > *:first-child {
+    margin-top: 0;
+}
+
 .code-inner {
     display: inline-block;
     box-sizing: border-box;

@@ -21,7 +21,7 @@ export default function NewsList(props) {
                         title
                         coverImage {
                             childImageSharp {
-                                gatsbyImageData(width: 328)
+                                gatsbyImageData(width: 328, quality: 100)
                             }
                         }
                     }
