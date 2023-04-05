@@ -84,7 +84,7 @@ export function PageMarkdownLayout({pageContext, ...props } : MarkdownLayoutProp
     const title = pageContext?.frontmatter?.title;
     const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
     const contact = pageContext?.frontmatter?.contactUs ?? false;
-    const appearance = pageContext?.frontmatter?.appearance ?? LayoutMDAppearance.Classic;
+    const appearance = pageContext?.frontmatter?.appearance ?? LayoutMDAppearance.Modern;
 
     return (
         <MarkdownLayout {...props} title={title} layout={layout} appearance={appearance} contactUs={contact}/>
