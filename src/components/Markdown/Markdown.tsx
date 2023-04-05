@@ -70,5 +70,3 @@ export const Markdown = ({className, shortcodes, children} : MarkdownProps) => (
         <div className={cn(className, styles.markdown)}>{children}</div>
     </MDXProvider>
 );
-
-export default Markdown;

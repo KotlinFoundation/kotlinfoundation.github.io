@@ -2,7 +2,7 @@ import cn from "classnames";
 import {graphql, PageProps, useStaticQuery} from "gatsby";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 import Layout from "../Layout";
-import {ModernMarkdown} from "../Markdown/modern/ModernMarkdown";
+import {ModernMarkdown} from "../Markdown";
 
 import * as style from './Post.module.css';
 

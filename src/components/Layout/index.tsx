@@ -11,7 +11,7 @@ import "./heading.css";
 
 import { SEO } from "../Seo";
 import { Header } from "../Header";
-import { Markdown } from "../Markdown/Markdown";
+import { Markdown, ModernMarkdown } from "../Markdown";
 import { ContactUs } from "../ContactUs/ContactUs";
 import { Footer } from "../Footer";
 
@@ -26,6 +26,12 @@ interface MDLayoutProps {
     title?: string;
     layout?: LayoutSize;
     contactUs?: boolean;
+    appearance?: LayoutMDAppearance
+}
+
+export enum LayoutMDAppearance {
+    Modern = 'modern',
+    Classic = 'classic'
 }
 
 export interface BaseLayoutProps {
@@ -65,10 +71,11 @@ const RegularLayout = ({children}) => (
     </div>
 );
 
-export function MarkdownLayout({children, ...props} : LayoutProps) {
+export function MarkdownLayout({appearance, children, ...props} : LayoutProps) {
+    const Tag = LayoutMDAppearance.Modern === appearance ? ModernMarkdown : Markdown;
     return (
         <Layout {...props}>
-            <Markdown>{children}</Markdown>
+            <Tag>{children}</Tag>
         </Layout>
     );
 }
@@ -77,9 +84,10 @@ export function PageMarkdownLayout({pageContext, ...props } : MarkdownLayoutProp
     const title = pageContext?.frontmatter?.title;
     const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
     const contact = pageContext?.frontmatter?.contactUs ?? false;
+    const appearance = pageContext?.frontmatter?.appearance ?? LayoutMDAppearance.Classic;
 
     return (
-        <MarkdownLayout {...props} title={title} layout={layout} contactUs={contact}/>
+        <MarkdownLayout {...props} title={title} layout={layout} appearance={appearance} contactUs={contact}/>
     );
 }
 
