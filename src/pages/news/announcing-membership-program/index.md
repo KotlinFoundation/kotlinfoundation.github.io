@@ -2,6 +2,7 @@
 title: "Announcing the Kotlin Foundation Membership Program"
 date: 2023-04-14
 coverImage: "./cover.jpg"
+spoilerSize: 586
 ---
 
 Originally, the Kotlin Foundation’s mission was to preserve the Kotlin trademark, control incompatible changes to the language, and assign a lead language designer. But as of 2023, the Foundation is taking on more responsibility, which includes advancing the Kotlin ecosystem and promoting Kotlin in education.

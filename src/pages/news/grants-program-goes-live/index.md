@@ -2,6 +2,7 @@
 title: "The Kotlin Foundation Grants Program Is Live"
 date: 2023-04-14
 coverImage: "./cover.jpg"
+spoilerSize: 499
 ---
 
 Today, we’re introducing the Kotlin Foundation's Grants Program! This initiative will be held on a regular basis and provide financial awards to developers who contribute to the Kotlin ecosystem.

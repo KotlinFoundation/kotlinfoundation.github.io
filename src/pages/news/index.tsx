@@ -19,6 +19,7 @@ export default function NewsList(props) {
                     frontmatter {
                         date(formatString: "MMMM DD, YYYY")
                         title
+                        spoilerSize
                         coverImage {
                             childImageSharp {
                                 gatsbyImageData(width: 328, quality: 100)
