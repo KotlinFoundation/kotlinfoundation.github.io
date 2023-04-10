@@ -8,7 +8,7 @@
     margin-right: 0;
 }
 
-@media (min-width: 768px) {
+@media (--ktl-tl-min) {
     .faq {
         display: grid;
         grid-template-columns: 4fr 7fr;
@@ -18,8 +18,8 @@
     .question, .answer {
         margin-bottom: 0;
     }
-}
 
-.question {
-    padding-right: calc(20% + var(--ktl-box-section-l));
+    .question {
+        padding-right: var(--ktl-box-block-l);
+    }
 }
