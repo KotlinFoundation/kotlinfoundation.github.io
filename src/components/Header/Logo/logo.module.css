@@ -6,6 +6,7 @@
 
 .image {
     display: flex;
+    align-items: center;
     margin-right: var(--ktl-box-block-s);
 }
 
