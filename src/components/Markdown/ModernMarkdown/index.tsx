@@ -1,4 +1,5 @@
 import {createContext, useContext} from "react";
+import cn from "classnames";
 import {useTextStyles} from "@rescui/typography";
 
 import {cls, Markdown, MarkdownProps, SHORT_CODES_TYPE} from "../Markdown";
@@ -49,6 +50,10 @@ const MODERN_SHORT_CODES: SHORT_CODES_TYPE = {
     blockquote: props => <blockquote {...cls(props, styles.quote)}/>,
 };
 
-export function ModernMarkdown({shortcodes, ...props}: MarkdownProps) {
-    return <Markdown {...props} className={styles.markdown} shortcodes={{...MODERN_SHORT_CODES, ...(shortcodes || {})}}/>
+export function ModernMarkdown({shortcodes, className, ...props}: MarkdownProps) {
+    return <Markdown
+        {...props}
+        className={cn(className, styles.markdown)}
+        shortcodes={{...MODERN_SHORT_CODES, ...(shortcodes || {})}}
+    />;
 }

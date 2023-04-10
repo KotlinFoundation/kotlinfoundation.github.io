@@ -36,6 +36,10 @@ body {
     background: #fff;
 }
 
+.narrow {
+    max-width: 720px;
+}
+
 @media (max-width: 767px) {
     :global body.overlay-locked {
         overflow: hidden;

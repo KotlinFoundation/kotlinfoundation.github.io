@@ -18,8 +18,9 @@ import { Footer } from "../Footer";
 import * as styles from "./layout.module.css";
 
 export enum LayoutSize {
+    Regular = 'regular',
     Narrow = 'narrow',
-    Wide = 'wide'
+    Wide = 'wide',
 }
 
 interface MDLayoutProps {
@@ -50,7 +51,11 @@ type LayoutProps = BaseLayoutProps & MDLayoutProps;
 export function Layout({ children, path, title, layout, contactUs }: LayoutProps) {
     const content = layout === LayoutSize.Wide
         ? children
-        : <RegularLayout>{children}</RegularLayout>;
+        : (
+            <RegularLayout className={LayoutSize.Narrow === layout ? styles.narrow : ''}>
+                {children}
+            </RegularLayout>
+        );
 
     return (
         <>
@@ -65,8 +70,8 @@ export function Layout({ children, path, title, layout, contactUs }: LayoutProps
     );
 }
 
-const RegularLayout = ({children}) => (
-    <div className={cn('ktl-layout ktl-layout--center ktl-layout--spacing')}>
+const RegularLayout = ({className, children}) => (
+    <div className={cn(className, 'ktl-layout ktl-layout--center ktl-layout--spacing')}>
         {children}
     </div>
 );
