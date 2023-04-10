@@ -34,6 +34,8 @@ export const DEFAULT_SHORT_CODES = {
     li: props => <li {...cls(props, 'ktl-offset-bottom-s')}/>,
     pre: props => <div><pre {...cls(props, 'ktl-text-2', styles.codeInner)}/></div>,
     a: props => <Link {...props}/>,
+    blockquote: props => <blockquote {...props}/>,
+
     Layout: KtlLayout,
     FAQ,
     Question,
@@ -44,8 +46,8 @@ export const DEFAULT_SHORT_CODES = {
     IntroBanner,
     ProductHighlight,
     ProductHighlightItem,
-    NotFound
-    // blockquote: props => <blockquote {...cls(props, 'ktl-')}/>,
+    NotFound,
+
     // strong: props => <strong {...cls(props, 'ktl-')}/>,
     // hr: props => <hr {...cls(props, 'ktl-')}/>,
     // table: props => <table {...cls(props, 'ktl-')}/>,

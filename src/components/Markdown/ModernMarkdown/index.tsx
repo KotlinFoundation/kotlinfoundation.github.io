@@ -45,6 +45,8 @@ const MODERN_SHORT_CODES: SHORT_CODES_TYPE = {
     },
 
     li: props => <li {...props}/>,
+
+    blockquote: props => <blockquote {...cls(props, styles.quote)}/>,
 };
 
 export function ModernMarkdown({shortcodes, ...props}: MarkdownProps) {

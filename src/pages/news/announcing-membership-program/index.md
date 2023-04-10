@@ -1,6 +1,6 @@
 ---
 title: "Announcing the Kotlin Foundation Membership Program"
-date: 2023-04-14
+date: 2023-04-14 00:03
 coverImage: "./cover.jpg"
 spoilerSize: 586
 ---

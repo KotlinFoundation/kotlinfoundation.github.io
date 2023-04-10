@@ -33,3 +33,7 @@
 .markdown > *:last-child {
     margin-bottom: 0;
 }
+
+.quote .para {
+    color: var(--ktf-text-gray);
+}

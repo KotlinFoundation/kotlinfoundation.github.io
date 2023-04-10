@@ -30,8 +30,8 @@ export function Posts({ posts }) {
                                         <Button className={styles.more} size="l" mode="outline" href={url} onClick={onReadMore}>Read more</Button>
                                     }/>
                                 </div>
-                                <div className={styles.image}>
-                                    <GatsbyImage alt={post.frontmatter.title} image={coverImage}/>
+                                <div className={cn(styles.image, { [styles.noImage]: !coverImage })}>
+                                    {coverImage && <GatsbyImage alt={post.frontmatter.title} image={coverImage}/>}
                                 </div>
                             </div>
                         </li>
