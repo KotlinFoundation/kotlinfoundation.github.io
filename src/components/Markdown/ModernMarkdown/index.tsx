@@ -1,6 +1,6 @@
 import {createContext, useContext} from "react";
 import cn from "classnames";
-import {useTextStyles} from "@rescui/typography";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
 import {cls, Markdown, MarkdownProps, SHORT_CODES_TYPE} from "../Markdown";
 
@@ -11,6 +11,13 @@ export const OLContext = createContext<number | null>(null);
 
 const offsetItems = 8;
 
+function withTextCn(Component) {
+    return props => {
+        const textCn = useTextStyles();
+        return <Component {...props} textCn={textCn}/>;
+    }
+}
+
 const MODERN_SHORT_CODES: SHORT_CODES_TYPE = {
     h1: props => <h1 {...cls(props, 'ktf-h2 ktf-h3--mm', styles.h1)}/>,
     h2: props => <h2 {...cls(props, 'ktf-h3 ktf-h4--mm', styles.h2)}/>,
@@ -19,7 +26,9 @@ const MODERN_SHORT_CODES: SHORT_CODES_TYPE = {
     h5: props => <h5 {...cls(props, 'ktl-h5', styles.h5)}/>,
     h6: props => <h6 {...cls(props, 'ktl-h6', styles.h6)}/>,
 
-    p: props => <p {...cls(props, 'ktl-text-2', styles.para)}/>,
+    p: withTextCn(
+        ({ textCn, ...props }) => <p {...cls(props, textCn('ktl-text-2'), styles.para)}/>
+    ),
 
     ul: function UL(props) {
         const textCn = useTextStyles();

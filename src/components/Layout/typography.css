@@ -36,3 +36,9 @@
 .ktl-text--gray {
     color: var(--ktf-text-gray);
 }
+
+@media (--ktl-mm) {
+    .hide--mm {
+        display: none;
+    }
+}

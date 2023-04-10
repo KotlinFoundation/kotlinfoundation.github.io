@@ -1,0 +1,82 @@
+:root {
+    --ktf-grants-spacing: var(--ktl-box-section-s);
+    
+    @media (--ktl-tm) {
+        --ktf-grants-spacing: 0;
+    }
+}
+
+.grants {
+    margin: 0 var(--ktf-grants-spacing);
+}
+
+.grants > p:first-of-type {
+    margin-bottom: var(--ktl-box-section-m);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--ktl-box-section-m);
+
+    &::before {
+        display: block;
+        content: '';
+        background: url("intro.png") no-repeat center;
+        background-size: 152px;
+        margin-bottom: var(--ktf-para-spacing);
+        height: 152px;
+        width: 152px;
+    }
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+
+    padding: var(--ktl-box-section-s);
+    margin-left: calc(-1 * var(--ktf-grants-spacing));
+    margin-right: calc(-1 * var(--ktf-grants-spacing));
+    margin-top: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-m);
+
+    background: var(--ktl-light-grey);
+
+    @media (--ktl-tm-min) {
+        > :first-child {
+            margin: 0;
+        }
+    }
+
+    @media (--ktl-tm) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.action:has( + .action) {
+    margin-bottom: var(--ktf-para-spacing);
+}
+
+.action + .action {
+    margin-top: var(--ktf-para-spacing);
+}
+
+.action--dark {
+    background: #19191C;
+}
+
+.button {
+    min-width: 250px;
+
+    @media (--ktl-tm-min) {
+        margin-left: var(--ktl-box-section-s);
+    }
+
+    @media (--ktl-ms) {
+        min-width: 224px;
+    }
+}

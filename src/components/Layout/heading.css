@@ -1,5 +1,5 @@
 @define-mixin ktf-h1 {
-    color: #19191C;
+    color: var(--rs-typography-color-hard);
 
     font-weight: 600;
     font-size: 43px;
@@ -10,7 +10,7 @@
 }
 
 @define-mixin ktf-h2 {
-    color: #19191C;
+    color: var(--rs-typography-color-hard);
 
     font-weight: 600;
     font-size: 35px;
@@ -21,7 +21,7 @@
 }
 
 @define-mixin ktf-h3 {
-    color: #19191C;
+    color: var(--rs-typography-color-hard);
 
     font-weight: 600;
     font-size: 20px;
@@ -32,7 +32,7 @@
 }
 
 @define-mixin ktf-h4 {
-    color: #19191C;
+    color: var(--rs-typography-color-hard);
 
     font-weight: 600;
     font-size: 16px;

@@ -1,6 +1,7 @@
 import {ReactNode} from "react";
 import cn from "classnames";
 import {MDXProvider} from "@mdx-js/react";
+import Button from "@rescui/button";
 
 import {Link} from "../Link";
 import {KtlLayout} from "../KtlLayout";
@@ -11,6 +12,7 @@ import {VideoGallery} from "../VideoGallery";
 import {IntroBanner} from "../IntroBanner";
 import {ProductHighlight, ProductHighlightItem} from "../ProductHighlight";
 import {NotFound} from "../NotFound";
+import {Grants, GrantsTitle, GrantsAction} from "../Grants";
 
 import * as styles from "./markdown.module.css";
 
@@ -47,6 +49,10 @@ export const DEFAULT_SHORT_CODES = {
     ProductHighlight,
     ProductHighlightItem,
     NotFound,
+    Grants,
+    GrantsTitle,
+    GrantsAction,
+    Button,
 
     // strong: props => <strong {...cls(props, 'ktl-')}/>,
     // hr: props => <hr {...cls(props, 'ktl-')}/>,
