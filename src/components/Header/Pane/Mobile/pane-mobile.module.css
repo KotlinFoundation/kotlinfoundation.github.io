@@ -1,10 +1,14 @@
 @import "../../../Layout/spacing.css";
 
-.trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 52px;
-    height: 52px;
+.pane {
+    > .trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        margin: 4px;
+        width: 48px;
+        height: 48px;
+    }
 }

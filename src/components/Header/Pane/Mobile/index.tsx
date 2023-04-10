@@ -1,9 +1,10 @@
+import {useCallback, useContext} from "react";
 import cn from "classnames";
+import Button from "@rescui/button";
 import {CloseIcon, HamburgerIcon} from "@rescui/icons";
+import {NavigationContext} from "../../../Navigation";
 
 import * as style from "./pane-mobile.module.css";
-import {useCallback, useContext} from "react";
-import {NavigationContext} from "../../../Navigation";
 
 export function PaneMobile({ className = null, sidebar = false, children = null }) {
     const { toggle } = useContext(NavigationContext);
@@ -15,11 +16,13 @@ export function PaneMobile({ className = null, sidebar = false, children = null 
     }, [isClose, toggle]);
 
     return (
-        <div className={className}>
+        <div className={cn(className, style.pane)}>
             {children}
-            <div className={style.trigger} onClick={onIconClick}>
-                {isClose ? <CloseIcon /> : <HamburgerIcon />}
-            </div>
+            <Button
+                mode="clear" className={style.trigger} onClick={onIconClick}
+                icon={isClose ? <CloseIcon /> : <HamburgerIcon />}
+                iconPosition="left"
+            />
         </div>
     );
 }

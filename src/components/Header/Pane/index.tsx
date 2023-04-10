@@ -29,7 +29,7 @@ export function Pane({ className = null, sidebar = false }) {
             </div>
             <div className={style.nav}>
                 {isTop && <PaneDesktop className={style.desktop}/>}
-                <PaneMobile sidebar={sidebar} className={style.mobile}>
+                <PaneMobile sidebar={sidebar} className={cn(style.mobile)}>
                     {isTop && <JoinLink/>}
                 </PaneMobile>
             </div>

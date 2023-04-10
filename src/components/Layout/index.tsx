@@ -52,7 +52,7 @@ export function Layout({ children, path, title, layout, contactUs }: LayoutProps
     const content = layout === LayoutSize.Wide
         ? children
         : (
-            <RegularLayout className={LayoutSize.Narrow === layout ? styles.narrow : ''}>
+            <RegularLayout className={LayoutSize.Narrow === layout && styles.narrow}>
                 {children}
             </RegularLayout>
         );
