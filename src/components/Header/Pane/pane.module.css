@@ -1,0 +1,60 @@
+:root {
+    --ktf-header-height: 64px;
+}
+
+@media (--ktf-header-mobile) {
+    :root {
+        --ktf-header-height: 52px;
+    }
+}
+
+.pane {
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 0 var(--ktl-box-section-l);
+    border-bottom: 1px solid var(--rs-color-grey-20);
+    height: var(--ktf-header-height);
+
+    @media (--ktf-header-mobile) {
+        padding-left: var(--ktl-box-block-l);
+        padding-right: 0;
+    }
+}
+
+.pane--top {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.nav, .logo, .mobile {
+    display: flex;
+    align-items: center;
+}
+
+.kotlinlang {
+    margin-left: var(--ktl-box-section-l);
+
+    @media (--ktf-header-site-link) {
+        display: none;
+    }
+}
+
+.desktop {
+    margin-bottom: -1px;
+
+    @media (--ktf-header-mobile) {
+        display: none;
+    }
+}
+
+.mobile, .popup {
+    @media (--ktf-header-desktop) {
+        display: none;
+    }
+}

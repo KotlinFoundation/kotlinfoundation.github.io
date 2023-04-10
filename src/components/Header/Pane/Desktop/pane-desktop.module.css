@@ -1,6 +1,6 @@
-@import "../../Layout/spacing.css";
+@import "../../../Layout/spacing.css";
 
-.menu {
+.list {
     display: flex;
     padding: 0;
     margin: 0 calc(-1px * var(--ktl-box-section-s));
@@ -31,7 +31,7 @@
     border-bottom-width: 2px;
 }
 
-.menu, .link, .item {
+.list, .link, .item {
     box-sizing: border-box;
     height: var(--ktf-header-height);
 }

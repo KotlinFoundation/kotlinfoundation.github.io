@@ -18,7 +18,7 @@ type IProps =  LinkParams & {
     standalone?: boolean,
 };
 
-export function Link({ className, hardness = null, standalone = false, external = null, mode=null, ...props } : IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
+export function Link({ className, hardness = null, standalone = false, external = null, mode=null, ...props } : IProps & (AnchorHTMLAttributes<HTMLAnchorElement>)) {
     const base = useSiteURL();
     const textCn = useTextStyles();
 

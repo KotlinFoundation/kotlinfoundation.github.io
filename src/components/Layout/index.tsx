@@ -10,7 +10,7 @@ import "./typography.css";
 import "./heading.css";
 
 import { SEO } from "../Seo";
-import { Header } from "../Header";
+import { Header as Header } from "../Header";
 import { Markdown, ModernMarkdown } from "../Markdown";
 import { ContactUs } from "../ContactUs/ContactUs";
 import { Footer } from "../Footer";
