@@ -1,0 +1,5 @@
+.popup {
+    @media(--ktf-header-desktop) {
+        display: none;
+    }
+}

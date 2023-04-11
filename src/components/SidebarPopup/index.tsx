@@ -14,8 +14,15 @@ export function SidebarPopup({ className = null, classNameNav = null, children, 
 
     const classes = cn(className, styles.popup, { [styles.close]: !isOpen });
 
+    const disableProps = {};
+
+    if (!isOpen) {
+        disableProps.tabIndex = '-1';
+        disableProps.role = 'none';
+    }
+
     return (
-        <div className={classes} onClick={onToggleClick}>
+        <div className={classes} onClick={onToggleClick} {...disableProps}>
             {isOpen && <RemoveScrollBar/>}
             <div ref={ref} className={cn(classNameNav, styles.navigation)}>
                 {children}

@@ -33,7 +33,7 @@
         right: 0;
         left: 0;
 
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.62);
         visibility: visible;
 
         transition: background-color var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
@@ -60,6 +60,7 @@
     }
 
     .navigation {
-        transform: translateX(100%)
+        transform: translateX(100%);
+        visibility: hidden;
     }
 }
