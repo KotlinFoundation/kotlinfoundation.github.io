@@ -1,35 +1,27 @@
 import {FC, ReactNode} from "react";
 import {Link} from "gatsby";
 import cn from "classnames";
-import Button from "@rescui/button";
-import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
+import {useTextStyles} from "@rescui/typography";
+
+import {KtlLayout} from "../KtlLayout";
 import * as styles from "./productHighlight.module.css";
 
 export interface ProductHighlightProps {
     title: string;
     children: ReactNode[];
-    link?: {
-        title: string;
-        href: string;
-    };
 }
-export const ProductHighlight: FC<ProductHighlightProps> = ({title, children, link}) => {
-    const textCn = useTextStyles();
+
+export const ProductHighlight: FC<ProductHighlightProps> = ({title, children}) => {
     return (
-        <section className={'ktl-offset-top-xxl'}>
+        <KtlLayout spacing addExtraSpace>
             <div className={styles.productHighlight}>
-                <h2 className="ktl-h2 ktl-offset-bottom-l">{title}</h2>
-                <ul className={cn(styles.items, textCn('ktl-text-1'))}>
+                <h2 className={cn(styles.header, "ktf-h1--ds ktf-h2--ds-min ktf-h2--tl")}>{title}</h2>
+                <ul className={cn(styles.items)}>
                     {children}
                 </ul>
             </div>
-            {link && <div className={styles.appendix}>
-                <Link to={link.href}>
-                    <Button mode="outline" size="l">{link.title}</Button>
-                </Link>
-            </div>}
-        </section>
+        </KtlLayout>
     );
 };
 
@@ -39,12 +31,16 @@ export interface ProductHighlightItemProps {
     children: ReactNode;
 }
 
-export const ProductHighlightItem: FC<ProductHighlightItemProps> = ({value, icon, children}) => (
-    <li className={cn(styles.item, {[styles.withNumber]: !!value})}>
-        {value && <div className={cn(styles.number, 'ktl-hero')}>{value}</div>}
-        {icon && <img className={styles.icon} src={icon} alt="" />}
-        <div className={styles.desc}>
-            {children}
-        </div>
-    </li>
-);
+export const ProductHighlightItem: FC<ProductHighlightItemProps> = ({value, icon, children}) => {
+    const textCn = useTextStyles();
+
+    return (
+        <li className={styles.item}>
+            {value && <div className={cn(styles.number,  textCn('rs-hero', {hardness: 'hard'}))}>{value}</div>}
+            {icon && <img className={styles.icon} src={icon} alt=""/>}
+            <div className={cn(styles.desc, textCn('rs-text-2', {hardness: 'hard'}), {[styles.withNumber]: !!value})}>
+                {children}
+            </div>
+        </li>
+    );
+};

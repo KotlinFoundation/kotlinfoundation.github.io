@@ -16,16 +16,17 @@ import YoutubePlayer from '@jetbrains/kotlin-web-site-ui/out/components/youtube-
 import '@jetbrains/kotlin-web-site-ui/out/components/youtube-player/index.css';
 
 import * as styles from './index.module.css';
+import {KtlLayout} from "../KtlLayout";
 
 export interface VideoGalleryProps {
     videos: {
         title: string;
         url: string;
     }[],
-    children: ReactNode
+    title: string;
 }
 
-export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
+export const VideoGallery: FC<VideoGalleryProps> = ({videos, title}) => {
     const textCn = useTextStyles();
     let [currentId, setCurrentId] = useState('');
     const sliderRef = useRef(null);
@@ -63,10 +64,13 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
     }, []);
 
     return (
-        <>
-            <h2 className="ktl-h2 ktl-layout ktl-layout--center ktl-offset-top-xxl">{children}</h2>
+        <div className={styles.container}>
+            <KtlLayout>
+                <h2 className={cn(styles.header, "ktf-h1--ds ktf-h2--ds-min ktf-h2--tl")}>{title}</h2>
+            </KtlLayout>
+
             <div className={styles.wrapper}>
-                <Slider ref={sliderRef} {...settings} className={'ktl-offset-top-l'}>
+                <Slider ref={sliderRef} {...settings}>
                     {videos.map((video, i) => (
                         <div key={video.url} className={styles.item}>
                             <div className={styles.media}>
@@ -74,7 +78,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
                                 <Button icon={<RightIcon/>} className={styles.btn} onClick={() => clickHandle(i)}
                                         mode="rock" size="l" theme="dark"/>
                             </div>
-                            <span className={cn(styles.title, textCn('ktl-text-2'))}>{video.title}</span>
+                            <div className={cn(styles.title, textCn('ktl-text-2'))}>{video.title}</div>
                         </div>
                     ))}
                 </Slider>
@@ -92,7 +96,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, children}) => {
                     <YoutubePlayer id={currentId} autoplay className={styles.player}/>
                 </Popup>
             </div>
-        </>
+        </div>
     );
 };
 

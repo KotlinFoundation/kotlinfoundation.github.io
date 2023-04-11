@@ -45,7 +45,7 @@
 @each $size in 1, 2, 3, 4 {
     .ktf-h$(size) { @mixin ktf-h$(size); }
 
-    @each $query in ms, mm, ts, tm, tl {
+    @each $query in ms, mm, ts, tm, tl, ds, dm {
         @media (--ktl-$(query)) {
             .ktf-h$(size)--$(query) { @mixin ktf-h$(size); }
         }

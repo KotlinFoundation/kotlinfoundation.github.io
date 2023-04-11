@@ -27,7 +27,8 @@ interface MDLayoutProps {
     title?: string;
     layout?: LayoutSize;
     contactUs?: boolean;
-    appearance?: LayoutMDAppearance
+    appearance?: LayoutMDAppearance;
+    greyLayout?: true;
 }
 
 export enum LayoutMDAppearance {
@@ -48,7 +49,7 @@ type MarkdownLayoutProps = BaseLayoutProps & {
 
 type LayoutProps = BaseLayoutProps & MDLayoutProps;
 
-export function Layout({ children, path, title, layout, socialImage = null, contactUs }: LayoutProps) {
+export function Layout({ children, path, title, layout, socialImage = null, contactUs, greyLayout }: LayoutProps) {
     const content = layout === LayoutSize.Wide
         ? children
         : (
@@ -61,7 +62,7 @@ export function Layout({ children, path, title, layout, socialImage = null, cont
         <>
             <SEO title={title} image={socialImage}/>
             <Header path={path}/>
-            <div className={styles.layout}>
+            <div className={cn(styles.layout, {[styles.greyLayout]: Boolean(greyLayout)})}>
                 {content}
                 {contactUs && <ContactUs/>}
                 <Footer/>
@@ -90,9 +91,10 @@ export function PageMarkdownLayout({pageContext, ...props } : MarkdownLayoutProp
     const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
     const contact = pageContext?.frontmatter?.contactUs ?? false;
     const appearance = pageContext?.frontmatter?.appearance ?? LayoutMDAppearance.Modern;
+    const greyLayout = pageContext?.frontmatter?.greyLayout ?? false;
 
     return (
-        <MarkdownLayout {...props} title={title} layout={layout} appearance={appearance} contactUs={contact}/>
+        <MarkdownLayout {...props} title={title} layout={layout} appearance={appearance} contactUs={contact} greyLayout={greyLayout} />
     );
 }
 

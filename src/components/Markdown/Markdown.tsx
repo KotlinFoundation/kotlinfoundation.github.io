@@ -13,6 +13,9 @@ import {IntroBanner} from "../IntroBanner";
 import {ProductHighlight, ProductHighlightItem} from "../ProductHighlight";
 import {NotFound} from "../NotFound";
 import {Grants, GrantsTitle, GrantsAction} from "../Grants";
+import {PagePreview} from "../PagePreview";
+import {PairedBlock} from "../PairedBlock";
+import {LatestNews} from "../LatestNews";
 
 import * as styles from "./markdown.module.css";
 
@@ -53,7 +56,9 @@ export const DEFAULT_SHORT_CODES = {
     GrantsTitle,
     GrantsAction,
     Button,
-
+    PagePreview,
+    PairedBlock,
+    LatestNews,
     // strong: props => <strong {...cls(props, 'ktl-')}/>,
     // hr: props => <hr {...cls(props, 'ktl-')}/>,
     // table: props => <table {...cls(props, 'ktl-')}/>,

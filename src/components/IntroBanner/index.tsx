@@ -25,7 +25,7 @@ interface Company {
     image: string;
 }
 
-export const IntroBanner: FC = ({title, members}) => {
+export const IntroBanner: FC<IntroBannerProps> = ({title, members}) => {
     const textCn = useTextStyles();
 
     return (
