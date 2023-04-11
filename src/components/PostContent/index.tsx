@@ -6,10 +6,10 @@ import * as styles from './post-content.module.css';
 const DEFAULT_EXCERPT_SIZE = 300;
 
 export function PostContent({ more, excerpt, frontmatter }) {
+    const textCn = useTextStyles();
     const { date, title } = frontmatter;
 
     const {content, isTrimmed} = postContentPreview({excerpt, frontmatter});
-    const textCn = useTextStyles();
 
     return (
         <>
@@ -21,7 +21,7 @@ export function PostContent({ more, excerpt, frontmatter }) {
     );
 }
 
-export function postContentPreview({excerpt, frontmatter}, more): {content: string; isTrimmed: boolean;} {
+export function postContentPreview({excerpt, frontmatter}, more = null): {content: string; isTrimmed: boolean;} {
     const { spoilerSize } = frontmatter;
 
     const cutContent = excerpt
@@ -46,5 +46,5 @@ export function postContentPreview({excerpt, frontmatter}, more): {content: stri
     return {
         content,
         isTrimmed
-    }
+    };
 }
