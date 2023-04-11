@@ -37,13 +37,11 @@
     justify-content: space-between;
     border-radius: 16px;
 
+    background: var(--ktl-light-grey);
     padding: var(--ktl-box-section-s);
+
     margin-left: calc(-1 * var(--ktf-grants-spacing));
     margin-right: calc(-1 * var(--ktf-grants-spacing));
-    margin-top: var(--ktl-box-section-m);
-    margin-bottom: var(--ktl-box-section-m);
-
-    background: var(--ktl-light-grey);
 
     @media (--ktl-tm-min) {
         > :first-child {
@@ -55,6 +53,11 @@
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+.action {
+    margin-top: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-m);
 }
 
 .action:has( + .action) {
