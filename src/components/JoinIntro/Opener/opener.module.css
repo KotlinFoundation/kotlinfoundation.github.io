@@ -16,7 +16,7 @@
 }
 
 .image {
-    margin-bottom: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-l);
 }
 
 .image::before {
@@ -33,12 +33,12 @@
     display: inline-block;
     background: var(--rs-color-grey-10);
     border-radius: 8px;
-    margin: var(--ktl-box-section-m) 0 0;
+    margin: var(--ktl-box-section-l) 0 0;
     padding: var(--ktl-box-block-l) 18px;
 
     @media (--ktl-mm) {
         align-self: stretch;
-        margin-bottom: var(--ktl-box-section-l);
+        margin-bottom: var(--ktl-box-section-m);
     }
 }
 

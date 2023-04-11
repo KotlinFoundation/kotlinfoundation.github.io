@@ -4,5 +4,5 @@
 
 .title {
     margin-top: calc(var(--ktl-box-section-s) / 2);
-    margin-bottom: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-l);
 }

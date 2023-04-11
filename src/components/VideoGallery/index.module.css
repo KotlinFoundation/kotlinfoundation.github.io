@@ -2,7 +2,7 @@
 
 .container {
     margin-top: var(--ktl-box-page-m);
-    padding-bottom: var(--ktl-box-section-m);
+    padding-bottom: var(--ktl-box-section-l);
 }
 
 .wrapper {
@@ -91,6 +91,6 @@
 
 @media (--ktl-mm) {
     .container {
-        margin-top: var(--ktl-box-section-m);
+        margin-top: var(--ktl-box-section-l);
     }
 }

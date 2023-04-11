@@ -19,7 +19,7 @@
     }
 
     @media (--ktl-tl) {
-        padding: var(--ktl-box-section-m) 0;
+        padding: var(--ktl-box-section-l) 0;
     }
 }
 
@@ -65,7 +65,7 @@
 
 .image {
     @media (--ktl-tl) {
-        margin-top: var(--ktl-box-section-m);
+        margin-top: var(--ktl-box-section-l);
     }
 
     @media (--ktl-mm) {
@@ -90,7 +90,7 @@
 }
 
 .more {
-    margin-top: var(--ktl-box-section-m);
+    margin-top: var(--ktl-box-section-l);
     @media (--ktl-mm) {
         margin-top: var(--ktl-box-section-s);
     }

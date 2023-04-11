@@ -11,14 +11,14 @@
 }
 
 .grants > p:first-of-type {
-    margin-bottom: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-l);
 }
 
 .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-l);
 
     &::before {
         display: block;
@@ -56,8 +56,8 @@
 }
 
 .action {
-    margin-top: var(--ktl-box-section-m);
-    margin-bottom: var(--ktl-box-section-m);
+    margin-top: var(--ktl-box-section-l);
+    margin-bottom: var(--ktl-box-section-l);
 }
 
 .action:has( + .action) {

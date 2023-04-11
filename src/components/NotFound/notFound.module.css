@@ -22,7 +22,7 @@
 }
 
 .btn {
-    margin-top: var(--ktl-box-section-l);
+    margin-top: var(--ktl-box-section-m);
 }
 
 @media (min-width: 768px) {
@@ -39,6 +39,6 @@
 
     .content {
         text-align: left;
-        margin-left: var(--ktl-box-section-l);
+        margin-left: var(--ktl-box-section-m);
     }
 }

@@ -9,17 +9,17 @@
 }
 
 .h1 {
-    margin-top: var(--ktl-box-section-m);
-    margin-bottom: var(--ktl-box-section-m);
-}
-
-.h2 {
-    margin-top: var(--ktl-box-section-m);
+    margin-top: var(--ktl-box-section-l);
     margin-bottom: var(--ktl-box-section-l);
 }
 
-.h3 {
+.h2 {
     margin-top: var(--ktl-box-section-l);
+    margin-bottom: var(--ktl-box-section-m);
+}
+
+.h3 {
+    margin-top: var(--ktl-box-section-m);
     margin-bottom: var(--ktl-box-section-s);
 }
 

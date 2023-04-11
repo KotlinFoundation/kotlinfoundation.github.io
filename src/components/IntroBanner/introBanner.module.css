@@ -30,7 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -80px;
-    margin-top: calc(var(--ktl-box-section-l) * -1);
+    margin-top: calc(var(--ktl-box-section-m) * -1);
 }
 
 .companies-group {
@@ -55,11 +55,11 @@
     }
 
     .companies {
-        margin-left: calc(var(--ktl-box-section-m) * -1);
+        margin-left: calc(var(--ktl-box-section-l) * -1);
     }
 
     .companies-group {
-        margin-left: var(--ktl-box-section-m);
+        margin-left: var(--ktl-box-section-l);
     }
 }
 
@@ -93,7 +93,7 @@
 
 @media (--ktl-tm) {
     .intro {
-        margin-bottom: var(--ktl-box-section-m);
+        margin-bottom: var(--ktl-box-section-l);
     }
 
     .title {
@@ -108,7 +108,7 @@
 
     .companies-group {
         margin-left: 0;
-        margin-top: var(--ktl-box-section-m);
+        margin-top: var(--ktl-box-section-l);
 
         &:first-child {
             margin-top: 0;
@@ -118,7 +118,7 @@
 
 @media (--ktl-ts) {
     .intro {
-        margin-top: var(--ktl-box-section-m);
+        margin-top: var(--ktl-box-section-l);
     }
 
     .title {
@@ -132,6 +132,6 @@
 
 @media (--ktl-mm) {
     .companies {
-        margin-top: var(--ktl-box-section-m);
+        margin-top: var(--ktl-box-section-l);
     }
 }

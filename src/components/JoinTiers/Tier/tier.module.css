@@ -8,7 +8,7 @@
     background: #fff;
     box-shadow: 5px 2px 24px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: var(--ktl-box-section-l) var(--ktl-box-section-s) var(--ktl-box-section-s);
+    padding: var(--ktl-box-section-m) var(--ktl-box-section-s) var(--ktl-box-section-s);
 
     width: 376px;
     min-height: 432px;

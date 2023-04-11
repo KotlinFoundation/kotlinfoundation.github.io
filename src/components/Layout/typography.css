@@ -11,7 +11,7 @@
 
 @media (--ktl-mm) {
     :root {
-        --ktf-fuild-spacing-xl: var(--ktl-box-section-m);
+        --ktf-fuild-spacing-xl: var(--ktl-box-section-l);
     }
 }
 

@@ -2,7 +2,7 @@
 
 .outer {
     background: var(--ktf-bg-dark);
-    padding: var(--ktl-box-section-m) 0;
+    padding: var(--ktl-box-section-l) 0;
 
     @media (--ktl-mm) {
         padding-bottom: var(--ktl-box-section-s);
@@ -11,7 +11,7 @@
 
 .footer {
     display: flex;
-    margin-top: calc(-1 * var(--ktl-box-section-m));
+    margin-top: calc(-1 * var(--ktl-box-section-l));
 }
 
 .nav {
@@ -21,7 +21,7 @@
 }
 
 .nav, .support {
-    margin-top: var(--ktl-box-section-m);
+    margin-top: var(--ktl-box-section-l);
 }
 
 @media (--ktl-tl-min) {

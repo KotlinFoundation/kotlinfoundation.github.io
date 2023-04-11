@@ -28,8 +28,8 @@
     z-index: 900;
 
     @media (--ktf-header-desktop) {
-        padding-right: var(--ktl-box-section-l);
-        padding-left: var(--ktl-box-section-l);
+        padding-right: var(--ktl-box-section-m);
+        padding-left: var(--ktl-box-section-m);
     }
 }
 
@@ -39,7 +39,7 @@
 }
 
 .kotlinlang {
-    margin-left: var(--ktl-box-section-l);
+    margin-left: var(--ktl-box-section-m);
 
     @media (--ktf-header-site-link) {
         display: none;

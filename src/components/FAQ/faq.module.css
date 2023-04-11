@@ -12,7 +12,7 @@
     .faq {
         display: grid;
         grid-template-columns: 4fr 7fr;
-        gap: var(--ktl-box-section-l);
+        gap: var(--ktl-box-section-m);
     }
 
     .question, .answer {

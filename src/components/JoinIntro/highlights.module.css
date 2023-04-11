@@ -9,7 +9,7 @@
 }
 
 .highlight {
-    margin-top: var(--ktl-box-section-l);
+    margin-top: var(--ktl-box-section-m);
 
     @media (--ktl-mm-min) {
         display: flex;

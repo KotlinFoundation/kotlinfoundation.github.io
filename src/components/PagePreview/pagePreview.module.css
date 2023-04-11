@@ -3,7 +3,7 @@
 .pagePreview {
     background: #19191C;
     border-radius: 16px;
-    padding: var(--ktl-box-section-m);
+    padding: var(--ktl-box-section-l);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
