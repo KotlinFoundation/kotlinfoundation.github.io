@@ -38,6 +38,9 @@ body {
 
 .narrow {
     max-width: 720px;
+
+    margin-top: var(--ktf-fuild-spacing-xl);
+    margin-bottom: var(--ktf-fuild-spacing-xl);
 }
 
 @media (max-width: 767px) {
