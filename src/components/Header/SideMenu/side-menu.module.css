@@ -1,7 +1,7 @@
 .list {
     margin: 0;
     list-style-type: none;
-    padding: var(--ktl-box-block-l) 0;
+    padding: var(--ktl-box-block-m) 0;
 }
 
 .link {
