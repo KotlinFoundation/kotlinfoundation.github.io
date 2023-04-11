@@ -2,6 +2,7 @@
 title: "The Kotlin Foundation Grants Program Is Live"
 date: 2023-04-14 00:02
 coverImage: "./cover.jpg"
+socialImage: "./social.png"
 spoilerSize: 499
 ---
 

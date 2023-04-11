@@ -23,6 +23,9 @@ export default function PageTemplate({ children, ...props } : PageProps) {
                         coverImage {
                             publicURL
                         }
+                        socialImage {
+                            publicURL
+                        }
                     }
                 }
             }
@@ -32,7 +35,7 @@ export default function PageTemplate({ children, ...props } : PageProps) {
     const post = posts.find(post => post.fields.slug === location.pathname);
 
     const { title, date } = post.frontmatter;
-    const coverImage = post.frontmatter.coverImage?.publicURL;
+    const coverImage = post.frontmatter.socialImage?.publicURL || post.frontmatter.coverImage?.publicURL;
 
     props.pageContext.frontmatter = {
         ...props.pageContext.frontmatter,

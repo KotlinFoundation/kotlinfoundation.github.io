@@ -2,6 +2,7 @@
 title: "Gradle, Touchlab, and Shopify Become Kotlin Foundation's First Silver Members"
 date: 2023-04-14 00:03
 coverImage: "./cover.jpg"
+socialImage: "./social.png"
 ---
 
 We are thrilled to announce that [Gradle Inc.](https://gradle.org/), [Touchlab](https://touchlab.co/kotlin-foundation), and [Shopify](https://www.shopify.com/) have recently joined the Kotlin Foundation as its first silver members. These companies bring with them a wealth of knowledge and experience on how Kotlin is used in production and what the Kotlin ecosystem needs. We are excited to have their collective experience join us in supporting and advancing the Kotlin ecosystem.
