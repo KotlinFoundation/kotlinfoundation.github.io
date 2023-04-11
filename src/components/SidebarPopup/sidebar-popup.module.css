@@ -44,7 +44,8 @@
     .navigation {
         transform: translateX(0);
 
-        transition: transform var(--ktf-header-animation-function) var(--ktf-header-animation-timing);
+        transition: transform var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
+            visibility var(--ktf-header-animation-function) var(--ktf-header-animation-timing);
         will-change: transform;
     }
 }
