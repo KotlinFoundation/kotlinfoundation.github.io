@@ -1,39 +1,42 @@
-import {useCallback, useContext} from "react";
-import {Link, navigate, withPrefix} from "gatsby";
+import {memo, useCallback, useContext, useMemo} from "react";
+import {Link, withPrefix} from "gatsby";
+import { Menu, MenuItem } from '@rescui/menu';
 
-import {usePath} from "../../Layout/pathContext";
-import {isPlatformOnly, NavigationContext} from "../../Navigation";
+import {useLayoutLocation} from "../../Layout/locationContext";
+import {NavigationContext, isPlatformOnly} from "../../Navigation";
 
 import * as styles from "./side-menu.module.css";
-import cn from "classnames";
 
-function SlideMenuItem({title, url}) {
-    const path = usePath();
+const SlideMenuItem = memo(({title, url}) => {
+    const { pathname } = useLayoutLocation();
     const { toggle } = useContext(NavigationContext);
-    const isActive = path === withPrefix(url);
+    const isActive = pathname === withPrefix(url);
 
     const onClick = useCallback(
         () => { if (isActive) toggle(false); },
         [isActive, toggle]
     );
 
-    return (
-        <li>
-            <Link className={cn(styles.link, isActive && styles.active)} to={url} onClick={onClick}>{title}</Link>
-        </li>
+    const MenuLink = useCallback(
+        props => <Link {...props} to={url}>{title}</Link>,
+        [title, url]
     );
-}
+
+    return (
+        <MenuItem className={styles.item} selected={isActive} onClick={onClick} tag={MenuLink}/>
+    );
+});
 
 export function SideMenu(props) {
   const { menuItems } = useContext(NavigationContext);
 
   return (
     <nav {...props}>
-      <ul className={styles.list}>{
+      <Menu className={styles.list} size="l">{
           menuItems
             .filter(item => isPlatformOnly(item, 'mobile'))
             .map(item => <SlideMenuItem key={item.url || item.title} {...item}/>)
-      }</ul>
+      }</Menu>
     </nav>
   );
 }

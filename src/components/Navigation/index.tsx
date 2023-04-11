@@ -1,4 +1,4 @@
-import {useCallback, useState} from "react";
+import {memo, useCallback, useState} from "react";
 import {ReactComponentLike } from "prop-types";
 
 import {SidebarPopup} from "../SidebarPopup";
@@ -13,7 +13,7 @@ export type NavigationProps = {
     items: MenuItems;
 };
 
-export function Navigation({ classNamePopup = null, nav: Navigation, sidebar: Sidebar, items } : NavigationProps) {
+function NavigationStateless({ classNamePopup = null, nav: Navigation, sidebar: Sidebar, items } : NavigationProps) {
     const [isOpen, setOpen] = useState(false);
 
     const toggle = useCallback(
@@ -33,5 +33,6 @@ export function Navigation({ classNamePopup = null, nav: Navigation, sidebar: Si
     );
 }
 
+export const Navigation = memo(NavigationStateless);
 export * from './MenuItem';
 export * from './context';

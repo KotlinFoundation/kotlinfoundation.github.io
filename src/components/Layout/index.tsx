@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
 import cn from "classnames";
-import { PathContext } from "./pathContext";
+import { LocationContext } from "./locationContext";
 
 import "@rescui/typography/lib/font-jb-sans-auto.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
@@ -38,7 +38,7 @@ export enum LayoutMDAppearance {
 }
 
 export interface BaseLayoutProps {
-    path: string;
+    location: Location;
     children: null | ReactNode;
 }
 
@@ -50,7 +50,7 @@ type MarkdownLayoutProps = BaseLayoutProps & {
 
 type LayoutProps = BaseLayoutProps & MDLayoutProps;
 
-export function Layout({ children, path, title, layout, socialImage = null, contactUs, greyLayout }: LayoutProps) {
+export function Layout({ children, location, title, layout, socialImage = null, contactUs, greyLayout }: LayoutProps) {
     const content = layout === LayoutSize.Wide
         ? children
         : (
@@ -60,15 +60,15 @@ export function Layout({ children, path, title, layout, socialImage = null, cont
         );
 
     return (
-        <PathContext.Provider value={path}>
+        <LocationContext.Provider value={location}>
             <SEO title={title} image={socialImage}/>
-            <Header path={path}/>
+            <Header/>
             <div className={cn(styles.layout, {[styles.greyLayout]: Boolean(greyLayout)})}>
                 {content}
                 {contactUs && <ContactUs/>}
                 <Footer/>
             </div>
-        </PathContext.Provider>
+        </LocationContext.Provider>
     );
 }
 

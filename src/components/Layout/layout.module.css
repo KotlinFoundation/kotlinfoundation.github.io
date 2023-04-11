@@ -17,6 +17,7 @@ html, body, :global(#___gatsby, #gatsby-focus-wrapper) {
 
 body {
     --ktl-font-family-inter: 'JetBrains Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;;
+    --rs-font-family-ui: var(--ktl-font-family-inter);
     font-family: var(--ktl-font-family-inter);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

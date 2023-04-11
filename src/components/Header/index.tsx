@@ -1,3 +1,4 @@
+import {memo} from "react";
 import {MenuItems, Navigation} from "../Navigation";
 import {Pane} from './Pane';
 import {SideMenu} from "./SideMenu";
@@ -39,8 +40,10 @@ function Sidebar() {
     </>;
 }
 
-export function Header () {
+function HeaderStateless () {
     return (
         <Navigation nav={Pane} sidebar={Sidebar} classNamePopup={styles.popup} items={menuItems}/>
     );
 }
+
+export const Header = memo(HeaderStateless);

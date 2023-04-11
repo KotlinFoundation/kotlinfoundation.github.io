@@ -4,24 +4,6 @@
     padding: var(--ktl-box-block-m) 0;
 }
 
-.link {
-    display: block;
-    color: var(--ktf-bg-dark);
-    text-decoration: none;
+.item {
     font-size: 20px;
-    line-height: 28px;
-
-    padding: var(--ktf-para-spacing) var(--ktl-box-block-l);
-
-    &:hover {
-        cursor: pointer;
-        background: rgba(39, 40, 44, 0.1);
-    }
-}
-
-.active {
-    &, &:hover {
-        background: var(--ktf-bg-dark);
-        color: #fff;
-    }
 }
