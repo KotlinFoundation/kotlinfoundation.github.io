@@ -1,5 +1,6 @@
 import {ReactNode} from "react";
 import cn from "classnames";
+import { PathContext } from "./pathContext";
 
 import "@rescui/typography/lib/font-jb-sans-auto.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
@@ -59,7 +60,7 @@ export function Layout({ children, path, title, layout, socialImage = null, cont
         );
 
     return (
-        <>
+        <PathContext.Provider value={path}>
             <SEO title={title} image={socialImage}/>
             <Header path={path}/>
             <div className={cn(styles.layout, {[styles.greyLayout]: Boolean(greyLayout)})}>
@@ -67,7 +68,7 @@ export function Layout({ children, path, title, layout, socialImage = null, cont
                 {contactUs && <ContactUs/>}
                 <Footer/>
             </div>
-        </>
+        </PathContext.Provider>
     );
 }
 
