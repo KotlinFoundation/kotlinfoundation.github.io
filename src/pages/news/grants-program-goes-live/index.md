@@ -1,5 +1,5 @@
 ---
-title: "The Kotlin Foundation Grants Program Is Live"
+title: "The Kotlin Foundation grants program is live"
 date: 2023-04-14 00:02
 coverImage: "./cover.jpg"
 socialImage: "./social.png"
