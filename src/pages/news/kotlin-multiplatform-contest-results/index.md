@@ -3,6 +3,7 @@ title: "Results of the Kotlin Multiplatform contest: meet the winners"
 date: 2023-04-14 00:02
 coverImage: "./cover.jpg"
 socialImage: "./social.png"
+spoilerSize: 393
 ---
 
 The Kotlin Foundation recently held a [Kotlin Multiplatform Contest](https://blog.jetbrains.com/kotlin/2022/10/join-the-kotlin-multiplatform-contest/) for all students and recent graduates who love to code in Kotlin. We received a total of 43 submissions from across the world and we were impressed by the creativity of the projects and the skill of the contestants! After careful deliberation, our panel of judges has chosen the top 3 winners out of 19 qualified submissions.
