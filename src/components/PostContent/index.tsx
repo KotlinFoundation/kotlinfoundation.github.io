@@ -23,7 +23,7 @@ export function PostContent({ more, excerpt, frontmatter }) {
             }
 
             return (
-                <p key={text}>{text}{isLastTrimmed && '…'}</p>
+                <p key={text}>{text.trimEnd()}{isLastTrimmed && '…'}</p>
             );
         });
 
