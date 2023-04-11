@@ -34,6 +34,11 @@
     margin-bottom: 0;
 }
 
-.quote .para {
-    color: var(--ktf-text-gray);
+.quote {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .para {
+        font-weight: 600;
+    }
 }
