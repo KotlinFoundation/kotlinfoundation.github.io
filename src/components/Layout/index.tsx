@@ -48,7 +48,7 @@ type MarkdownLayoutProps = BaseLayoutProps & {
 
 type LayoutProps = BaseLayoutProps & MDLayoutProps;
 
-export function Layout({ children, path, title, layout, contactUs }: LayoutProps) {
+export function Layout({ children, path, title, layout, socialImage = null, contactUs }: LayoutProps) {
     const content = layout === LayoutSize.Wide
         ? children
         : (
@@ -59,7 +59,7 @@ export function Layout({ children, path, title, layout, contactUs }: LayoutProps
 
     return (
         <>
-            <SEO title={title}/>
+            <SEO title={title} image={socialImage}/>
             <Header path={path}/>
             <div className={styles.layout}>
                 {content}

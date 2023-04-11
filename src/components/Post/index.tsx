@@ -20,6 +20,9 @@ export default function PageTemplate({ children, ...props } : PageProps) {
                     frontmatter {
                         title
                         date(formatString: "MMMM DD, YYYY")
+                        coverImage {
+                            publicURL
+                        }
                     }
                 }
             }
@@ -29,6 +32,7 @@ export default function PageTemplate({ children, ...props } : PageProps) {
     const post = posts.find(post => post.fields.slug === location.pathname);
 
     const { title, date } = post.frontmatter;
+    const coverImage = post.frontmatter.coverImage?.publicURL;
 
     props.pageContext.frontmatter = {
         ...props.pageContext.frontmatter,
@@ -36,7 +40,7 @@ export default function PageTemplate({ children, ...props } : PageProps) {
     };
 
     return (
-        <Layout {...props}>
+        <Layout {...props} socialImage={coverImage}>
             <p className={cn(textCn('ktl-text-3'), 'ktl-text--gray', style.date)}>{date}</p>
             <h1 className={cn("ktf-h2 ktf-h3--mm", style.title)}>{title}</h1>
             <ModernMarkdown>{children}</ModernMarkdown>

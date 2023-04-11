@@ -73,15 +73,16 @@
     }
 }
 
-.no-image {
-    &::before {
-        display: inline-block;
-        content: '';
-        border: 2px dashed rgba(25, 25, 28, 0.2);
-        border-radius: 16px;
-        height: 328px;
-        width: 328px;
-    }
+.image-tag, .no-image::before {
+    height: 328px;
+    width: 328px;
+}
+
+.no-image::before {
+    display: inline-block;
+    content: '';
+    border: 2px dashed rgba(25, 25, 28, 0.2);
+    border-radius: 16px;
 }
 
 .more {

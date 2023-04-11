@@ -1,6 +1,6 @@
 import {navigate} from "gatsby";
 import cn from "classnames";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import {GatsbyImage, getImage, StaticImage} from "gatsby-plugin-image";
 import Button from "@rescui/button";
 
 import {PostContent} from "../PostContent";
@@ -20,7 +20,7 @@ export function Posts({ posts }) {
                         navigate(url)
                     };
 
-                    const coverImage = getImage(post.frontmatter.coverImage?.childImageSharp?.gatsbyImageData)
+                    const coverImage = post.frontmatter.coverImage?.publicURL;
 
                     return (
                         <li key={post.id} className={styles.wrap} id={url}>
@@ -31,7 +31,9 @@ export function Posts({ posts }) {
                                     }/>
                                 </div>
                                 <div className={cn(styles.image, { [styles.noImage]: !coverImage })}>
-                                    {coverImage && <GatsbyImage alt={post.frontmatter.title} image={coverImage}/>}
+                                    {coverImage && (
+                                        <img className={styles.imageTag} alt={post.frontmatter.title} src={coverImage}/>
+                                    )}
                                 </div>
                             </div>
                         </li>

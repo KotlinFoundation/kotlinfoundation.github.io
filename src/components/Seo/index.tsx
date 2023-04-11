@@ -5,12 +5,13 @@ import Helmet from 'react-helmet';
 interface SEOProps {
     title: string;
     description?: string;
+    image?: string;
     meta?: {name: string; content: string}[];
 }
 
 import imageUrl from '../../images/preview.png';
 
-export const SEO: React.FC<SEOProps> = ({ title, description, meta = [] }) => {
+export const SEO: React.FC<SEOProps> = ({ title, description, image, meta = [] }) => {
     const { site } = useStaticQuery(
         graphql`
       query {
@@ -27,7 +28,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, meta = [] }) => {
 
     const metaDescription = description || site.siteMetadata.description;
     const url = site.siteMetadata.siteUrl;
-    const absoluteImageUrl = site.siteMetadata.siteUrl + imageUrl;
+    const absoluteImageUrl = site.siteMetadata.siteUrl + (image || imageUrl);
 
     const schemaOrgJSONLD = [
         {

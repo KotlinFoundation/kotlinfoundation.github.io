@@ -21,9 +21,7 @@ export default function NewsList(props) {
                         title
                         spoilerSize
                         coverImage {
-                            childImageSharp {
-                                gatsbyImageData(width: 328, quality: 100)
-                            }
+                            publicURL
                         }
                     }
                 }
