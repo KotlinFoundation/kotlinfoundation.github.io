@@ -74,8 +74,12 @@
 }
 
 .image-tag, .no-image::before {
-    height: 328px;
-    width: 328px;
+    max-width: 328px;
+    width: 100%;
+
+    @media (--ktl-ms) {
+        max-width: 272px;
+    }
 }
 
 .no-image::before {
