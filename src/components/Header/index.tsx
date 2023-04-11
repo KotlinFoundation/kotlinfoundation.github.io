@@ -2,6 +2,8 @@ import {MenuItems, Navigation} from "../Navigation";
 import {Pane} from './Pane';
 import {SideMenu} from "./SideMenu";
 
+import * as styles from './header.module.css';
+
 const menuItems: MenuItems = [
     {
         title: 'Home',
@@ -39,6 +41,6 @@ function Sidebar() {
 
 export function Header () {
     return (
-        <Navigation nav={Pane} sidebar={Sidebar} items={menuItems}/>
+        <Navigation nav={Pane} sidebar={Sidebar} classNamePopup={styles.popup} items={menuItems}/>
     );
 }
