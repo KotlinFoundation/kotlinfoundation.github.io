@@ -29,7 +29,7 @@ interface MDLayoutProps {
     layout?: LayoutSize;
     contactUs?: boolean;
     appearance?: LayoutMDAppearance;
-    greyLayout?: true;
+    greyLayout?: boolean;
 }
 
 export enum LayoutMDAppearance {
@@ -40,6 +40,8 @@ export enum LayoutMDAppearance {
 export interface BaseLayoutProps {
     location: Location;
     children: null | ReactNode;
+    greyLayout?: boolean;
+    socialImage?: string;
 }
 
 type MarkdownLayoutProps = BaseLayoutProps & {
