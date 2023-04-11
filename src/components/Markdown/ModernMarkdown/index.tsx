@@ -19,9 +19,9 @@ function withTextCn(Component) {
 }
 
 const MODERN_SHORT_CODES: SHORT_CODES_TYPE = {
-    h1: props => <h1 {...cls(props, 'ktf-h2 ktf-h3--mm', styles.h1)}/>,
-    h2: props => <h2 {...cls(props, 'ktf-h3 ktf-h4--mm', styles.h2)}/>,
-    h3: props => <h3 {...cls(props, 'ktf-h4', styles.h3)}/>,
+    h1: props => <h1 {...cls(props, 'ktf-h1', styles.h1)}/>,
+    h2: props => <h2 {...cls(props, 'ktf-h2 ktf-h3--mm', styles.h2)}/>,
+    h3: props => <h3 {...cls(props, 'ktf-h3 ktf-h4--mm', styles.h3)}/>,
     h4: props => <h4 {...cls(props, 'ktl-h4', styles.h4)}/>,
     h5: props => <h5 {...cls(props, 'ktl-h5', styles.h5)}/>,
     h6: props => <h6 {...cls(props, 'ktl-h6', styles.h6)}/>,
