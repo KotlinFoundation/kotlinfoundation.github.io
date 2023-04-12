@@ -37,6 +37,11 @@
     .title {
         margin-top: 48px;
     }
+
+    .text {
+        font-size: 13px !important;
+        line-height: 20px !important;
+    }
 }
 
 @media (--ktl-ms) {

@@ -62,7 +62,7 @@ function NewsPreview({ post }) {
         <div className={styles.previewItem}>
             <div className={textCn('rs-text-3')}>{date}</div>
             <h3 className={cn(textCn('rs-h3'), styles.newsTitle)}>{title}</h3>
-            <div className={textCn('rs-text-2')}>{content}</div>
+            <div className={cn(textCn('rs-text-2'), styles.text)}>{content}</div>
         </div>
     );
 }
