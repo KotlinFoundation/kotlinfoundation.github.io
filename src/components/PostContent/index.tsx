@@ -8,7 +8,7 @@ const DEFAULT_EXCERPT_SIZE = 300;
 export function PostContent({ more, excerpt, frontmatter }) {
     const textCn = useTextStyles();
     const { date, title } = frontmatter;
-    debugger
+
     const {content, isTrimmed} = postContentPreview({excerpt, frontmatter});
 
     return (
@@ -38,7 +38,7 @@ export function postContentPreview({excerpt, frontmatter}, more = null): {conten
                 if (spoilerSize === undefined) {
                     text = text.replace(/^(.+)\s+.*$/g, '$1');
                 }
-                text = text.replace(/^(.+)\.+\s*/g, '$1')
+                text = text.trimEnd().replace(/^(.+)\.+\s*/g, '$1')
             }
 
             return (
