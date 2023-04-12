@@ -21,6 +21,10 @@
 .item {
     flex: 1 1 0;
     margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .icon {
@@ -43,7 +47,7 @@
 
 @supports (-webkit-background-clip: text) {
     .number {
-        background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #EF4857 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
+        background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #ED495B 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -111,5 +115,10 @@
 
     .item {
         margin-top: 48px;
+        margin-right: 24px;
+
+        &, &:first-child {
+            margin-left: 24px;
+        }
     }
 }

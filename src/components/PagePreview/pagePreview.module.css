@@ -44,12 +44,16 @@
 
 @media (--ktl-mm) {
     .pagePreview {
-        min-height: 432px;
+        min-height: 0;
         align-items: center;
     }
 
     .title {
         text-align: center;
         max-width: 10ch;
+    }
+
+    .image {
+        margin-top: var(--ktl-box-section-s);
     }
 }
