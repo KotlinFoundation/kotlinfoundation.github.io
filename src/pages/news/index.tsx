@@ -30,7 +30,7 @@ export default function NewsList(props) {
     `);
 
     return (
-        <Layout {...props} contactUs layout="wide" title="FAQ">
+        <Layout {...props} contactUs layout="wide" title="News">
             <div className="ktl-layout ktl-layout--center">
                 <Posts posts={posts}/>
             </div>
