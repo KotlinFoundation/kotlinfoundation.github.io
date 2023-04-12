@@ -7,11 +7,11 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 
-import Popup from '@jetbrains/kotlin-web-site-ui/dist/popup';
-import '@jetbrains/kotlin-web-site-ui/dist/popup.css';
+import Popup from '@jetbrains/kotlin-web-site-ui/out/components/popup';
+import '@jetbrains/kotlin-web-site-ui/out/components/popup/index.css';
 
-import YoutubePlayer from '@jetbrains/kotlin-web-site-ui/dist/youtubePlayer';
-import '@jetbrains/kotlin-web-site-ui/dist/youtubePlayer.css';
+import YoutubePlayer from '@jetbrains/kotlin-web-site-ui/out/components/youtube-player';
+import '@jetbrains/kotlin-web-site-ui/out/components/youtube-player/index.css';
 
 import * as styles from './index.module.css';
 import classnames from 'classnames';

@@ -1,9 +1,9 @@
 import {FC, ReactNode} from "react";
 
 import "@rescui/typography/lib/font-inter.css";
-import "@jetbrains/kotlin-web-site-ui/dist/typography.css";
-import "@jetbrains/kotlin-web-site-ui/dist/grid.css";
-import "@jetbrains/kotlin-web-site-ui/dist/ctaBlock.css";
+import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
+import "@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
+import "@jetbrains/kotlin-web-site-ui/out/components/cta-block/index.css";
 
 import * as styles from "./layout.module.css";
 

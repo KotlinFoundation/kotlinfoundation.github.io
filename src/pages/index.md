@@ -4,7 +4,7 @@ layout: "wide"
 whiteHeader: true
 contactUs: true
 ---
-
+export {Layout as default} from '../components/Layout';
 import trademarkIcon from "../images/highlights/trademark.svg";
 import designIcon from "../images/highlights/design.svg";
 import controlIcon from "../images/highlights/control.svg";

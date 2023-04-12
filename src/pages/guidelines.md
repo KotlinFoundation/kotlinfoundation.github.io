@@ -2,6 +2,8 @@
 title: "Kotlin brand usage guidelines"
 ---
 
+export {Layout as default} from '../components/Layout';
+
 # Kotlin brand usage guidelines
 
 One of the goals of The Kotlin Foundation is to protect the use of the Kotlin word and to make sure it is not misused. The following guidelines provide guidance on how to reference the Kotlin word trademark (“Trademark”) in an approved manner while ensuring the Trademark remains subject to protection under applicable laws around the world, and continues to serve as a source indicator for the Kotlin programming language and related offerings.  
@@ -42,7 +44,7 @@ Please follow these guidelines when referencing the Trademark:
 example "Kotlin™ ..." This requirement is waived in all contexts where such marks are not normally included, such as non-marketing emails, online discussions, and academic papers. We encourage the use of the TM symbol whenever possible, but recognize that many non-commercial and informal uses will omit it.
 * Where identifying that a product or service is built on the Kotlin programming language or runs the Kotlin 
 programming language, use the product’s own name followed by “in Kotlin™”, “for Kotlin™”, “compatible with Kotlin™”, “running Kotlin™” etc.  Do not incorporate Kotlin into the product name. 
-* User groups, communities and/or meet-ups should follow the naming convention "{XYZ} Kotlin User Group" where {XYZ} 
+* User groups, communities and/or meet-ups should follow the naming convention "\{XYZ\} Kotlin User Group" where \{XYZ\} 
 represents the location and optionally other wordings. These entities should also prominently disclaim any affiliation with or endorsement by The Kotlin Foundation. 
 * Do not display the word Kotlin using any different stylization, color, or font from the surrounding text.  
 * Don’t use the trademark as verb (“Kotlin your code”), or create derivatives of it such as “Kotlinize”, etc. 

@@ -5,6 +5,7 @@
         "name": "typescript-plugin-css-modules"
       }
     ],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "esModuleInterop": true
   }
 }
