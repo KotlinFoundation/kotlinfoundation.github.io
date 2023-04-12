@@ -42,9 +42,19 @@ export const IntroBanner: FC<IntroBannerProps> = ({title, members}) => {
                         <div className={styles.companiesGroup} key={groupName}>
                             <div className={textCn('rs-text-2', {hardness: 'hard'})}>{groupName}</div>
                             <div className={styles.companiesLogos}>
-                                {companies.map(({name, image}) => (
-                                    <img key={name} alt={`${name} Logo`} src={image} className={styles.companyLogo} />
-                                ))}
+                                {companies.map(({name, image, url}) => {
+                                    let content = <img
+                                        key={name} alt={`${name} Logo`}
+                                        src={image} className={styles.companyLogo}
+                                    />
+
+                                    if (url) content = <a
+                                        href={url} target="_blank"
+                                        rel="noreferrer noopener" className={styles.companyLink}
+                                    >{content}</a>;
+
+                                    return content;
+                                })}
                             </div>
                         </div>
                     ))}

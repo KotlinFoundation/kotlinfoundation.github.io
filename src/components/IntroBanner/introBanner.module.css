@@ -49,6 +49,14 @@
     margin-left: 12px;
 }
 
+.company-link {
+    font-size: 0;
+    line-height: 0;
+    &, &:hover {
+        text-decoration: none;
+    }
+}
+
 @media (--ktl-ds) {
     .title {
         margin-right: -70px;
