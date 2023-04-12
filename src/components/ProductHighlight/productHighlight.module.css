@@ -1,13 +1,26 @@
-.items {
+@import "../Layout/spacing.css";
+
+.productHighlight {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.header {
+    width: 240px;
+    flex: 0 0 auto;
+}
+
+.items {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
 }
 
 .item {
-    margin-bottom: 32px;
+    flex: 1 1 0;
+    margin-left: 24px;
 }
 
 .icon {
@@ -17,6 +30,10 @@
 }
 
 .desc {
+    margin-top: 24px;
+}
+
+.withNumber {
     margin-top: 16px;
 }
 
@@ -32,42 +49,67 @@
     }
 }
 
-@media (min-width: 640px) {
-    .item {
-        max-width: 210px;
-        margin-right: 32px;
-    }
 
-    .withNumber {
-        max-width: 320px;
-    }
-
-    .item:last-of-type {
-        margin-right: 0;
-    }
-
-    .desc {
-        margin-top: 32px;
-    }
-}
-
-@media (min-width: 1024px) {
+@media (--ktl-ds) {
     .productHighlight {
-        grid-column-gap: 58px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: block;
     }
 
     .items {
-        display: contents;
+        margin-top: 48px;
     }
 
     .item {
-        max-width: none;
+        margin-left: 56px;
+
+        &:first-child {
+            margin-left: 0;
+        }
     }
 
-    .appendix {
-        padding-left: calc(25% + 16px);
+    .desc {
+        font-size: 20px;
+        line-height: 28px;
     }
 }
 
+@media (--ktl-tl) {
+    .desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .number {
+        font-size: 43px;
+        line-height: 49px;
+    }
+}
+
+@media (--ktl-tm) {
+    .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 48px;
+    }
+
+    .item {
+        margin: 0;
+    }
+}
+
+@media (--ktl-ts) {
+    .items {
+        grid-gap: 48px 16px;
+    }
+}
+
+@media (--ktl-mm) {
+    .items {
+        display: block;
+    }
+
+    .item {
+        margin-top: 48px;
+    }
+}

@@ -1,41 +1,65 @@
 import {FC} from "react";
 import cn from "classnames";
-import introWebp from "../../images/intro/intro.webp";
-import intro2xWebp from "../../images/intro/intro@2x.webp";
-import introPng from "../../images/intro/intro.png";
-import jbLogoSvg from "../../images/companies/jb.svg";
-import googleLogoSvg from "../../images/companies/google.svg";
+
+import '@jetbrains/kotlin-web-site-ui/out/components/layout/index.css';
+import {useTextStyles} from "@rescui/typography";
+
+import {KtlLayout} from "../KtlLayout";
+
+import introJPG from "./intro/intro.jpg";
 
 import * as styles from "./introBanner.module.css";
 
-const SPONSORS = [
-    { name: 'JetBrains', image: jbLogoSvg },
-    { name: 'Google', image: googleLogoSvg },
-];
+interface IntroBannerProps {
+    title: string;
+    members: Array<Group>
+}
 
+interface Group {
+    groupName: string;
+    companies: Array<Company>;
+}
 
-export const IntroBanner: FC = ({children}) => (
-    <section className={cn(styles.introWrap)}>
-        <div className={cn(styles.intro, "ktl-container")}>
-            <div className={styles.introContent}>
-                <h1 className="ktl-hero ktl-offset-top-xl">
-                    {children}
+interface Company {
+    name: string;
+    image: string;
+}
+
+export const IntroBanner: FC<IntroBannerProps> = ({title, members}) => {
+    const textCn = useTextStyles();
+
+    return (
+        <section className={styles.section}>
+            <KtlLayout spacing className={styles.intro}>
+                <img src={introJPG} alt="" className={styles.image}/>
+
+                <h1 className={cn("ktf-h1 ktf-h2--tl ktf-h3--ts", styles.title)}>
+                    {title}
                 </h1>
-                <div className="ktl-offset-top-xxl">
-                    <h2 className="ktl-h3">Companies Behind Kotlin</h2>
-                    <ul className={cn(styles.companies, 'ktl-offset-top-l', 'ktl-offset-bottom-l')}>
-                        {SPONSORS.map(({ name, image }) => (
-                            <li key={name} className={styles.company}>
-                                <img alt={`${name} Logo`} src={image}/>
-                            </li>
-                        ))}
-                    </ul>
+
+                <div className={styles.companies}>
+                    {members.map(({groupName, companies}) => (
+                        <div className={styles.companiesGroup} key={groupName}>
+                            <div className={textCn('rs-text-2', {hardness: 'hard'})}>{groupName}</div>
+                            <div className={styles.companiesLogos}>
+                                {companies.map(({name, image, url}) => {
+                                    let content = <img
+                                        key={name} alt={`${name} Logo`}
+                                        src={image} className={styles.companyLogo}
+                                    />;
+
+                                    if (url) content = <a
+                                        href={url} target="_blank"
+                                        rel="noreferrer noopener" className={styles.companyLink}
+                                    >{content}</a>;
+
+                                    return <div className={styles.company}>{content}</div>;
+                                })}
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            </div>
-            <picture className={styles.introPicture}>
-                <source type="image/webp" srcSet={`${introWebp} 1x, ${intro2xWebp} 2x`} />
-                <img src={introPng} alt="Funny Kotlin Constructor" className={styles.introImage}/>
-            </picture>
-        </div>
-    </section>
-);
+            </KtlLayout>
+        </section>
+    );
+};

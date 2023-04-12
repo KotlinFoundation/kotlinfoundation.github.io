@@ -1,5 +1,7 @@
-.notFound {
-    margin: 0 auto 64px;
+@import "../Layout/spacing.css";
+
+.not-found {
+    margin: 0 auto var(--ktl-box-page-s);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +22,7 @@
 }
 
 .btn {
-    margin-top: 32px;
+    margin-top: var(--ktl-box-section-m);
 }
 
 @media (min-width: 768px) {
@@ -30,13 +32,13 @@
 }
 
 @media (min-width: 1024px) {
-    .notFound {
-        margin: 64px auto;
+    .not-found {
+        margin: var(--ktl-box-page-s) auto;
         flex-direction: row;
     }
 
     .content {
         text-align: left;
-        margin-left: 32px;
+        margin-left: var(--ktl-box-section-m);
     }
 }

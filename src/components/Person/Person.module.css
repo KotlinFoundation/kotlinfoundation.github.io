@@ -1,3 +1,5 @@
+@import "../Layout/spacing.css";
+
 @media (min-width: 560px) {
     .person {
         display: flex;
@@ -10,9 +12,9 @@
     flex-direction: column;
 }
 
-.photoWrap {
+.photo-wrap {
     position: relative;
-    margin-right: 16px;
+    margin-right: var(--ktl-box-block-l);
 }
 
 .photo {
@@ -24,12 +26,12 @@
     transform: translateZ(0); /* Safari and (radius + overflow:hidden) bug fix */
 }
 
-.person_size_xl {
+.person--size-xl {
     display: flex;
     flex-direction: column;
 }
 
-.person_size_xl > .info {
+.person--size-xl > .info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,11 +40,11 @@
     position: relative;
 }
 
-.person_size_xl > .photoWrap {
+.person--size-xl > .photo-wrap {
     margin: 0;
 }
 
-.person_size_xl > .photoWrap > .photo {
+.person--size-xl > .photo-wrap > .photo {
     border-radius: 200px;
     height: 190px;
     width: 152px;
@@ -51,7 +53,7 @@
 }
 
 @media (min-width: 960px) {
-    .person_size_xl > .photoWrap > .photo {
+    .person--size-xl > .photo-wrap > .photo {
         width: 220px;
         height: 280px;
     }

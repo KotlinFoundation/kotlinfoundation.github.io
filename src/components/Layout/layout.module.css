@@ -6,37 +6,50 @@
 html, body, :global(#___gatsby, #gatsby-focus-wrapper), .layout {
     margin: 0;
     padding: 0;
+    height: 100%;
     width: 100%;
     min-width: 320px;
 }
 
-body, :global(#___gatsby, #gatsby-focus-wrapper), .layout {
+html, body, :global(#___gatsby, #gatsby-focus-wrapper) {
     min-height: 100vh;
 }
 
 body {
+    --ktl-font-family-inter: 'JetBrains Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;;
+    --rs-font-family-ui: var(--ktl-font-family-inter);
     font-family: var(--ktl-font-family-inter);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
-.layout {
-    background: #F4F4F4;
+:global(#gatsby-focus-wrapper) {
     display: flex;
     flex-direction: column;
 }
 
-.layout > :global(.ktl-container) {
+.layout {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    width: 100%;
+    justify-content: space-between;
+
+    background: #fff;
+}
+
+.greyLayout {
+    background: #F4F4F4;
+}
+
+.narrow {
+    max-width: 720px;
+
+    margin-top: var(--ktf-fuild-spacing-xl);
+    margin-bottom: var(--ktf-fuild-spacing-xl);
 }
 
 @media (max-width: 767px) {
     :global body.overlay-locked {
         overflow: hidden;
     }
-}
-
-/* reset "margin: 0 auto" centring and use flex, cause pre tag expand body size without px:
-    */
-:global(.ktl-container) {
-    box-sizing: border-box;
 }

@@ -13,6 +13,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@csstools/postcss-global-data": "^1.0.3",
     "@jetbrains/kotlin-web-site-ui": "^4.5.0",
     "@rescui/button": "^0.8.0",
     "@rescui/checkbox": "^0.4.10",
@@ -23,6 +24,10 @@
     "@rescui/typography": "^0.8.3",
     "@rescui/ui-contexts": "^0.3.5",
     "classnames": "^2.3.2",
+    "gatsby-remark-images": "^7.8.0",
+    "postcss-each": "^1.1.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-preset-env": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -31,13 +36,13 @@
     "react-remove-scroll-bar": "^2.3.4",
     "react-scrollbar-size": "^5.0.0",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "the-platform": "^0.10.1"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@mdx-js/react": "^2.3.0",
     "@types/react-helmet": "^6.1.6",
-    "autoprefixer": "^10.4.14",
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^3.7.0",
     "core-js": "^3.29.1",
@@ -55,7 +60,6 @@
     "gatsby-transformer-remark": "^6.7.0",
     "gatsby-transformer-sharp": "^5.7.0",
     "postcss": "^8.4.21",
-    "postcss-css-variables": "^0.18.0",
     "prop-types": "^15.7.2",
     "typescript": "^4.9.5",
     "typescript-plugin-css-modules": "^4.2.3"

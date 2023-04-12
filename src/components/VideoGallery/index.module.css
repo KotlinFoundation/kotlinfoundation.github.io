@@ -1,5 +1,12 @@
+@import "../Layout/spacing.css";
+
+.container {
+    margin-top: var(--ktl-box-page-m);
+    padding-bottom: var(--ktl-box-section-l);
+}
+
 .wrapper {
-    margin-bottom: 36px;
+    margin-top: var(--ktl-box-section-s);
 }
 
 :global .slick-arrow {
@@ -7,7 +14,7 @@
 }
 
 .item {
-    padding: 0 8px;
+    padding: 0 var(--ktl-box-block-m);
 }
 
 .media {
@@ -34,7 +41,7 @@
 }
 
 .title {
-    display: none;
+    margin-top: var(--ktl-box-section-s);
 }
 
 .navigation {
@@ -62,25 +69,28 @@
 }
 
 @media (min-width: 768px) {
-    .wrapper {
-        margin-bottom: 96px;
-    }
-
     .media {
         width: 600px;
         border-radius: 16px;
     }
 
     .player {
-        width: calc(100% - 64px);
-    }
-
-    .title {
-        display: block;
-        margin-top: 24px;
+        width: calc(100% - var(--ktl-box-page-s));
     }
 
     .navigation {
         display: block;
+    }
+}
+
+@media (--ktl-ts) {
+    .header {
+        max-width: 12ch;
+    }
+}
+
+@media (--ktl-mm) {
+    .container {
+        margin-top: var(--ktl-box-section-l);
     }
 }

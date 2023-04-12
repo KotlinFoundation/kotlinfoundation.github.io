@@ -1,0 +1,82 @@
+.image::before {
+    top: -9px;
+    left: -24px;
+}
+
+.shadow {
+    display: none;
+}
+
+@media (--ktl-tm-min) {
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .wrap {
+        position: relative;
+        width: 600px;
+    }
+
+    .shadow {
+        composes: shadow from "../section-shadow.module.css";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-100%, -50%);
+        margin: 0 0 0 -136px;
+
+        &::before {
+            opacity: 1;
+            filter: blur(25px);
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 400px;
+        }
+    }
+
+    .image {
+        position: relative;
+    }
+}
+
+.wrap::before {
+    @media (--ktl-ds) {
+        margin-left: -116px;
+    }
+
+    @media (--ktl-tl) {
+        margin-left: -108px;
+    }
+}
+
+@media (--ktl-ts-min) {
+    .title-br {
+        display: none;
+    }
+}
+
+@media (--ktl-mm) {
+    .text-br {
+        display: none;
+    }
+}
+
+@media (--ktl-ts) {
+    .text-br-logo {
+        display: none;
+    }
+}
+
+.use-logo {
+    --into-highlight-image: url("./images/use-logo.svg");
+}
+
+.add-logo {
+    --into-highlight-image: url("./images/add-logo.svg");
+}

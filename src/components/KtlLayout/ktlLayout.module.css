@@ -1,0 +1,15 @@
+@import "../Layout/spacing.css";
+
+@media (--ktl-tl) {
+    .extra-space {
+        margin-top: var(--ktl-box-page-m);
+        margin-bottom: var(--ktl-box-page-m);
+    }
+}
+
+@media (--ktl-mm) {
+    .extra-space {
+        margin-top: var(--ktl-box-section-l);
+        margin-bottom: var(--ktl-box-section-l);
+    }
+}

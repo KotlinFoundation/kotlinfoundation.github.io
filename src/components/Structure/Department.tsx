@@ -1,8 +1,10 @@
 import cn from "classnames";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 import { Person } from "../Person";
 import * as style from "./structure.module.css";
 
 export const Department = ({ hero = false, name, members, children }) => {
+    const textCn = useTextStyles();
     const persons = members
         ? Array.isArray(members) ? members : [ members ]
         : [];
@@ -19,7 +21,7 @@ export const Department = ({ hero = false, name, members, children }) => {
                 </li>
             ))}</ul>
 
-            <div className={cn('ktl-text-1', style.description)}>
+            <div className={cn(textCn('ktl-text-1'), style.description)}>
                 {children}
             </div>
         </div>

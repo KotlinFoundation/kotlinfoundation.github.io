@@ -1,0 +1,27 @@
+@import "./section-shadow.module.css";
+
+.section {
+    padding-bottom: var(--ktl-box-page-m);
+    padding-top: 0;
+}
+
+.shadow {
+    composes: shadow from "./section-shadow.module.css";
+    margin: 0 0 var(--ktl-box-section-s);
+}
+
+.image {
+    position: relative;
+    height: 152px;
+    width: 152px;
+}
+
+.section:not(.show-image) {
+    @media (--ktl-tm-min) {
+        padding-top: var(--ktl-box-page-m);
+
+        .shadow {
+            display: none;
+        }
+    }
+}

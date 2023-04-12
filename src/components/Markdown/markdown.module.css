@@ -1,7 +1,11 @@
-.codeInner {
+.markdown > *:first-child {
+    margin-top: 0;
+}
+
+.code-inner {
     display: inline-block;
     box-sizing: border-box;
-    padding: 12px 16px;
+    padding: var(--ktl-box-block-l);
     overflow: auto;
     white-space: pre;
     background: rgba(25,25,28,.05);
@@ -9,6 +13,6 @@
     max-width: 100%;
 }
 
-.codeInner > code {
+.code-inner > code {
     display: block;
 }

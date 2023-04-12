@@ -1,107 +1,104 @@
-import {FC, ReactNode} from "react";
+import {ReactNode} from "react";
+import cn from "classnames";
+import { LocationContext } from "./locationContext";
 
-import "@rescui/typography/lib/font-inter.css";
+import "@rescui/typography/lib/font-jb-sans-auto.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/typography/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
 import "@jetbrains/kotlin-web-site-ui/out/components/cta-block/index.css";
 
-import * as styles from "./layout.module.css";
+import "./typography.css";
+import "./heading.css";
 
 import { SEO } from "../Seo";
-import { Header } from "../Header";
+import { Header as Header } from "../Header";
+import { Markdown, ModernMarkdown } from "../Markdown";
+import { ContactUs } from "../ContactUs/ContactUs";
 import { Footer } from "../Footer";
-import Markdown from "../Markdown/Markdown";
-import {graphql} from "gatsby";
-import {ContactUs} from "../ContactUs/ContactUs";
 
-enum LayoutSize {
-    Narrow = 'narrow',
+import * as styles from "./layout.module.css";
+
+export enum LayoutSize {
     Regular = 'regular',
-    Wide = 'wide'
+    Narrow = 'narrow',
+    Wide = 'wide',
 }
 
-export interface LayoutProps {
+interface MDLayoutProps {
+    title?: string;
+    layout?: LayoutSize;
+    contactUs?: boolean;
+    appearance?: LayoutMDAppearance;
+    greyLayout?: boolean;
+}
+
+export enum LayoutMDAppearance {
+    Modern = 'modern',
+    Classic = 'classic'
+}
+
+export interface BaseLayoutProps {
+    location: Location;
     children: null | ReactNode;
-    pageContext?: undefined | {
-        frontmatter?: {
-            title?: string;
-            layout?: LayoutSize;
-            whiteHeader?: boolean;
-            contactUs?: boolean;
-        }
-    }
+    greyLayout?: boolean;
+    socialImage?: string;
 }
 
-export const Layout: FC<LayoutProps> = ({
-    children,
-    pageContext
-}) => {
-    const pageTitle = pageContext?.frontmatter?.title;
-    const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
-    const whiteHeader = pageContext?.frontmatter?.whiteHeader ?? false;
-    const contactBlock = pageContext?.frontmatter?.contactUs ?? false;
-
-    let LayoutComponent = NarrowLayout;
-
-    if (layout === LayoutSize.Regular) {
-        LayoutComponent = RegularLayout;
-    } else if (layout === LayoutSize.Wide) {
-        LayoutComponent = WideLayout;
+type MarkdownLayoutProps = BaseLayoutProps & {
+    pageContext?: undefined | {
+        frontmatter?: MDLayoutProps
     }
-
-    return (
-        <>
-            <SEO title={pageTitle} />
-            <Header whiteBg={whiteHeader} />
-
-            <div className={styles.layout}>
-                <LayoutComponent>{children}</LayoutComponent>
-                {contactBlock && <ContactUs />}
-                <Footer/>
-            </div>
-        </>
-    );
 };
 
-const NarrowLayout = ({children}) => (
-    <div className={'ktl-container ktl-container-fluid'}>
-        <div className={'ktl-row'}>
-            <div className={'ktl-col ktl-col-sm-12 ktl-col-md-offset-2 ktl-col-md-8 ktl-offset-bottom-xl'}>
-                <Markdown>
-                    {children}
-                </Markdown>
+type LayoutProps = BaseLayoutProps & MDLayoutProps;
+
+export function Layout({ children, location, title, layout, socialImage = null, contactUs, greyLayout }: LayoutProps) {
+    const content = layout === LayoutSize.Wide
+        ? children
+        : (
+            <RegularLayout className={LayoutSize.Narrow === layout && styles.narrow}>
+                {children}
+            </RegularLayout>
+        );
+
+    return (
+        <LocationContext.Provider value={location}>
+            <SEO title={title} image={socialImage}/>
+            <Header/>
+            <div className={cn(styles.layout, {[styles.greyLayout]: Boolean(greyLayout)})}>
+                {content}
+                {contactUs && <ContactUs/>}
+                <Footer/>
             </div>
-        </div>
-    </div>
-);
-
-const RegularLayout = ({children}) => (
-    <div className={'ktl-container ktl-offset-bottom-xxl'}>
-        <Markdown>
-            {children}
-        </Markdown>
-    </div>
-);
-
-const WideLayout = ({children}) => (
-    <Markdown>{children}</Markdown>
-);
-
-export const pageQuery = graphql`
-query {
-  allMdx {
-    edges {
-      node {
-        frontmatter {
-          title
-          layout
-          whiteHeader
-          contactUs
-        }
-      }
-    }
-  }
+        </LocationContext.Provider>
+    );
 }
-`
 
-export default Layout;
+const RegularLayout = ({className, children}) => (
+    <div className={cn(className, 'ktl-layout ktl-layout--center ktl-layout--spacing')}>
+        {children}
+    </div>
+);
+
+export function MarkdownLayout({appearance, children, ...props} : LayoutProps) {
+    const Tag = LayoutMDAppearance.Modern === appearance ? ModernMarkdown : Markdown;
+    return (
+        <Layout {...props}>
+            <Tag>{children}</Tag>
+        </Layout>
+    );
+}
+
+export function PageMarkdownLayout({pageContext, ...props } : MarkdownLayoutProps) {
+    const title = pageContext?.frontmatter?.title;
+    const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
+    const contact = pageContext?.frontmatter?.contactUs ?? false;
+    const appearance = pageContext?.frontmatter?.appearance ?? LayoutMDAppearance.Modern;
+    const greyLayout = pageContext?.frontmatter?.greyLayout ?? false;
+
+    return (
+        <MarkdownLayout {...props} title={title} layout={layout} appearance={appearance} contactUs={contact} greyLayout={greyLayout} />
+    );
+}
+
+export default PageMarkdownLayout;

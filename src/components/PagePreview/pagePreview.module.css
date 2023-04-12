@@ -1,0 +1,55 @@
+@import "../Layout/spacing.css";
+
+.pagePreview {
+    background: #19191C;
+    border-radius: 16px;
+    padding: var(--ktl-box-section-l);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 480px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.title {
+    margin: 0;
+}
+
+.button {
+    margin-top: var(--ktl-box-section-s);
+}
+
+.image {
+    width: 144px;
+    display: block;
+    margin-top: auto;
+}
+
+@media (--ktl-tl) {
+    .title {
+        max-width: 10ch; /** word Foundation **/
+    }
+}
+
+@media (--ktl-tm) {
+    .pagePreview {
+        min-height: 424px;
+    }
+
+    .title {
+        max-width: none;
+    }
+}
+
+@media (--ktl-mm) {
+    .pagePreview {
+        min-height: 432px;
+        align-items: center;
+    }
+
+    .title {
+        text-align: center;
+        max-width: 10ch;
+    }
+}

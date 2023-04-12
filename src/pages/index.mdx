@@ -1,0 +1,89 @@
+---
+title: "Home"
+layout: "wide"
+greyLayout: true
+contactUs: true
+---
+import trademarkIcon from "../images/highlights/trademark.svg";
+import grantsIcon from "../images/highlights/grants.svg";
+import controlIcon from "../images/highlights/control.svg";
+
+import jetbrainsLogo from "../images/partners/jetbrains.svg";
+import googleLogo from "../images/partners/google.svg";
+import gradleLogo from "../images/partners/gradle.svg";
+import shopifyLogo from "../images/partners/shopify.svg";
+import touchlabLogo from "../images/partners/touchlab.png";
+
+import grantPreviewUrl from "../images/grants-preview.png";
+import joinPreviewUrl from "../images/join-preview.png";
+
+<IntroBanner
+  title="Protect, promote and advance the&nbsp;development of the&nbsp;Kotlin programming language"
+  members={
+    [
+      {
+        groupName: 'Founding members',
+        companies: [
+          { name: 'JetBrains', image: jetbrainsLogo, url: 'https://www.jetbrains.com/' },
+          { name: 'Google', image: googleLogo, url: 'https://about.google/' },
+        ]
+      },
+      {
+        groupName: 'Silver members',
+        companies: [
+          { name: 'Gradle', image: gradleLogo, url: 'https://gradle.org/' },
+          { name: 'Shopify', image: shopifyLogo, url: 'https://www.shopify.com/' },
+          { name: 'Touchlab', image: touchlabLogo, url: 'https://touchlab.co/kotlin-foundation' },
+        ]
+      },
+    ]
+  }
+/>
+
+<ProductHighlight title="Key Goals">
+<ProductHighlightItem icon={grantsIcon}>Provide financial support to Kotlin ecosystem projects.</ProductHighlightItem>
+  <ProductHighlightItem icon={controlIcon}>Control incompatible changes to&nbsp;the&nbsp;language.</ProductHighlightItem>
+  <ProductHighlightItem icon={trademarkIcon}>Preserve the Kotlin trademarks.</ProductHighlightItem>
+</ProductHighlight>
+
+<ProductHighlight title="Kotlin Now">
+  <ProductHighlightItem value="570k">Active developers use Kotlin every month.</ProductHighlightItem>
+  <ProductHighlightItem value="1M">GitHub repositories currently use Kotlin as a primary language.</ProductHighlightItem>
+  <ProductHighlightItem value="32">Of the top 100 universities in the THE Rankings 2023 are teaching Kotlin.</ProductHighlightItem>
+</ProductHighlight>
+
+<Layout>
+	<PairedBlock
+		left={<PagePreview title={"Apply for a&nbsp;grant"} actionTitle={"Learn more"} imageSrc={grantPreviewUrl} url={"grants"} />}
+		right={<PagePreview title={"Join the Foundation"} actionTitle={"Continue"} imageSrc={joinPreviewUrl} url={"join"} />}
+	/>
+</Layout>
+
+<Layout>
+	<LatestNews />
+</Layout>
+
+<VideoGallery videos={
+  [
+    {
+      title: 'Kotlin Anniversary Documentary',
+      url: 'https://www.youtube.com/watch?v=uE-1oF9PyiY'
+    },
+    {
+      title: 'Kotlin 2021 Keynote',
+      url: 'https://www.youtube.com/watch?v=3uVUDsoE_5U'
+    },
+    {
+      title: 'Kotlin 2020 Keynote',
+      url: 'https://www.youtube.com/watch?v=pD58Dw17CLk'
+    },
+    {
+      title: 'Kotlin 2019 Keynote',
+      url: 'https://www.youtube.com/watch?v=0xKTM0A8gdI'
+    },
+    {
+      title: 'Kotlin 2018 Keynote',
+      url: 'https://www.youtube.com/watch?v=PsaFVLr8t4E&list=PLQ176FUIyIUbVvFMqDc2jhxS-t562uytr&index=2'
+    }
+  ]
+} title={"Look how we’ve grown up"}/>

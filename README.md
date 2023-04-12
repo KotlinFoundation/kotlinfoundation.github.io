@@ -55,7 +55,6 @@ Be sure to specify the title, other parameters are optional:
 title: "A page title"
 layout: "narrow" or "regular"  "wide"
 contactUs: true
-whiteHeader: true 
 ---
 ```
 
@@ -64,7 +63,6 @@ The params are:
 - `title` a string value that will be used in the title meta tag of the page, required;
 - `layout` a string value that defines content width. "narrow" by default;
 - `contactUs` includes a block of the same name on the page;
-- `whiteHeader` sets a white background for the Header block.
 
 ## Deploy Changes
 In order to publish your changes, it is enough that they are included in the master branch on GitHub.

@@ -1,0 +1,98 @@
+@import "../../Layout/spacing.css";
+
+.section {
+    padding-top: var(--ktl-box-page-m);
+}
+
+.image::before {
+    top: -9px;
+    left: -24px;
+}
+
+.shadow {
+    display: none;
+}
+
+@media (--ktl-tm-min) {
+    .wrap {
+        position: relative;
+        width: 608px;
+    }
+
+    .shadow {
+        composes: shadow from "../section-shadow.module.css";
+        display: block;
+        position: absolute;
+        top: -316px;
+        right: -46px;
+        transform: translate(100%);
+        margin: 0;
+    }
+
+    .shadow::before {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 480px;
+        width: 480px;
+    }
+
+    .image {
+        position: relative;
+    }
+}
+
+/* The current style requires an additional 2 pixels to be added to “Shape the future
+ * of the ecosystem” text so that it can fit in a single line for TM layout.
+ *
+ * Sometimes I think Pasha is trolling me! 😅*/
+.title {
+    @media (--ktl-tm) and (--ktl-ts-min) {
+        letter-spacing: -1px;
+    }
+}
+
+.title-br {
+    /* there is no support "or" in @media for safari :( */
+    @media (--ktl-ts-min) { display: none; }
+    @media (--ktl-ms) { display: none; }
+}
+
+.shadow {
+    @media (--ktl-ds) {
+        right: 8px;
+    }
+
+    @media (--ktl-tl) {
+        right: 64px;
+    }
+}
+
+.sustain {
+    --into-highlight-image: url("./images/sustain.svg");
+}
+
+.contribute {
+    --into-highlight-image: url("./images/contribute.svg");
+}
+
+.br-guidance {
+    display: none;
+    @media (--ktl-mm) and (--ktl-ms-min) {
+        display: inline;
+    }
+}
+
+.br-make {
+    display: none;
+    @media (--ktl-tm) and (--ktl-ts-min) {
+        display: inline;
+    }
+}
+
+.br-funding {
+    display: none;
+    @media (--ktl-ts) and (--ktl-ms-min) {
+        display: inline;
+    }
+}

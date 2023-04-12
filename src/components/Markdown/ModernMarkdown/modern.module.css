@@ -1,0 +1,42 @@
+.markdown {
+    --ktf-markdown-para-spacing: 1.5em;
+}
+
+/* all tags of first level) */
+.markdown > :is(.h1, .h2, .h3, .h4, .h5, .h6, .para, .list, .quote) {
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+}
+
+.h1 {
+    margin-top: var(--ktl-box-section-l);
+    margin-bottom: var(--ktl-box-section-l);
+}
+
+.h2 {
+    margin-top: var(--ktl-box-section-l);
+    margin-bottom: var(--ktl-box-section-m);
+}
+
+.h3 {
+    margin-top: var(--ktl-box-section-m);
+    margin-bottom: var(--ktl-box-section-s);
+}
+
+.h4, .h5, .h6 {
+    margin-top: var(--ktl-box-section-s);
+    margin-bottom: var(--ktl-box-block-l);
+}
+
+.list:has(+ *), .para:has(+ *) {
+    margin-bottom: var(--ktf-markdown-para-spacing);
+}
+
+.quote {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .para {
+        font-weight: 600;
+    }
+}
