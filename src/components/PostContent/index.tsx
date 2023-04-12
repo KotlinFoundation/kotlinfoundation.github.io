@@ -8,7 +8,7 @@ const DEFAULT_EXCERPT_SIZE = 300;
 export function PostContent({ more, excerpt, frontmatter }) {
     const textCn = useTextStyles();
     const { date, title } = frontmatter;
-
+    debugger
     const {content, isTrimmed} = postContentPreview({excerpt, frontmatter});
 
     return (
@@ -34,12 +34,15 @@ export function postContentPreview({excerpt, frontmatter}, more = null): {conten
         .map((text, i, list) => {
             const isLastTrimmed = isTrimmed && i === list.length - 1;
 
-            if (isLastTrimmed && typeof spoilerSize === 'undefined') {
-                text = text.replace(/^(.+)\s+.*$/g, '$1');
+            if (isLastTrimmed) {
+                if (spoilerSize === undefined) {
+                    text = text.replace(/^(.+)\s+.*$/g, '$1');
+                }
+                text = text.replace(/^(.+)\.+\s*/g, '$1')
             }
 
             return (
-                <p key={text}>{text.trimEnd()}{isLastTrimmed && '…'}{more}</p>
+                <p key={i}>{text.trimEnd()}{isLastTrimmed && '…'}{more}</p>
             );
         });
 
