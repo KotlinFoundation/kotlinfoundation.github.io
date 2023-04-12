@@ -84,8 +84,10 @@
         min-width: auto;
 
         .action & {
-            padding-left: 0;
-            padding-right: 0;
+            &, &:hover, &:active {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 }
