@@ -46,14 +46,14 @@ export const IntroBanner: FC<IntroBannerProps> = ({title, members}) => {
                                     let content = <img
                                         key={name} alt={`${name} Logo`}
                                         src={image} className={styles.companyLogo}
-                                    />
+                                    />;
 
                                     if (url) content = <a
                                         href={url} target="_blank"
                                         rel="noreferrer noopener" className={styles.companyLink}
                                     >{content}</a>;
 
-                                    return content;
+                                    return <div className={styles.company}>{content}</div>;
                                 })}
                             </div>
                         </div>

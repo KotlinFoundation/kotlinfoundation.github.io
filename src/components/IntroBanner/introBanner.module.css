@@ -38,18 +38,25 @@
 }
 
 .companies-logos {
+    --ktf-companies-logo-spacing: 12px;
+
     display: flex;
     flex-wrap: wrap;
     margin-top: 12px;
-    margin-left: -12px;
+    margin-left: calc(-1 * var(--ktf-companies-logo-spacing));
+}
+
+.company {
+    margin-left: var(--ktf-companies-logo-spacing);
 }
 
 .company-logo {
     height: 48px;
-    margin-left: 12px;
 }
 
 .company-link {
+    display: inline-block;
+
     font-size: 0;
     line-height: 0;
     &, &:hover {

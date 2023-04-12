@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Link as GatsbyLink } from "gatsby";
+import {navigate} from "gatsby";
 import cn from "classnames";
 import {useTextStyles} from "@rescui/typography";
 import * as styles from "./pagePreview.module.css";
 import Button from "@rescui/button";
 import { ThemeProvider } from '@rescui/ui-contexts';
-import {FC} from "react";
+import {FC, useCallback} from "react";
 
 interface PagePreviewProps {
     title: string;
@@ -25,12 +25,15 @@ export const PagePreview: FC<PagePreviewProps> = ({title, actionTitle, url, imag
 function PagePreviewItem({title, actionTitle, url, imageSrc}) {
     const textCn = useTextStyles();
 
+    const onClick = useCallback(
+        e => { e.preventDefault(); navigate(e.target.getAttribute('href')) },
+        [navigate]
+    );
+
     return (
         <div className={styles.pagePreview}>
             <h2 className={cn(styles.title, textCn('rs-h2'))} dangerouslySetInnerHTML={{__html: title}} />
-            <GatsbyLink to={url}>
-                <Button mode="outline" className={styles.button} size={"l"}>{actionTitle}</Button>
-            </GatsbyLink>
+            <Button mode="outline"  onClick={onClick} href={url} className={styles.button} size={"l"}>{actionTitle}</Button>
             <img src={imageSrc} alt={""} className={styles.image} />
         </div>
     );
