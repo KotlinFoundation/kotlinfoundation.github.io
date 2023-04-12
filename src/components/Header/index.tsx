@@ -12,20 +12,20 @@ const menuItems: MenuItems = [
         only: 'mobile',
     },
     {
-        url: "/structure/",
-        title: "Structure",
+        url: "/news/",
+        title: "News",
     },
     {
-        url: "/faq/",
-        title: "FAQ",
+        url: "/structure/",
+        title: "Structure",
     },
     {
         url: "/grants/",
         title: "Grants",
     },
     {
-        url: "/news/",
-        title: "News",
+        url: "/faq/",
+        title: "FAQ",
     },
     {
         url: "/join/",
