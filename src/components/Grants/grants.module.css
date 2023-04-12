@@ -83,3 +83,19 @@
         min-width: 224px;
     }
 }
+
+:global(.grants-hide--agreement) {
+    @media (--ktl-tm) {
+        display: none;
+    }
+}
+
+:global(.grants-hide--purposes) {
+    @media (--ktl-tm-min) {
+        display: none;
+    }
+
+    @media (--ktl-ts) {
+        display: none;
+    }
+}
