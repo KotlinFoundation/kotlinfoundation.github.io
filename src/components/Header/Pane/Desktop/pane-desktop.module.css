@@ -11,27 +11,29 @@
     display: flex;
     position: relative;
     align-items: center;
+    height: 100%;
 
     padding-left: calc(var(--ktl-box-section-s) / 2);
     padding-right: calc(var(--ktl-box-section-s) / 2);
+    padding-bottom: 0;
 
     letter-spacing: 0.0015em;
 
     &:hover { background: var(--ktl-menu-item-active-bg); }
 
-    &:not(.link--active) {
+    &, &:hover {
         text-decoration: none;
-        border-bottom-color: transparent;
+        border-bottom: 0 none transparent;
     }
 }
 
-.link--active {
-    padding-bottom: 0;
-    border-bottom-color: var(--rs-underline-color-hover);
-    border-bottom-width: 2px;
-}
-
-.list, .link, .item {
-    box-sizing: border-box;
-    height: var(--ktf-header-height);
+.link--active::after {
+    display: block;
+    content: '';
+    position: absolute;
+    background: var(--rs-underline-color-hover);
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
 }

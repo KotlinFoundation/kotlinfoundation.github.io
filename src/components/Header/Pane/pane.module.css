@@ -13,7 +13,6 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     border-bottom: 1px solid var(--rs-color-grey-20);
     height: var(--ktf-header-height);
@@ -33,7 +32,11 @@
     }
 }
 
-.nav, .logo, .mobile {
+.nav {
+    display: flex;
+}
+
+.logo, .mobile {
     display: flex;
     align-items: center;
 }
@@ -47,8 +50,6 @@
 }
 
 .desktop {
-    margin-bottom: -1px;
-
     @media (--ktf-header-mobile) {
         display: none;
     }

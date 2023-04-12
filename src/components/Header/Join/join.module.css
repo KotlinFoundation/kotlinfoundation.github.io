@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding: 0 var(--ktl-box-block-l);
-    height: var(--ktf-header-height);
+    height: 100%;
 }
 
 .active {
