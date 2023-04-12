@@ -80,7 +80,8 @@
     }
 
     @media (--ktl-ms) {
-        min-width: 224px;
+        align-self: center;
+        max-width: 224px;
     }
 }
 
