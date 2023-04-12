@@ -1,6 +1,6 @@
 ---
 title: "Gradle Inc, Touchlab, and Shopify become Kotlin Foundation's first Silver Members"
-date: 2023-04-14 00:05
+date: 2023-04-13 00:05
 coverImage: "./cover.jpg"
 socialImage: "./social.png"
 ---

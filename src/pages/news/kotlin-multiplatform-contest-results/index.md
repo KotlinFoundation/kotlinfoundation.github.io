@@ -1,6 +1,6 @@
 ---
 title: "Results of the Kotlin Multiplatform contest: meet the winners"
-date: 2023-04-14 00:02
+date: 2023-04-13 00:02
 coverImage: "./cover.jpg"
 socialImage: "./social.png"
 spoilerSize: 393
