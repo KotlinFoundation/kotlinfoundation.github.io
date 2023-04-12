@@ -80,8 +80,13 @@
     }
 
     @media (--ktl-ms) {
-        align-self: center;
-        max-width: 224px;
+        align-self: stretch;
+        min-width: auto;
+
+        .action & {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
