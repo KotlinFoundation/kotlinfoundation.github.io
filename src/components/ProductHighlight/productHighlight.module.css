@@ -115,5 +115,10 @@
 
     .item {
         margin-top: 48px;
+        margin-right: 24px;
+
+        &, &:first-child {
+            margin-left: 24px;
+        }
     }
 }
