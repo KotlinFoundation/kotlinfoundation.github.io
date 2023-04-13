@@ -1,7 +1,7 @@
 import * as React from "react";
 import {navigate} from "gatsby";
 import cn from "classnames";
-import {useTextStyles} from "@rescui/typography";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 import * as styles from "./pagePreview.module.css";
 import Button from "@rescui/button";
 import { ThemeProvider } from '@rescui/ui-contexts';
@@ -32,7 +32,7 @@ function PagePreviewItem({title, actionTitle, url, imageSrc}) {
 
     return (
         <div className={styles.pagePreview}>
-            <h2 className={cn(styles.title, textCn('rs-h2'))} dangerouslySetInnerHTML={{__html: title}} />
+            <h2 className={cn(styles.title, textCn('ktf-h2'))} dangerouslySetInnerHTML={{__html: title}} />
             <Button mode="outline"  onClick={onClick} href={url} className={styles.button} size={"l"}>{actionTitle}</Button>
             <img src={imageSrc} alt={""} className={styles.image} />
         </div>
