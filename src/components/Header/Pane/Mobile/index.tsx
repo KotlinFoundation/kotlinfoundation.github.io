@@ -19,6 +19,7 @@ export function PaneMobile({ className = null, sidebar = false, children = null 
         <div className={cn(className, style.pane)}>
             {children}
             <Button
+                aria-label="toggle menu"
                 mode="clear" className={style.trigger} onClick={onIconClick}
                 icon={isClose ? <CloseIcon /> : <HamburgerIcon />}
                 iconPosition="left"

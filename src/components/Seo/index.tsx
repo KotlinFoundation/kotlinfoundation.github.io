@@ -50,6 +50,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, image, meta = [] }
 
     return (
         <Helmet
+            htmlAttributes={{ lang: 'en' }}
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
