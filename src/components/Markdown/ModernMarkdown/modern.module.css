@@ -40,3 +40,8 @@
         font-weight: 600;
     }
 }
+
+.tag-anchor {
+    position: absolute;
+    margin-top: calc(-1 * var(--ktf-header-height) - 5px);
+}

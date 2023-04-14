@@ -11,28 +11,44 @@ export const OLContext = createContext<number | null>(null);
 
 const offsetItems = 8;
 
-function withTextCn(Component) {
-    return props => {
-        const textCn = useTextStyles();
-        return <Component {...props} textCn={textCn}/>;
+function wrapElemAnchor(Component) {
+    function AnchorID({id, children, ...props}) {
+        return <Component {...props}>
+            <a className={styles.tagAnchor} id={id}/>
+            {children}
+        </Component>;
     }
+    return AnchorID;
 }
 
 const MODERN_SHORT_CODES: SHORT_CODES_TYPE = {
-    h1: props => <h1 {...cls(props, 'ktf-h1', styles.h1)}/>,
-    h2: props => <h2 {...cls(props, 'ktf-h2 ktf-h3--mm', styles.h2)}/>,
-    h3: props => <h3 {...cls(props, 'ktf-h3 ktf-h4--mm', styles.h3)}/>,
-    h4: props => <h4 {...cls(props, 'ktl-h4', styles.h4)}/>,
-    h5: props => <h5 {...cls(props, 'ktl-h5', styles.h5)}/>,
-    h6: props => <h6 {...cls(props, 'ktl-h6', styles.h6)}/>,
+    h1:  wrapElemAnchor(function H1(props) {
+        return <h1 {...cls(props, 'ktf-h1', styles.h1)}/>;
+    }),
+    h2:  wrapElemAnchor(function H2(props) {
+        return <h2 {...cls(props, 'ktf-h2 ktf-h3--mm', styles.h2)}/>;
+    }),
+    h3:  wrapElemAnchor(function H3(props) {
+        return <h3 {...cls(props, 'ktf-h3 ktf-h4--mm', styles.h3)}/>;
+    }),
+    h4:  wrapElemAnchor(function H4(props) {
+        return <h4 {...cls(props, 'ktl-h4', styles.h4)}/>;
+    }),
+    h5:  wrapElemAnchor(function H5(props) {
+        return <h5 {...cls(props, 'ktl-h5', styles.h5)}/>;
+    }),
+    h6:  wrapElemAnchor(function H6(props) {
+        return <h6 {...cls(props, 'ktl-h6', styles.h6)}/>;
+    }),
 
-    p: withTextCn(
-        ({ textCn, ...props }) => <p {...cls(props, textCn('ktl-text-2'), styles.para)}/>
-    ),
+    p: function P(props) {
+        const textCn = useTextStyles();
+        return <p {...cls(props, textCn('ktl-text-2'), styles.para)}/>;
+    },
 
     ul: function UL(props) {
         const textCn = useTextStyles();
-        return <ul {...cls(props, textCn('rs-ul', { offsetItems }), 'ktl-text-2', styles.list)}/>
+        return <ul {...cls(props, textCn('rs-ul', { offsetItems }), 'ktl-text-2', styles.list)}/>;
     },
 
     ol: function OL({ children, ...props }) {
