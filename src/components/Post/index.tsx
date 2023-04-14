@@ -1,5 +1,5 @@
 import cn from "classnames";
-import {graphql, PageProps, useStaticQuery} from "gatsby";
+import {graphql, PageProps, useStaticQuery, withPrefix} from "gatsby";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 import Layout from "../Layout";
 import {ModernMarkdown} from "../Markdown";
@@ -32,7 +32,7 @@ export default function PageTemplate({ children, ...props } : PageProps) {
         }
     `);
 
-    const post = posts.find(post => post.fields.slug === location.pathname);
+    const post = posts.find(post => withPrefix(post.fields.slug) === location.pathname);
 
     const { title, date } = post.frontmatter;
     const coverImage = post.frontmatter.socialImage?.publicURL || post.frontmatter.coverImage?.publicURL;

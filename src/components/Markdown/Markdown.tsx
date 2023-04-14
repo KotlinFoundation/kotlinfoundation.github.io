@@ -18,6 +18,7 @@ import {PairedBlock} from "../PairedBlock";
 import {LatestNews} from "../LatestNews";
 
 import * as styles from "./markdown.module.css";
+import {useSiteMeta} from "../../utlis/hooks";
 
 export function cls({ className, ...props }, ...classes: cn.ArgumentArray) {
     return {
@@ -38,7 +39,15 @@ export const DEFAULT_SHORT_CODES = {
     ol: props => <ol {...cls(props, 'ktl-text-1 ktl-offset-top-s')}/>,
     li: props => <li {...cls(props, 'ktl-offset-bottom-s')}/>,
     pre: props => <div><pre {...cls(props, 'ktl-text-2', styles.codeInner)}/></div>,
-    a: props => <Link {...props}/>,
+    a: props => {
+        let url = props.href;
+        const { pathPrefix } = useSiteMeta();
+
+        if (url && url.startsWith(pathPrefix))
+            url = url.substring(pathPrefix.length);
+
+        return <Link {...props} href={url}/>;
+    },
     blockquote: props => <blockquote {...props}/>,
 
     Layout: KtlLayout,
