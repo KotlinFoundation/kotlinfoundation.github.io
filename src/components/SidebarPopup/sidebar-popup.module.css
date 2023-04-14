@@ -9,7 +9,7 @@
     z-index: 910;
 }
 
-.navigation {
+.content {
     background: #fff;
     margin-left: auto;
     height: 100%;
@@ -41,7 +41,7 @@
         will-change: background-color, visible;
     }
 
-    .navigation {
+    .content {
         transform: translateX(0);
 
         transition: transform var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
@@ -60,7 +60,7 @@
         visibility: hidden;
     }
 
-    .navigation {
+    .content {
         transform: translateX(100%);
         visibility: hidden;
     }

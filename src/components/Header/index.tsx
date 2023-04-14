@@ -36,13 +36,13 @@ const menuItems: MenuItems = [
 function Sidebar() {
     return <>
         <Pane sidebar/>
-        <SideMenu/>
+        <SideMenu className={styles.sideMenu}/>
     </>;
 }
 
 function HeaderStateless () {
     return (
-        <Navigation nav={Pane} sidebar={Sidebar} classNamePopup={styles.popup} items={menuItems}/>
+        <Navigation nav={Pane} sidebar={Sidebar} classNamePopup={styles.popup} classNameContent={styles.nav} items={menuItems}/>
     );
 }
 

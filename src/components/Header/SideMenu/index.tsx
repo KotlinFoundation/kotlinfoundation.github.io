@@ -1,4 +1,4 @@
-import {memo, useCallback, useContext, useMemo} from "react";
+import {memo, useCallback, useContext} from "react";
 import {Link, withPrefix} from "gatsby";
 import { Menu, MenuItem } from '@rescui/menu';
 
