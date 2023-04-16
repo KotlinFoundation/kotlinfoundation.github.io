@@ -2,7 +2,7 @@ import cn from "classnames";
 import {graphql, PageProps, useStaticQuery, withPrefix} from "gatsby";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 import Layout from "../Layout";
-import {ModernMarkdown} from "../Markdown";
+import {Markdown} from "../Markdown";
 
 import * as style from './Post.module.css';
 
@@ -46,7 +46,7 @@ export default function PageTemplate({ children, ...props } : PageProps) {
         <Layout {...props} socialImage={coverImage}>
             <p className={cn(textCn('ktl-text-3'), 'ktl-text--gray', style.date)}>{date}</p>
             <h1 className={cn("ktf-h2 ktf-h3--mm", style.title)}>{title}</h1>
-            <ModernMarkdown>{children}</ModernMarkdown>
+            <Markdown>{children}</Markdown>
         </Layout>
     );
 }

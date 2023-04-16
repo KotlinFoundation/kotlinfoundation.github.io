@@ -2,8 +2,8 @@
     --ktf-markdown-para-spacing: 1.5em;
 }
 
-/* all tags of first level) */
-.markdown > :is(.h1, .h2, .h3, .h4, .h5, .h6, .para, .list, .quote) {
+/* all tags of first level. */
+.markdown > :is(.h1, .h2, .h3, .h4, .h5, .h6, .para, .list, .quote, .code-block) {
     &:first-child { margin-top: 0; }
     &:last-child { margin-bottom: 0; }
 }
@@ -39,6 +39,21 @@
     > .para {
         font-weight: 600;
     }
+}
+
+.code-block {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: var(--ktl-box-block-l);
+    overflow: auto;
+    white-space: pre;
+    background: rgba(25,25,28,.05);
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.code-block > code {
+    display: block;
 }
 
 .tag-anchor {
