@@ -1,6 +1,6 @@
 import {useMemo} from 'react';
-import {graphql, useStaticQuery} from "gatsby";
 import cn from "classnames";
+import {graphql, useStaticQuery} from "gatsby";
 import {useTextStyles} from "@rescui/typography";
 
 import {Link} from "../Link";

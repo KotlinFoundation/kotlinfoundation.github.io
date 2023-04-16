@@ -1,11 +1,11 @@
-import * as React from "react";
-import {navigate} from "gatsby";
-import cn from "classnames";
-import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
-import * as styles from "./pagePreview.module.css";
-import Button from "@rescui/button";
-import { ThemeProvider } from '@rescui/ui-contexts';
 import {FC, useCallback} from "react";
+import cn from "classnames";
+import {navigate} from "gatsby";
+import { ThemeProvider } from '@rescui/ui-contexts';
+import Button from "@rescui/button";
+import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
+
+import * as styles from "./pagePreview.module.css";
 
 interface PagePreviewProps {
     title: string;

@@ -9,15 +9,12 @@ import {Link} from "../Link";
 import * as CUSTOM_MARKDOWN_TAGS from "./CustomTags";
 
 import * as styles from "./modern.module.css";
+import {cls} from "../../utlis";
 
 const OLAlpha = [ 'upper', 'lower' ];
 export const OLContext = createContext<number | null>(null);
 
 const offsetItems = 8;
-
-export function cls(props, ...classes: cn.ArgumentArray) {
-    return { ...props, className: cn(props.className, ...classes) };
-}
 
 function wrapElemAnchor(Component) {
     function AnchorID({id, children, ...props}) {

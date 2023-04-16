@@ -11,9 +11,9 @@ import "./typography.css";
 import "./heading.css";
 
 import { SEO } from "../Seo";
-import { Header as Header } from "../Header";
+import { Header } from "../Header";
 import { Markdown } from "../Markdown";
-import { ContactUs } from "../ContactUs/ContactUs";
+import { CtaBlock as ContactUs } from "../CtaBlock";
 import { Footer } from "../Footer";
 
 import * as styles from "./layout.module.css";

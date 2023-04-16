@@ -11,9 +11,8 @@ interface SEOProps {
 
 import imageUrl from '../../images/preview.png';
 
-export const SEO: React.FC<SEOProps> = ({ title, description, image, meta = [] }) => {
-    const { site } = useStaticQuery(
-        graphql`
+export function SEO({title, description, image, meta = []} : SEOProps) {
+    const {site} = useStaticQuery(graphql`
       query {
         site {
           siteMetadata {
@@ -23,8 +22,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, image, meta = [] }
           }
         }
       }
-    `
-    );
+    `);
 
     const metaDescription = description || site.siteMetadata.description;
     const url = site.siteMetadata.siteUrl;

@@ -3,7 +3,7 @@ import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typogr
 import { Person } from "../Person";
 import * as style from "./structure.module.css";
 
-export const Department = ({ hero = false, name, members, children }) => {
+export function Department({hero = false, name, members, children}) {
     const textCn = useTextStyles();
     const persons = members
         ? Array.isArray(members) ? members : [ members ]

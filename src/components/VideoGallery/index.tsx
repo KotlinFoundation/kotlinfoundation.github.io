@@ -1,4 +1,4 @@
-import {FC, ReactNode, useCallback, useMemo, useRef, useState} from 'react';
+import {FC, useCallback, useMemo, useRef, useState} from 'react';
 import cn from 'classnames';
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
@@ -26,7 +26,7 @@ export interface VideoGalleryProps {
     title: string;
 }
 
-export const VideoGallery: FC<VideoGalleryProps> = ({videos, title}) => {
+export function VideoGallery({videos, title} : VideoGalleryProps) {
     const textCn = useTextStyles();
     let [currentId, setCurrentId] = useState('');
     const sliderRef = useRef(null);
@@ -98,7 +98,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({videos, title}) => {
             </div>
         </div>
     );
-};
+}
 
 function preview(url: string): string {
     return `https://img.youtube.com/vi/${getVideoId(url)}/maxresdefault.jpg`;

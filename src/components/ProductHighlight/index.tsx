@@ -1,5 +1,4 @@
 import {FC, ReactNode} from "react";
-import {Link} from "gatsby";
 import cn from "classnames";
 
 import {useTextStyles} from "@rescui/typography";
@@ -36,7 +35,7 @@ export const ProductHighlightItem: FC<ProductHighlightItemProps> = ({value, icon
 
     return (
         <li className={styles.item}>
-            {value && <div className={cn(styles.number,  textCn('rs-hero', {hardness: 'hard'}))}>{value}</div>}
+            {value && <div className={cn(styles.number, textCn('rs-hero'))}>{value}</div>}
             {icon && <img className={styles.icon} src={icon} alt=""/>}
             <div className={cn(styles.desc, textCn('rs-text-2', {hardness: 'hard'}), {[styles.withNumber]: !!value})}>
                 {children}
