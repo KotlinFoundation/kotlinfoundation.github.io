@@ -1,4 +1,8 @@
 const {join, relative, resolve} = require("path");
+const { stat, readFile, writeFile } = require('fs').promises;
+const path = require("path");
+const {createHash} = require("crypto");
+const { sync } = require('glob');
 const {createFilePath} = require("gatsby-source-filesystem");
 
 const MD_EXTS = ['md', 'mdx'];
@@ -62,3 +66,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         });
     }
 }
+
+exports.onPostBuild = async () => {
+    const publicPath = path.join(__dirname, 'public');
+    const files = sync(`${publicPath}/**/*.{html,js}`);
+    const hash = createHash(`sha256`)
+        .update(Date.now().toString())
+        .digest(`hex`);
+
+    return Promise.all(
+        files.map(async file => {
+            const stats = await stat(file);
+            if (stats.isFile()) {
+                console.log(
+                    `[onPostBuild] Replacing page-data.json references in the following files:${file}...`
+                );
+
+                const content = await readFile(file, 'utf8');
+                const result = content
+                    .replace(/page-data.json/g, `page-data.json?${hash}`)
+                    .replace(/app-data.json/g, `app-data.json?${hash}`);
+                await writeFile(file, result, 'utf8');
+            }
+        })
+    );
+};
