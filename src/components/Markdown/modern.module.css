@@ -59,4 +59,24 @@
 .tag-anchor {
     position: absolute;
     margin-top: calc(-1 * var(--ktf-header-height) - 5px);
+    visibility: hidden;
 }
+
+.link-anchor {
+    display: none;
+    position: absolute;
+    color: var(--ktl-color-dark-40);
+    margin-left: var(--ktl-box-block-l);
+}
+
+.h-anchor {
+    position: relative;
+
+    &:hover > .link-anchor {
+        display: inline-block;
+        &:hover {
+            color: currentColor;
+        }
+    }
+}
+

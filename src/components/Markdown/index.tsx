@@ -1,6 +1,7 @@
 import {createContext, ReactNode, useContext} from "react";
 import cn from "classnames";
 import {MDXProvider} from "@mdx-js/react";
+import {LinkIcon} from "@rescui/icons";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
 import {useSiteMeta} from "../../utlis/hooks";
@@ -18,10 +19,17 @@ const offsetItems = 8;
 
 function wrapElemAnchor(Component) {
     function AnchorID({id, children, ...props}) {
-        return <Component {...props}>
-            <a className={styles.tagAnchor} id={id}/>
-            {children}
-        </Component>;
+        if (id) return (
+             <Component {...cls(props, styles.hAnchor)}>
+                 <a className={styles.tagAnchor} id={id}/>
+                 {children}
+                 <a className={styles.linkAnchor} id={id} href={`#${id}`}>
+                     <LinkIcon/>
+                 </a>
+            </Component>
+        );
+
+        return <Component {...props}/>;
     }
     return AnchorID;
 }
