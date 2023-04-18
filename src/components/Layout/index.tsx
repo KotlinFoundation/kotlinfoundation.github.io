@@ -13,7 +13,7 @@ import "./heading.css";
 import { SEO } from "../Seo";
 import { Header } from "../Header";
 import { Markdown } from "../Markdown";
-import { CtaBlock as ContactUs } from "../CtaBlock";
+import { ContactUs } from "../ContactUs";
 import { Footer } from "../Footer";
 
 import * as styles from "./layout.module.css";
