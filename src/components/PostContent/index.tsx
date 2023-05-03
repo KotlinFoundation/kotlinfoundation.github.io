@@ -3,13 +3,13 @@ import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typogr
 
 import * as styles from './post-content.module.css';
 
-const DEFAULT_EXCERPT_SIZE = 300;
+export const DEFAULT_EXCERPT_SIZE = 300;
 
 export function PostContent({ more, excerpt, frontmatter }) {
     const textCn = useTextStyles();
     const { date, title } = frontmatter;
 
-    const {content, isTrimmed} = postContentPreview({excerpt, frontmatter});
+    const {content, isTrimmed} = postContentPreview(excerpt, frontmatter.spoilerSize);
 
     return (
         <>
@@ -21,13 +21,16 @@ export function PostContent({ more, excerpt, frontmatter }) {
     );
 }
 
-export function postContentPreview({excerpt, frontmatter}, more = null): {content: string; isTrimmed: boolean;} {
-    const { spoilerSize } = frontmatter;
-
-    const cutContent = excerpt
+export function postContentPreview(text, spoilerSize, more = null): {content: string; isTrimmed: boolean;} {
+    let cutContent = text
         .substring(0, spoilerSize || DEFAULT_EXCERPT_SIZE);
 
-    const isTrimmed = cutContent.length !== excerpt.length;
+    const isTrimmed = cutContent.length !== text.length;
+
+    // Don't show trimmed last word
+    if (isTrimmed && !text[cutContent.length].match(/\s/)) {
+        cutContent = cutContent.replace(/^(.+)\s+.*$/g, '$1');
+    }
 
     const content = cutContent
         .split('\n\n')
@@ -38,7 +41,7 @@ export function postContentPreview({excerpt, frontmatter}, more = null): {conten
                 if (spoilerSize === undefined) {
                     text = text.replace(/^(.+)\s+.*$/g, '$1');
                 }
-                text = text.trimEnd().replace(/^(.+)\.+\s*/g, '$1')
+                text = text.trimEnd().replace(/^(.+)[.!?,]+\s*$/g, '$1')
             }
 
             return (
