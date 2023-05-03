@@ -1,3 +1,4 @@
+import {memo, useState} from "react";
 import cn from "classnames";
 import {graphql, useStaticQuery} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -5,7 +6,7 @@ import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typogr
 
 import * as style from "./Person.module.css";
 
-export function Person({size = null, className = null, name, company}) {
+export function Person({avatar = false, position = null, size = null, className = null, name, company, onHover}) {
     const textCn = useTextStyles();
     const { images }= useStaticQuery(graphql`
       query {
@@ -29,12 +30,14 @@ export function Person({size = null, className = null, name, company}) {
     );
 
     const classes = cn(style.person, 'vcard', className, {
+        [style.personAvatar]: avatar,
         [style[`person_size_${size}`]]: Boolean(size),
+        [style[`person_position_${position}`]]: Boolean(position),
     });
 
     return (
         <div className={classes}>
-            <div className={style.photoWrap}>
+            <div className={style.photoWrap} onMouseLeave={onHover}>
                 <GatsbyImage
                     className={style.photo}
                     image={file.node.childImageSharp.gatsbyImageData}
@@ -48,3 +51,5 @@ export function Person({size = null, className = null, name, company}) {
         </div>
     );
 }
+
+export const PurePerson = memo(Person);

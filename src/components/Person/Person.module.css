@@ -24,14 +24,15 @@
     min-width: 80px;
 
     transform: translateZ(0); /* Safari and (radius + overflow:hidden) bug fix */
+    z-index: 2;
 }
 
-.person--size-xl {
+.person_size_xl {
     display: flex;
     flex-direction: column;
 }
 
-.person--size-xl > .info {
+.person_size_xl > .info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,11 +41,11 @@
     position: relative;
 }
 
-.person--size-xl > .photo-wrap {
+.person_size_xl > .photo-wrap {
     margin: 0;
 }
 
-.person--size-xl > .photo-wrap > .photo {
+.person_size_xl > .photo-wrap > .photo {
     border-radius: 200px;
     height: 190px;
     width: 152px;
@@ -53,8 +54,90 @@
 }
 
 @media (min-width: 960px) {
-    .person--size-xl > .photo-wrap > .photo {
+    .person_size_xl > .photo-wrap > .photo {
         width: 220px;
         height: 280px;
+    }
+}
+
+@keyframes person-mascot {
+    0% {
+        z-index: 1;
+        top: -25%
+    }
+    1%  { top: -70%; }
+    2%  {
+        top: 0;
+        z-index: 3;
+    }
+     3% { top: -1%; }  4% { top: 0; }  5% { top: -1%; }  6% { top: 0; }  7% { top: -1%; }  8% { top: 0; }
+     9% { top: -1%; } 10% { top: 0; } 11% { top: -1%; } 12% { top: 0; } 13% { top: -1%; } 14% { top: 0; }
+    15% { top: -1%; } 16% { top: 0; } 17% { top: -1%; } 18% { top: 0; } 19% { top: -1%; } 20% { top: 0; }
+    21% { top: -1%; } 22% { top: 0; } 23% { top: -1%; } 24% { top: 0; } 25% { top: -1%; } 26% { top: 0; }
+    27% { top: -1%; } 28% { top: 0; } 29% { top: -1%; } 30% { top: 0; } 31% { top: -1%; } 32% { top: 0; }
+    33% { top: -1%; } 34% { top: 0; } 35% { top: -1%; } 36% { top: 0; } 37% { top: -1%; } 38% { top: 0; }
+    39% { top: -1%; } 40% { top: 0; } 41% { top: -1%; } 42% { top: 0; } 43% { top: -1%; } 44% { top: 0; }
+    45% { top: -1%; } 46% { top: 0; } 47% { top: -1%; } 48% { top: 0; } 49% { top: -1%; } 50% { top: 0; }
+    51% { top: -1%; } 52% { top: 0; } 53% { top: -1%; } 54% { top: 0; } 55% { top: -1%; } 56% { top: 0; }
+    57% { top: -1%; } 58% { top: 0; } 59% { top: -1%; } 60% { top: 0; } 61% { top: -1%; } 62% { top: 0; }
+    63% { top: -1%; } 64% { top: 0; } 65% { top: -1%; } 66% { top: 0; } 67% { top: -1%; } 68% { top: 0; }
+    69% { top: -1%; } 70% { top: 0; } 71% { top: -1%; } 72% { top: 0; } 73% { top: -1%; } 74% { top: 0; }
+    75% { top: -1%; } 76% { top: 0; } 77% { top: -1%; } 78% { top: 0; } 79% { top: -1%; } 80% { top: 0; }
+    81% { top: -1%; } 82% { top: 0; } 83% { top: -1%; } 84% { top: 0; } 85% { top: -1%; } 86% { top: 0; }
+    87% { top: -1%; } 88% { top: 0; } 89% { top: -1%; } 90% { top: 0; } 91% { top: -1%; } 92% { top: 0; }
+    93% { top: -1%; } 94% { top: 0; } 95% { top: -1%; } 96% { top: 0; } 97% { top: -1%; } 98% { top: 0; }
+    99% { top: -1%; } 100% { top: 0; }
+}
+
+.photo-wrap {
+    &::after {
+        display: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        background: transparent var(--person-mascot-url, url('../../images/mascots/1.svg')) no-repeat top center;
+        background-size: 75%;
+        z-index: 3;
+        animation: person-mascot 10s;
+
+        .person_position_1 & {
+            background-position: 45% 39%;
+            background-size: 80%;
+            transform: rotate(9deg);
+        }
+
+        .person_position_2 & {
+            background-position: 100% 25%;
+            background-size: 85%;
+            transform: rotate(3deg);
+        }
+
+        .person_position_3 & {
+            background-position: 68% 35%;
+            background-size: 70%;
+            transform: rotate(15deg);
+        }
+
+        .person_position_4 & {
+            background-position: 30% 30%;
+            background-size: 70%;
+            transform: rotate(-9deg);
+        }
+
+        .person_position_5 & {
+            background-position: 80% 30%;
+            background-size: 80%;
+            transform: rotate(-4deg);
+        }
+    }
+
+    @media (--ktl-mm-min) {
+        .person--avatar > &:hover::after {
+            display: block;
+        }
     }
 }
