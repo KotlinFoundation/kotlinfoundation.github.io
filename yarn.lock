@@ -1846,10 +1846,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@jetbrains/kotlin-web-site-ui@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@jetbrains/kotlin-web-site-ui/-/kotlin-web-site-ui-4.5.0.tgz#0f31b5cb1259cf1103df498e741d33bf23d9b238"
-  integrity sha512-5S3KjrQN0suuNNsBOI2oqbx9d/SNbI6elDfgVJztdFuaCZx2tJD1njLzWeHpsoqP01HL848HufreaJ7n/p5XBA==
+"@jetbrains/kotlin-web-site-ui@^0.0.0-foundation-changes.6":
+  version "0.0.0-foundation-changes.6"
+  resolved "https://registry.yarnpkg.com/@jetbrains/kotlin-web-site-ui/-/kotlin-web-site-ui-0.0.0-foundation-changes.6.tgz#777bb68cda08612666184986548365fd0779c32a"
+  integrity sha512-ZM8oaFRN9GRuNiLtt229kafHac6Juj0dyEvVqYuUqyIzZhGW1JywgeOdpAJCnJBmxf31xueOgVuuBMmOUaQekg==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"

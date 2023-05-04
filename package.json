@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@csstools/postcss-global-data": "^1.0.3",
-    "@jetbrains/kotlin-web-site-ui": "^4.5.0",
+    "@jetbrains/kotlin-web-site-ui": "^4.6.0",
     "@rescui/button": "^0.8.0",
     "@rescui/checkbox": "^0.4.10",
     "@rescui/focus-manager": "^0.1.3",
