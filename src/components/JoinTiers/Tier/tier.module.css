@@ -1,5 +1,3 @@
-@import "../../Layout/spacing.css";
-
 .tier {
     display: flex;
     flex-direction: column;

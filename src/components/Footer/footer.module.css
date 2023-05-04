@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 .outer {
     background: var(--ktf-bg-dark);
     padding: var(--ktl-box-section-l) 0;

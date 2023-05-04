@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 @media (min-width: 560px) {
     .person {
         display: flex;

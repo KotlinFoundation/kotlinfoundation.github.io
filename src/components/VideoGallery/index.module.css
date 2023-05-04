@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 .container {
     margin-top: var(--ktl-box-page-m);
     padding-bottom: var(--ktl-box-section-l);

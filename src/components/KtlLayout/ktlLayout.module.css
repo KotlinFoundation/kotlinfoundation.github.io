@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 @media (--ktl-tl) {
     .extra-space {
         margin-top: var(--ktl-box-page-m);

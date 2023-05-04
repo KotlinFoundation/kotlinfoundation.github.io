@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 .outter {
     background: var(--ktl-light-grey);
     padding-top: var(--ktf-fuild-spacing-xl);

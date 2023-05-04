@@ -1,5 +1,4 @@
 @import "~@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
-@import "../Layout/spacing.css";
 
 .root {
     position: relative;
