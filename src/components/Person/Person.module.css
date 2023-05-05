@@ -58,33 +58,29 @@
     }
 }
 
-@keyframes person-mascot {
+@define-mixin mascot-anim $x {
+    transform: translateY($x) var(--mascot-rotate) ;
+}
+
+@keyframes mascot-animation-in {
     0% {
+        transform: rotate(0deg) translateY(0);
         z-index: 1;
-        top: -25%
     }
-    1%  { top: -70%; }
-    2%  {
-        top: 0;
+    50% {
+        transform: rotate(0deg) translateY(-75%);
+        z-index: 1;
+    }
+    100% {
+        @mixin mascot-anim 0;
         z-index: 3;
     }
-     3% { top: -1%; }  4% { top: 0; }  5% { top: -1%; }  6% { top: 0; }  7% { top: -1%; }  8% { top: 0; }
-     9% { top: -1%; } 10% { top: 0; } 11% { top: -1%; } 12% { top: 0; } 13% { top: -1%; } 14% { top: 0; }
-    15% { top: -1%; } 16% { top: 0; } 17% { top: -1%; } 18% { top: 0; } 19% { top: -1%; } 20% { top: 0; }
-    21% { top: -1%; } 22% { top: 0; } 23% { top: -1%; } 24% { top: 0; } 25% { top: -1%; } 26% { top: 0; }
-    27% { top: -1%; } 28% { top: 0; } 29% { top: -1%; } 30% { top: 0; } 31% { top: -1%; } 32% { top: 0; }
-    33% { top: -1%; } 34% { top: 0; } 35% { top: -1%; } 36% { top: 0; } 37% { top: -1%; } 38% { top: 0; }
-    39% { top: -1%; } 40% { top: 0; } 41% { top: -1%; } 42% { top: 0; } 43% { top: -1%; } 44% { top: 0; }
-    45% { top: -1%; } 46% { top: 0; } 47% { top: -1%; } 48% { top: 0; } 49% { top: -1%; } 50% { top: 0; }
-    51% { top: -1%; } 52% { top: 0; } 53% { top: -1%; } 54% { top: 0; } 55% { top: -1%; } 56% { top: 0; }
-    57% { top: -1%; } 58% { top: 0; } 59% { top: -1%; } 60% { top: 0; } 61% { top: -1%; } 62% { top: 0; }
-    63% { top: -1%; } 64% { top: 0; } 65% { top: -1%; } 66% { top: 0; } 67% { top: -1%; } 68% { top: 0; }
-    69% { top: -1%; } 70% { top: 0; } 71% { top: -1%; } 72% { top: 0; } 73% { top: -1%; } 74% { top: 0; }
-    75% { top: -1%; } 76% { top: 0; } 77% { top: -1%; } 78% { top: 0; } 79% { top: -1%; } 80% { top: 0; }
-    81% { top: -1%; } 82% { top: 0; } 83% { top: -1%; } 84% { top: 0; } 85% { top: -1%; } 86% { top: 0; }
-    87% { top: -1%; } 88% { top: 0; } 89% { top: -1%; } 90% { top: 0; } 91% { top: -1%; } 92% { top: 0; }
-    93% { top: -1%; } 94% { top: 0; } 95% { top: -1%; } 96% { top: 0; } 97% { top: -1%; } 98% { top: 0; }
-    99% { top: -1%; } 100% { top: 0; }
+}
+
+@keyframes mascot-animation-out {
+      0% { @mixin mascot-anim 0; }
+     50% { @mixin mascot-anim 1%; }
+    100% { @mixin mascot-anim 0; }
 }
 
 .photo-wrap {
@@ -100,36 +96,38 @@
         background: transparent var(--person-mascot-url, url('../../images/mascots/1.svg')) no-repeat top center;
         background-size: 75%;
         z-index: 3;
-        animation: person-mascot 10s;
+        animation: mascot-animation-in 250ms, mascot-animation-out 300ms 250ms infinite;
+        transform: var(--mascot-rotate, rotate(0deg));
+        will-change: background-size, transform;
 
         .person_position_1 & {
+            --mascot-rotate: rotate(9deg);
             background-position: 45% 39%;
             background-size: 80%;
-            transform: rotate(9deg);
         }
 
         .person_position_2 & {
+            --mascot-rotate: rotate(3deg);
             background-position: 100% 25%;
             background-size: 85%;
-            transform: rotate(3deg);
         }
 
         .person_position_3 & {
+            --mascot-rotate: rotate(15deg);
             background-position: 68% 35%;
             background-size: 70%;
-            transform: rotate(15deg);
         }
 
         .person_position_4 & {
+            --mascot-rotate: rotate(-9deg);
             background-position: 30% 30%;
             background-size: 70%;
-            transform: rotate(-9deg);
         }
 
         .person_position_5 & {
             background-position: 80% 30%;
             background-size: 80%;
-            transform: rotate(-4deg);
+            --mascot-rotate: rotate(-4deg);
         }
     }
 
