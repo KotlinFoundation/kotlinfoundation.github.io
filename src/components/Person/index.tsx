@@ -1,4 +1,4 @@
-import {memo, useState} from "react";
+import {HTMLAttributes, ReactNode} from "react";
 import cn from "classnames";
 import {graphql, useStaticQuery} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -6,7 +6,16 @@ import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typogr
 
 import * as style from "./Person.module.css";
 
-export function Person({avatar = false, position = null, size = null, className = null, name, company, onHover}) {
+export type PersonProps = {
+    className?: string,
+    avatar?: boolean | 'asIdle',
+    variation: number,
+    size?: 'xl',
+    name: ReactNode,
+    company: ReactNode,
+} & HTMLAttributes<HTMLDivElement>;
+
+export function Person({ className, avatar, variation, size, name, company, ...props }: PersonProps) {
     const textCn = useTextStyles();
     const { images }= useStaticQuery(graphql`
       query {
@@ -30,14 +39,15 @@ export function Person({avatar = false, position = null, size = null, className 
     );
 
     const classes = cn(style.person, 'vcard', className, {
-        [style.personAvatar]: avatar,
+        [style.personAvatar]: Boolean(avatar),
+        [style.personAvatarIdle]: avatar === 'asIdle',
         [style[`person_size_${size}`]]: Boolean(size),
-        [style[`person_position_${position}`]]: Boolean(position),
+        [style[`person_variation_${variation}`]]: Boolean(variation),
     });
 
     return (
-        <div className={classes}>
-            <div className={style.photoWrap} onMouseLeave={onHover}>
+        <div className={classes} {...props}>
+            <div className={style.photoWrap} >
                 <GatsbyImage
                     className={style.photo}
                     image={file.node.childImageSharp.gatsbyImageData}
@@ -51,5 +61,3 @@ export function Person({avatar = false, position = null, size = null, className 
         </div>
     );
 }
-
-export const PurePerson = memo(Person);

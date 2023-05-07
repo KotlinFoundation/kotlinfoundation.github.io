@@ -1,22 +1,38 @@
-import {useCallback, useRef, useState} from "react";
+import {forwardRef, HTMLAttributes, memo, RefObject, useCallback, useLayoutEffect, useRef, useState} from "react";
 import cn from "classnames";
+import {graphql, useStaticQuery} from "gatsby";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
-import { PurePerson as Person } from "../Person";
+import {Person, PersonProps} from "../Person";
 
 import * as style from "./structure.module.css";
-import {graphql, useStaticQuery} from "gatsby";
 
-function randomMascotUrl(hero, mascots) {
-    return hero
-        ? `url("${mascots[Math.floor(Math.random() * mascots.length)].publicURL}")`
-        : null;
+export const PersonPure = memo(Person);
+
+type MembersProps = {
+    className?: string,
+    list: PersonProps[],
+} & HTMLAttributes<HTMLUListElement>;
+
+const Members = forwardRef(({ className, list, ...props }: MembersProps, ref: RefObject<HTMLUListElement>) => {
+    return (
+        <ul {...props} ref={ref} className={cn(style.members, className)}>{
+            list.map((person, i) => (
+                <li key={i} className={style.member}>
+                    <PersonPure {...person}/>
+                </li>
+            ))
+        }</ul>
+    );
+});
+
+function randomMascotUrl(mascots) {
+    return `url("${mascots[Math.floor(Math.random() * mascots.length)].publicURL}")`;
 }
 
 const MASCOT_CSS_PROP = '--person-mascot-url';
 
-export function Department({hero = false, name, members, children}) {
-    const textCn = useTextStyles();
+function HeroMembers({ list, ...props }) {
     const ref = useRef(null);
 
     const { allFile: { nodes: mascots } } = useStaticQuery(graphql`query {
@@ -27,52 +43,53 @@ export function Department({hero = false, name, members, children}) {
         }
     }`);
 
-    const [mascot, setMascot] = useState(randomMascotUrl(hero, mascots));
+    const [ mascot, setMascot ] = useState(randomMascotUrl(mascots));
+    const [ isInteracted, setInteract ] = useState(true);
 
-    const onHover = useCallback(() => {
+    const onHover = useCallback(() => setInteract(true), []);
+    const onLeave = useCallback((e) => {
         if (ref && ref.current) {
             let url;
             const currentUrl = ref.current.style.getPropertyValue(MASCOT_CSS_PROP);
 
             do {
-                url = randomMascotUrl(hero, mascots);
+                url = randomMascotUrl(mascots);
             } while (url === currentUrl);
 
             setMascot(url);
         }
     }, [ ref, setMascot ]);
 
+    useLayoutEffect(() => setInteract(false), []); // only for browser
+
+    return <Members {...props} ref={ref} style={{ [MASCOT_CSS_PROP]: mascot }} list={list.map(
+        (person, i) => ({
+            avatar: isInteracted || i !== 1 ? true : 'asIdle',
+            variation: String(i + 1),
+            size: 'xl',
+            onMouseLeave: onLeave,
+            onMouseEnter: isInteracted ? null : onHover,
+            ...person,
+        })
+    )}/>;
+}
+
+export function Department({hero = false, name, members, children}) {
+    const textCn = useTextStyles();
+
     const persons = members
         ? Array.isArray(members) ? members : [ members ]
         : [];
 
+    const MembersTag = hero ? HeroMembers : Members;
+
     return (
-        <div
-            ref={ref}
-            className={cn(style.row, { [style.hero]: Boolean(hero), })}
-            style={{ [MASCOT_CSS_PROP]: mascot }}
-        >
+        <div className={cn(style.row, { [style.hero]: Boolean(hero), })}>
             <h2 className={cn('ktl-h2', style.title)}>{name}</h2>
-
-            <ul className={style.members}>{persons.map((person, i) => {
-                const props = !hero ? {} : {
-                    avatar: true,
-                    size: 'xl',
-                    position: i + 1,
-                    onHover: hero ? onHover : null,
-                };
-
-                return (
-                    <li key={i} className={style.member}>
-                        <Person {...props} {...person}/>
-                    </li>
-                );
-            })}</ul>
-
+            <MembersTag list={persons}/>
             <div className={cn(textCn('ktl-text-1'), style.description)}>
                 {children}
             </div>
         </div>
     );
 }
-
