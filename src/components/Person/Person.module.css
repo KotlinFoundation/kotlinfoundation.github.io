@@ -119,6 +119,7 @@
         bottom: 0;
         right: 0;
         left: 0;
+        pointer-events: none;
 
         background: transparent var(--person-mascot-url, url('../../images/mascots/1.svg')) no-repeat top center;
         background-size: 75%;
