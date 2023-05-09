@@ -47,8 +47,6 @@
     border-radius: 200px;
     height: 190px;
     width: 152px;
-
-    box-shadow: 0 10px 30px #DED5E1, 0 25px 70px rgba(209, 197, 212, 0.8);
 }
 
 @media (min-width: 960px) {
@@ -58,8 +56,13 @@
     }
 }
 
-@define-mixin mascot-anim $x {
-    transform: translateY($x) var(--mascot-rotate) ;
+@define-mixin mascot-anim $y, $x: 0 {
+    transform: translate3d($x, $y, 0) var(--mascot-rotate);
+}
+
+@keyframes mascot-animation-delay {
+    from { opacity: 0; z-index: 0; }
+    to { opacity: 0; z-index: 0; }
 }
 
 @keyframes mascot-animation-in {
@@ -82,9 +85,11 @@
 }
 
 @keyframes mascot-animation-out {
-      0% { @mixin mascot-anim 0; }
-     50% { @mixin mascot-anim 1%; }
-    100% { @mixin mascot-anim 0; }
+      0% { @mixin mascot-anim 0, 0; }
+     25% { @mixin mascot-anim 0.5%, -0.5%; }
+     50% { @mixin mascot-anim 0, 0; }
+     75% { @mixin mascot-anim 0.5%, 0.5%; }
+    100% { @mixin mascot-anim 0, 0; }
 }
 
 @keyframes mascot-animation-idle {
@@ -121,40 +126,37 @@
         left: 0;
         pointer-events: none;
 
-        background: transparent var(--person-mascot-url, url('../../images/mascots/1.svg')) no-repeat top center;
-        background-size: 75%;
-        z-index: 3;
-        animation: mascot-animation-in 250ms, mascot-animation-out 300ms 250ms infinite;
+        background: transparent var(--person-mascot-url) no-repeat top center;
+        background-size: 80%;
+        animation: mascot-animation-delay 150ms linear,
+                   mascot-animation-in    250ms 150ms linear,
+                   mascot-animation-out   700ms 400ms infinite linear;
         transform: var(--mascot-rotate, rotate(0deg));
         will-change: background-size, transform;
+        z-index: 3;
 
         .person_variation_1 & {
             --mascot-rotate: rotate(9deg);
             background-position: 45% 39%;
-            background-size: 80%;
         }
 
         .person_variation_2 & {
             --mascot-rotate: rotate(3deg);
             background-position: 100% 25%;
-            background-size: 85%;
         }
 
         .person_variation_3 & {
-            --mascot-rotate: rotate(15deg);
+            --mascot-rotate: rotate(8deg);
             background-position: 68% 35%;
-            background-size: 70%;
         }
 
         .person_variation_4 & {
             --mascot-rotate: rotate(-9deg);
-            background-position: 30% 30%;
-            background-size: 70%;
+            background-position: 30% 20%;
         }
 
         .person_variation_5 & {
-            background-position: 80% 30%;
-            background-size: 80%;
+            background-position: 60% 33%;
             --mascot-rotate: rotate(-4deg);
         }
 
@@ -165,10 +167,12 @@
 
             .person--avatar--idle > & {
                 --mascot-rotate: rotate(0);
+
                 display: block;
                 background-size: 75%;
                 background-position: center;
-                animation: mascot-animation-idle 4s 2s, mascot-animation-idle 4s 12s;
+                animation: mascot-animation-idle 4s 2s linear,
+                           mascot-animation-idle 4s 12s linear; /*- 4+2 - first,6 - second delay */
                 opacity: 0;
                 z-index: 1;
             }
