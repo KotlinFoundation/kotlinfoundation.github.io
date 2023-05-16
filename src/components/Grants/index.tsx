@@ -11,14 +11,14 @@ export function Grants({ children }) {
     );
 }
 
-export function GrantsActionTheme({ action, url, children, }) {
+export function GrantsActionTheme({ action, url, children, target = '_blank'}) {
     const theme = useTheme();
     const textCn = useTextStyles();
 
     return (
         <div className={cn(styles.action, textCn("ktl-text-2"), { [styles.actionDark]: theme === 'dark' })}>
             {children}
-            <Button className={styles.button} mode="outline" size="l" href={url} target="_blank">{action}</Button>
+            <Button className={styles.button} mode="outline" size="l" href={url} target={target}>{action}</Button>
         </div>
     );
 }
