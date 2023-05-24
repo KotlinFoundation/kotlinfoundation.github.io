@@ -64,20 +64,13 @@
     }
 }
 
-.image-tag, .no-image::before {
+.image-tag {
     max-width: 328px;
     width: 100%;
 
     @media (--ktl-ms) {
         max-width: 272px;
     }
-}
-
-.no-image::before {
-    display: inline-block;
-    content: '';
-    border: 2px dashed rgba(25, 25, 28, 0.2);
-    border-radius: 16px;
 }
 
 .more {

@@ -5,6 +5,8 @@ import Button from "@rescui/button";
 
 import {PostContent} from "../PostContent";
 
+import noImage from './post.png';
+
 import * as styles from './posts.module.css';
 
 export function Posts({ posts }) {
@@ -30,10 +32,8 @@ export function Posts({ posts }) {
                                         <Button className={styles.more} size="l" mode="outline" href={url} onClick={onReadMore}>Read more</Button>
                                     }/>
                                 </div>
-                                <div className={cn(styles.image, { [styles.noImage]: !coverImage })}>
-                                    {coverImage && (
-                                        <img className={styles.imageTag} alt={post.frontmatter.title} src={coverImage}/>
-                                    )}
+                                <div className={styles.image}>
+                                    <img className={styles.imageTag} alt={post.frontmatter.title} src={coverImage || noImage}/>
                                 </div>
                             </div>
                         </li>
