@@ -66,7 +66,7 @@
     display: none;
     position: absolute;
     color: var(--ktl-color-dark-40);
-    margin-left: var(--ktl-box-block-l);
+    margin-left: var(--ktl-box-block-m);
 }
 
 .h-anchor {
