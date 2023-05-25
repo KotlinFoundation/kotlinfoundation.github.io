@@ -3,6 +3,8 @@
 - [How to Make Changes on a Page](#how-to-make-changes-on-a-page)
 - [How to Add a Page](#how-to-make-changes-on-a-page)
 - [Define Page Metadata](#define-page-metadata)
+- [How to Add a news post](#how-to-add-a-news-post)
+- [Define Post metadata and images](#define-post-metadata-and-images)
 - [Deploy Changes](#deploy-changes)
 - [How to Run the Site Locally](#how-to-run-the-site-locally)
 - [Set up Your Development Environment](#set-up-your-development-environment)
@@ -63,6 +65,36 @@ The params are:
 - `title` a string value that will be used in the title meta tag of the page, required;
 - `layout` a string value that defines content width. "narrow" by default;
 - `contactUs` includes a block of the same name on the page;
+
+## How to Add a news post
+
+### Create page
+To add a post, follow these steps:
+- Add an "{post_dir}/index.md" file in the news folder ([`src/pages/news`](src/pages/news)).
+  The `post_dir` of the file will be used as URL path to the page.
+  For example, "news/first-silver-members/index.md"
+- Define the page title, date and additional data at the beginning of the file, using metadata format.
+  See the [Define Post Metadata](#define-post-metadata-and-images) for more details.
+- Write page content using Markdown markup.
+- _Optional_. Add cover and social images for post.
+
+### Define Post metadata and images
+When you create a post markdown file, you need to provide additional data to configure the page.
+Be sure to specify the title, other parameters are optional:
+```yaml
+---
+title: "Post news title"
+date: 2023-04-13 00:05
+---
+```
+
+This block will be parsed as YAML. The params are:
+- `title` a string value that will be used in the title of the page. **required**;
+- `date` a string value in ISO format (2023-01-31 00:05), that will be used as the publication date. **required**;
+- `coverImage` - a string relative path value to custom image on [news](https://kotlinfoundation.org/news/) page.
+- `socialImage` - a string relative path value to custom image for socials.
+
+[See example](src/pages/news/first-silver-members/)
 
 ## Deploy Changes
 In order to publish your changes, it is enough that they are included in the master branch on GitHub.
