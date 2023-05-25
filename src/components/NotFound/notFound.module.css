@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 .not-found {
     margin: 0 auto var(--ktl-box-page-s);
     display: flex;

@@ -1,6 +1,6 @@
 import {navigate} from "gatsby";
 import cn from "classnames";
-import {GatsbyImage, getImage, StaticImage} from "gatsby-plugin-image";
+
 import Button from "@rescui/button";
 
 import {PostContent} from "../PostContent";

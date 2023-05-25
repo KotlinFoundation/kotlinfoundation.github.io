@@ -35,6 +35,7 @@
 
     @media (--ktl-tl-min) {
         padding: var(--ktl-box-section-s);
+        padding-left: 0;
     }
 }
 
@@ -50,16 +51,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-}
-
-@media (--ktl-tl) and (--ktl-tm-min) {
-    .wrap {
-        justify-content: center;
-    }
-
-    .content {
-        max-width: 568px;
     }
 }
 

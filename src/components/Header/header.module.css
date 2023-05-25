@@ -3,3 +3,13 @@
         display: none;
     }
 }
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu {
+    overflow-y: auto;
+    flex-grow: 1;
+}

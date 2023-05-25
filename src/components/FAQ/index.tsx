@@ -1,19 +1,18 @@
-import {FC, HTMLAttributes} from "react";
-import cn from "classnames";
+import {HTMLAttributes} from "react";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
+import {cls} from "../../utlis";
+
 import * as style from "./faq.module.css";
 
-export const Question: FC<HTMLAttributes<HTMLDListElement>> = ({className, children, ...props}) => (
-    <dt {...props} className={cn(style.question, 'ktl-h3 ktl-offset-bottom-s', className)}>{children}</dt>
-);
+export function Question(props: HTMLAttributes<HTMLDListElement>) {
+    return <dt {...cls(props, style.question, 'ktl-h3 ktl-offset-bottom-s')}/>;
+}
 
-export const Answer: FC<HTMLAttributes<HTMLDListElement>> = ({className, children, ...props}) => {
+export function Answer(props: HTMLAttributes<HTMLDListElement>) {
     const textCn = useTextStyles();
-    return (
-        <dd {...props} className={cn(style.answer, textCn('ktl-text-1'), 'ktl-offset-bottom-l', className)}>{children}</dd>
-    );
-};
+    return <dd {...cls(props, style.answer, textCn('ktl-text-1'), 'ktl-offset-bottom-l')}/>;
+}
 
-export const FAQ: FC<HTMLAttributes<HTMLDListElement>> = ({ className, children, ...props }) => (
-    <dl {...props} className={cn(style.faq, className)}>{children}</dl>
-);
+export function FAQ(props: HTMLAttributes<HTMLDListElement>) {
+    return <dl {...cls(props, style.faq)}/>;
+}

@@ -1,4 +1,6 @@
-module.exports = {
+import rehypeSlug from 'rehype-slug';
+
+export default {
   siteMetadata: {
     siteUrl: "https://kotlinfoundation.org/",
     title: "Kotlin Foundation – official site",
@@ -20,6 +22,11 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [`.mdx`, `.md`],
+        mdxOptions: {
+          rehypePlugins: [
+            rehypeSlug,
+          ],
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,

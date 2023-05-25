@@ -4,6 +4,7 @@ module.exports = {
   plugins: [
     require("@csstools/postcss-global-data")({
       files: [
+        "node_modules/@rescui/typography/lib/mixins.pcss",
         "node_modules/@jetbrains/kotlin-web-site-ui/out/components/breakpoints/media.pcss",
         "./src/components/Header/media.pcss"
       ]

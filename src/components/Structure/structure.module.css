@@ -1,5 +1,4 @@
 @import "~@jetbrains/kotlin-web-site-ui/out/components/grid/index.css";
-@import "../Layout/spacing.css";
 
 .root {
     position: relative;
@@ -92,7 +91,9 @@
 .hero > .members > .member {
     margin-right: var(--ktl-box-block-l);
     margin-bottom: var(--ktl-box-block-l);
+    z-index: 1;
 }
+
 @media(--ktl-ds-min) {
     .hero > .members > .member {
         margin-right: 11px;

@@ -1,3 +1,4 @@
+import {HTMLAttributes, ReactNode} from "react";
 import cn from "classnames";
 import {graphql, useStaticQuery} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -5,7 +6,16 @@ import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typogr
 
 import * as style from "./Person.module.css";
 
-export function Person({size = null, className = null, name, company}) {
+export type PersonProps = {
+    className?: string,
+    avatar?: boolean | 'asIdle',
+    variation: number,
+    size?: 'xl',
+    name: ReactNode,
+    company: ReactNode,
+} & HTMLAttributes<HTMLDivElement>;
+
+export function Person({ className, avatar, variation, size, name, company, ...props }: PersonProps) {
     const textCn = useTextStyles();
     const { images }= useStaticQuery(graphql`
       query {
@@ -29,12 +39,15 @@ export function Person({size = null, className = null, name, company}) {
     );
 
     const classes = cn(style.person, 'vcard', className, {
+        [style.personAvatar]: Boolean(avatar),
+        [style.personAvatarIdle]: avatar === 'asIdle',
         [style[`person_size_${size}`]]: Boolean(size),
+        [style[`person_variation_${variation}`]]: Boolean(variation),
     });
 
     return (
-        <div className={classes}>
-            <div className={style.photoWrap}>
+        <div className={classes} {...props}>
+            <div className={style.photoWrap} >
                 <GatsbyImage
                     className={style.photo}
                     image={file.node.childImageSharp.gatsbyImageData}

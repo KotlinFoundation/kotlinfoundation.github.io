@@ -53,7 +53,7 @@ export const IntroBanner: FC<IntroBannerProps> = ({title, members}) => {
                                         rel="noreferrer noopener" className={styles.companyLink}
                                     >{content}</a>;
 
-                                    return <div className={styles.company}>{content}</div>;
+                                    return <div key={url || name} className={styles.company}>{content}</div>;
                                 })}
                             </div>
                         </div>

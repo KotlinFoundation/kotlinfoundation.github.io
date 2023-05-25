@@ -11,9 +11,9 @@ import "./typography.css";
 import "./heading.css";
 
 import { SEO } from "../Seo";
-import { Header as Header } from "../Header";
-import { Markdown, ModernMarkdown } from "../Markdown";
-import { ContactUs } from "../ContactUs/ContactUs";
+import { Header } from "../Header";
+import { Markdown } from "../Markdown";
+import { ContactUs } from "../ContactUs";
 import { Footer } from "../Footer";
 
 import * as styles from "./layout.module.css";
@@ -28,13 +28,7 @@ interface MDLayoutProps {
     title?: string;
     layout?: LayoutSize;
     contactUs?: boolean;
-    appearance?: LayoutMDAppearance;
     greyLayout?: boolean;
-}
-
-export enum LayoutMDAppearance {
-    Modern = 'modern',
-    Classic = 'classic'
 }
 
 export interface BaseLayoutProps {
@@ -74,17 +68,16 @@ export function Layout({ children, location, title, layout, socialImage = null, 
     );
 }
 
-const RegularLayout = ({className, children}) => (
-    <div className={cn(className, 'ktl-layout ktl-layout--center ktl-layout--spacing')}>
+function RegularLayout({className, children}) {
+    return <div className={cn(className, 'ktl-layout ktl-layout--center ktl-layout--spacing')}>
         {children}
-    </div>
-);
+    </div>;
+}
 
-export function MarkdownLayout({appearance, children, ...props} : LayoutProps) {
-    const Tag = LayoutMDAppearance.Modern === appearance ? ModernMarkdown : Markdown;
+export function MarkdownLayout({ children, ...props } : LayoutProps) {
     return (
         <Layout {...props}>
-            <Tag>{children}</Tag>
+            <Markdown>{children}</Markdown>
         </Layout>
     );
 }
@@ -93,11 +86,10 @@ export function PageMarkdownLayout({pageContext, ...props } : MarkdownLayoutProp
     const title = pageContext?.frontmatter?.title;
     const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
     const contact = pageContext?.frontmatter?.contactUs ?? false;
-    const appearance = pageContext?.frontmatter?.appearance ?? LayoutMDAppearance.Modern;
     const greyLayout = pageContext?.frontmatter?.greyLayout ?? false;
 
     return (
-        <MarkdownLayout {...props} title={title} layout={layout} appearance={appearance} contactUs={contact} greyLayout={greyLayout} />
+        <MarkdownLayout {...props} title={title} layout={layout} contactUs={contact} greyLayout={greyLayout} />
     );
 }
 

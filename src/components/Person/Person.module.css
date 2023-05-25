@@ -1,5 +1,3 @@
-@import "../Layout/spacing.css";
-
 @media (min-width: 560px) {
     .person {
         display: flex;
@@ -24,14 +22,15 @@
     min-width: 80px;
 
     transform: translateZ(0); /* Safari and (radius + overflow:hidden) bug fix */
+    z-index: 2;
 }
 
-.person--size-xl {
+.person_size_xl {
     display: flex;
     flex-direction: column;
 }
 
-.person--size-xl > .info {
+.person_size_xl > .info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,21 +39,143 @@
     position: relative;
 }
 
-.person--size-xl > .photo-wrap {
+.person_size_xl > .photo-wrap {
     margin: 0;
 }
 
-.person--size-xl > .photo-wrap > .photo {
+.person_size_xl > .photo-wrap > .photo {
     border-radius: 200px;
     height: 190px;
     width: 152px;
-
-    box-shadow: 0 10px 30px #DED5E1, 0 25px 70px rgba(209, 197, 212, 0.8);
 }
 
 @media (min-width: 960px) {
-    .person--size-xl > .photo-wrap > .photo {
+    .person_size_xl > .photo-wrap > .photo {
         width: 220px;
         height: 280px;
+    }
+}
+
+@define-mixin mascot-anim $y, $x: 0 {
+    transform: translate3d($x, $y, 0) var(--mascot-rotate);
+}
+
+@keyframes mascot-animation-delay {
+    from { opacity: 0; z-index: 0; }
+    to { opacity: 0; z-index: 0; }
+}
+
+@keyframes mascot-animation-in {
+    0% {
+        transform: rotate(0deg) translateY(0);
+        z-index: 1;
+    }
+    49% {
+        transform: rotate(0deg) translateY(-70%);
+        z-index: 1;
+    }
+    50% {
+        transform: rotate(0deg) translateY(-70%);
+        z-index: 3;
+    }
+    100% {
+        @mixin mascot-anim 0;
+        z-index: 3;
+    }
+}
+
+@keyframes mascot-animation-out {
+      0% { @mixin mascot-anim 0, 0; }
+     25% { @mixin mascot-anim 0.5%, -0.5%; }
+     50% { @mixin mascot-anim 0, 0; }
+     75% { @mixin mascot-anim 0.5%, 0.5%; }
+    100% { @mixin mascot-anim 0, 0; }
+}
+
+@keyframes mascot-animation-idle {
+    0% {
+        @mixin mascot-anim 0;
+        opacity: 1;
+    }
+    45% {
+        @mixin mascot-anim -53%;
+    }
+    90% {
+        @mixin mascot-anim -53%;
+    }
+    93% {
+        transform: rotate(9deg) translateY(-53%);
+    }
+    96% {
+        transform: rotate(-9deg) translateY(-53%);
+    }
+    100% {
+        @mixin mascot-anim 0;
+        opacity: 1;
+    }
+}
+
+.photo-wrap {
+    &::after {
+        display: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+
+        background: transparent var(--person-mascot-url) no-repeat top center;
+        background-size: 80%;
+        animation: mascot-animation-delay 150ms linear,
+                   mascot-animation-in    250ms 150ms linear,
+                   mascot-animation-out   700ms 400ms infinite linear;
+        transform: var(--mascot-rotate, rotate(0deg));
+        will-change: background-size, transform;
+        z-index: 3;
+
+        .person_variation_1 & {
+            --mascot-rotate: rotate(9deg);
+            background-position: 45% 39%;
+        }
+
+        .person_variation_2 & {
+            --mascot-rotate: rotate(3deg);
+            background-position: 100% 25%;
+        }
+
+        .person_variation_3 & {
+            --mascot-rotate: rotate(8deg);
+            background-position: 68% 35%;
+        }
+
+        .person_variation_4 & {
+            --mascot-rotate: rotate(-9deg);
+            background-position: 30% 20%;
+        }
+
+        .person_variation_5 & {
+            background-position: 60% 33%;
+            --mascot-rotate: rotate(-4deg);
+        }
+
+        @media (--ktl-mm-min) {
+            .person--avatar:hover > & {
+                display: block;
+            }
+
+            .person--avatar--idle > & {
+                --mascot-rotate: rotate(0);
+
+                display: block;
+                background-size: 75%;
+                background-position: center;
+                animation: mascot-animation-idle 4s 2s linear,
+                           mascot-animation-idle 4s 12s linear; /*- 4+2 - first,6 - second delay */
+                opacity: 0;
+                z-index: 1;
+            }
+        }
     }
 }

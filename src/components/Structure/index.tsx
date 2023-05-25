@@ -1,8 +1,7 @@
 import { HTMLAttributes } from "react";
-import cn from "classnames";
+import {cls} from "../../utlis";
 import * as style from "./structure.module.css";
 
-export const Structure = ({className, ...props} : HTMLAttributes<HTMLDivElement>) => <section
-    {...props}
-    className={cn(style.root, className)}
-/>;
+export function Structure(props: HTMLAttributes<HTMLDivElement>) {
+    return <section {...cls(props, style.root)}/>;
+}

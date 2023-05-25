@@ -1,5 +1,5 @@
-import {memo, useCallback, useContext, useMemo} from "react";
-import {Link, withPrefix} from "gatsby";
+import { memo, useCallback, useContext } from "react";
+import { navigate, withPrefix } from "gatsby";
 import { Menu, MenuItem } from '@rescui/menu';
 
 import {useLayoutLocation} from "../../Layout/locationContext";
@@ -12,18 +12,16 @@ const SlideMenuItem = memo(({title, url}) => {
     const { toggle } = useContext(NavigationContext);
     const isActive = pathname === withPrefix(url);
 
-    const onClick = useCallback(
-        () => { if (isActive) toggle(false); },
-        [isActive, toggle]
-    );
-
-    const MenuLink = useCallback(
-        props => <Link {...props} to={url}>{title}</Link>,
-        [title, url]
-    );
+    const onClick = useCallback(e => {
+        e.preventDefault();
+        if (isActive) toggle(false);
+        else navigate(url);
+    }, [isActive, toggle, url]);
 
     return (
-        <MenuItem className={styles.item} selected={isActive} onClick={onClick} tag={MenuLink}/>
+        <MenuItem className={styles.item} selected={isActive} href={url} onClick={onClick}>
+            {title}
+        </MenuItem>
     );
 });
 

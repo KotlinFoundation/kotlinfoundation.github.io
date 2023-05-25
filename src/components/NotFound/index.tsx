@@ -1,8 +1,8 @@
-import * as styles from "./notFound.module.css";
 import {Link} from "gatsby";
 import Button from "@rescui/button";
 import {ArrowRightIcon} from "@rescui/icons";
-import * as React from "react";
+
+import * as styles from "./notFound.module.css";
 
 export const NotFound = ({children}) => (
     <div className={styles.notFound}>

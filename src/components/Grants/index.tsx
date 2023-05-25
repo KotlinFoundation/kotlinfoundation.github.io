@@ -1,14 +1,15 @@
+import {HTMLAttributes} from "react";
 import cn from "classnames";
 import {ThemeProvider, useTheme} from "@rescui/ui-contexts";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
-
-import * as styles from './grants.module.css';
 import Button from "@rescui/button";
 
-export function Grants({ children }) {
-    return (
-        <div className={styles.grants}>{children}</div>
-    );
+import {cls} from "../../utlis";
+
+import * as styles from './grants.module.css';
+
+export function Grants(props: HTMLAttributes<HTMLDivElement>) {
+    return <div {...cls(props, styles.grants)}/>;
 }
 
 export function GrantsActionTheme({ action, url, children, target = '_blank'}) {
@@ -35,8 +36,6 @@ export function GrantsAction({ theme, ...props }) {
     return content;
 }
 
-export function GrantsTitle({ children }) {
-    return (
-        <h1 className={cn("ktf-h2", styles.intro)}>{children}</h1>
-    );
+export function GrantsTitle(props: HTMLAttributes<HTMLHeadingElement>) {
+    return <h1 {...cls(props, 'ktf-h2', styles.intro)}/>;
 }

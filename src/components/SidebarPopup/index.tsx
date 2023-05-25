@@ -4,7 +4,7 @@ import {RemoveScrollBar} from "react-remove-scroll-bar";
 
 import * as styles from "./sidebar-popup.module.css";
 
-export function SidebarPopup({ className = null, classNameNav = null, children, isOpen, onClose }) {
+export function SidebarPopup({ className = null, classNameContent = null, children, isOpen, onClose }) {
     const ref = useRef(null);
 
     const onToggleClick = useCallback(
@@ -24,7 +24,7 @@ export function SidebarPopup({ className = null, classNameNav = null, children, 
     return (
         <div className={classes} onClick={onToggleClick} {...disableProps}>
             {isOpen && <RemoveScrollBar/>}
-            <div ref={ref} className={cn(classNameNav, styles.navigation)}>
+            <div ref={ref} className={cn(classNameContent, styles.content)}>
                 {children}
             </div>
         </div>
