@@ -79,11 +79,13 @@ function HeroMembers({ list, ...props }) {
 
     const mascot = mascots[mascotN];
 
+    debugger
     return <Members {...props} ref={ref} style={{ [MASCOT_CSS_PROP]: `url("${mascot.publicURL}")` }} list={
         list.map((person, i) => ({
             avatar: isInteracted || i !== 1 ? true : 'asIdle',
             variation: String(i + 1),
             size: 'xl',
+            xlWidth: list.length < 7 && (list.length === 6 ? 'wide' : 'ultraWide'),
             onMouseLeave: onLeave,
             onMouseEnter: isInteracted ? null : onHover,
             ...person,
