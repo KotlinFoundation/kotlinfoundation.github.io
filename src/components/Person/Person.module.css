@@ -50,7 +50,11 @@
 }
 
 @media (min-width: 960px) {
-    .person_size_xl > .photo-wrap > .photo {
+    .person_size_xl_wide > .photo-wrap > .photo {
+        width: 180px;
+        height: 230px;
+    }
+    .person_size_xl_ultraWide > .photo-wrap > .photo {
         width: 220px;
         height: 280px;
     }

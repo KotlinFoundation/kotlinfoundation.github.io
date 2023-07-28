@@ -11,11 +11,12 @@ export type PersonProps = {
     avatar?: boolean | 'asIdle',
     variation: number,
     size?: 'xl',
+    xlWidth?: 'wide' | 'ultra-wide',
     name: ReactNode,
     company: ReactNode,
 } & HTMLAttributes<HTMLDivElement>;
 
-export function Person({ className, avatar, variation, size, name, company, ...props }: PersonProps) {
+export function Person({ className, avatar, variation, size, xlWidth, name, company, ...props }: PersonProps) {
     const textCn = useTextStyles();
     const { images }= useStaticQuery(graphql`
       query {
@@ -42,6 +43,7 @@ export function Person({ className, avatar, variation, size, name, company, ...p
         [style.personAvatar]: Boolean(avatar),
         [style.personAvatarIdle]: avatar === 'asIdle',
         [style[`person_size_${size}`]]: Boolean(size),
+        [style[`person_size_xl_${xlWidth}`]]: size === 'xl' && Boolean(xlWidth),
         [style[`person_variation_${variation}`]]: Boolean(variation),
     });
 
