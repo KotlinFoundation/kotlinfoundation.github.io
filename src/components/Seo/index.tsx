@@ -10,6 +10,7 @@ interface SEOProps {
 }
 
 import imageUrl from '../../images/preview.png';
+import logoUrl from '../../images/kotlin-logo.png';
 
 export function SEO({title, description, image, meta = []} : SEOProps) {
     const {site} = useStaticQuery(graphql`
@@ -43,6 +44,12 @@ export function SEO({title, description, image, meta = []} : SEOProps) {
             name: title,
             description: metaDescription,
             image: absoluteImageUrl
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            'url': site.siteMetadata.siteUrl,
+            'logo': site.siteMetadata.siteUrl + logoUrl
         }
     ];
 
