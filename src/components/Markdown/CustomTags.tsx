@@ -11,3 +11,4 @@ export { Grants, GrantsAction, GrantsTitle } from '../Grants';
 export { PagePreview } from '../PagePreview';
 export { PairedBlock } from '../PairedBlock';
 export { LatestNews } from '../LatestNews';
+export { AnnualReport } from '../AnnualReport';
