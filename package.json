@@ -10,7 +10,20 @@
     "start": "gatsby develop --port 8082",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint --ext src/**/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix --ext src/**/**/*.{ts,tsx}",
+    "prettier": "prettier --write 'src/**/**/*.{ts,tsx,css,scss}'",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "src/**/**/*.{ts,tsx,css,scss}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@csstools/postcss-global-data": "^1.0.3",
@@ -48,10 +61,17 @@
     "@babel/core": "^7.21.3",
     "@mdx-js/react": "^2.3.0",
     "@types/react-helmet": "^6.1.6",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^3.7.0",
     "core-js": "^3.29.1",
-    "eslint": "^8.36.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gatsby": "5",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-manifest": "^5.7.0",
@@ -65,7 +85,10 @@
     "gatsby-transformer-remark": "^6.7.0",
     "gatsby-transformer-sharp": "^5.7.0",
     "glob": "^10.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "postcss": "^8.4.21",
+    "prettier": "^3.1.0",
     "prop-types": "^15.7.2",
     "typescript": "^4.9.5",
     "typescript-plugin-css-modules": "^4.2.3"
