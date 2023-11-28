@@ -1,52 +1,56 @@
 @define-mixin ktf-h1 {
-    font-size: 43px;
-    line-height: 49px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
+  font-size: 43px;
+  line-height: 49px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 @define-mixin ktf-h2 {
-    font-size: 35px;
-    line-height: 42px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 @define-mixin ktf-h3 {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 @define-mixin ktf-h4 {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 @each $size in 1, 2, 3, 4 {
-    .ktf-h$(size) {
-        color: var(--rs-typography-color-hard);
+  .ktf-h$(size) {
+    color: var(--rs-typography-color-hard);
+    @mixin ktf-h$(size);
+  }
+
+  .ktf-h$(size)_theme_dark {
+    @mixin rs-typography-dark;
+  }
+
+  @each $query in ms, mm, ts, tm, tl, ds, dm {
+    @media (--ktl-$(query)) {
+      .ktf-h$(size)--$(query) {
         @mixin ktf-h$(size);
+      }
     }
 
-    .ktf-h$(size)_theme_dark {
-         @mixin rs-typography-dark;
+    @media (--ktl-$(query)-min) {
+      .ktf-h$(size)--$(query)-min {
+        @mixin ktf-h$(size);
+      }
     }
-
-    @each $query in ms, mm, ts, tm, tl, ds, dm {
-        @media (--ktl-$(query)) {
-            .ktf-h$(size)--$(query) { @mixin ktf-h$(size); }
-        }
-
-        @media (--ktl-$(query)-min) {
-            .ktf-h$(size)--$(query)-min { @mixin ktf-h$(size); }
-        }
-    }
+  }
 }

@@ -1,15 +1,15 @@
 .popup {
-    @media(--ktf-header-desktop) {
-        display: none;
-    }
+  @media (--ktf-header-desktop) {
+    display: none;
+  }
 }
 
 .nav {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.side-menu {
-    overflow-y: auto;
-    flex-grow: 1;
+.sideMenu {
+  overflow-y: auto;
+  flex-grow: 1;
 }

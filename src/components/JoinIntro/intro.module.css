@@ -1,9 +1,9 @@
 .intro {
-    background: none white top right no-repeat;
-    overflow: hidden;
+  background: none white top right no-repeat;
+  overflow: hidden;
 
-    @media (--ktl-tm-min) {
-        padding-bottom: var(--ktl-box-page-m);
-        background-image: url("./bg.svg");
-    }
+  @media (--ktl-tm-min) {
+    padding-bottom: var(--ktl-box-page-m);
+    background-image: url('./bg.svg');
+  }
 }

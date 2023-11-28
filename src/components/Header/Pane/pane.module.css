@@ -1,62 +1,64 @@
 :root {
-    --ktf-header-height: 64px;
+  --ktf-header-height: 64px;
 }
 
 @media (--ktf-header-mobile) {
-    :root {
-        --ktf-header-height: 52px;
-    }
+  :root {
+    --ktf-header-height: 52px;
+  }
 }
 
 .pane {
-    background: #fff;
+  background: #fff;
 
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    border-bottom: 1px solid var(--rs-color-grey-20);
-    height: var(--ktf-header-height);
+  border-bottom: 1px solid var(--rs-color-grey-20);
+  height: var(--ktf-header-height);
 
-    padding-left: var(--ktl-box-block-l);
-    padding-right: 0;
+  padding-left: var(--ktl-box-block-l);
+  padding-right: 0;
 }
 
-.pane--top {
-    position: sticky;
-    top: 0;
-    z-index: 900;
+.paneTop {
+  position: sticky;
+  top: 0;
+  z-index: 900;
 
-    @media (--ktf-header-desktop) {
-        padding-right: var(--ktl-box-section-m);
-        padding-left: var(--ktl-box-section-m);
-    }
+  @media (--ktf-header-desktop) {
+    padding-right: var(--ktl-box-section-m);
+    padding-left: var(--ktl-box-section-m);
+  }
 }
 
 .nav {
-    display: flex;
+  display: flex;
 }
 
-.logo, .mobile {
-    display: flex;
-    align-items: center;
+.logo,
+.mobile {
+  display: flex;
+  align-items: center;
 }
 
 .kotlinlang {
-    margin-left: var(--ktl-box-section-m);
+  margin-left: var(--ktl-box-section-m);
 
-    @media (--ktf-header-site-link) {
-        display: none;
-    }
+  @media (--ktf-header-site-link) {
+    display: none;
+  }
 }
 
 .desktop {
-    @media (--ktf-header-mobile) {
-        display: none;
-    }
+  @media (--ktf-header-mobile) {
+    display: none;
+  }
 }
 
-.pane--top .mobile, .popup {
-    @media (--ktf-header-desktop) {
-        display: none;
-    }
+.paneTop .mobile,
+.popup {
+  @media (--ktf-header-desktop) {
+    display: none;
+  }
 }

@@ -1,24 +1,24 @@
 .container {
-    display: flex;
-    align-items: stretch;
+  display: flex;
+  align-items: stretch;
 }
 
 .item {
-    flex: 1 0 0;
-    display: flex;
+  flex: 1 0 0;
+  display: flex;
 
-    &:first-child {
-         margin-right: 16px;
-    }
+  &:first-child {
+    margin-right: 16px;
+  }
 }
 
 @media (--ktl-tm) {
-    .container {
-        display: block;
-    }
+  .container {
+    display: block;
+  }
 
-    .item:first-child {
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
+  .item:first-child {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
 }

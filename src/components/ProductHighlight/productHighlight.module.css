@@ -1,122 +1,128 @@
 .productHighlight {
-    display: flex;
+  display: flex;
 }
 
 .header {
-    width: 240px;
-    flex: 0 0 auto;
+  width: 240px;
+  flex: 0 0 auto;
 }
 
 .items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-content: flex-start;
-    align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 
 .item {
-    flex: 1 1 0;
-    margin-left: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+  flex: 1 1 0;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .icon {
-    height: 48px;
-    width: 48px;
-    display: block;
+  height: 48px;
+  width: 48px;
+  display: block;
 }
 
 .desc {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .withNumber {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .number {
-    line-height: 1;
+  line-height: 1;
 }
 
 @supports (-webkit-background-clip: text) {
-    .number {
-        background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #ED495B 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  .number {
+    background: radial-gradient(
+      89.53% 145.96% at 0.34% 100.79%,
+      #ed495b 0%,
+      #de4970 17.58%,
+      #b44db0 50.31%,
+      #7f52ff 97.03%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-
 @media (--ktl-ds) {
-    .productHighlight {
-        display: block;
-    }
+  .productHighlight {
+    display: block;
+  }
 
-    .items {
-        margin-top: 48px;
-    }
+  .items {
+    margin-top: 48px;
+  }
 
-    .item {
-        margin-left: 56px;
+  .item {
+    margin-left: 56px;
 
-        &:first-child {
-            margin-left: 0;
-        }
+    &:first-child {
+      margin-left: 0;
     }
+  }
 
-    .desc {
-        font-size: 20px;
-        line-height: 28px;
-    }
+  .desc {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 @media (--ktl-tl) {
-    .desc {
-        font-size: 16px;
-        line-height: 24px;
-    }
+  .desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    .number {
-        font-size: 43px;
-        line-height: 49px;
-    }
+  .number {
+    font-size: 43px;
+    line-height: 49px;
+  }
 }
 
 @media (--ktl-tm) {
-    .items {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-gap: 48px;
-    }
+  .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 48px;
+  }
 
-    .item {
-        margin: 0;
-    }
+  .item {
+    margin: 0;
+  }
 }
 
 @media (--ktl-ts) {
-    .items {
-        grid-gap: 48px 16px;
-    }
+  .items {
+    grid-gap: 48px 16px;
+  }
 }
 
 @media (--ktl-mm) {
-    .items {
-        display: block;
-    }
+  .items {
+    display: block;
+  }
 
-    .item {
-        margin-top: 48px;
-        margin-right: 24px;
+  .item {
+    margin-top: 48px;
+    margin-right: 24px;
 
-        &, &:first-child {
-            margin-left: 24px;
-        }
+    &,
+    &:first-child {
+      margin-left: 24px;
     }
+  }
 }
