@@ -7,23 +7,16 @@
     "gatsby"
   ],
   "scripts": {
-    "start": "gatsby develop --port 8082",
+    "start": "gatsby develop --port 8082 & tcm -w -c src",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint --ext src/**/**/*.{ts,tsx}",
-    "lint:fix": "eslint --fix --ext src/**/**/*.{ts,tsx}",
+    "lint": "eslint --ext src/**/**/*.{ts,tsx} --quiet",
+    "lint:fix": "eslint --fix --ext src/**/**/*.{ts,tsx} --quiet",
     "prettier": "prettier --write 'src/**/**/*.{ts,tsx,css,scss}'",
+    "generate-css-types": "tcm -c src",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
-  },
-  "lint-staged": {
-    "src/**/**/*.{ts,tsx}": [
-      "eslint --fix"
-    ],
-    "src/**/**/*.{ts,tsx,css,scss}": [
-      "prettier --write"
-    ]
   },
   "dependencies": {
     "@csstools/postcss-global-data": "^1.0.3",
@@ -90,6 +83,7 @@
     "postcss": "^8.4.21",
     "prettier": "^3.1.0",
     "prop-types": "^15.7.2",
+    "typed-css-modules": "^0.8.1",
     "typescript": "^4.9.5",
     "typescript-plugin-css-modules": "^4.2.3"
   }

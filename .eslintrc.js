@@ -33,13 +33,15 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'prettier', 'import', 'react-hooks'],
   rules: {
-    indent: ['warn', 2],
+    indent: 'off',
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
+    curly: ['error', 'all'],
     'react/react-in-jsx-scope': 'off',
     'import/order': ['error', { alphabetize: { order: 'asc' } }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
+  ignorePatterns: ['*.js', '*.mjs'],
 };

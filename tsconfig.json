@@ -4,6 +4,7 @@
       { "name": "typescript-plugin-css-modules" }
     ],
     "jsx": "react-jsx",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   }
 }
