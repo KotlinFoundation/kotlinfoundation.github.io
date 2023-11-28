@@ -1,64 +1,63 @@
-import {AnchorHTMLAttributes, useMemo} from "react";
-import cn from "classnames";
+import { useTextStyles } from '@rescui/typography';
+import { LinkParams } from '@rescui/typography/lib/create-text-cn';
+import cn from 'classnames';
 import { Link as GatsbyLink } from 'gatsby';
-import {useTextStyles} from "@rescui/typography";
-import {LinkParams} from "@rescui/typography/lib/create-text-cn";
-import {useSiteURL} from "../../utlis/hooks";
+import { AnchorHTMLAttributes, useMemo } from 'react';
+import { useSiteURL } from '../../utlis/hooks';
+import * as styles from './link.module.css';
 
-import * as styles from "./link.module.css";
+function checkExternal(link, base = null) {
+  const url = new URL(link, base);
+  const baseUrl = new URL(base || '');
 
-function checkExternal (link, base = null) {
-    const url = new URL(link , base);
-    const baseUrl = new URL(base || '');
-
-    return !(url.hostname === '' || url.hostname === baseUrl.hostname);
+  return !(url.hostname === '' || url.hostname === baseUrl.hostname);
 }
 
-type IProps =  LinkParams & {
-    standalone?: boolean,
+type IProps = LinkParams & {
+  standalone?: boolean;
+  activeClassName?: string;
 };
 
-export function Link({ className, hardness = null, standalone = false, external = null, mode=null, ...props } : IProps & (AnchorHTMLAttributes<HTMLAnchorElement>)) {
-    const base = useSiteURL();
-    const textCn = useTextStyles();
+export function Link({
+  className,
+  hardness = null,
+  standalone = false,
+  external = null,
+  mode = null,
+  ...props
+}: IProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const base = useSiteURL();
+  const textCn = useTextStyles();
 
-    const { href } = props;
+  const { href } = props;
 
-    const isExternal = useMemo(
-        () => checkExternal(href, base),
-        [ href, base ]
-    );
+  const isExternal = useMemo(() => checkExternal(href, base), [href, base]);
 
-    const externalDecorator = useMemo(
-        () => typeof external === "boolean" ? external : isExternal,
-        [ external, isExternal ]
-    );
+  const externalDecorator = useMemo(
+    () => (typeof external === 'boolean' ? external : isExternal),
+    [external, isExternal]
+  );
 
-    const additionalProps = useMemo(
-        () => isExternal
-            ? {
-                target: '_blank',
-                rel: 'noopener noreferrer',
-            }
-            : {
-                to: href
-            },
-        [ isExternal, href ],
-    );
+  const linkClassName = textCn('rs-link', {
+    external: externalDecorator,
+    mode: standalone ? 'standalone' : mode || 'classic',
+    hardness: hardness || 'hard',
+  });
 
-    const linkClassName = textCn('rs-link', {
-        external: externalDecorator,
-        mode: standalone ?  'standalone' : mode || 'classic',
-        hardness: hardness || 'hard',
-    });
+  const commonProps = {
+    ...props,
+    className: cn(className, linkClassName),
+  };
 
-    const Tag = isExternal || href.startsWith('mailto:') ?
-        'a' :
-        GatsbyLink;
+  if (isExternal || href.startsWith('mailto:')) {
+    return <a target="_blank" rel="noopener noreferrer" {...commonProps} />;
+  }
 
-    return (
-        <Tag {...additionalProps} {...props} className={cn(className, linkClassName)}/>
-    );
+  return <GatsbyLink to={href} {...commonProps} />;
 }
 
-export const LinkStandalone = ({className=null, ...props }) => <Link {...props} className={styles.typeStandalone} standalone={true}/>;
+type LinkStandaloneProps = AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export const LinkStandalone = (props: LinkStandaloneProps) => (
+  <Link {...props} className={styles.typeStandalone} standalone={true} />
+);

@@ -1,84 +1,85 @@
 .outer {
-    background: var(--ktf-bg-dark);
-    padding: var(--ktl-box-section-l) 0;
+  background: var(--ktf-bg-dark);
+  padding: var(--ktl-box-section-l) 0;
 
-    @media (--ktl-mm) {
-        padding-bottom: var(--ktl-box-section-s);
-    }
+  @media (--ktl-mm) {
+    padding-bottom: var(--ktl-box-section-s);
+  }
 }
 
 .footer {
-    display: flex;
-    margin-top: calc(-1 * var(--ktl-box-section-l));
+  display: flex;
+  margin-top: calc(-1 * var(--ktl-box-section-l));
 }
 
 .nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav, .support {
-    margin-top: var(--ktl-box-section-l);
+.nav,
+.support {
+  margin-top: var(--ktl-box-section-l);
 }
 
 @media (--ktl-tl-min) {
-    .footer {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .nav {
-        display: flex;
-    }
+  .nav {
+    display: flex;
+  }
 
-    .nav-item {
-        display: flex;
-        align-items: center;
-    }
+  .navItem {
+    display: flex;
+    align-items: center;
+  }
 
-    .nav-item::after {
-        display: inline-block;
-        content: '';
-        background: rgba(255, 255, 255, 0.3);
-        height: 1.5em;
-        margin: 0 1ex;
-        width: 1px;
-    }
+  .navItem:after {
+    display: inline-block;
+    content: '';
+    background: rgba(255, 255, 255, 0.3);
+    height: 1.5em;
+    margin: 0 1ex;
+    width: 1px;
+  }
 
-    .nav-item:last-of-type::after {
-        display: none;
-    }
+  .navItem:last-of-type:after {
+    display: none;
+  }
 }
 
 @media (--ktl-tl) {
-    .footer {
-        flex-direction: column;
-    }
+  .footer {
+    flex-direction: column;
+  }
 
-    .nav-item {
-        margin-top: var(--ktl-box-block-l);
-    }
+  .navItem {
+    margin-top: var(--ktl-box-block-l);
+  }
 
-    .nav-item:first-of-type {
-        margin-top: 0;
-    }
+  .navItem:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .support {
-    margin-left: auto;
+  margin-left: auto;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.support-label {
-    margin: 0 var(--ktl-box-block-m) 0 0;
-    text-align: right;
+.supportLabel {
+  margin: 0 var(--ktl-box-block-m) 0 0;
+  text-align: right;
 }
 
-.support-link {
-    font-size: 0;
-    line-height: 0;
+.supportLink {
+  font-size: 0;
+  line-height: 0;
 }

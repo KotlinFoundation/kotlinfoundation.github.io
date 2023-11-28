@@ -1,23 +1,24 @@
 .faq {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media (--ktl-tl-min) {
-    .faq {
-        display: grid;
-        grid-template-columns: 4fr 7fr;
-        gap: var(--ktl-box-section-m);
-    }
+  .faq {
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    gap: var(--ktl-box-section-m);
+  }
 
-    .question, .answer {
-        margin-bottom: 0;
-    }
+  .question,
+  .answer {
+    margin-bottom: 0;
+  }
 
-    .question {
-        padding-right: var(--ktl-box-block-l);
-    }
+  .question {
+    padding-right: var(--ktl-box-block-l);
+  }
 }

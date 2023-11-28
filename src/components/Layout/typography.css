@@ -1,43 +1,50 @@
-@import "@rescui/colors/lib/index.css";
+@import '@rescui/colors/lib/index.css';
 
 :root {
-    --ktf-bg-dark: #27282c;
-    --ktf-para-spacing: 12px;
-    --ktf-fuild-spacing-xl: var(--ktl-box-page-m);
-    --ktl-menu-item-active-bg: rgba(25,25,28,.1);
-    --ktf-text-gray: rgba(25, 25, 28, 0.7);
+  --ktf-bg-dark: #27282c;
+  --ktf-para-spacing: 12px;
+  --ktf-fuild-spacing-xl: var(--ktl-box-page-m);
+  --ktl-menu-item-active-bg: rgba(25, 25, 28, 0.1);
+  --ktf-text-gray: rgba(25, 25, 28, 0.7);
 }
 
 @media (--ktl-mm) {
-    :root {
-        --ktf-fuild-spacing-xl: var(--ktl-box-section-l);
-    }
+  :root {
+    --ktf-fuild-spacing-xl: var(--ktl-box-section-l);
+  }
 }
 
-:focus-visible, :focus[data-focus-method=key] {
-    outline: none;
-    box-shadow: var(--rs-color-primary-dim-light-theme) 0 0 0 4px;
+:focus-visible,
+:focus[data-focus-method='key'] {
+  outline: none;
+  box-shadow: var(--rs-color-primary-dim-light-theme) 0 0 0 4px;
 }
 
 .ktl-text--rainbow {
-    background: radial-gradient(89.53% 145.96% at 0.34% 100.79%, #ED495B 0%, #DE4970 17.58%, #B44DB0 50.31%, #7F52FF 97.03%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+  background: radial-gradient(
+    89.53% 145.96% at 0.34% 100.79%,
+    #ed495b 0%,
+    #de4970 17.58%,
+    #b44db0 50.31%,
+    #7f52ff 97.03%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .ktf-para {
-    margin-top: var(--ktf-para-spacing);
-    margin-bottom: var(--ktf-para-spacing);
+  margin-top: var(--ktf-para-spacing);
+  margin-bottom: var(--ktf-para-spacing);
 }
 
 .ktl-text--gray {
-    color: var(--ktf-text-gray);
+  color: var(--ktf-text-gray);
 }
 
 @media (--ktl-mm) {
-    .hide--mm {
-        display: none;
-    }
+  .hide--mm {
+    display: none;
+  }
 }

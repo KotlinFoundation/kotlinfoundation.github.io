@@ -1,55 +1,61 @@
 :root {
-    --rs-color-primary-light-theme: rgba(127, 82, 255, 1);
-    --rs-color-primary-t-dim-light-theme: rgba(127, 82, 255, 0.8);
+  --rs-color-primary-light-theme: rgba(127, 82, 255, 1);
+  --rs-color-primary-t-dim-light-theme: rgba(127, 82, 255, 0.8);
 }
 
-html, body, :global(#___gatsby, #gatsby-focus-wrapper), .layout {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    min-width: 320px;
+html,
+body,
+:global(#___gatsby, #gatsby-focus-wrapper),
+.layout {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
 }
 
-html, body, :global(#___gatsby, #gatsby-focus-wrapper) {
-    min-height: 100vh;
+html,
+body,
+:global(#___gatsby, #gatsby-focus-wrapper) {
+  min-height: 100vh;
 }
 
 body {
-    --ktl-font-family-inter: 'JetBrains Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;;
-    --rs-font-family-ui: var(--ktl-font-family-inter);
-    font-family: var(--ktl-font-family-inter);
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  --ktl-font-family-inter: 'JetBrains Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+  --rs-font-family-ui: var(--ktl-font-family-inter);
+  font-family: var(--ktl-font-family-inter);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 :global(#gatsby-focus-wrapper) {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .layout {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 
-    background: #fff;
+  background: #fff;
 }
 
 .greyLayout {
-    background: #F4F4F4;
+  background: #f4f4f4;
 }
 
 .narrow {
-    max-width: 720px;
+  max-width: 720px;
 
-    margin-top: var(--ktf-fuild-spacing-xl);
-    margin-bottom: var(--ktf-fuild-spacing-xl);
+  margin-top: var(--ktf-fuild-spacing-xl);
+  margin-bottom: var(--ktf-fuild-spacing-xl);
 }
 
 @media (max-width: 767px) {
-    :global body.overlay-locked {
-        overflow: hidden;
-    }
+  :global body.overlay-locked {
+    overflow: hidden;
+  }
 }

@@ -1,65 +1,67 @@
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 910;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 910;
 }
 
 .content {
-    background: #fff;
-    margin-left: auto;
-    height: 100%;
+  background: #fff;
+  margin-left: auto;
+  height: 100%;
 
-    @media (--ktl-ts-min) {
-        max-width: 320px;
-    }
+  @media (--ktl-ts-min) {
+    max-width: 320px;
+  }
 }
 
 .popup {
-    --ktf-header-animation-timing: 250ms;
-    --ktf-header-animation-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --ktf-header-animation-timing: 250ms;
+  --ktf-header-animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    &::before {
-        display: block;
-        content: '';
+  &:before {
+    display: block;
+    content: '';
 
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 
-        background: rgba(0, 0, 0, 0.62);
-        visibility: visible;
+    background: rgba(0, 0, 0, 0.62);
+    visibility: visible;
 
-        transition: background-color var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
-            visibility var(--ktf-header-animation-function) var(--ktf-header-animation-timing);
-        will-change: background-color, visible;
-    }
+    transition:
+      background-color var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
+      visibility var(--ktf-header-animation-function) var(--ktf-header-animation-timing);
+    will-change: background-color, visible;
+  }
 
-    .content {
-        transform: translateX(0);
+  .content {
+    transform: translateX(0);
 
-        transition: transform var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
-            visibility var(--ktf-header-animation-function) var(--ktf-header-animation-timing);
-        will-change: transform;
-    }
+    transition:
+      transform var(--ktf-header-animation-function) var(--ktf-header-animation-timing),
+      visibility var(--ktf-header-animation-function) var(--ktf-header-animation-timing);
+    will-change: transform;
+  }
 }
 
 .close {
-    --ktf-header-animation-timing: 300ms;
+  --ktf-header-animation-timing: 300ms;
 
-    pointer-events: none;
+  pointer-events: none;
 
-    &::before {
-        background: rgba(0, 0, 0, 0);
-        visibility: hidden;
-    }
+  &:before {
+    background: rgba(0, 0, 0, 0);
+    visibility: hidden;
+  }
 
-    .content {
-        transform: translateX(100%);
-        visibility: hidden;
-    }
+  .content {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
 }

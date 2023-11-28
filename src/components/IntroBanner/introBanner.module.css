@@ -1,150 +1,151 @@
 .section {
-    background: #fff;
-    overflow: hidden;
+  background: #fff;
+  overflow: hidden;
 }
 
 .intro {
-    display: grid;
-    grid-template:
-            "title image"
-            ". image"
-            "companies companies";
+  display: grid;
+  grid-template:
+    'title image'
+    '. image'
+    'companies companies';
 }
 
 .image {
-    height: 400px;
-    width: 400px;
-    grid-area: image;
-    margin-top: var(--ktl-box-page-m);
+  height: 400px;
+  width: 400px;
+  grid-area: image;
+  margin-top: var(--ktl-box-page-m);
 }
 
 .title {
-    grid-area: title;
-    max-width: 30ch;
+  grid-area: title;
+  max-width: 30ch;
 }
 
 .companies {
-    grid-area: companies;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -80px;
-    margin-top: calc(var(--ktl-box-section-m) * -1);
+  grid-area: companies;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -80px;
+  margin-top: calc(var(--ktl-box-section-m) * -1);
 }
 
-.companies-group {
-    margin-left: 80px;
+.companiesGroup {
+  margin-left: 80px;
 }
 
-.companies-logos {
-    --ktf-companies-logo-spacing: 12px;
+.companiesLogos {
+  --ktf-companies-logo-spacing: 12px;
 
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 12px;
-    margin-left: calc(-1 * var(--ktf-companies-logo-spacing));
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-left: calc(-1 * var(--ktf-companies-logo-spacing));
 }
 
 .company {
-    margin-left: var(--ktf-companies-logo-spacing);
+  margin-left: var(--ktf-companies-logo-spacing);
 }
 
-.company-logo {
-    height: 48px;
+.companyLogo {
+  height: 48px;
 }
 
-.company-link {
-    display: inline-block;
+.companyLink {
+  display: inline-block;
 
-    font-size: 0;
-    line-height: 0;
-    &, &:hover {
-        text-decoration: none;
-    }
+  font-size: 0;
+  line-height: 0;
+  &,
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 @media (--ktl-ds) {
-    .title {
-        margin-right: -70px;
-    }
+  .title {
+    margin-right: -70px;
+  }
 
-    .companies {
-        margin-left: calc(var(--ktl-box-section-l) * -1);
-    }
+  .companies {
+    margin-left: calc(var(--ktl-box-section-l) * -1);
+  }
 
-    .companies-group {
-        margin-left: var(--ktl-box-section-l);
-    }
+  .companiesGroup {
+    margin-left: var(--ktl-box-section-l);
+  }
 }
 
 @media (--ktl-tl) {
-    .intro {
-        display: block;
-        margin-top: var(--ktl-box-page-m);
-        margin-bottom: var(--ktl-box-page-m);
-    }
+  .intro {
+    display: block;
+    margin-top: var(--ktl-box-page-m);
+    margin-bottom: var(--ktl-box-page-m);
+  }
 
-    .title {
-        height: 242px;
-        margin-top: 12px;
-        margin-right: 0;
-    }
+  .title {
+    height: 242px;
+    margin-top: 12px;
+    margin-right: 0;
+  }
 
-    .image {
-        height: 152px;
-        width: 152px;
-        margin: 0;
-    }
+  .image {
+    height: 152px;
+    width: 152px;
+    margin: 0;
+  }
 
-    .companies {
-        margin-top: 0;
-    }
+  .companies {
+    margin-top: 0;
+  }
 
-    .companies-group {
-        margin-top: 12px;
-    }
+  .companiesGroup {
+    margin-top: 12px;
+  }
 }
 
 @media (--ktl-tm) {
-    .intro {
-        margin-bottom: var(--ktl-box-section-l);
-    }
+  .intro {
+    margin-bottom: var(--ktl-box-section-l);
+  }
 
-    .title {
-        height: 266px;
-    }
+  .title {
+    height: 266px;
+  }
 
-    .companies {
-        display: block;
-        margin-left: 0;
-        margin-top: 12px;
-    }
+  .companies {
+    display: block;
+    margin-left: 0;
+    margin-top: 12px;
+  }
 
-    .companies-group {
-        margin-left: 0;
-        margin-top: var(--ktl-box-section-l);
+  .companiesGroup {
+    margin-left: 0;
+    margin-top: var(--ktl-box-section-l);
 
-        &:first-child {
-            margin-top: 0;
-        }
+    &:first-child {
+      margin-top: 0;
     }
+  }
 }
 
 @media (--ktl-ts) {
-    .intro {
-        margin-top: var(--ktl-box-section-l);
-    }
+  .intro {
+    margin-top: var(--ktl-box-section-l);
+  }
 
-    .title {
-        height: auto;
-    }
+  .title {
+    height: auto;
+  }
 
-    .companies {
-        margin-top: var(--ktl-box-page-m);
-    }
+  .companies {
+    margin-top: var(--ktl-box-page-m);
+  }
 }
 
 @media (--ktl-mm) {
-    .companies {
-        margin-top: var(--ktl-box-section-l);
-    }
+  .companies {
+    margin-top: var(--ktl-box-section-l);
+  }
 }
