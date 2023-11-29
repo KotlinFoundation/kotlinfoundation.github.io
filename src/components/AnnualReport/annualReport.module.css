@@ -65,6 +65,10 @@
 
 .image {
     position: absolute;
+    transform: perspective(1500px) rotateY(15deg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+    will-change: transform;
 
     @media (--ktl-mm) {
         width: 256px;
@@ -82,6 +86,10 @@
     }
 }
 
+.imageContainer:hover .image:nth-child(1) {
+    transform: perspective(3000px) rotateY(0deg) translateX(-18px) translateY(-6px);
+}
+
 .image:nth-child(2) {
     top: 48px;
     left: 72px;
@@ -92,6 +100,10 @@
     }
 }
 
+.imageContainer:hover .image:nth-child(2) {
+    transform: perspective(3000px) rotateY(0deg);
+}
+
 .image:nth-child(3) {
     top: 72px;
     left: 96px;
@@ -100,6 +112,10 @@
         top: 32px;
         left: 32px;
     }
+}
+
+.imageContainer:hover .image:nth-child(3) {
+    transform: perspective(3000px) rotateY(0deg) translateX(18px) translateY(6px);
 }
 
 .textContainer {
@@ -113,6 +129,7 @@
 
     @media (--ktl-tl) {
         position: relative;
+        width: unset;
         padding: 0;
         z-index: 1;
     }

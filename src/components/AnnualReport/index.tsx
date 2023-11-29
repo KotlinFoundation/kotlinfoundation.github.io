@@ -1,9 +1,9 @@
+import Button from "@rescui/button";
+import cn from "classnames";
 import * as styles from "./annualReport.module.css";
 import report1KotlinResults from "./assets/1-kotlin-results.png";
 import report2MissionRecap from "./assets/2-mission-recap.png";
 import report3FoundationResults from "./assets/3-foundation-results.png";
-import cn from "classnames";
-import Button from "@rescui/button";
 
 export function AnnualReport() {
     const renderButton = (className: string) => (
@@ -11,8 +11,8 @@ export function AnnualReport() {
             className={className}
             mode="outline"
             size="l"
-            // TODO: Update link to the actual report
-            href="/kotlin-foundation-presentation.pdf"
+            // TODO: upload actual pdf file with the report
+            href="/annual-report-2023.pdf"
             target="_blank"
         >
             View annual report
