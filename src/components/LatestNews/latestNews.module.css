@@ -41,8 +41,7 @@
   .item:before {
     display: block;
     content: '';
-    background: #fff;
-    box-shadow: 5px 2px 24px rgba(0, 0, 0, 0.1);
+    background-color: var(--rs-color-grey-10);
     border-radius: 16px;
     grid-row: 1 / 4;
   }
@@ -50,8 +49,6 @@
 
 @media (--ktl-tm) {
   .item {
-    background: #ffffff;
-    box-shadow: 5px 2px 24px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     padding: 24px;
     box-sizing: border-box;
