@@ -39,17 +39,11 @@ body {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-
-  background: #fff;
-}
-
-.greyLayout {
-  background: #f4f4f4;
+  background-color: #fff;
 }
 
 .narrow {
   max-width: 720px;
-
   margin-top: var(--ktf-fuild-spacing-xl);
   margin-bottom: var(--ktf-fuild-spacing-xl);
 }
