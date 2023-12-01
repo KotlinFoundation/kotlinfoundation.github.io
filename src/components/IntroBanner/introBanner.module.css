@@ -9,13 +9,16 @@
     'title image'
     '. image'
     'companies companies';
+  margin-top: var(--ktl-box-page-l);
+  margin-bottom: 0;
+  padding-bottom: var(--ktl-box-page-l);
+  border-bottom: 1px solid var(--rs-color-black-t20);
 }
 
 .image {
   height: 400px;
   width: 400px;
   grid-area: image;
-  margin-top: var(--ktl-box-page-m);
 }
 
 .title {
@@ -28,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -80px;
-  margin-top: calc(var(--ktl-box-section-m) * -1);
+  margin-top: -84px;
 }
 
 .companiesGroup {
@@ -53,8 +56,7 @@
 }
 
 .companyLink {
-  display: inline-block;
-
+  display: block;
   font-size: 0;
   line-height: 0;
   &,
