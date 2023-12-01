@@ -1,5 +1,5 @@
 .outter {
-  background: var(--ktl-light-grey);
+  background: var(--kt-grey);
   padding-top: var(--ktf-fuild-spacing-xl);
   overflow: hidden;
 }
