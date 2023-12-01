@@ -37,7 +37,7 @@
   justify-content: space-between;
   border-radius: 16px;
 
-  background: var(--ktl-light-grey);
+  background: var(--kt-grey);
   padding: var(--ktl-box-section-s);
 
   margin-left: calc(-1 * var(--ktf-grants-spacing));
@@ -69,7 +69,7 @@
 }
 
 .actionDark {
-  background: #19191c;
+  background: var(--kt-bg-black);
 }
 
 .button {

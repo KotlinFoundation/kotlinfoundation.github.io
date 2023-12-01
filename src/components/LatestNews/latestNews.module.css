@@ -41,7 +41,7 @@
   .item:before {
     display: block;
     content: '';
-    background-color: var(--rs-color-grey-10);
+    background-color: var(--kt-grey);
     border-radius: 16px;
     grid-row: 1 / 4;
   }
