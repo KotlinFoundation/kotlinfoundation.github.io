@@ -1,0 +1,10 @@
+:root {
+  --kt-old-gradient: radial-gradient(
+    89.53% 145.96% at 0.34% 100.79%,
+    #ed495b 0%,
+    #de4970 17.58%,
+    #b44db0 50.31%,
+    #7f52ff 97.03%
+  );
+  --kt-gradinent: radial-gradient(114.55% 114.55% at 96.68% 4.11%, #e54857 0%, #c811e2 50%, #7f52ff 100%);
+}
