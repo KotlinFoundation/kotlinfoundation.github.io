@@ -94,7 +94,7 @@ function NewsPreview({ className = '', post, spoilerSize, ...props }: NewsPrevie
         post.excerpt,
         spoilerSize || postSpoilerSize,
         <Link href={post.fields.slug} className={classes}>
-          Read more
+          Read&nbsp;more
         </Link>
       ),
     [post, spoilerSize]
