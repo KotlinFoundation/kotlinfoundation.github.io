@@ -1875,10 +1875,10 @@
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
-"@jetbrains/kotlin-web-site-ui@^4.6.0":
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/@jetbrains/kotlin-web-site-ui/-/kotlin-web-site-ui-4.6.0.tgz#e1fdfc31bc668ce93b845311a37b7928818c7074"
-  integrity sha512-uUZ2YAqUYANPEBijkcZLXWi6LjNpPnD5xhDF5CoP9qAqJWnGQ1pRGbPWPpVjyR9vyCYkssIfA9TKNPfruA27Bw==
+"@jetbrains/kotlin-web-site-ui@4.8.0-alpha.13":
+  version "4.8.0-alpha.13"
+  resolved "https://registry.yarnpkg.com/@jetbrains/kotlin-web-site-ui/-/kotlin-web-site-ui-4.8.0-alpha.13.tgz#3d17d53389758613c7330a27b708e4b16c5fe59f"
+  integrity sha512-82Hi8uq0C8bSYAkZ9cBTn8uGgLYmUHlVlCfZe1Ilv9b1yqV33hhEPrMYIb97iEbQ/NpWXu39ykK9YzKq6M/5NA==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
