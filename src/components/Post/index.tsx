@@ -64,7 +64,7 @@ export default function PageTemplate({ children, ...props }: PageTemplateProps) 
 
   return (
     <Layout {...props} socialImage={coverImage}>
-      <p className={cn(textCn('ktl-text-3'), 'ktl-text--gray', style.date)}>{date}</p>
+      <p className={cn(textCn('ktl-text-3'), 'ktl-text--gray')}>{date}</p>
       <h1 className={cn('ktf-h2 ktf-h3--mm', style.title)}>{title}</h1>
       <Markdown>{children}</Markdown>
     </Layout>

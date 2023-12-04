@@ -1,7 +1,3 @@
-.date {
-  margin-top: var(--ktf-fuild-spacing-xl);
-}
-
 .title {
   margin-top: calc(var(--ktl-box-section-s) / 2);
   margin-bottom: var(--ktl-box-section-l);
