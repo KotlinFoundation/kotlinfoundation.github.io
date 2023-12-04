@@ -67,6 +67,7 @@
 .imageTag {
   max-width: 328px;
   width: 100%;
+  border-radius: 16px;
 
   @media (--ktl-ms) {
     max-width: 272px;

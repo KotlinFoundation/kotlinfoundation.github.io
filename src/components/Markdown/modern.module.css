@@ -48,7 +48,8 @@
   }
 }
 
-pre.codeBlock, .codeBlock {
+pre.codeBlock,
+.codeBlock {
   display: inline-block;
   box-sizing: border-box;
   padding: var(--ktl-box-block-l);
@@ -64,7 +65,7 @@ pre.codeBlock, .codeBlock {
   display: block;
 
   background: #f3f3f3;
-  font-family: "JetBrains Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: 'JetBrains Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   line-height: 1.5;
 }
 
