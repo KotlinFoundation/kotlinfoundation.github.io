@@ -8,7 +8,6 @@ import { postContentPreview, DEFAULT_EXCERPT_SIZE } from '../PostContent';
 import * as styles from './latestNews.module.css';
 
 export function LatestNews() {
-  const textCn = useTextStyles();
   const isTm = useTM();
   const {
     allMdx: { nodes: posts },
@@ -49,7 +48,7 @@ export function LatestNews() {
 
   return (
     <>
-      <h2 className={cn(styles.title, textCn('rs-h2'))}>Latest news</h2>
+      <h2 className={cn(styles.title, 'ktf-h2')}>Latest news</h2>
       <div className={styles.news}>
         {posts.map((post, i: number) => (
           <NewsPreview

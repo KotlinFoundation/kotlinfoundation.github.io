@@ -2,6 +2,16 @@
   display: block;
 }
 
+.title {
+  margin-top: var(--ktl-box-section-l);
+  margin-bottom: var(--ktl-box-section-s);
+}
+
+.item {
+  background-color: var(--kt-grey);
+  border-radius: 16px;
+}
+
 @media (--ktl-tm-min) {
   .news {
     display: grid;
