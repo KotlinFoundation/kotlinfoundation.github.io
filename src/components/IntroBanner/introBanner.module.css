@@ -59,6 +59,7 @@
   display: block;
   font-size: 0;
   line-height: 0;
+
   &,
   &:hover {
     text-decoration: none;
@@ -70,7 +71,12 @@
     margin-right: -70px;
   }
 
+  .image {
+    margin-top: 72px;
+  }
+
   .companies {
+    margin-top: -12px;
     margin-left: calc(var(--ktl-box-section-l) * -1);
   }
 
@@ -82,13 +88,14 @@
 @media (--ktl-tl) {
   .intro {
     display: block;
+    padding-bottom: var(--ktl-box-page-m);
     margin-top: var(--ktl-box-page-m);
-    margin-bottom: var(--ktl-box-page-m);
+    margin-bottom: 0;
   }
 
   .title {
-    height: 242px;
-    margin-top: 12px;
+    height: 280px;
+    margin-top: 8px;
     margin-right: 0;
   }
 
@@ -109,7 +116,7 @@
 
 @media (--ktl-tm) {
   .intro {
-    margin-bottom: var(--ktl-box-section-l);
+    padding-bottom: var(--ktl-box-section-l);
   }
 
   .title {

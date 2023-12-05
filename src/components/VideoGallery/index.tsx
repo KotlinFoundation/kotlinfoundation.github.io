@@ -68,7 +68,7 @@ export function VideoGallery({ videos, title }: VideoGalleryProps) {
   return (
     <div className={styles.container}>
       <KtlLayout>
-        <h2 className={cn(styles.header, 'ktf-h1--ds ktf-h2--ds-min ktf-h2--tl')}>{title}</h2>
+        <h2 className={cn(styles.header, 'ktf-h2')}>{title}</h2>
       </KtlLayout>
 
       <div className={styles.wrapper}>
