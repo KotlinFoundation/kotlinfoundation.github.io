@@ -8,11 +8,12 @@ const contactEmail = 'hello@kotlinfoundation.org';
 export function ContactUs() {
   return (
     <CtaBlock
+      classTopTitle={styles.topTitle}
       topTitle={
-        <>
-          Still have questions? <br className={styles.br} />
+        <span>
+          Still have questions? <br />
           Contact us!
-        </>
+        </span>
       }
       classMainTitle={cn('ktf-h2', 'ktf-h4--tm', 'ktf-h3--ts', styles.mainTitle)}
       mainTitle={
