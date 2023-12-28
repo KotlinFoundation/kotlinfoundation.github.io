@@ -38,7 +38,7 @@ Nikolai successfully delivered these features by implementing support for Kotlin
 
 ![Signature help](image7.png)
 
-**Hovering***
+**Hovering**
 
 ![Hovering](image3.png)
 
