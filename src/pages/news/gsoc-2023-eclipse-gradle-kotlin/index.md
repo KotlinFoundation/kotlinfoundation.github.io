@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2023 – Eclipse Gradle Kotlin Script Support"
-date: 2023-12-18 10:00
+date: 2024-01-05 10:00
 ---
 
 The Kotlin Foundation sponsored 4 projects for the Google Summer of Code 2023, and we are excited to announce the completion of the Eclipse Gradle Kotlin Script Support project! Gradle, a Kotlin Foundation member, provided mentoring support for this project, and we'd like to share details about the project.
