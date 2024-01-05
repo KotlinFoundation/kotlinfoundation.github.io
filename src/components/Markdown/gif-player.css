@@ -1,0 +1,5 @@
+@import '~react-gif-player/dist/gifplayer.min.css';
+
+.gif_player, .gif_player .play_button {
+    font-family: inherit;
+}
