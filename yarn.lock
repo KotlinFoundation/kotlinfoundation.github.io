@@ -6223,6 +6223,15 @@ fs-extra@^11.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs-extra@^11.1.1:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.2.0.tgz#e70e17dfad64232287d01929399e0ea7c86b0e5b"
+  integrity sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^9.0.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
@@ -6577,6 +6586,20 @@ gatsby-react-router-scroll@^6.7.0:
   dependencies:
     "@babel/runtime" "^7.20.13"
     prop-types "^15.8.1"
+
+gatsby-remark-copy-linked-files@^6.13.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-6.13.0.tgz#673ea3d3002ddba9f962cc0ee43051d0325c583c"
+  integrity sha512-hdWgIjCnvfixKIGRpWQwW8kxkMJg/7zD5bRjZH7Dsm2vHn/mv+g58pV3xGCA4CQGF4e+ZgSJk5mYkXciOFaxkA==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    cheerio "^1.0.0-rc.10"
+    fs-extra "^11.1.1"
+    is-relative-url "^3.0.0"
+    lodash "^4.17.21"
+    path-is-inside "^1.0.2"
+    probe-image-size "^7.2.3"
+    unist-util-visit "^2.0.3"
 
 gatsby-remark-images@^7.8.0:
   version "7.8.0"
@@ -10128,6 +10151,11 @@ path-is-absolute@^1.0.0:
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
   integrity sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==
 
+path-is-inside@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/path-is-inside/-/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
+  integrity sha512-DUWJr3+ULp4zXmol/SZkFf3JGsS9/SIv+Y3Rt93/UjPpDpklB5f1er4O3POIbUuUJ3FXgqte2Q7SrU6zAqwk8w==
+
 path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
@@ -10883,7 +10911,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.6.0, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -11073,6 +11101,13 @@ react-fast-compare@^3.0.1, react-fast-compare@^3.1.1:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
+react-gif-player@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/react-gif-player/-/react-gif-player-0.4.2.tgz#7f7675625bb264a3cfac8956edd5a18b8c196af3"
+  integrity sha512-ub++AT0PgbVxw1S0ahV3Q/4m67772r3vrnE6VqYed0Wi0cB9iremID8UnkFhZJCge77lwumsFOYsk1ShmouAgA==
+  dependencies:
+    prop-types "^15.6.0"
 
 react-helmet@^6.1.0:
   version "6.1.0"
