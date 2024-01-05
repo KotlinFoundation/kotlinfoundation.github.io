@@ -1,11 +1,10 @@
-import {createContext, ReactNode, useContext} from "react";
+import {createContext, lazy, ReactNode, Suspense, useContext} from "react";
 import cn from "classnames";
 import {MDXProvider} from "@mdx-js/react";
 import {LinkIcon} from "@rescui/icons";
-import GifPlayer from "react-gif-player";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
 
-import {useSiteMeta} from "../../utlis/hooks";
+import {useSiteMeta, useSiteURL} from "../../utlis/hooks";
 import {Link} from "../Link";
 
 import * as CUSTOM_MARKDOWN_TAGS from "./CustomTags";
@@ -13,6 +12,8 @@ import * as CUSTOM_MARKDOWN_TAGS from "./CustomTags";
 import "./gif-player.css";
 import * as styles from "./modern.module.css";
 import {cls} from "../../utlis";
+
+const GifPlayer = lazy(() => import("react-gif-player"));
 
 const OLAlpha = [ 'upper', 'lower' ];
 export const OLContext = createContext<number | null>(null);
@@ -101,11 +102,15 @@ const MODERN_SHORT_CODES = {
     blockquote: props => <blockquote {...cls(props, styles.quote)}/>,
     pre: props => <div><pre {...cls(props, 'ktl-text-2', styles.codeBlock)}/></div>,
     img: ({src, ...props}) => {
-        const { pathname } = new URL(src, window.location.href);
+        const url = useSiteURL();
+        const { pathname } = new URL(src, url);
+        const image = <img src={src} {...props}/>
 
-        return pathname.endsWith('.gif') ?
-            <GifPlayer {...props} gif={src}/> :
-            <img src={src} {...props}/>
+        return typeof window !== 'undefined' && pathname.endsWith('.gif') ?
+            <Suspense fallback={image}>
+                <GifPlayer {...props} gif={src}/>
+            </Suspense> :
+            image;
     },
 
     // strong: props => <strong {...cls(props, 'ktl-')}/>,
