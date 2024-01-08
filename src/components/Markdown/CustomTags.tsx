@@ -1,3 +1,4 @@
+export { default as YoutubePlayer} from "@jetbrains/kotlin-web-site-ui/out/components/youtube-player";
 export {KtlLayout as Layout} from "../KtlLayout";
 export {Answer, FAQ, Question} from "../FAQ";
 export {Structure} from "../Structure";
