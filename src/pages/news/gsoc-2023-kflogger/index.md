@@ -13,7 +13,7 @@ KFlogger incorporates the existing JVM Flogger codebase as a Java module, preser
 
 Here is a demo of this working on Android and iOS:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hkyL-Lhkla8?si=sC-VNE7s8YTZ673C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<YoutubePlayer id="hkyL-Lhkla8" />
 
 ## Getting Started
 
