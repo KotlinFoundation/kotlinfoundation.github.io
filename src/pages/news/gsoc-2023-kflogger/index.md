@@ -20,7 +20,8 @@ Here is a demo of this working on Android and iOS:
 To use KFlogger, add the following dependency to your `commonMain` sourceSet:
 
 ```kotlin
-// Find the latest version on https://mvnrepository.com/artifact/com.giancarlobuenaflor/kflogger
+// Find the latest version 
+// on https://mvnrepository.com/artifact/com.giancarlobuenaflor/kflogger
 implementation("com.buenaflor:kflogger:0.0.3")
 ```
 
@@ -34,10 +35,10 @@ class LoggingClass {
     private val logger = KFluentLogger.forEnclosingClass()
     
     fun log() {
-        logger.atWarning().log("string: %s“, “example”)
-        logger.atWarning().log("integer: %d”, 1)
-        logger.atWarning().log(“float: %f, 1.0f)
-        logger.atWarning().log(“%d%% %s, 100, “chance”)
+        logger.atWarning().log("string: %s", "example")
+        logger.atWarning().log("integer: %d:", 1)
+        logger.atWarning().log("float: %f", 1.0f)
+        logger.atWarning().log("%d%% %s", 100, "chance")
     }
 }
 ```
