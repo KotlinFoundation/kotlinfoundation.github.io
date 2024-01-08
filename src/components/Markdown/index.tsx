@@ -3,6 +3,7 @@ import cn from "classnames";
 import {MDXProvider} from "@mdx-js/react";
 import {LinkIcon} from "@rescui/icons";
 import {useTextStyles} from "@jetbrains/kotlin-web-site-ui/out/components/typography";
+import "prism-themes/themes/prism-one-light.min.css";
 
 import {useSiteMeta, useSiteURL} from "../../utlis/hooks";
 import {Link} from "../Link";

@@ -1,4 +1,5 @@
 import rehypeSlug from 'rehype-slug';
+import rehypePrism from '@mapbox/rehype-prism';
 
 export default {
   siteMetadata: {
@@ -25,6 +26,7 @@ export default {
         mdxOptions: {
           rehypePlugins: [
             rehypeSlug,
+            rehypePrism,
           ],
         },
         gatsbyRemarkPlugins: [

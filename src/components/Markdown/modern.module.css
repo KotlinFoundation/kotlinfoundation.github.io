@@ -41,19 +41,25 @@
     }
 }
 
+pre.code-block,
 .code-block {
     display: inline-block;
     box-sizing: border-box;
     padding: var(--ktl-box-block-l);
     overflow: auto;
     white-space: pre;
-    background: rgba(25,25,28,.05);
+    background: #f3f3f3;
     border-radius: 8px;
+    border: 0 none transparent;
     max-width: 100%;
 }
 
 .code-block > code {
     display: block;
+
+    background: #f3f3f3;
+    font-family: "JetBrains Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 1.5;
 }
 
 .tag-anchor {
