@@ -121,7 +121,7 @@ const MODERN_SHORT_CODES = {
       <pre {...cls(props, 'ktl-text-2', styles.codeBlock)} />
     </div>
   ),
-  img: ({ src, ...props }) => {
+  img: (({ src, ...props }) => {
     const url = useSiteURL();
     const { pathname } = new URL(src, url);
     const image = <img src={src} {...props} />;
@@ -133,7 +133,7 @@ const MODERN_SHORT_CODES = {
     ) : (
       image
     );
-  },
+  }) as React.FC<JSX.IntrinsicElements['img']>,
 
   // strong: props => <strong {...cls(props, 'ktl-')}/>,
   // hr: props => <hr {...cls(props, 'ktl-')}/>,
