@@ -11,8 +11,7 @@ export function AnnualReport() {
       className={className}
       mode="outline"
       size="l"
-      // TODO: upload actual pdf file with the report
-      href="/annual-report-2023.pdf"
+      href="/kf_annual_report_2023.pdf"
       target="_blank"
     >
       View annual report
