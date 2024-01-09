@@ -96,6 +96,6 @@ You can click on the frames to navigate to the corresponding source code positio
 
 ## Feel Free to Contribute!
 
-This is just the beginning! With new ideas and features, we can improve the tool to cover more use cases. If you’ve found a bug, don’t like how a feature works, or have other feedback, feel free to open an issue in our official GitHub repository: [https://github.com/nikita-nazarov/coroutine-stacks](https://github.com/nikita-nazarov/coroutine-stacks)
+This is just the beginning! With new ideas and features, we can improve the tool to cover more use cases. If you’ve found a bug, don’t like how a feature works, or have other feedback, feel free to open an issue in our official GitHub repository: [https://github.com/google/coroutine-stacks](https://github.com/google/coroutine-stacks)
 
 Thank you to Raehat and Nikita for building an awesome new tool to help developers be more productive!
