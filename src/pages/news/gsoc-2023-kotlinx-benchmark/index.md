@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code 2023 – Enhancing kotlinx-benchmark's API and User Experience"
-date: 2024-01-08 11:00
+date: 2024-01-09 10:00
 ---
 
 The Kotlin Foundation sponsored four projects for the Google Summer of Code 2023, and we are excited to announce the completion of a project to enhance the _kotlinx-benchmark_ library! JetBrains, a Kotlin Foundation member, provided mentoring support for this project.
