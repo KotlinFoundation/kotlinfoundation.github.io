@@ -34,6 +34,6 @@ To further enhance _kotlinx-benchmark_, we are planning to:
 * Support the Android target and integrate the _androidx.benchmark_ framework into _kotlinx-benchmark_.
 * Implement an IntelliJ IDEA plugin to support running benchmarks with a click of a run button, the same way as running unit tests.
 
-If you'd like to help continue improving _kotlinx-benchmark_, check out the project's [contribution guide](https://github.com/Kotlin/kotlinx-benchmark/CONTRIBUTING.md).
+If you'd like to help continue improving _kotlinx-benchmark_, check out the [open issues](https://github.com/Kotlin/kotlinx-benchmark/issues) for ideas on where to jump in.
 
 Thank you Henok and Abduqodiri for making _kotlinx-benchmark_ even better for Kotlin developers!
