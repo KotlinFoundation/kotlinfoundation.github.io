@@ -1,12 +1,13 @@
-.date, .title  {
-    margin: 0;
-    padding: 0;
+.date,
+.title {
+  margin: 0;
+  padding: 0;
 }
 
 .date {
-    margin-bottom: var(--ktf-para-spacing);
+  margin-bottom: var(--ktf-para-spacing);
 }
 
 .content > *:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }

@@ -1,18 +1,19 @@
-.type--standalone, .type--standalone:hover {
-    color: var(--ktl-color-primary-light-theme, #7f52ff);
+.typeStandalone,
+.typeStandalone:hover {
+  color: var(--ktl-color-primary-light-theme, #7f52ff);
 }
 
-.type--standalone {
-    border-color: transparent;
+.typeStandalone {
+  border-color: transparent;
 }
 
-.type--standalone:hover {
-    border-image: linear-gradient(to right, currentColor calc(100% - 1.1em), transparent 1.1em) 1;
+.typeStandalone:hover {
+  border-image: linear-gradient(to right, currentColor calc(100% - 1.1em), transparent 1.1em) 1;
 
-    /* safari fix */
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
+  /* safari fix */
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
 
-    border-bottom-color: currentColor;
+  border-bottom-color: currentColor;
 }

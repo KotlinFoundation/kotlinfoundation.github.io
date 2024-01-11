@@ -1,47 +1,47 @@
-import {memo, useCallback, useState} from "react";
-import {ReactComponentLike} from "prop-types";
+import { ReactComponentLike } from 'prop-types';
+import { memo, useCallback, useState } from 'react';
 
-import {SidebarPopup} from "../SidebarPopup";
+import { SidebarPopup } from '../SidebarPopup';
 
-import {NavigationContext} from "./context";
-import {MenuItems} from "./MenuItem";
+import { MenuItems } from './MenuItem';
+import { NavigationContext } from './context';
 
 export type NavigationProps = {
-    classNameContent?: string;
-    classNamePopup?: string;
-    nav: ReactComponentLike;
-    sidebar: ReactComponentLike;
-    items: MenuItems;
+  classNameContent?: string;
+  classNamePopup?: string;
+  nav: ReactComponentLike;
+  sidebar: ReactComponentLike;
+  items: MenuItems;
 };
 
 function NavigationStateless({
-     classNamePopup: className = null,
-     classNameContent = null,
-     nav: Navigation,
-     sidebar: Sidebar,
-     items
- }: NavigationProps) {
-    const [isOpen, setOpen] = useState(false);
+  classNamePopup: className = null,
+  classNameContent = null,
+  nav: Navigation,
+  sidebar: Sidebar,
+  items,
+}: NavigationProps) {
+  const [isOpen, setOpen] = useState(false);
 
-    const toggle = useCallback(
-        val => {
-            setOpen(val === undefined ? !isOpen : val);
-        },
-        [isOpen]
-    );
+  const toggle = useCallback(
+    (val) => {
+      setOpen(val === undefined ? !isOpen : val);
+    },
+    [isOpen]
+  );
 
-    const onClose = useCallback(() => {
-        toggle(false);
-    }, [toggle]);
+  const onClose = useCallback(() => {
+    toggle(false);
+  }, [toggle]);
 
-    return (
-        <NavigationContext.Provider value={{ menuItems: items, toggle, isOpen }}>
-            <Navigation/>
-            <SidebarPopup className={className} classNameContent={classNameContent} isOpen={isOpen} onClose={onClose}>
-                <Sidebar/>
-            </SidebarPopup>
-        </NavigationContext.Provider>
-    );
+  return (
+    <NavigationContext.Provider value={{ menuItems: items, toggle, isOpen }}>
+      <Navigation />
+      <SidebarPopup className={className} classNameContent={classNameContent} isOpen={isOpen} onClose={onClose}>
+        <Sidebar />
+      </SidebarPopup>
+    </NavigationContext.Provider>
+  );
 }
 
 export const Navigation = memo(NavigationStateless);

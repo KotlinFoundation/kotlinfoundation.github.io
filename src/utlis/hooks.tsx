@@ -1,20 +1,20 @@
-import {graphql, useStaticQuery} from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby';
 
 export function useSiteMeta() {
-    const { site } = useStaticQuery(graphql`
-        query {
-          site {
-            pathPrefix
-            siteMetadata {
-              siteUrl
-            }
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        pathPrefix
+        siteMetadata {
+          siteUrl
         }
-    `);
+      }
+    }
+  `);
 
-    return site;
+  return site;
 }
 
 export function useSiteURL() {
-    return useSiteMeta().siteMetadata.siteUrl;
+  return useSiteMeta().siteMetadata.siteUrl;
 }
