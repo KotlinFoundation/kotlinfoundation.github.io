@@ -9,13 +9,16 @@
     'title image'
     '. image'
     'companies companies';
+  margin-top: var(--ktl-box-page-l);
+  margin-bottom: 0;
+  padding-bottom: var(--ktl-box-page-l);
+  border-bottom: 1px solid var(--rs-color-black-t20);
 }
 
 .image {
   height: 400px;
   width: 400px;
   grid-area: image;
-  margin-top: var(--ktl-box-page-m);
 }
 
 .title {
@@ -28,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -80px;
-  margin-top: calc(var(--ktl-box-section-m) * -1);
+  margin-top: -84px;
 }
 
 .companiesGroup {
@@ -53,10 +56,10 @@
 }
 
 .companyLink {
-  display: inline-block;
-
+  display: block;
   font-size: 0;
   line-height: 0;
+
   &,
   &:hover {
     text-decoration: none;
@@ -65,10 +68,15 @@
 
 @media (--ktl-ds) {
   .title {
-    margin-right: -70px;
+    margin-right: -72px;
+  }
+
+  .image {
+    margin-top: 72px;
   }
 
   .companies {
+    margin-top: -12px;
     margin-left: calc(var(--ktl-box-section-l) * -1);
   }
 
@@ -80,13 +88,14 @@
 @media (--ktl-tl) {
   .intro {
     display: block;
+    padding-bottom: var(--ktl-box-page-m);
     margin-top: var(--ktl-box-page-m);
-    margin-bottom: var(--ktl-box-page-m);
+    margin-bottom: 0;
   }
 
   .title {
-    height: 242px;
-    margin-top: 12px;
+    height: 280px;
+    margin-top: 8px;
     margin-right: 0;
   }
 
@@ -107,7 +116,7 @@
 
 @media (--ktl-tm) {
   .intro {
-    margin-bottom: var(--ktl-box-section-l);
+    padding-bottom: var(--ktl-box-section-l);
   }
 
   .title {

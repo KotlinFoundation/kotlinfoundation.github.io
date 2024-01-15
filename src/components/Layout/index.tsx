@@ -24,13 +24,11 @@ interface MDLayoutProps {
   title?: string;
   layout?: LayoutSize;
   contactUs?: boolean;
-  greyLayout?: boolean;
 }
 
 export interface BaseLayoutProps {
   location: Location;
   children: null | ReactNode;
-  greyLayout?: boolean;
   socialImage?: string;
 }
 
@@ -44,7 +42,7 @@ type MarkdownLayoutProps = BaseLayoutProps & {
 
 type LayoutProps = BaseLayoutProps & MDLayoutProps;
 
-export function Layout({ children, location, title, layout, socialImage = null, contactUs, greyLayout }: LayoutProps) {
+export function Layout({ children, location, title, layout, socialImage = null, contactUs }: LayoutProps) {
   const content =
     layout === LayoutSize.Wide ? (
       children
@@ -56,7 +54,7 @@ export function Layout({ children, location, title, layout, socialImage = null, 
     <LocationContext.Provider value={location}>
       <SEO title={title} image={socialImage} />
       <Header />
-      <div className={cn(styles.layout, { [styles.greyLayout]: Boolean(greyLayout) })}>
+      <div className={styles.layout}>
         {content}
         {contactUs && <ContactUs />}
         <Footer />
@@ -86,9 +84,8 @@ export function PageMarkdownLayout({ pageContext, ...props }: MarkdownLayoutProp
   const title = pageContext?.frontmatter?.title;
   const layout = pageContext?.frontmatter?.layout ?? LayoutSize.Narrow;
   const contact = pageContext?.frontmatter?.contactUs ?? false;
-  const greyLayout = pageContext?.frontmatter?.greyLayout ?? false;
 
-  return <MarkdownLayout {...props} title={title} layout={layout} contactUs={contact} greyLayout={greyLayout} />;
+  return <MarkdownLayout {...props} title={title} layout={layout} contactUs={contact} />;
 }
 
 export default PageMarkdownLayout;

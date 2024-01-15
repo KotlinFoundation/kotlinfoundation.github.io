@@ -1,3 +1,8 @@
+.extraSpace {
+  margin-top: var(--ktl-box-page-l);
+  margin-bottom: var(--ktl-box-page-l);
+}
+
 @media (--ktl-tl) {
   .extraSpace {
     margin-top: var(--ktl-box-page-m);

@@ -28,7 +28,6 @@
 .title,
 .members,
 .description {
-  /*border-top: 1px solid rgba(39, 40, 44, 0.2);*/
   padding: 23px 0 30px;
   margin: 0;
 }
@@ -38,7 +37,7 @@
 }
 
 .title:before {
-  background: rgba(39, 40, 44, 0.2);
+  background: var(--rs-color-black-t20);
   display: block;
   position: absolute;
   content: '';

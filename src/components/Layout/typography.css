@@ -21,13 +21,7 @@
 }
 
 .ktl-text--rainbow {
-  background: radial-gradient(
-    89.53% 145.96% at 0.34% 100.79%,
-    #ed495b 0%,
-    #de4970 17.58%,
-    #b44db0 50.31%,
-    #7f52ff 97.03%
-  );
+  background: var(--kt-gradinent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

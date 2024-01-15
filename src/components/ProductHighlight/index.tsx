@@ -14,7 +14,7 @@ export const ProductHighlight: FC<ProductHighlightProps> = ({ title, children })
   return (
     <KtlLayout spacing addExtraSpace>
       <div className={styles.productHighlight}>
-        <h2 className={cn(styles.header, 'ktf-h1--ds ktf-h2--ds-min ktf-h2--tl')}>{title}</h2>
+        <h2 className={cn(styles.header, 'ktf-h2')}>{title}</h2>
         <ul className={cn(styles.items)}>{children}</ul>
       </div>
     </KtlLayout>

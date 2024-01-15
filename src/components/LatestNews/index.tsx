@@ -8,7 +8,6 @@ import { postContentPreview, DEFAULT_EXCERPT_SIZE } from '../PostContent';
 import * as styles from './latestNews.module.css';
 
 export function LatestNews() {
-  const textCn = useTextStyles();
   const isTm = useTM();
   const {
     allMdx: { nodes: posts },
@@ -49,7 +48,7 @@ export function LatestNews() {
 
   return (
     <>
-      <h2 className={cn(styles.title, textCn('rs-h2'))}>Latest news</h2>
+      <h2 className={cn(styles.title, 'ktf-h2')}>Latest news</h2>
       <div className={styles.news}>
         {posts.map((post, i: number) => (
           <NewsPreview
@@ -95,7 +94,7 @@ function NewsPreview({ className = '', post, spoilerSize, ...props }: NewsPrevie
         post.excerpt,
         spoilerSize || postSpoilerSize,
         <Link href={post.fields.slug} className={classes}>
-          Read more
+          Read&nbsp;more
         </Link>
       ),
     [post, spoilerSize]

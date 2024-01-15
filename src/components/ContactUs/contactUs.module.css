@@ -1,5 +1,15 @@
-.br {
-  @media (--ktl-mm) {
-    display: none;
+.mainTitle {
+  @media (--ktl-tm) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.topTitle {
+  @media (--ktl-ms) {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
   }
 }
