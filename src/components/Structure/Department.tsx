@@ -66,6 +66,8 @@ type HeroMembersProps = {
   list: PersonProps[];
 } & HTMLAttributes<HTMLUListElement>;
 
+const MAX_VARIATION_COUNT = 5;
+
 function HeroMembers({ list, ...props }: HeroMembersProps) {
   const ref = useRef(null);
 
@@ -102,7 +104,7 @@ function HeroMembers({ list, ...props }: HeroMembersProps) {
       style={{ [MASCOT_CSS_PROP]: `url("${mascot.publicURL}")` }}
       list={list.map((person, i) => ({
         avatar: isInteracted || i !== 1 ? true : 'asIdle',
-        variation: String(i + 1),
+        variation: String((i % MAX_VARIATION_COUNT) + 1),
         size: 'Xl',
         xlWidth: list.length < 7 && (list.length === 6 ? 'Wide' : 'UltraWide'),
         onMouseLeave: onLeave,
