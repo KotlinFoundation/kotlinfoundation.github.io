@@ -1,6 +1,6 @@
 ---
 title: "The Kotlin Foundation Annual Report 2023"
-date: 2023-02-02 10:00
+date: 2024-02-02 10:00
 coverImage: "./cover.jpg"
 socialImage: "./social.png"
 ---
