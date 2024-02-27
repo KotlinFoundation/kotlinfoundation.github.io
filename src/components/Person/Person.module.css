@@ -157,13 +157,13 @@
     z-index: 3;
 
     .personVariation1 & {
-      --mascot-rotate: rotate(9deg);
-      background-position: 45% 39%;
+      --mascot-rotate: rotate(-5deg);
+      background-position: 35% 30%;
     }
 
     .personVariation2 & {
-      --mascot-rotate: rotate(3deg);
-      background-position: 100% 25%;
+      --mascot-rotate: rotate(-6deg);
+      background-position: 50% 30%;
     }
 
     .personVariation3 & {
