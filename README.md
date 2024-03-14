@@ -20,6 +20,9 @@ have a unique layout that cannot be described only as a Markdown file.
 For these, an extended version of the Markdown is used - MDX.
 MDX allows you to use JSX in a markdown content. You can find more details in the [MDX documentation](https://mdxjs.com/).
 
+#### Images requirements
+Please use images with a minimum width of 1440 pixels.
+
 ### FAQ Editing
 - find the `faq.md` page in the pages folder (`src/pages`);
 - Write a question using the `Question` tag as a wrapper;
