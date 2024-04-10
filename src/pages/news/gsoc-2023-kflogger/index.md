@@ -22,7 +22,7 @@ To use KFlogger, add the following dependency to your `commonMain` sourceSet:
 ```kotlin
 // Find the latest version 
 // on https://mvnrepository.com/artifact/com.giancarlobuenaflor/kflogger
-implementation("com.buenaflor:kflogger:0.0.3")
+implementation("com.giancarlobuenaflor:kflogger:0.0.3")
 ```
 
 This will allow you to start simple logging.
