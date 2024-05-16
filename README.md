@@ -118,8 +118,8 @@ To do so, please follow the next steps.
 ### Run the Site
 In the project's root folder run the following commands:
 ```shell
-npm ci
-npm run start
+yarn install
+yarn run start
 ```
 Then open http://localhost:8082/ in a browser.
 Make changes in a page in `src/pages`.
