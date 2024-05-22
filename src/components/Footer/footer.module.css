@@ -10,6 +10,11 @@
 .footer {
   display: flex;
   margin-top: calc(-1 * var(--ktl-box-section-l));
+  flex-direction: row-reverse;
+
+  @media (--ktl-ds) {
+    flex-direction: initial;
+  }
 }
 
 .nav {
@@ -67,16 +72,12 @@
   }
 }
 
-.support {
-  margin-left: auto;
-
-  display: flex;
-  align-items: center;
+.logo {
+  margin-bottom: 3px;
 }
 
 .supportLabel {
-  margin: 0 var(--ktl-box-block-m) 0 0;
-  text-align: right;
+  margin: 0;
 }
 
 .supportLink {
