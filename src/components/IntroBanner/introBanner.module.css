@@ -38,6 +38,22 @@
   margin-left: 80px;
 }
 
+.companiesGroup:nth-child(2) {
+  margin-left: 24px;
+
+  @media (--ktl-ds) {
+    margin-left: 48px;
+  }
+
+  @media (--ktl-tl) {
+    margin-left: var(--ktl-box-section-l);
+  }
+
+  @media (--ktl-tm) {
+    margin-left: 0;
+  }
+}
+
 .companiesLogos {
   --ktf-companies-logo-spacing: 12px;
 

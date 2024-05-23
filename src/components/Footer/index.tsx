@@ -28,14 +28,10 @@ const FooterMarkup = () => {
           ))}
         </ul>
         <div className={cn(textCn('ktl-text-3'), styles.support)}>
-          <p className={styles.supportLabel}>
-            Supported and developed
-            <br />
-            by JetBrains
-          </p>
           <a className={styles.supportLink} href="https://jetbrains.com" target="_blank" rel="noreferrer noopener">
-            <img alt="JetBrains Logo" src={svgLogo} />
+            <img alt="JetBrains Logo" src={svgLogo} className={styles.logo} />
           </a>
+          <p className={styles.supportLabel}>Supported and developed by JetBrains</p>
         </div>
       </div>
     </footer>
