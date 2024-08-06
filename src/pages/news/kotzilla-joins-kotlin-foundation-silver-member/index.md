@@ -1,7 +1,7 @@
 ---
 title: "Kotzilla Joins the Kotlin Foundation as a Silver Member"
 date: 2024-08-06 14:00
-spoilerSize: 180
+spoilerSize: 178
 ---
 
 We are thrilled to announce that Kotzilla has joined the Kotlin Foundation as a Silver member. This new partnership will advance the ecosystem and enrich the Kotlin community.
