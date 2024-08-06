@@ -4,7 +4,7 @@ date: 2024-08-06 14:00
 spoilerSize: 178
 ---
 
-We are thrilled to announce that Kotzilla has joined the Kotlin Foundation as a Silver member. This new partnership will advance the ecosystem and enrich the Kotlin community.
+We are thrilled to announce that [Kotzilla](https://kotzilla.io/) has joined the Kotlin Foundation as a Silver member. This new partnership will advance the ecosystem and enrich the Kotlin community.
 
 The Kotzilla team has put significant effort into the advancement of Kotlin, especially with the creation of [Koin](https://insert-koin.io/), an open-source dependency injection (DI) framework. Koin helps developers manage their dependencies efficiently, write clean and modular code, as well as develop scalable and maintainable applications. Known for its simplicity and effectiveness, Koin is fully compatible with Kotlin Multiplatform (KMP) and Compose Multiplatform, enhancing the development of seamless and efficient mobile apps. Currently, Koin is used in over 350,000 mobile applications worldwide and has more than 9 million downloads each month, highlighting its essential role in the Kotlin ecosystem.
 
