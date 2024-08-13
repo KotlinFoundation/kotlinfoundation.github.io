@@ -61,6 +61,10 @@
   flex-wrap: wrap;
   margin-top: 12px;
   margin-left: calc(-1 * var(--ktf-companies-logo-spacing));
+
+  @media (--ktl-ds-min) {
+    max-width: 480px;
+  }
 }
 
 .company {
