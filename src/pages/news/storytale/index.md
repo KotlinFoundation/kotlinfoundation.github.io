@@ -1,4 +1,8 @@
-# Google Summer of Code 2024 – Storytale Compose Multiplatform Component Gallery Generator
+---
+title: "Google Summer of Code 2024 – Storytale Compose Multiplatform Component Gallery Generator"
+date: 2025-01-16 11:00
+---
+
 
 The Kotlin Foundation facilitated mentorship for several projects during the [Google Summer of Code 2024](https://summerofcode.withgoogle.com/archive/2024/organizations/kotlin-foundation), and we are excited to announce the completion of a project for a composable functions gallery generator\!
 
