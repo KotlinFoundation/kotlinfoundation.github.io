@@ -36,24 +36,29 @@ We will also provide developers with a set of runtime APIs and Gradle tasks, whi
 
 Let's write a simple use case, assuming we have a `PrimaryButton` component.
 
-`@Composable`  
-`fun PrimaryButton(`  
- `text: String,`  
- `onClick: () -> Unit = {},`  
- `enabled: Boolean = true`  
-`) {`  
- `Button(onClick = onClick, enabled = enabled) {`  
-   `Text(text)`  
- `}`  
-`}`
+```kotlin
+@Composable  
+fun PrimaryButton(  
+  text: String,  
+  onClick: () -> Unit = {},  
+  enabled: Boolean = true  
+) {  
+ Button(onClick = onClick, enabled = enabled) {  
+   Text(text)
+ }  
+}
+```
 
 In the project, we can create a `commonStories` folder and then write the following code:
 
-`val PrimaryButton by story {`  
- `val enabled by parameter(true)`  
- `val text by parameter("Click Me")`  
- `PrimaryButton(text = text, enabled = enabled)`  
-**`}`**
+```kotlin
+val PrimaryButton by story {  
+  val enabled by parameter(true)  
+  val text by parameter("Click Me")
+
+  PrimaryButton(text = text, enabled = enabled)  
+}
+```
 
 Then, depending on the target platform, we can run the `storiesRun` command, and we'll be able to see this visualized component on the corresponding platform. We'll also be able to edit `PrimaryButton`'s text and enabled parameters. That's it\!
 
