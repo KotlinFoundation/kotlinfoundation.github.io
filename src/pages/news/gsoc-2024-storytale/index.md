@@ -1,6 +1,8 @@
 ---
 title: "Google Summer of Code 2024 – Storytale Compose Multiplatform Component Gallery Generator"
-date: 2025-01-16 11:00
+date: 2025-01-21 20:00
+coverImage: "./cover.png"
+socialImage: "./social.png"
 ---
 
 
