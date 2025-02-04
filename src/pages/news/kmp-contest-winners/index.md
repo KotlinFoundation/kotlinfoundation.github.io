@@ -1,4 +1,4 @@
---
+---
 title: "Kotlin Multiplatform Contest: Announcing the Winners"
 date: 2025-02-04 10:00
 coverImage: "./social.png"
