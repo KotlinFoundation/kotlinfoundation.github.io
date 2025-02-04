@@ -1,4 +1,9 @@
-# Kotlin Multiplatform Contest: Announcing the Winners
+--
+title: "Kotlin Multiplatform Contest: Announcing the Winners"
+date: 2025-02-04 10:00
+coverImage: "./social.png"
+socialImage: "./social.png"
+---
 
 Held annually by the Kotlin Foundation, the [Kotlin Multiplatform Contest](https://kotlinconf.com/contest/) invites students and recent graduates to showcase their skills and explore multiplatform development. Participants create cross-platform apps that run on Android, iOS, desktop, web, and server, demonstrating the versatility of the Kotlin Multiplatform technology.
 
