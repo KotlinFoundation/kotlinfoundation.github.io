@@ -63,7 +63,7 @@
   margin-left: calc(-1 * var(--ktf-companies-logo-spacing));
 
   @media (--ktl-ds-min) {
-    max-width: 480px;
+    max-width: 520px;
   }
 }
 
