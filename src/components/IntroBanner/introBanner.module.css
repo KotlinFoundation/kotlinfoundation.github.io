@@ -63,12 +63,19 @@
   margin-left: calc(-1 * var(--ktf-companies-logo-spacing));
 
   @media (--ktl-ds-min) {
-    max-width: 480px;
+    max-width: 520px;
   }
 }
 
 .company {
   margin-left: var(--ktf-companies-logo-spacing);
+
+  /* this forces companies logos to spread among two lines equally  */
+  @media (width >= 473px) and (width <= 616px) {
+    &:nth-child(2) {
+      flex-basis: 50%;
+    }
+  }
 }
 
 .companyLogo {
