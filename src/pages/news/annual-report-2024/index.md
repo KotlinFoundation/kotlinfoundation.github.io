@@ -20,7 +20,7 @@ You can also find their noteworthy achievements including the release of Kotlin 
 the Beta release of Compose Multiplatform for iOS, and significant enhancements across Kotlin tools and libraries.
 In our commitment to transparency, the report includes a financial summary.
 
-To explore our 2024 activities and results, and see what’s ahead for the upcoming year, see the [full report on our website](https://kotlinfoundation.org/kf_annual_report_2024.pdf).
+To explore our 2024 activities and results, and see what’s ahead for the upcoming year, read the [full report on our website](https://kotlinfoundation.org/kf_annual_report_2024.pdf).
 
 If you’d like more information about our initiatives or are considering joining as a member, please reach out to us via the #kotlin-foundation channel on Kotlin Slack
 [(join)](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up) or email us at [hello@kotlinfoundation.org](mailto:hello@kotlinfoundation.org).
