@@ -5,8 +5,6 @@ coverImage: "./cover.png"
 socialImage: "./social.png"
 ---
 
-### **Building a Better Developer Experience: A Collaboration Between Gradle, Google, and JetBrains**
-
 Developers are at the heart of everything we do. You are the ones who create all of those new things to make the world better. To do that effectively, you need tools to rely on that are powerful yet easy to use.
 
 That’s why Kotlin was created. But the language is only a part of the story – you need an entire ecosystem to make things actually work together. That includes various developer tools and, among others, a build system, and an IDE.
