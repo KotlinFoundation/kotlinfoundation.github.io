@@ -1,3 +1,10 @@
+---
+title: "Building a Better Developer Experience: A Collaboration Between Gradle, Google, and JetBrains"
+date: 2025-02-20 12:00
+coverImage: "./cover.png"
+socialImage: "./social.png"
+---
+
 ### **Building a Better Developer Experience: A Collaboration Between Gradle, Google, and JetBrains**
 
 Developers are at the heart of everything we do. You are the ones who create all of those new things to make the world better. To do that effectively, you need tools to rely on that are powerful yet easy to use.
