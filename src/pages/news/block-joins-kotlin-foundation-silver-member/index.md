@@ -14,7 +14,7 @@ This deep commitment to Kotlin is more than just adoption – Block has actively
 
 As a Silver Member, Block will continue to support the Kotlin community through funding, expertise, and participation in shaping the future of Kotlin. Their involvement helps ensure Kotlin’s continued growth, especially in industries like fintech.
 
-In addition to Block’s exciting partnership, we’re also celebrating **Meta** joining as a Gold Member.
+In addition to Block’s exciting partnership, we’re also celebrating [**Meta** joining as a Gold Member](/news/meta-joins-kotlin-foundation-first-gold-member/).
 
 We’re excited to collaborate with both Block and Meta, and look forward to the valuable expertise and scale they’ll bring to the Kotlin Foundation’s mission.
 
