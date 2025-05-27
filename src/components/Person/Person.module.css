@@ -167,8 +167,8 @@
     }
 
     .personVariation3 & {
-      --mascot-rotate: rotate(8deg);
-      background-position: 68% 35%;
+      --mascot-rotate: rotate(4deg);
+      background-position: 20% 0;
     }
 
     .personVariation4 & {
@@ -177,8 +177,8 @@
     }
 
     .personVariation5 & {
-      background-position: 60% 33%;
-      --mascot-rotate: rotate(-4deg);
+      background-position: 55% 20%;
+      --mascot-rotate: rotate(1deg);
     }
 
     @media (--ktl-mm-min) {
