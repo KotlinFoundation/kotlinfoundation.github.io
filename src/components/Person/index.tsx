@@ -57,7 +57,7 @@ export function Person({ className = '', avatar, variation, size, xlWidth, name,
       </div>
       <p className={style.info}>
         <span className={cn('ktl-h4', 'n')}>{name}</span>
-        <span className={cn(textCn('ktl-text-2'), 'org')}>{company}</span>
+        <span className={cn(textCn('ktl-text-3'), 'org')}>{company}</span>
       </p>
     </div>
   );

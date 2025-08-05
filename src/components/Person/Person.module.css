@@ -45,8 +45,13 @@
 
 .personSizeXl > .photoWrap > .photo {
   border-radius: 200px;
-  height: 190px;
-  width: 152px;
+  height: 130px;
+  width: 110px;
+
+  @media (min-width: 1191px) {
+    height: 190px;
+    width: 152px;
+  }
 }
 
 @media (min-width: 960px) {
