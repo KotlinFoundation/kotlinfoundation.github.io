@@ -1,0 +1,63 @@
+---
+title: "Google Summer of Code 2025 – Support Android and iOS Targets in Kotlin Multiplatform for Gemini Using Vertex AI in Firebase"
+date: 2025-11-19 11:45
+coverImage: "./cover.png"
+socialImage: "./social.png"
+---
+
+
+# Support Android and iOS Targets in Kotlin Multiplatform for Gemini Using Vertex AI in Firebase
+
+>GSoC ultimately strengthened my passion for the developer experience and mobile infrastructure, inspiring me to keep building tools that make complex technologies more accessible. - Sean Chin Jun Kai
+
+[Project page](https://github.com/SeanChinJunKai/firebase-ai-kmp)
+
+Mentor: Matt Dyor (Google)
+
+As one of the first Firebase libraries with native Kotlin Multiplatform (KMP) support, Sean’s project bridges Android and iOS with a shared Gemini-powered Firebase AI layer. His modular SDK and Swift-Kotlin bridge simplify AI feature integration across platforms, answering one of the top community requests for Firebase. Mentored by Matt Dyor from Google, Sean’s work lays the foundation for future official KMP-compatible Firebase libraries.
+
+## About the author
+
+My name is Sean. I recently graduated from the National University of Singapore with a bachelor’s in computer science. 
+
+## Intro and motivation
+
+* **Why this project matters**
+
+  This project adds official Kotlin Multiplatform (KMP) support for Android and iOS in Firebase AI Logic using Gemini. Developed under Google Summer of Code, and with the mentorship of an Android Engineer, Firebase SDK Team Lead, and KMP Product Manager, it’s one of the first Firebase libraries with native KMP support.
+
+* **What problem it solves or what it adds to the Kotlin ecosystem**
+
+  KMP developers have struggled to use Firebase due to its platform-specific SDKs. This project introduces a shared KMP-compatible Firebase layer, enabling unified AI logic across Android and iOS – reducing code duplication and simplifying cross-platform development. Supporting KMP in Firebase SDKs is one of the top community requests ([Firebase UserVoice](https://firebase.uservoice.com/forums/948424-general/filters/top)). This work lays the foundation for future official Firebase KMP libraries, accelerating cross-platform app development with modern AI integration.
+
+  ## Technical highlights
+
+
+* SDK feature implementation  
+  * Achieved \~80% feature parity with the Firebase AI Logic SDK.  
+  * Modeled the API after the Firebase Android SDK for easier future integration.  
+* Architecture  
+  * Built a modular architecture separating platform-specific and shared logic.  
+  * Enabled Swift-Kotlin interoperability via Objective-C bridging for iOS libraries.
+
+  ## About your GSoC experience
+
+I discovered Google Summer of Code (GSoC) while contributing to open source and was immediately drawn to the idea of building something impactful with guidance from experienced mentors. With a background in backend development and six months of Kotlin experience from an internship, I thought it would be cool to work on a multiplatform mobile SDK which increases accessibility to Firebase AI.
+
+My project focused on creating a Firebase KMP library that allows developers to use Firebase in their Android and iOS apps. The goal was to simplify how developers add AI-powered features to their apps. Alongside the library, I built sample code and documentation to help others use it easily.
+
+To craft a successful proposal, I shared my previous open-source work, laid out a detailed project plan, and even built a small prototype. Working with my mentors was a great experience – they offered valuable feedback and helped me refine my ideas. The most challenging part was getting familiar with KMP’s iOS side, but it turned out to be an amazing learning opportunity.
+
+Through this project, I gained hands-on experience in cross-platform development, SDK design, and open-source collaboration, as well as key skills in communication and documentation. GSoC ultimately strengthened my passion for developer experience and mobile infrastructure, inspiring me to keep building tools that make complex technologies more accessible.
+
+## Links
+
+* [KMP library repository](https://github.com/SeanChinJunKai/firebase-ai-kmp)  
+* [Objective-C bridge for Kotlin Multiplatform to access the Firebase iOS AI Logic SDK in Swift](https://github.com/SeanChinJunKai/FirebaseAIBridge)  
+* [Sample application demonstrating how to use the KMP library](https://github.com/SeanChinJunKai/firebase-ai-sample)  
+* [GSoC Midterm Evaluation Slides](https://docs.google.com/presentation/d/1lHnDq4jEJiMFIw1r77t4cBkfemG7v9tAMkdHUJU4lDI/edit?slide=id.g36d58456049_0_79#slide=id.g36d58456049_0_79)  
+* [Final Evaluation Slides](https://docs.google.com/presentation/d/1tceN_14lT9tLr32TTG4SKGIyTHuCeIXIos1TG-lB7Fg/edit?usp=sharing)
+
+  ## Contact information
+
+* LinkedIn: [https://www.linkedin.com/in/sean-chin-jun-kai/](https://www.linkedin.com/in/sean-chin-jun-kai/)
