@@ -1,0 +1,41 @@
+---
+title: "Google Summer of Code 2025 – Enhanced Kotlin Code Quality Reporting with Gradle Problem API: Integration with Detekt and Ktlint"
+date: 2025-11-19 11:45
+coverImage: "./cover.png"
+socialImage: "./social.png"
+---
+
+<h1>Enhanced Kotlin Code Quality Reporting with Gradle Problem API: Integration with Detekt and Ktlint</h1>
+
+>Participating in GSoC opened my eyes to the open-source community. Collaboration, communication, and more Kotlin all helped me grow into a better, well-rounded engineer. To anyone considering GSoC, especially beginners, I would say to apply! It is very beginner friendly and you can acquire valuable skills that you would not easily gain elsewhere. - Vanessa Johnson
+
+[Project page](https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/)
+
+Mentors: Donát Csikós and Reinhold Degenfellner (both from Gradle)
+
+Based in New York City, Android Engineer Vanessa Johnson spent her summer improving how Kotlin developers experience code quality. Her project integrated the Gradle Problems API into popular tools like Detekt and Ktlint, unifying error reporting across consoles, IDEs, and HTML reports for cleaner, more actionable feedback.
+
+## About the autor
+
+Hey everyone, my name is Vanessa Johnson, and I am an Android Engineer based in New York City. I’ve been at my company for a little over a year now and was excited about the opportunity to take part in Google Summer of Code (GSoC) 2025\. My proposal was *Enhanced Kotlin Code Quality Reporting with Gradle Problem API: Integration with Detekt and Ktlint*. 
+
+## Motivation
+
+As developers, we always favor tools that enhance and streamline the programming process, including plugins that provide error reporting and insights to improve code quality. Kotlin developers using Gradle rely on tools like Detekt and Ktlint to enforce code quality. This project aimed to implement a unified and actionable code quality reporting system through the integration of the recently introduced Gradle Problems API. As an engineer who uses tools like Detekt and Ktlint daily, I wanted the opportunity to contribute to these popular tools to enhance their usefulness. This past summer I was also exploring how to make a linter or a plugin, so this project also gave me more insight into that. 
+
+## GSoC experience
+
+I discovered GSoC a couple years ago when my previous mentor mentioned it when I was looking for summer internships and did not have any luck elsewhere. Unfortunately the deadline to apply to be a contributor had passed at that time, but I kept it in my back pocket to apply for in the future. 
+
+Since I am a full-time Android Engineer, I wanted to contribute to the Kotlin Foundation, as that is the language we use to develop our Android app. I wrote the proposal and met with the potential mentors to talk more about implementation and my goals for the project. To my surprise, my proposal was accepted\!   
+![][image1]
+
+Now, of course, I encountered challenges along the way. Learning about plugins took extra time, having a full-time job when we were coming out with big and new feature releases that I was leading did not help, and a small but noticeable one was the time difference between me and my mentors. The last one wasn’t too bad, but when things started to pile up at work or when I had to prepare for my conference talks, it did take my focus away from this project. 
+
+Some takeaways are that I learned more about how plugins work, learned about open source, and connected with people that I would normally not have the chance to. I am still interested in open-source projects, but not necessarily plugin development. Nonetheless I enjoyed participating in the project and have a couple PRs that I need to fix up before they can be merged. You can find the project page [here](https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/), which also has the linked PRs. Collaboration, communication, and more Kotlin, of course, were skills I practiced during this project, which I am grateful for since they all contribute to becoming a better and more well-rounded engineer. 
+
+Participating was a rewarding experience, and it opened up my eyes to the open-source community. To anyone considering GSoC, especially beginners, I would say to apply\! It is very beginner-friendly, and you can acquire valuable skills that you would not easily gain elsewhere. Below are some links where you can find me and my work\! Thanks for reading about my GSoC journey. 
+
+## Resources and contacts
+
+You can see what other things I am working on or have done thus far on my [website](https://vanessajohnson.vercel.app), where you can also find links to my most recent talks if you are interested\! I also have a [newsletter](https://vanessaonmobile.substack.com) that I try to stay consistent with, which is about mobile application development and any projects or conferences I have in flight. You can also find me on [LinkedIn](https://www.linkedin.com/in/vanessa-johnson999/)\!
