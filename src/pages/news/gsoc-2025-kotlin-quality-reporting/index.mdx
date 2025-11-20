@@ -1,17 +1,45 @@
 ---
 title: "Google Summer of Code 2025 – Enhanced Kotlin Code Quality Reporting with Gradle Problem API: Integration with Detekt and Ktlint"
 date: 2025-11-19 11:45
-coverImage: "./cover.png"
-socialImage: "./social.png"
+coverImage: "./gsoc-2025.png"
+socialImage: "./gsoc-2025.png"
 ---
+import vanessaImg from "./vanessa.jpg"
 
-<h1>Enhanced Kotlin Code Quality Reporting with Gradle Problem API: Integration with Detekt and Ktlint</h1>
+<style>{`
+  .gsoc-author-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+    @media (max-width: 472px) {
+      display: block;
+    }
+  }
+  .gsoc-author-img {
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .gsoc-quote {
+    margin: 0 0 0 10px;
+  }
+`}</style>
 
->Participating in GSoC opened my eyes to the open-source community. Collaboration, communication, and more Kotlin all helped me grow into a better, well-rounded engineer. To anyone considering GSoC, especially beginners, I would say to apply! It is very beginner friendly and you can acquire valuable skills that you would not easily gain elsewhere. - Vanessa Johnson
+<div className="gsoc-author-card">
+  <img src={vanessaImg} alt="Vanessa Johnson" width="150" className="gsoc-author-img" />
 
-[Project page](https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/)
+  <blockquote className="gsoc-quote">
+    "Participating in GSoC opened my eyes to the open-source community. Collaboration, communication, and more Kotlin all helped me grow into a better, well-rounded engineer. To anyone considering GSoC, especially beginners, I would say to apply! It is very beginner friendly and you can acquire valuable skills that you would not easily gain elsewhere."
 
-Mentors: Donát Csikós and Reinhold Degenfellner (both from Gradle)
+    **Vanessa Johnson**
+  </blockquote>
+</div>
+
+**[Project page](https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/)**
+
+**Mentors**: Donát Csikós and Reinhold Degenfellner (both from Gradle)
 
 Based in New York City, Android Engineer Vanessa Johnson spent her summer improving how Kotlin developers experience code quality. Her project integrated the Gradle Problems API into popular tools like Detekt and Ktlint, unifying error reporting across consoles, IDEs, and HTML reports for cleaner, more actionable feedback.
 
@@ -27,8 +55,7 @@ As developers, we always favor tools that enhance and streamline the programming
 
 I discovered GSoC a couple years ago when my previous mentor mentioned it when I was looking for summer internships and did not have any luck elsewhere. Unfortunately the deadline to apply to be a contributor had passed at that time, but I kept it in my back pocket to apply for in the future. 
 
-Since I am a full-time Android Engineer, I wanted to contribute to the Kotlin Foundation, as that is the language we use to develop our Android app. I wrote the proposal and met with the potential mentors to talk more about implementation and my goals for the project. To my surprise, my proposal was accepted\!   
-![][image1]
+Since I am a full-time Android Engineer, I wanted to contribute to the Kotlin Foundation, as that is the language we use to develop our Android app. I wrote the proposal and met with the potential mentors to talk more about implementation and my goals for the project. To my surprise, my proposal was accepted!
 
 Now, of course, I encountered challenges along the way. Learning about plugins took extra time, having a full-time job when we were coming out with big and new feature releases that I was leading did not help, and a small but noticeable one was the time difference between me and my mentors. The last one wasn’t too bad, but when things started to pile up at work or when I had to prepare for my conference talks, it did take my focus away from this project. 
 
