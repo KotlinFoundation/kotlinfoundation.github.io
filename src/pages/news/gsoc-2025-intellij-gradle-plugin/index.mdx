@@ -115,7 +115,7 @@ The verifyPlugin task, a Gradle task that is part of the IntelliJ Platform Gradl
     Groups.VerifyPlugin` for verification-specific issues.  
   * Dynamic `VerificationFailure` factory generating `ProblemIds` from `FailureLevel` enum.
 
-```
+```kotlin
 /**
  * Contains problem IDs to be used when reporting a problem with the Problems API
  * for the IntelliJ Platform Gradle Plugin.
@@ -151,7 +151,7 @@ internal object Problems {
 
 * **`reportError()` helper**: Wraps exceptions with Problems API metadata, including clickable report URLs.
 
-```
+```kotlin
 /**
  * Helper function to report an error using the Problems API.
  *
@@ -200,7 +200,7 @@ internal fun ProblemReporter.reportError(
 
 * **`VerifyPluginConfigurationReportsImpl`**: `DelegatingReportContainer` delegating to `DefaultReportContainer`. 
 
-```
+```kotlin
 open class VerifyPluginConfigurationReportsImpl @Inject constructor(
     owner: Describable,
     objectFactory: ObjectFactory,
@@ -226,7 +226,7 @@ open class VerifyPluginConfigurationReportsImpl @Inject constructor(
 * **Report lifecycle**: Task execution → validation results → `SingleFileReport` generation → configurable output.  
 * **DSL integration**
 
-```
+```kotlin
 // Task DSL configuration
 reports {
     txt.required.set(true)
@@ -238,7 +238,7 @@ reports {
 
 * **Dependency injection**: `@Inject ObjectFactory` for report instance creation.
 
-```
+```kotlin
 @CacheableTask
 abstract class VerifyPluginProjectConfigurationTask : DefaultTask(), IntelliJPlatformVersionAware, KotlinMetadataAware,
     RuntimeAware, PluginAware, ModuleAware, Reporting<VerifyPluginConfigurationReports> {
@@ -304,7 +304,7 @@ I dived into the IntelliJ Platform Gradle Plugin source code, focusing on the ke
 * I found the TODOs in the codebase that specifically mentioned Worker API and Reporting API integration – these became my project's foundation.  
 * I examined how VerifyPluginTask calls the external tool in its exec() method:
 
-```
+```kotlin
 @TaskAction
 override fun exec() {
     with(ides) {
@@ -336,7 +336,7 @@ I also built prototypes:
 
 2. **Worker API prototype:** I implemented a basic Worker API integration for VerifyPluginTask using process isolation mode:
 
-```
+```kotlin
 abstract class VerifyPluginTask : DefaultTask() {
     @get:Inject
     abstract val workerExecutor: WorkerExecutor
