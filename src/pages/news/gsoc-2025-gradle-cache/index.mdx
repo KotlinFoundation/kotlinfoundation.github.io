@@ -1,24 +1,52 @@
 ---
 title: "Google Summer of Code 2025 – Improving Configuration Cache in Key Gradle Plugins"
 date: 2025-11-19 11:45
-coverImage: "./cover.png"
-socialImage: "./social.png"
+coverImage: "./gsoc-2025.png"
+socialImage: "./gsoc-2025.png"
 ---
+import nouranAtefImg from "./nouran-atef.jpeg"
 
-<h1>Improving Configuration Cache in Key Gradle Plugins</h1>
+<style>{`
+  .gsoc-author-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+    @media (max-width: 472px) {
+      display: block;
+    }
+  }
+  .gsoc-author-img {
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .gsoc-quote {
+    margin: 0 0 0 10px;
+  }
+`}</style>
 
->Working with my mentors was an amazing experience. They provided invaluable guidance, from high-level architectural advice to detailed feedback on pull requests. - Nouran Atef
+<div className="gsoc-author-card">
+  <img src={nouranAtefImg} alt="Nouran Atef" width="150" className="gsoc-author-img" />
 
-[Project page](https://community.gradle.org/events/gsoc/2025/configuration-cache-and-lock-contention/)
+  <blockquote className="gsoc-quote">
+    "Working with my mentors was an amazing experience. They provided invaluable guidance, from high-level architectural advice to detailed feedback on pull requests."
 
-Mentors: Oleg Nenashev (ex-Gradle), Rafael Chaves (Gradle), Rodrigo Oliveira (Gradle)
+    **Nouran Atef**
+  </blockquote>
+</div>
+
+**[Project page](https://community.gradle.org/events/gsoc/2025/configuration-cache-and-lock-contention/)**
+
+**Mentors**: Oleg Nenashev (ex-Gradle), Rafael Chaves (Gradle), Rodrigo Oliveira (Gradle)
 
 Hailing from Cairo, Nouran Atef spent her summer making Gradle builds faster and more reliable. Her project tackled Configuration Cache compatibility across major community plugins, refactoring them to remove bottlenecks and enable smarter caching. She contributed fixes, documentation, and patterns now adopted across plugins, boosting performance for developers everywhere.
-## **About the author**
+## About the author
 
 Hi everyone\! I'm Nouran Atef, a senior computer engineering student from Cairo, Egypt. I'm passionate about developer tooling and open-source collaboration, and I love diving deep into build systems to make development faster and more efficient for everyone.
 
-## **Why this project matters**
+## Why this project matters
 
 We've all been there: You make a tiny change, hit "build," and then wait... and wait. In large-scale projects, slow build times are a major drain on productivity. This is the exact problem my Google Summer of Code project with the Kotlin Foundation aimed to tackle.
 
@@ -26,7 +54,7 @@ The goal was to improve support for Gradle’s **Configuration Cache**, a powerf
 
 By making more plugins compatible, we make Gradle builds faster and more reliable, which is a huge win for developer productivity and CI stability across the Gradle plugins.
 
-## **Technical highlights**
+## Technical highlights
 
 The primary technical challenge encountered was that plugins were accessing the live, non-serializable `Project` object during task execution, which is incompatible with the Configuration Cache.
 
@@ -37,7 +65,7 @@ My main tools for this were:
 1. **Serializable data transfer objects (DTOs):** I created simple data-holder classes to act as a "snapshot" of the required project information.  
 2. **Gradle’s lazy Provider API:** I used `Provider<T>` to represent values that might not be known at configuration time, deferring their computation until they were actually needed. This allowed me to safely connect data from the plugin extension to the task inputs, ensuring proper task dependency tracking and configuration cache compatibility.
 
-## **A few key contributions**
+## A few key contributions
 
 While I worked on several plugins, here are a few highlights:
 
@@ -63,7 +91,7 @@ While I worked on several plugins, here are a few highlights:
 * **Fix:** This was a more straightforward fix. I replaced the `project.projectDir` call with a lazy `@Internal` property and switched from `project.logger` to the task's own built-in `getLogger()` method.  
 * **Pull requests:** [\#12](https://github.com/hyperether/compose-multiplatform-localize/pull/12) and [\#13](https://github.com/hyperether/compose-multiplatform-localize/pull/13)
 
-## **About My GSoC Experience**
+## About My GSoC Experience
 
 I discovered GSoC while looking for ways to contribute to impactful open-source projects. The idea of working on developer tools that I use every day was incredibly exciting. I spent a lot of time studying Gradle's build lifecycle and the Configuration Cache documentation to write a proposal that outlined a clear, actionable plan for identifying and fixing issues in community plugins.
 
@@ -79,21 +107,21 @@ Through GSoC, I've learned so much:
 
 This experience has solidified my passion for working on developer productivity tools. My plan is to stay active in the Gradle community, continue supporting my open PRs, and find new plugins to improve.
 
-## **Demos**
+## Demos
 
 * **Midterm demo:** This video demonstrates the progress made during the first half of the project, showcasing the initial fixes and the overall approach to making community plugins compatible with Gradle's Configuration Cache.  
   * [GSoC 2025- Nouran- Improving Configuration Cache and lock contention in key Gradle plugins](https://youtu.be/nhuRXXAnick?si=pt-CsoIE7ZJR1GmN)  
 * **Final evaluation:** This video covers the full scope of the project, including all completed deliverables and future plans.   
   * [GSoC 2025 Final Presentation](https://www.youtube.com/watch?v=_TAho7gWsgc)
 
-## **Resources**
+## Resources
 
 * **My GSoC project page:** [Improving Configuration Cache in key Gradle plugins](https://www.google.com/search?q=https://summerofcode.withgoogle.com/programs/2025/projects/your-project-link-here)  
 * **My technical blog post:** [Supporting Configuration Cache \- my learnings from the Nebula Lint Plugin](https://dev.to/gradle-community/unlocking-configuration-cache-with-gsoc-contributor-374l)  
 * **Gradle Cookbook guide:** [Example \- Configuration Cache compatibility for the Liquibase plugin](https://cookbook.gradle.org/plugin-development/configuration-cache/example-config-cache-liquibase-plugin/?_gl=1*j978j1*_gcl_au*MTM2OTczMDc1MC4xNzYwNDU1NzUw*_ga*MzAxNTA3OS4xNzYwNDU1NzUy*_ga_7W7NC6YNPT*czE3NjA0NTU3NTEkbzEkZzAkdDE3NjA0NTU3NTkkajUyJGwwJGgw)  
 * **Community tracking issue:** [List of Community Plugins with Configuration Cache Issues](https://github.com/gradle/gradle/issues/13490)
 
-## **Find me online**
+## Find me online
 
 I'm always happy to connect and talk about build systems, open source, or anything in between\!
 
