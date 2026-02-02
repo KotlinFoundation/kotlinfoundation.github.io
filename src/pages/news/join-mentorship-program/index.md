@@ -1,6 +1,6 @@
 ---
 title: "Join the Kotlin Ecosystem Mentorship Program"
-date: 2025-02-02 00:01
+date: 2026-02-02 00:01
 coverImage: "./cover.jpg"
 socialImage: "./social.jpg"
 spoilerSize: 305
