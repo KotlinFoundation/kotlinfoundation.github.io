@@ -125,6 +125,17 @@ Then open http://localhost:8082/ in a browser.
 Make changes in a page in `src/pages`.
 Saved changes will live reload in the browser.
 
+### Run Both Main Site and Annual Report
+To run both the Gatsby site and the Annual Report Vite app together:
+```shell
+./start.sh
+```
+Or use: `npm run start:both`
+
+This starts:
+- Main site at http://localhost:8082
+- Annual Report at http://localhost:8080
+
 ## How to Deal with MDX
 MDX lets you write JSX inside a markdown file.
 Just create a React component inside the `components` directory, register it in the Markdown component, located it `src/components/Markdown` folder.
