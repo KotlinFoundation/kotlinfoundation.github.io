@@ -42,6 +42,10 @@
   }
 }
 
+.gradleLogo {
+  max-height: 30px;
+}
+
 .companiesGroup:nth-child(2) {
   margin-left: 24px;
 
@@ -73,6 +77,8 @@
 
 .company {
   margin-left: var(--ktf-companies-logo-spacing);
+  display: flex;
+  align-items: center;
 
   /* this forces companies logos to spread among two lines equally  */
   @media (width >= 473px) and (width <= 616px) {

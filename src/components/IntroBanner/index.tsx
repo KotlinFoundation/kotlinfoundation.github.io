@@ -39,8 +39,15 @@ export const IntroBanner: FC<IntroBannerProps> = ({ title, members }) => {
               <div className={textCn('rs-text-2', { hardness: 'hard' })}>{groupName}</div>
               <div className={styles.companiesLogos}>
                 {companies.map(({ name, image, url }) => {
-                  let content = <img key={name} alt={`${name} Logo`} src={image} className={styles.companyLogo} />;
-
+                  const logoClassName = name.toLowerCase() + 'Logo';
+                  let content = (
+                    <img
+                      key={name}
+                      alt={`${name} Logo`}
+                      src={image}
+                      className={cn(styles.companyLogo, styles[logoClassName])}
+                    />
+                  );
                   if (url) {
                     content = (
                       <a href={url} target="_blank" rel="noreferrer noopener" className={styles.companyLink}>
