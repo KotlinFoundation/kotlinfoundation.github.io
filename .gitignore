@@ -4,7 +4,3 @@ public
 .idea
 .DS_Store
 *.css.d.ts
-
-# Annual Report Vite App
-annual-report-2025/dist
-annual-report-2025/node_modules
