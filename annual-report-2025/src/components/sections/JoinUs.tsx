@@ -14,7 +14,7 @@ import blockLogo from "@/assets/logos/block.svg";
 const valueProps = [
   {
     icon: Briefcase,
-    title: "Brand & Hiring",
+    title: "Brand and Hiring",
     description: "Position your company as a Kotlin leader",
   },
   {
@@ -50,7 +50,7 @@ export const JoinUs = () => {
             <SectionAnchor id="join-us" />
           </h2>
           <p className="text-body text-white/60 mb-10">
-            Shape the future of Kotlin — together.
+            Shape the future of Kotlin – together.
           </p>
         </AnimatedSection>
 
@@ -75,7 +75,7 @@ export const JoinUs = () => {
                 key={index}
                 src={logo}
                 alt="Member logo"
-                className="h-6 md:h-8 w-auto opacity-30 grayscale invert"
+                className={logo === touchlabLogo ? "h-6 md:h-8 w-auto grayscale brightness-0 invert opacity-40" : "h-6 md:h-8 w-auto grayscale invert opacity-30"}
               />
             ))}
           </div>

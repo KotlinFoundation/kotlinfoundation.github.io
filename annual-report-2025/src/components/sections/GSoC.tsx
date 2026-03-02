@@ -12,7 +12,7 @@ interface GSoCProject {
   storyUrl: string;
 }
 const projects: GSoCProject[] = [{
-  title: "IntelliJ Platform Gradle Plugin — Gradle Reporting and Parallel Verifications",
+  title: "IntelliJ Platform Gradle Plugin – Gradle Reporting and Parallel Verifications",
   description: "Improving the Gradle plugin for IntelliJ Platform development.",
   contributor: "Victoria Chuks Alajemba",
   mentors: "Jakub Chrzanowski (JetBrains)",
@@ -46,14 +46,13 @@ const projects: GSoCProject[] = [{
   description: "Modern publishing workflows for Maven Central.",
   contributor: "Yongjun Hong",
   mentors: "Oleg Nenashev (ex-Gradle)",
-  storyUrl: "https://kotlinfoundation.org/news/gsoc-2025-kotlin-lps/"
+  storyUrl: "https://blog.jetbrains.com/kotlin/2025/11/google-summer-of-code-2025/#maven-central-publishing-plugin-for-gradle-new-apis"
 }, {
   title: "Build a Modern, Compiler-Integrated Kotlin Language Server",
   description: "Language Server Protocol implementation for Kotlin.",
   contributor: "Hemram",
   mentors: "Shauvik Roy Choudhary (Uber), Ryan U (Uber), Michael Noah (Uber), Claudia Babescu (Uber)",
-  // TODO: Replace with dedicated foundation.org story link when available
-  storyUrl: "https://blog.jetbrains.com/kotlin/2025/11/google-summer-of-code-2025/"
+  storyUrl: "https://github.com/h4-mm-3r/kotlin-lsp"
 }];
 const ProjectCard = ({
   project

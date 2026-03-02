@@ -71,7 +71,7 @@ export const KotlinConfPresence = () => {
       <div className="container-kotlin">
         <AnimatedSection>
           <h2 className="heading-section mb-4 group">
-            Kotlin Foundation at KotlinConf
+            The Kotlin Foundation at KotlinConf
             <SectionAnchor id="kotlinconf-presence" />
           </h2>
           <p className="text-body text-muted-foreground mb-8 max-w-3xl">

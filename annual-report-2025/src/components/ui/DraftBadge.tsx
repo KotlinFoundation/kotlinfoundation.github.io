@@ -19,7 +19,7 @@ interface DraftBadgeProps {
  */
 export const DraftBadge = ({ 
   variant = "block",
-  tooltip = "Draft — needs review/verification"
+  tooltip = "Draft – needs review/verification"
 }: DraftBadgeProps) => {
   const sizes = {
     section: "px-3 py-1.5 text-xs",

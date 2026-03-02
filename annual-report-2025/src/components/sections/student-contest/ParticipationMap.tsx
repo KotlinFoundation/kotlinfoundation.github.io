@@ -15,7 +15,7 @@ import { AnimatedCard } from "@/components/ui/AnimatedSection";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-// 2025 participation data — ISO 3166-1 numeric codes
+// 2025 participation data – ISO 3166-1 numeric codes
 const participationByCode: Record<string, { count: number; name: string }> = {
   "356": { count: 17, name: "India" },
   "840": { count: 7, name: "United States" },

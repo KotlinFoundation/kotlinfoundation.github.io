@@ -37,7 +37,7 @@ export const GrantsProgram = () => {
       <div className="container-kotlin">
         <AnimatedSection>
           <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-gradient-to-r from-kotlin-purple/20 to-glow-magenta/20 text-kotlin-purple border border-kotlin-purple/20 mb-1.5">
-            Round 3
+            Year 3
           </span>
           <h2 className="heading-section group mb-4">
             Ecosystem Grants Program
@@ -113,12 +113,6 @@ export const GrantsProgram = () => {
           ))}
         </div>
 
-        {/* Closing note */}
-        <AnimatedSection delay={0.4}>
-          <p className="text-sm text-muted-foreground mt-8 text-center">
-            Grant winners were invited to KotlinConf 2025 to showcase their projects at the Kotlin Foundation booth.
-          </p>
-        </AnimatedSection>
       </div>
     </section>
   );

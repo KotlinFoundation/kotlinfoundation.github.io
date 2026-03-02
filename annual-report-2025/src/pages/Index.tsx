@@ -10,6 +10,7 @@ import { GSoC } from "@/components/sections/GSoC";
 import { KotlinConfPresence } from "@/components/sections/KotlinConfPresence";
 import { Finances } from "@/components/sections/Finances";
 import { LookingAhead } from "@/components/sections/LookingAhead";
+import { ClosingWord } from "@/components/sections/ClosingWord";
 import { JoinUs } from "@/components/sections/JoinUs";
 
 const Index = () => {
@@ -28,6 +29,7 @@ const Index = () => {
         <GSoC />
         <Finances />
         <LookingAhead />
+        <ClosingWord />
         <JoinUs />
       </main>
     </div>

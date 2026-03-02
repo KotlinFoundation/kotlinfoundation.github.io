@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Play, Quote } from "lucide-react";
-import { useState, useEffect } from "react";
-import kotlinLogo from "@/assets/kotlin-3d-logo.png";
-import { DraftBadge } from "@/components/ui/DraftBadge";
+import { ChevronDown, Quote } from "lucide-react";
+import { useEffect, useState } from "react";
+import kotlinLogo from "@/assets/kotlin-logo.svg";
+import jeffreyPhoto from "@/assets/members/jeffrey-van-gogh.png";
 const navTabs = [
   { label: "What We Do", href: "#mission" },
   { label: "Highlights", href: "#at-a-glance" },
   { label: "Grants Program", href: "#grants-program" },
   { label: "Student Contest", href: "#student-contest" },
   { label: "Open Source Internships", href: "#gsoc" },
-  { label: "At KotlinConf", href: "#kotlinconf" },
+  { label: "KotlinConf", href: "#kotlinconf" },
   { label: "Financial Report", href: "#finances" },
   { label: "Looking Ahead", href: "#looking-ahead-2026" },
 ];
 
 export const Hero = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -46,46 +46,23 @@ export const Hero = () => {
       {/* ========== GLOW LAYER (z-[1]) - sits between bg and content ========== */}
       <div className="absolute inset-0 z-[1] pointer-events-none overflow-visible">
         {/* Positioned glow that follows logo area - left side of hero */}
-        <motion.div 
-          className="absolute top-[12%] left-[5%] w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]"
-          animate={prefersReducedMotion ? {} : {
-            opacity: [0.5, 1, 0.5],
-            scale: [0.9, 1.15, 0.9]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
+        <div className="absolute top-[18%] left-[2%] w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
           <div 
             className="w-full h-full blur-[100px] 2xl:blur-[120px]"
             style={{
               background: "radial-gradient(ellipse at center, rgba(239,72,87,0.45) 0%, rgba(200,17,226,0.35) 30%, rgba(127,82,255,0.25) 55%, transparent 75%)"
             }}
           />
-        </motion.div>
+        </div>
         
-        {/* Secondary inner glow */}
-        <motion.div 
-          className="absolute top-[15%] left-[8%] w-[280px] h-[280px] 2xl:w-[350px] 2xl:h-[350px]"
-          animate={prefersReducedMotion ? {} : {
-            opacity: [0.4, 1, 0.4],
-            scale: [0.95, 1.1, 0.95]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
+        <div className="absolute top-[22%] left-[4%] w-[280px] h-[280px] 2xl:w-[350px] 2xl:h-[350px]">
           <div 
             className="w-full h-full blur-[60px]"
             style={{
               background: "radial-gradient(ellipse at center, rgba(127,82,255,0.55) 0%, rgba(127,82,255,0.2) 50%, transparent 70%)"
             }}
           />
-        </motion.div>
+        </div>
       </div>
       
       {/* Bottom fade-out gradient */}
@@ -118,12 +95,9 @@ export const Hero = () => {
               <motion.img
                 src={kotlinLogo}
                 alt="Kotlin Foundation"
-                className="relative w-24 md:w-32 lg:w-40 2xl:w-44 h-auto drop-shadow-[0_0_40px_rgba(127,82,255,0.5)]"
-                style={{
-                  filter: "brightness(1.05) saturate(1)",
-                }}
+                className="relative w-[96px] h-[96px] drop-shadow-[0_0_30px_rgba(127,82,255,0.4)]"
                 animate={prefersReducedMotion ? {} : {
-                  scale: [1, 1.08, 1]
+                  scale: [1, 1.06, 1]
                 }}
                 transition={{
                   duration: 4,
@@ -177,7 +151,7 @@ export const Hero = () => {
             </motion.nav>
           </motion.div>
 
-          {/* Right column: Welcome from the Board card - fixed width range */}
+          {/* Right column: Welcome from the Board card */}
           <motion.div
             id="welcome"
             initial={{ opacity: 0, y: 24 }}
@@ -185,16 +159,11 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative w-full max-w-[520px] lg:max-w-none mx-auto lg:mx-0"
           >
-            {/* Draft badge - absolute positioned on the card, no layout impact */}
-            <div className="absolute -top-3 right-4 z-20">
-              <DraftBadge variant="block" tooltip="Replace with real video from Jeffrey" />
-            </div>
-            
             {/* Card background */}
             <div className="absolute inset-0 bg-white/[0.03] border border-white/[0.10] rounded-2xl" />
             
             <div className="relative p-5 sm:p-6 md:p-7 lg:p-8">
-              {/* Label with left accent - more visible */}
+              {/* Label with left accent */}
               <div className="flex items-center gap-3 mb-5 md:mb-6">
                 <div className="w-1 h-6 bg-kotlin-purple rounded-full" />
                 <p className="text-[11px] lg:text-xs font-semibold text-white tracking-[0.18em] uppercase">
@@ -202,63 +171,60 @@ export const Hero = () => {
                 </p>
               </div>
               
-              {/* Video thumbnail - explicit aspect ratio */}
-              <div 
-                className="relative w-full rounded-xl overflow-hidden bg-black/60 cursor-pointer group mb-5 md:mb-6"
-                style={{ aspectRatio: '16/9' }}
-                onClick={() => setIsVideoPlaying(true)}
-              >
-                {!isVideoPlaying ? (
-                  <>
-                    <img
-                      src="https://img.youtube.com/vi/YdATt4-3gYU/maxresdefault.jpg"
-                      alt="Welcome from Jeffrey van Gogh"
-                      className="absolute inset-0 w-full h-full object-cover object-center"
-                    />
-                    {/* Bottom gradient overlay */}
-                    <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                    
-                    {/* Duration badge */}
-                    <div className="absolute top-3 right-3 px-2.5 py-1 bg-black/60 backdrop-blur-sm rounded-md text-[11px] text-white/85 font-medium">
-                      ~2 min
-                    </div>
-                    
-                    {/* Play button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-kotlin-purple/85 group-hover:bg-kotlin-purple group-hover:scale-105 flex items-center justify-center transition-all duration-300 shadow-xl shadow-kotlin-purple/25">
-                        <Play className="w-5 h-5 md:w-6 md:h-6 text-white fill-white ml-0.5" />
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/YdATt4-3gYU?autoplay=1&modestbranding=1&rel=0&playsinline=1"
-                    title="Welcome from the Board — Jeffrey van Gogh"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                )}
-              </div>
-              
-              {/* Quote */}
-              <div className="relative mb-4 md:mb-5">
-                <Quote className="absolute -left-1 -top-1 w-4 h-4 text-kotlin-purple/30 rotate-180" />
-                <p className="text-sm md:text-[15px] text-white/70 leading-[1.7] pl-5">
-                  "In 2025, the Kotlin ecosystem grew through deeper cross-company collaboration. Together with our members and the community, we invested in critical libraries, education, and stewardship that make Kotlin a safer long-term choice for teams. Thank you for building this with us — we're excited for what's next in 2026."
-                </p>
-              </div>
-              
-              {/* Attribution */}
-              <div className="pl-5 flex items-center gap-3">
-                <div>
-                  <p className="text-sm md:text-[15px] text-white/90 font-medium">
+              {/* Banner photo */}
+              <div className="relative w-full rounded-xl overflow-hidden mb-5 md:mb-6" style={{ aspectRatio: '16/9' }}>
+                <img
+                  src={jeffreyPhoto}
+                  alt="Jeffrey van Gogh"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
+                />
+                {/* Bottom gradient overlay for name legibility */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <p className="text-[15px] md:text-base text-white font-medium">
                     Jeffrey van Gogh
                   </p>
-                  <p className="text-xs md:text-[13px] text-white/45">
-                    Board of Directors
+                  <p className="text-xs text-white/60">
+                    On behalf of the Kotlin Foundation Board
                   </p>
                 </div>
+              </div>
+              
+              {/* Letter text */}
+              <div className="relative">
+                <Quote className="absolute -left-1 -top-1 w-4 h-4 text-kotlin-purple/30 rotate-180" />
+                <div className={`pl-5 space-y-3 text-sm md:text-[15px] text-white/65 leading-[1.75] transition-[max-height] duration-500 ease-in-out overflow-hidden ${!isExpanded ? 'max-h-[140px]' : 'max-h-[2000px]'}`}>
+                  <p>
+                    It is my distinct pleasure to introduce the Kotlin Foundation Annual Report for 2025 – a year that demonstrated remarkable impact and progress across our core pillars.
+                  </p>
+                  <p>
+                    The successful conclusion of the large K2 compiler effort was a monumental achievement for Language evolution. Following this, the Language Committee performed careful review of concern case issues, converting them into clear error messages to minimize runtime confusion and improve developer trust. Under the leadership of Mikhail Zarechenskii, the Lead Language Designer, we also successfully landed several bold new language features, including Guard Conditions in when expressions, Multi-dollar String Interpolation, and Explicit Backing Fields. This calculated approach – balancing innovative features with careful review of breaking changes – ensures the longevity and stability of the Kotlin language.
+                  </p>
+                  <p>
+                    Beyond the language itself, our committees delivered significant value to the community:
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><span className="text-white/80 font-medium">Education:</span> The Education Committee fully refreshed a significant portion of the Programming in Kotlin course to ensure it remains current with the latest version of the language. Furthermore, we expanded the Student Contest, providing winners the invaluable opportunity to demo their submissions at the Kotlin Foundation booth during KotlinConf.</li>
+                    <li><span className="text-white/80 font-medium">Ecosystem:</span> We continued to foster innovation through the Grants program, with winners also showcasing their efforts directly at KotlinConf.</li>
+                    <li><span className="text-white/80 font-medium">Marketing:</span> We increased our presence at KotlinConf, inviting both Student Contest winners and Grant recipients to demonstrate their work at the Kotlin Foundation booth.</li>
+                    <li><span className="text-white/80 font-medium">Operating:</span> The Operating Committee onboarded two new members: Block and Meta, growing our membership.</li>
+                  </ul>
+                  <p>
+                    Collectively, these milestones showcase the Foundation's dedication to providing a robust, stable, and growing platform for developers worldwide. Thank you for your continued support as we look ahead to another exciting year.
+                  </p>
+                  <p className="text-white/50 italic pt-2">
+                    Jeffrey van Gogh, Secretary of the Kotlin Foundation
+                  </p>
+                </div>
+                {!isExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-kotlin-black/90 to-transparent pointer-events-none" />
+                )}
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="relative z-10 mt-3 pl-5 text-sm text-white hover:text-kotlin-purple transition-colors font-semibold cursor-pointer underline underline-offset-4 decoration-white/40 hover:decoration-kotlin-purple/70"
+                >
+                  {isExpanded ? 'Show less' : 'Read more'}
+                </button>
               </div>
             </div>
           </motion.div>

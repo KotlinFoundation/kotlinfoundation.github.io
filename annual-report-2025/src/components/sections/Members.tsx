@@ -159,7 +159,7 @@ export const Members = () => {
                   >
                     Sergei Rybalkin
                   </a>{" "}
-                  to the Board — bringing more at-scale perspective into the Foundation.
+                  to the Board – bringing more at-scale perspective into the Foundation.
                 </span>
               </p>
             </div>
