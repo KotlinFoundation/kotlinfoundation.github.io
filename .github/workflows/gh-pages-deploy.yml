@@ -32,8 +32,7 @@ jobs:
 
       - name: Copy Vite Build to Public
         run: |
-          mkdir -p ./public/annual-report-2025
-          cp -r ./annual-report-2025/dist/* ./public/annual-report-2025/
+          npm run copy:annual-report
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
