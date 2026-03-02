@@ -5,7 +5,7 @@ import { Sparkles } from "lucide-react";
 import jetbrainsLogo from "@/assets/logos/jetbrains.svg";
 import googleLogo from "@/assets/logos/google.svg";
 import metaLogo from "@/assets/logos/meta.svg";
-import gradleLogo from "@/assets/logos/gradle.svg";
+import gradleLogo from "@/assets/logos/gradle.png";
 import touchlabLogo from "@/assets/logos/touchlab.png";
 import uberLogo from "@/assets/logos/uber.svg";
 import kotzillaLogo from "@/assets/logos/kotzilla.svg";
@@ -50,10 +50,10 @@ const MemberLogo = ({ name, logo, isNew, size = "md" }: MemberLogoProps) => {
         className={`${sizeClasses[size]} w-auto object-contain`}
       />
       {isNew && (
-        <span 
+        <span
           className="absolute -top-3 -right-4 text-[9px] px-1.5 py-0.5 rounded-full font-medium"
-          style={{ 
-            background: 'rgba(127,82,255,0.12)', 
+          style={{
+            background: 'rgba(127,82,255,0.12)',
             border: '1px solid rgba(127,82,255,0.35)',
             color: '#7F52FF'
           }}
@@ -101,26 +101,26 @@ export const Members = () => {
         <div className="space-y-4">
           {/* Top Row: Founding + Gold side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <MemberCard 
-              title="Founding Members" 
-              members={foundingMembers} 
-              size="lg" 
-              delay={0.1} 
+            <MemberCard
+              title="Founding Members"
+              members={foundingMembers}
+              size="lg"
+              delay={0.1}
             />
-            <MemberCard 
-              title="Gold Member" 
-              members={goldMembers} 
-              size="gold" 
-              delay={0.15} 
+            <MemberCard
+              title="Gold Member"
+              members={goldMembers}
+              size="gold"
+              delay={0.15}
             />
           </div>
 
           {/* Silver Members - Full Width */}
-          <MemberCard 
-            title="Silver Members" 
-            members={silverMembers} 
-            size="md" 
-            delay={0.2} 
+          <MemberCard
+            title="Silver Members"
+            members={silverMembers}
+            size="md"
+            delay={0.2}
           />
         </div>
 
@@ -133,27 +133,27 @@ export const Members = () => {
                 <span className="font-medium">2025:</span>
                 <span className="text-white/70 ml-1">
                   We welcomed{" "}
-                  <a 
-                    href="https://kotlinfoundation.org/news/meta-joins-kotlin-foundation-first-gold-member/" 
-                    target="_blank" 
+                  <a
+                    href="https://kotlinfoundation.org/news/meta-joins-kotlin-foundation-first-gold-member/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/90 underline underline-offset-2 decoration-white/30 hover:text-kotlin-purple hover:decoration-kotlin-purple transition-colors"
                   >
                     Meta
                   </a>{" "}
                   as our first Gold Member,{" "}
-                  <a 
-                    href="https://kotlinfoundation.org/news/block-joins-kotlin-foundation-silver-member/" 
-                    target="_blank" 
+                  <a
+                    href="https://kotlinfoundation.org/news/block-joins-kotlin-foundation-silver-member/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/90 underline underline-offset-2 decoration-white/30 hover:text-kotlin-purple hover:decoration-kotlin-purple transition-colors"
                   >
                     Block
                   </a>{" "}
                   as a Silver Member, and{" "}
-                  <a 
-                    href="https://kotlinfoundation.org/news/sergei-rybalkin-joins-kotlin-foundation-board/" 
-                    target="_blank" 
+                  <a
+                    href="https://kotlinfoundation.org/news/sergei-rybalkin-joins-kotlin-foundation-board/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/90 underline underline-offset-2 decoration-white/30 hover:text-kotlin-purple hover:decoration-kotlin-purple transition-colors"
                   >

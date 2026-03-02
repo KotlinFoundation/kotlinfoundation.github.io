@@ -5,7 +5,7 @@ import { Briefcase, Lightbulb, Heart, Users, ArrowRight, Mail, Globe, Linkedin, 
 import jetbrainsLogo from "@/assets/logos/jetbrains.svg";
 import googleLogo from "@/assets/logos/google.svg";
 import metaLogo from "@/assets/logos/meta.svg";
-import gradleLogo from "@/assets/logos/gradle.svg";
+import gradleLogo from "@/assets/logos/gradle.png";
 import touchlabLogo from "@/assets/logos/touchlab.png";
 import uberLogo from "@/assets/logos/uber.svg";
 import kotzillaLogo from "@/assets/logos/kotzilla.svg";
@@ -90,8 +90,8 @@ export const JoinUs = () => {
                 Become a Member
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a 
-                href="mailto:hello@kotlinfoundation.org" 
+              <a
+                href="mailto:hello@kotlinfoundation.org"
                 className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
@@ -105,8 +105,8 @@ export const JoinUs = () => {
         <AnimatedSection delay={0.4}>
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4 text-sm">
-              <a 
-                href="https://kotlinfoundation.org" 
+              <a
+                href="https://kotlinfoundation.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors"
@@ -115,7 +115,7 @@ export const JoinUs = () => {
                 kotlinfoundation.org
               </a>
               <span className="text-white/20">·</span>
-              <a 
+              <a
                 href="mailto:hello@kotlinfoundation.org"
                 className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors"
               >
@@ -125,8 +125,8 @@ export const JoinUs = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <a 
-                href="https://www.linkedin.com/company/kotlinfoundation/" 
+              <a
+                href="https://www.linkedin.com/company/kotlinfoundation/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/50 hover:bg-white/20 hover:text-white transition-colors"
@@ -134,8 +134,8 @@ export const JoinUs = () => {
               >
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a 
-                href="https://x.com/kotlin" 
+              <a
+                href="https://x.com/kotlin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/50 hover:bg-white/20 hover:text-white transition-colors"
