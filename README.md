@@ -130,7 +130,7 @@ To run both the Gatsby site and the Annual Report Vite app together:
 ```shell
 ./start.sh
 ```
-Or use: `npm run start:both`
+Or use: `npm run start:all`
 
 This starts:
 - Main site at http://localhost:8082
