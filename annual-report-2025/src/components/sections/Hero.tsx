@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronDown, Quote } from "lucide-react";
 import { useEffect, useState } from "react";
 import kotlinLogo from "@/assets/kotlin-logo.svg";
-import jeffreyPhoto from "@/assets/members/jeffrey-van-gogh.png";
+import jeffreyPhoto from "@/assets/members/jeffrey-van-gogh.jpg";
 const navTabs = [
   { label: "What We Do", href: "#mission" },
   { label: "Highlights", href: "#at-a-glance" },
@@ -21,7 +21,7 @@ export const Hero = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     setPrefersReducedMotion(mediaQuery.matches);
-    
+
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
     mediaQuery.addEventListener("change", handler);
     return () => mediaQuery.removeEventListener("change", handler);
@@ -42,21 +42,21 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-glow-gradient-subtle opacity-30" />
         <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl from-kotlin-purple/6 to-transparent" />
       </div>
-      
+
       {/* ========== GLOW LAYER (z-[1]) - sits between bg and content ========== */}
       <div className="absolute inset-0 z-[1] pointer-events-none overflow-visible">
         {/* Positioned glow that follows logo area - left side of hero */}
         <div className="absolute top-[18%] left-[2%] w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
-          <div 
+          <div
             className="w-full h-full blur-[100px] 2xl:blur-[120px]"
             style={{
               background: "radial-gradient(ellipse at center, rgba(239,72,87,0.45) 0%, rgba(200,17,226,0.35) 30%, rgba(127,82,255,0.25) 55%, transparent 75%)"
             }}
           />
         </div>
-        
+
         <div className="absolute top-[22%] left-[4%] w-[280px] h-[280px] 2xl:w-[350px] 2xl:h-[350px]">
-          <div 
+          <div
             className="w-full h-full blur-[60px]"
             style={{
               background: "radial-gradient(ellipse at center, rgba(127,82,255,0.55) 0%, rgba(127,82,255,0.2) 50%, transparent 70%)"
@@ -64,20 +64,20 @@ export const Hero = () => {
           />
         </div>
       </div>
-      
+
       {/* Bottom fade-out gradient */}
-      <div 
+      <div
         className="absolute left-0 right-0 bottom-0 h-[160px] pointer-events-none z-[25]"
         style={{
           background: "linear-gradient(to bottom, rgba(25,25,28,0) 0%, rgba(25,25,28,0.8) 60%, rgba(25,25,28,1) 100%)"
         }}
       />
-      
+
       {/* ========== FOREGROUND CONTENT LAYER (z-10) ========== */}
       <div className="container-kotlin relative z-10 flex items-center min-h-[100svh] py-12 lg:py-16">
         {/* 2-column grid layout - stacks below lg (1024px) */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(380px,420px)] xl:grid-cols-[1fr_minmax(400px,480px)] 2xl:grid-cols-[1fr_minmax(440px,520px)] gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 items-center w-full max-w-[1400px] 2xl:max-w-[1500px] mx-auto">
-          
+
           {/* Left column: Logo + Title + Tabs - constrained to not overlap right */}
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -106,10 +106,10 @@ export const Hero = () => {
                 }}
               />
             </motion.div>
-            
+
             {/* H1 Title + micro-subtitle */}
             <div className="space-y-3 relative">
-              <h1 
+              <h1
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-6xl 2xl:text-[4rem] font-semibold leading-[1.08] tracking-tight"
                 style={{
                   textShadow: "0 2px 20px rgba(0,0,0,0.4)"
@@ -120,13 +120,13 @@ export const Hero = () => {
                 <span className="text-white">Annual Report </span>
                 <span className="text-gradient text-[1.05em] font-bold">2025</span>
               </h1>
-              
+
               {/* Micro-subtitle */}
               <p className="text-sm md:text-[15px] text-white/40 tracking-wide">
                 A year of ecosystem investment and collaboration.
               </p>
             </div>
-            
+
             {/* Navigation tabs/pills - wrap within left column only */}
             <motion.nav
               initial={{ opacity: 0, y: 16 }}
@@ -161,7 +161,7 @@ export const Hero = () => {
           >
             {/* Card background */}
             <div className="absolute inset-0 bg-white/[0.03] border border-white/[0.10] rounded-2xl" />
-            
+
             <div className="relative p-5 sm:p-6 md:p-7 lg:p-8">
               {/* Label with left accent */}
               <div className="flex items-center gap-3 mb-5 md:mb-6">
@@ -170,7 +170,7 @@ export const Hero = () => {
                   Welcome from the Board
                 </p>
               </div>
-              
+
               {/* Banner photo */}
               <div className="relative w-full rounded-xl overflow-hidden mb-5 md:mb-6" style={{ aspectRatio: '16/9' }}>
                 <img
@@ -189,7 +189,7 @@ export const Hero = () => {
                   </p>
                 </div>
               </div>
-              
+
               {/* Letter text */}
               <div className="relative">
                 <Quote className="absolute -left-1 -top-1 w-4 h-4 text-kotlin-purple/30 rotate-180" />
