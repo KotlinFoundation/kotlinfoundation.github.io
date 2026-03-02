@@ -1,6 +1,6 @@
 import { AnimatedSection, AnimatedCard } from "@/components/ui/AnimatedSection";
 import { SectionAnchor } from "@/components/ui/SectionAnchor";
-import { Briefcase, Lightbulb, Heart, Users, ArrowRight, Mail, Globe, Linkedin, Twitter } from "lucide-react";
+import { Briefcase, Lightbulb, Heart, Users, ArrowRight, Mail, Globe, Linkedin } from "lucide-react";
 
 import jetbrainsLogo from "@/assets/logos/jetbrains.svg";
 import googleLogo from "@/assets/logos/google.svg";
@@ -75,7 +75,7 @@ export const JoinUs = () => {
                 key={index}
                 src={logo}
                 alt="Member logo"
-                className={logo === touchlabLogo ? "h-6 md:h-8 w-auto grayscale brightness-0 invert opacity-40" : "h-6 md:h-8 w-auto grayscale invert opacity-30"}
+                className={(logo === touchlabLogo || logo === gradleLogo) ? "h-6 md:h-8 w-auto grayscale brightness-0 invert opacity-40" : "h-6 md:h-8 w-auto grayscale invert opacity-30"}
               />
             ))}
           </div>
@@ -90,8 +90,8 @@ export const JoinUs = () => {
                 Become a Member
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a
-                href="mailto:hello@kotlinfoundation.org"
+              <a 
+                href="mailto:hello@kotlinfoundation.org" 
                 className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
@@ -105,8 +105,8 @@ export const JoinUs = () => {
         <AnimatedSection delay={0.4}>
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4 text-sm">
-              <a
-                href="https://kotlinfoundation.org"
+              <a 
+                href="https://kotlinfoundation.org" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors"
@@ -115,7 +115,7 @@ export const JoinUs = () => {
                 kotlinfoundation.org
               </a>
               <span className="text-white/20">·</span>
-              <a
+              <a 
                 href="mailto:hello@kotlinfoundation.org"
                 className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors"
               >
@@ -125,8 +125,8 @@ export const JoinUs = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/company/kotlinfoundation/"
+              <a 
+                href="https://www.linkedin.com/company/kotlinfoundation/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/50 hover:bg-white/20 hover:text-white transition-colors"
@@ -134,14 +134,14 @@ export const JoinUs = () => {
               >
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a
-                href="https://x.com/kotlin"
+              <a 
+                href="https://x.com/kotlin_found" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/50 hover:bg-white/20 hover:text-white transition-colors"
                 aria-label="Twitter/X"
               >
-                <Twitter className="w-4 h-4" />
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
               <span className="text-white/20 mx-1">·</span>
               <p className="text-xs text-white/30">© 2025 Kotlin Foundation</p>

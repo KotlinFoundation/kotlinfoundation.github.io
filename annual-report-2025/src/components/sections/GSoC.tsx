@@ -138,8 +138,8 @@ export const GSoC = () => {
               </div>
               {/* Navigation arrows */}
               <div className="flex items-center gap-2">
-                <CarouselPrevious className="static translate-y-0 h-8 w-8 border-border hover:bg-white hover:border-kotlin-purple/30" />
-                <CarouselNext className="static translate-y-0 h-8 w-8 border-border hover:bg-white hover:border-kotlin-purple/30" />
+                <CarouselPrevious className="static translate-y-0 h-8 w-8 border-border hover:bg-white hover:border-kotlin-purple/30 hover:text-foreground" />
+                <CarouselNext className="static translate-y-0 h-8 w-8 border-border hover:bg-white hover:border-kotlin-purple/30 hover:text-foreground" />
               </div>
             </div>
           </Carousel>

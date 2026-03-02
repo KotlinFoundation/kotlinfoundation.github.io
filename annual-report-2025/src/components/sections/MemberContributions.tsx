@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { AnimatedSection, AnimatedCard } from "@/components/ui/AnimatedSection";
 import { SectionAnchor } from "@/components/ui/SectionAnchor";
 import { Quote, ChevronRight, User, Handshake, ExternalLink, Play } from "lucide-react";
@@ -103,15 +103,15 @@ const QuoteCard = ({
   return (
     <AnimatedCard delay={index * 0.05}>
       <div
-        className={`bg-white rounded-2xl p-5 h-[520px] flex flex-col border border-border hover:border-kotlin-purple/30 transition-colors group ${!hasVideo && isLongQuote ? 'cursor-pointer' : ''}`}
-        onClick={!hasVideo && isLongQuote ? onReadMore : undefined}>
+        className={`bg-white rounded-2xl p-5 h-[520px] flex flex-col border border-border hover:border-kotlin-purple/30 transition-colors group ${isLongQuote ? 'cursor-pointer' : ''}`}
+        onClick={isLongQuote ? onReadMore : undefined}>
 
         {/* Video thumbnail for cards with video */}
         {hasVideo && videoId &&
         <div
           className="relative w-full aspect-video rounded-xl overflow-hidden mb-4 -mt-1 -mx-1 cursor-pointer"
           style={{ width: 'calc(100% + 8px)' }}
-          onClick={onPlayVideo}>
+          onClick={(e) => { e.stopPropagation(); onPlayVideo(); }}>
 
             <img
               src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
@@ -167,7 +167,7 @@ const QuoteCard = ({
         </div>
         {isLongQuote &&
         <button
-          className="mt-2 text-xs text-kotlin-purple hover:underline flex items-center gap-0.5 self-start opacity-0 group-hover:opacity-100 transition-opacity"
+          className="mt-2 text-xs text-kotlin-purple hover:underline flex items-center gap-0.5 self-start opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
           onClick={(e) => {
             e.stopPropagation();
             onReadMore();
@@ -225,6 +225,18 @@ const CollaborationBlock = () => {
 export const MemberContributions = () => {
   const [selectedQuote, setSelectedQuote] = useState<QuoteItem | null>(null);
   const [videoItem, setVideoItem] = useState<QuoteItem | null>(null);
+
+  // Close video modal on Esc (iframe steals focus from Radix Dialog)
+  useEffect(() => {
+    if (!videoItem) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setVideoItem(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [videoItem]);
 
   return (
     <section id="member-contributions" className="section-gray section-spacing relative">

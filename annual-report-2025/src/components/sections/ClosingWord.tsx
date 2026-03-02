@@ -23,7 +23,7 @@ export const ClosingWord = () => {
           <div className="relative bg-white/[0.03] border border-white/[0.10] rounded-2xl p-5 sm:p-6 md:p-8">
             <div className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] xl:grid-cols-[380px_1fr] gap-6 md:gap-8">
               {/* Left: Photo */}
-              <div className="relative rounded-xl overflow-hidden aspect-[3/4] md:aspect-auto md:min-h-[320px]">
+              <div className="relative rounded-xl overflow-hidden aspect-[3/4] md:aspect-auto md:min-h-[320px] bg-[#e0deda]">
                 <img
                   src={hadiPhoto}
                   alt="Hadi Hariri"
