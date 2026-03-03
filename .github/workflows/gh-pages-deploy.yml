@@ -19,10 +19,20 @@ jobs:
           node-version: '18'
           cache: 'yarn'
 
-      - name: Build Site
+      - name: Build Gatsby Site
         run: |
           yarn install --frozen-lockfile
           yarn build
+
+      - name: Build Annual Report Vite App
+        run: |
+          cd annual-report-2025
+          npm ci
+          npm run build
+
+      - name: Copy Vite Build to Public
+        run: |
+          npm run copy:annual-report
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

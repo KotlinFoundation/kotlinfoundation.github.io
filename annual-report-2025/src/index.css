@@ -1,0 +1,329 @@
+@import '@rescui/typography/lib/font-jb-sans-auto.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Kotlin Foundation Design System */
+    --background: 0 0% 100%;
+    --foreground: 240 4% 11%;
+
+    --card: 0 0% 96%;
+    --card-foreground: 240 4% 11%;
+
+    --card-dark: 240 4% 11%;
+    --card-dark-foreground: 0 0% 100%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 4% 11%;
+
+    /* Kotlin Purple Accent */
+    --primary: 258 100% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 240 4% 11%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 258 100% 66%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 258 100% 66%;
+
+    --radius: 1rem;
+
+    /* Kotlin Foundation specific */
+    --kotlin-purple: 258 100% 66%;
+    --kotlin-black: 240 4% 11%;
+    --kotlin-white: 0 0% 100%;
+    --kotlin-gray-light: 0 0% 96%;
+    --kotlin-gray: 0 0% 91%;
+
+    /* Glow gradient colors */
+    --glow-red: 355 86% 62%;
+    --glow-magenta: 305 89% 48%;
+    --glow-purple: 258 100% 66%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 4% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 4% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 4% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 258 100% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 258 100% 66%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 258 100% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'JetBrains Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-kotlin {
+    @apply mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section spacing */
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+
+  /* Dark section */
+  .section-dark {
+    @apply bg-kotlin-black text-white;
+  }
+
+  /* Light section */
+  .section-light {
+    @apply bg-white text-kotlin-black;
+  }
+
+  /* Gray section */
+  .section-gray {
+    @apply bg-kotlin-gray-light text-kotlin-black;
+  }
+
+  /* Cards */
+  .card-kotlin {
+    @apply rounded-2xl bg-card p-6 transition-all duration-300;
+  }
+
+  .card-kotlin-dark {
+    @apply rounded-2xl bg-kotlin-black text-white p-6 transition-all duration-300;
+  }
+
+  .card-kotlin-hover {
+    @apply hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .card-kotlin-glow {
+    @apply hover:shadow-[0_20px_50px_-10px_rgba(127,82,255,0.4)];
+  }
+
+  /* Typography */
+  .heading-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight tracking-tight;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight;
+  }
+
+  .heading-subsection {
+    @apply text-xl md:text-2xl font-medium leading-snug;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  .text-small {
+    @apply text-sm leading-relaxed;
+  }
+
+  /* Big numbers */
+  .stat-number {
+    @apply text-5xl md:text-6xl lg:text-7xl font-light tracking-tight;
+  }
+
+  .stat-number-small {
+    @apply text-3xl md:text-4xl font-light tracking-tight;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-current px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-foreground/5;
+  }
+
+  .btn-primary-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-kotlin-black transition-all duration-300 hover:bg-white/90;
+  }
+
+  .btn-secondary-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-white/10;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-[hsl(var(--glow-red))] via-[hsl(var(--glow-magenta))] to-[hsl(var(--glow-purple))] bg-clip-text text-transparent;
+  }
+
+  /* Glow effects */
+  .glow-border {
+    @apply relative;
+  }
+
+  .glow-border::before {
+    content: '';
+    @apply absolute -inset-px rounded-2xl bg-gradient-to-r from-[hsl(var(--glow-red))] via-[hsl(var(--glow-magenta))] to-[hsl(var(--glow-purple))] opacity-0 transition-opacity duration-300;
+    z-index: -1;
+  }
+
+  .glow-border:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Kotlin purple shadow */
+  .shadow-kotlin {
+    box-shadow: 0 20px 50px -10px rgba(127, 82, 255, 0.4);
+  }
+
+  /* Bento grid */
+  .bento-grid {
+    @apply grid gap-4 md:gap-6;
+  }
+
+  /* Logo styling */
+  .logo-member {
+    @apply h-8 md:h-10 w-auto opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0;
+  }
+
+  .logo-member-white {
+    @apply h-8 md:h-10 w-auto brightness-0 invert opacity-70 transition-opacity duration-300 hover:opacity-100;
+  }
+}
+
+@layer utilities {
+  /* Kotlin specific colors */
+  .bg-kotlin-black {
+    background-color: #19191C;
+  }
+
+  .bg-kotlin-purple {
+    background-color: #7F52FF;
+  }
+
+  .bg-kotlin-gray-light {
+    background-color: #F4F4F4;
+  }
+
+  .bg-kotlin-gray {
+    background-color: #E8E8E8;
+  }
+
+  .text-kotlin-purple {
+    color: #7F52FF;
+  }
+
+  .text-kotlin-black {
+    color: #19191C;
+  }
+
+  .border-kotlin-purple {
+    border-color: #7F52FF;
+  }
+
+  /* Gradient backgrounds */
+  .bg-glow-gradient {
+    background: radial-gradient(ellipse at center, #EF4857 0%, #C811E2 50%, #7F52FF 100%);
+  }
+
+  .bg-glow-gradient-subtle {
+    background: radial-gradient(ellipse at top right, rgba(127, 82, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom left, rgba(200, 17, 226, 0.1) 0%, transparent 50%);
+  }
+
+  /* Animation utilities */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-count-up {
+    animation: countUp 2s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Focus styles for accessibility */
+  .focus-kotlin {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+}

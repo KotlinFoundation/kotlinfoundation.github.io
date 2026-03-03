@@ -8,7 +8,12 @@
   ],
   "scripts": {
     "start": "gatsby develop --port 8082 & tcm -w -c src",
+    "start:annual-report": "cd annual-report-2025 && npm run dev",
+    "start:all": "./start.sh",
     "build": "gatsby build --prefix-paths",
+    "build:annual-report": "cd annual-report-2025 && npm run build",
+    "build:all": "npm run build && npm run build:annual-report && npm run copy:annual-report",
+    "copy:annual-report": "mkdir -p ./public/annual-report-2025 && cp -r ./annual-report-2025/dist/* ./public/annual-report-2025/",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint --ext src/**/**/*.{ts,tsx} --quiet",
