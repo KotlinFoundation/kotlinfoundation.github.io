@@ -112,9 +112,6 @@ const MapChart = memo(() => {
                             default: { outline: "none", transition: "fill 0.2s ease" },
                             hover: {
                               outline: "none",
-                              fill: data
-                                ? "hsl(var(--kotlin-purple))"
-                                : "hsl(var(--muted))",
                               cursor: data ? "pointer" : "default",
                             },
                             pressed: { outline: "none" },
