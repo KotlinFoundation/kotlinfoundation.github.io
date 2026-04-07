@@ -88,7 +88,7 @@ const QuoteCard = ({
   onReadMore,
   onPlayVideo
 }: {item: QuoteItem; index: number; onReadMore: () => void; onPlayVideo: () => void;}) => {
-  const noReadMore = ["Google", "Meta", "Gradle"];
+  const noReadMore = ["Meta", "Gradle"];
   const isLongQuote = item.quote.length > 150 && !noReadMore.includes(item.company);
   const hasVideo = !!item.videoUrl;
 
@@ -126,7 +126,7 @@ const QuoteCard = ({
 
             {/* Bottom gradient overlay */}
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-            
+
             {/* Play button */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-12 h-12 rounded-full bg-kotlin-purple/85 group-hover:bg-kotlin-purple group-hover:scale-105 flex items-center justify-center transition-all duration-300 shadow-xl shadow-kotlin-purple/25">
@@ -135,7 +135,7 @@ const QuoteCard = ({
             </div>
           </div>
         }
-        
+
         <div className="flex items-center gap-3 mb-3">
           {!hasVideo && (
           item.photo ?
@@ -194,7 +194,7 @@ const CollaborationBlock = () => {
 
           {/* Top-right external link icon */}
           <ExternalLink className="absolute top-5 right-5 w-5 h-5 text-kotlin-purple group-hover:text-white group-hover:scale-110 transition-all duration-200 drop-shadow-[0_0_6px_rgba(127,82,255,0.5)]" />
-          
+
           {/* Meta row: icon + gradient pill + company names */}
           <div className="flex items-center gap-3 mb-3 flex-wrap">
             <Handshake className="w-5 h-5 text-kotlin-purple/80" />
@@ -203,15 +203,15 @@ const CollaborationBlock = () => {
             </span>
             <span className="text-sm font-medium text-white/90 tracking-wide ml-0.5">JetBrains × Gradle × Google</span>
           </div>
-          
+
           {/* Title */}
           <p className="font-semibold text-xl mb-2 pr-8">Building a Better Developer Experience</p>
-          
+
           {/* Description */}
           <p className="text-[15px] text-white/70 leading-relaxed mb-2">
             Cross-company work to reduce friction between IDE, language, and build system – making Kotlin development faster and more reliable.
           </p>
-          
+
           {/* Outcomes on separate line */}
           <p className="text-[15px] text-white/50 leading-relaxed">
             <span className="font-medium text-white/60">Outcomes:</span> Kotlin DSL as the default · Better IDE Integration · Declarative Gradle initiative · Gradle Daemon toolchain support · Project isolation initiative.
