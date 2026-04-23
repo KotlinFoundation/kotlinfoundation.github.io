@@ -15,5 +15,4 @@ The report also captures notable achievements across the ecosystem, including on
 
 To explore the full scope of our 2025 activities and results, and to learn more about future directions, read the complete report on our website: [https://kotlinfoundation.org/annual-report-2025/](/annual-report-2025/)
 
-If you would like to learn more about our initiatives or are interested in becoming a member, contact us via the `#kotlin-foundation` channel on Kotlin Slack or email `hello@kotlinfoundation.org`.
-
+If you would like to learn more about our initiatives or are interested in becoming a member, contact us via the [#kotlin-foundation](https://kotlinlang.slack.com/archives/C04RQTY5PBP) channel on Kotlin Slack or email [hello@kotlinfoundation.org](mailto:hello@kotlinfoundation.org).
