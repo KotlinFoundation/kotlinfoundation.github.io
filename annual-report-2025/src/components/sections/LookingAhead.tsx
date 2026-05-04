@@ -44,7 +44,7 @@ const focusAreas = [
 
 
 const mentorshipFacts = [
-"Mentors: Kotlin open-source maintainers",
+"Mentors: open-source project maintainers",
 "Mentees: developers ready to make their first contribution",
 "Goal: at least one merged PR or accepted change"];
 
@@ -116,7 +116,7 @@ export const LookingAhead = () => {
                 <span className="self-start px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-gradient-to-r from-glow-red via-glow-magenta to-kotlin-purple text-white shadow-sm">
                   New Program
                 </span>
-                <p className="text-sm text-kotlin-black/70">A two-month cohort connecting Kotlin maintainers with developers making their first contribution.
+                <p className="text-sm text-kotlin-black/70">A two-month cohort connecting Kotlin ecosystem project maintainers with developers making their first contribution.
 
                 </p>
                 <ul className="space-y-2">
