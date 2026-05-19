@@ -70,14 +70,14 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "gatsby": "5",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-manifest": "^5.7.0",
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-postcss": "^6.7.0",
     "gatsby-plugin-react-helmet": "^6.7.0",
     "gatsby-plugin-react-svg": "^3.3.0",
-    "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-plugin-sitemap": "^6.7.0",
     "gatsby-source-filesystem": "^5.7.0",
     "gatsby-transformer-remark": "^6.7.0",
@@ -85,11 +85,17 @@
     "glob": "^10.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.5.10",
     "prettier": "^3.1.0",
     "prop-types": "^15.7.2",
     "typed-css-modules": "^0.8.1",
     "typescript": "^4.9.5",
     "typescript-plugin-css-modules": "^4.2.3"
+  },
+  "resolutions": {
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "**/@types/react": "18.2.79",
+    "**/@types/react-dom": "18.2.25"
   }
 }
