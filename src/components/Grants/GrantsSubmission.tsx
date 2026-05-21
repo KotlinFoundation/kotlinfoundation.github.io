@@ -37,7 +37,7 @@ function GrantsSubmissionOpen({ url, until, ...props }: GrantsSubmissionOpenProp
   }
 
   return (
-    <GrantsAction theme="dark" action="Application form" url={url} {...props}>
+    <GrantsAction theme="dark" action="Application form" url={url} target={'_blank'} {...props}>
       <MODERN_SHORT_CODES.p>
         To submit your project, fill in the application form.
         {!isNaN(untilDate.getTime()) && (
