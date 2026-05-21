@@ -46,7 +46,7 @@ function wrapElemAnchor(Component) {
   return AnchorID;
 }
 
-const MODERN_SHORT_CODES = {
+export const MODERN_SHORT_CODES = {
   h1: wrapElemAnchor(function H1(props) {
     return <h1 {...cls(props, 'ktf-h1', styles.h1)} />;
   }),
