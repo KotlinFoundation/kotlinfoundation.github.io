@@ -16,8 +16,8 @@ To be eligible, projects should meet the following criteria:
 * **Active maintenance.** The project should demonstrate ongoing development and community engagement.
 * **Impact on the Kotlin ecosystem.** The project should address a meaningful need for Kotlin developers and show a clear path for future improvements.
 
-Submit your grant proposals before **July 14, 2026**. Applications will be reviewed by the Kotlin Foundation’s Ecosystem Committee based on impact, project quality, long-term sustainability, and alignment with Kotlin development best practices.
+[Submit your grant proposals](/grants/) before **July 14, 2026**. Applications will be reviewed by the Kotlin Foundation’s Ecosystem Committee based on impact, project quality, long-term sustainability, and alignment with Kotlin development best practices.
 
-If you have any questions, reach out to us at [grants@kotlinfoundation.org](mailto:grants@kotlinfoundation.org) or join the discussion in the \#kotlin-foundation channel on Kotlin Slack.
+If you have any questions, reach out to us at [grants@kotlinfoundation.org](mailto:grants@kotlinfoundation.org) or join the discussion in the [#kotlin-foundation](https://kotlinlang.slack.com/archives/C04RQTY5PBP) channel on Kotlin Slack.
 
-To see the projects selected in previous years, take a look at our earlier winner announcements. [In 2025](/news/grants-program-winners-25/), the program received 117 applications and recognized projects including Firebase Kotlin SDK, Shadow Gradle Plugin, Mokkery, Stack Trace Decoroutinator, and Kobweb.
+To see the projects selected in previous years, [take a look at our earlier winner announcements](/news/grants-program-winners-25/). In 2025, the program received 117 applications and recognized projects including Firebase Kotlin SDK, Shadow Gradle Plugin, Mokkery, Stack Trace Decoroutinator, and Kobweb.
