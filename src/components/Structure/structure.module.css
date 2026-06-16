@@ -91,11 +91,13 @@
   margin-right: var(--ktl-box-block-l);
   margin-bottom: var(--ktl-box-block-l);
   z-index: 1;
+  max-width: 110px;
 }
 
 @media (--ktl-ds-min) {
   .hero > .members > .member {
     margin-right: 11px;
+    max-width: 152px;
   }
 }
 
