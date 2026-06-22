@@ -5,6 +5,7 @@ export { Structure } from '../Structure';
 export { Department } from '../Structure/Department';
 export { VideoGallery } from '../VideoGallery';
 export { IntroBanner } from '../IntroBanner';
+export { GrantsBanner } from '../GrantsBanner';
 export { ProductHighlight, ProductHighlightItem } from '../ProductHighlight';
 export { NotFound } from '../NotFound';
 export { Grants, GrantsAction, GrantsTitle, GrantsSubmission, GrantsHighlight } from '../Grants';
