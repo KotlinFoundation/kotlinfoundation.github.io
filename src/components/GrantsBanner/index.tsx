@@ -6,6 +6,7 @@ import { ThemeProvider } from '@rescui/ui-contexts';
 import cn from 'classnames';
 import { FC } from 'react';
 
+import { isGrantOpen } from '../../utlis';
 import { KtlLayout } from '../KtlLayout';
 import * as styles from './grantsBanner.module.css';
 
@@ -13,11 +14,17 @@ interface GrantsBannerProps {
   text: string;
   action?: string;
   url?: string;
+  until?: string;
 }
 
-export const GrantsBanner: FC<GrantsBannerProps> = ({ text, action = 'Apply', url = '/grants' }) => {
+export const GrantsBanner: FC<GrantsBannerProps> = ({ text, action = 'Apply', url = '/grants', until }) => {
   const textCn = useTextStyles('dark');
   const isShortButton = useMM();
+
+  // Hide the banner once the grant program has closed.
+  if (!isGrantOpen(until)) {
+    return null;
+  }
 
   return (
     // this ignore is needed because we can't modify ThemeProvider props and declare `children` prop explicitly as required in react 18

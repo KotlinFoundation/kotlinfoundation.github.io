@@ -1,3 +1,4 @@
+import { isGrantOpen, parseUntil } from '../../utlis';
 import { Link } from '../Link';
 import { MODERN_SHORT_CODES } from '../Markdown';
 import { GrantsAction, GrantsActionProps } from './GrantsAction';
@@ -13,14 +14,6 @@ type GrantsSubmissionCloseProps = Omit<GrantsActionProps, 'url'> & {
 
 type GrantsSubmissionProps = GrantsSubmissionOpenProps | GrantsSubmissionCloseProps;
 
-function parseUntil(until: string | undefined): Date {
-  const match = until?.match(/^(\d{2})-(\d{2})-(\d{4})$/);
-
-  const isoString = `${match?.[3]}-${match?.[2]}-${match?.[1]}T01:00:00.000Z`;
-
-  return new Date(isoString);
-}
-
 export function GrantsSubmission({ url, ...props }: GrantsSubmissionProps) {
   if (url) {
     return <GrantsSubmissionOpen url={url} {...props} />;
@@ -32,7 +25,7 @@ export function GrantsSubmission({ url, ...props }: GrantsSubmissionProps) {
 function GrantsSubmissionOpen({ url, until, ...props }: GrantsSubmissionOpenProps) {
   const untilDate = parseUntil(until);
 
-  if (until && !(untilDate > new Date())) {
+  if (!isGrantOpen(until)) {
     return <GrantsSubmissionClose {...props} />;
   }
 

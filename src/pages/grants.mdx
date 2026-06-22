@@ -1,12 +1,13 @@
 ---
 title: "Grants program"
 ---
+import { GRANT_PROGRAM_DEADLINE } from "../utlis";
 
 <Grants>
 
 <GrantsTitle>Grants program</GrantsTitle>
 
-<GrantsHighlight>
+<GrantsHighlight until={GRANT_PROGRAM_DEADLINE}>
 The 2026 grant program is now open. Applications are accepted until July 14, 2026.
 </GrantsHighlight>
 
@@ -28,7 +29,7 @@ Grant recipients retain full ownership of their work. The Kotlin Foundation does
 
 <GrantsSubmission
   url="https://docs.google.com/forms/d/e/1FAIpQLSebtmRHEbOtsn_5z2-cBTRE6ktkPqMbxIDD-zA4dlSTS4IuFg/viewform?usp=dialog"
-  until="14-07-2026"
+  until={GRANT_PROGRAM_DEADLINE}
 />
 
 <GrantsAction action="Terms & conditions" url="/kotlin-foundation-grant-agreement.pdf">
