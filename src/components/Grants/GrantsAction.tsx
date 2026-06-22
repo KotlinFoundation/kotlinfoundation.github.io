@@ -54,3 +54,8 @@ export function GrantsAction({ theme, ...props }: GrantsActionProps) {
 export function GrantsTitle(props: HTMLAttributes<HTMLHeadingElement>) {
   return <h1 {...cls(props, 'ktf-h2', styles.intro)} />;
 }
+
+export function GrantsHighlight(props: HTMLAttributes<HTMLDivElement>) {
+  const textCn = useTextStyles();
+  return <div {...cls(props, styles.highlight, textCn('ktl-text-2'))} />;
+}

@@ -7,7 +7,7 @@ export { VideoGallery } from '../VideoGallery';
 export { IntroBanner } from '../IntroBanner';
 export { ProductHighlight, ProductHighlightItem } from '../ProductHighlight';
 export { NotFound } from '../NotFound';
-export { Grants, GrantsAction, GrantsTitle, GrantsSubmission } from '../Grants';
+export { Grants, GrantsAction, GrantsTitle, GrantsSubmission, GrantsHighlight } from '../Grants';
 export { PagePreview } from '../PagePreview';
 export { PairedBlock } from '../PairedBlock';
 export { LatestNews } from '../LatestNews';
