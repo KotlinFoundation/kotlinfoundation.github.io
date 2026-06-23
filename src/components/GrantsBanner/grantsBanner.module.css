@@ -1,0 +1,38 @@
+.section {
+  background: var(--kt-gradinent);
+  color: #fff;
+  overflow: hidden;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ktl-box-section-s);
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: var(--ktl-box-block-l);
+  padding-bottom: var(--ktl-box-block-l);
+
+  @media (--ktl-tm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.text {
+  margin: 0;
+  color: #fff;
+  max-width: 60ch;
+}
+
+.button {
+  flex-shrink: 0;
+  min-width: 224px;
+
+  @media (--ktl-ms) {
+    align-self: stretch;
+    min-width: auto;
+  }
+}

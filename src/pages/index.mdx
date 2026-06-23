@@ -19,6 +19,8 @@ import blockLogo from "../images/partners/block.svg"
 import grantPreviewUrl from "../images/grants-preview.png";
 import joinPreviewUrl from "../images/join-preview.png";
 
+import { GRANT_PROGRAM_DEADLINE } from "../utlis";
+
 <IntroBanner
   title="Protect, promote and advance the&nbsp;development of the&nbsp;Kotlin programming language"
   members={
@@ -49,6 +51,8 @@ import joinPreviewUrl from "../images/join-preview.png";
     ]
   }
 />
+
+<GrantsBanner text="Apply for the 2026 Kotlin Foundation Grant Program for Library Authors" until={GRANT_PROGRAM_DEADLINE} />
 
 <ProductHighlight title="Key goals">
 <ProductHighlightItem icon={grantsIcon}>Provide financial support to Kotlin ecosystem projects.</ProductHighlightItem>

@@ -72,6 +72,22 @@
   background: var(--kt-bg-black);
 }
 
+.highlight {
+  border-radius: 16px;
+  background: var(--kt-gradinent);
+  color: #fff;
+  padding: var(--ktl-box-block-l) var(--ktl-box-section-s);
+
+  margin-left: calc(-1 * var(--ktf-grants-spacing));
+  margin-right: calc(-1 * var(--ktf-grants-spacing));
+  margin-bottom: var(--ktl-box-section-l);
+}
+
+.highlight p {
+  margin: 0;
+  color: inherit;
+}
+
 .button {
   min-width: 224px;
 

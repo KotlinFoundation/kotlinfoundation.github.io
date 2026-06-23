@@ -5,7 +5,7 @@ import { ThemeProvider, useTheme } from '@rescui/ui-contexts';
 import cn from 'classnames';
 import React, { HTMLAttributes, ReactNode } from 'react';
 
-import { cls } from '../../utlis';
+import { cls, isGrantOpen } from '../../utlis';
 import * as styles from './grants.module.css';
 
 export function Grants(props: HTMLAttributes<HTMLDivElement>) {
@@ -53,4 +53,19 @@ export function GrantsAction({ theme, ...props }: GrantsActionProps) {
 
 export function GrantsTitle(props: HTMLAttributes<HTMLHeadingElement>) {
   return <h1 {...cls(props, 'ktf-h2', styles.intro)} />;
+}
+
+type GrantsHighlightProps = HTMLAttributes<HTMLDivElement> & {
+  until?: string;
+};
+
+export function GrantsHighlight({ until, ...props }: GrantsHighlightProps) {
+  const textCn = useTextStyles();
+
+  // Hide the highlight once the grant program has closed.
+  if (!isGrantOpen(until)) {
+    return null;
+  }
+
+  return <div {...cls(props, styles.highlight, textCn('ktl-text-2'))} />;
 }
