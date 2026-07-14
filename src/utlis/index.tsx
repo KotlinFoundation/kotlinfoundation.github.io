@@ -5,7 +5,7 @@ export function cls(props, ...classes: cn.ArgumentArray) {
 }
 
 /** Deadline for the current grant program, in `DD-MM-YYYY` format. */
-export const GRANT_PROGRAM_DEADLINE = '14-07-2026';
+export const GRANT_PROGRAM_DEADLINE = '15-07-2026';
 
 /**
  * Parses a `DD-MM-YYYY` deadline string into a Date.
