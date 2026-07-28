@@ -4,25 +4,24 @@ import { useTextStyles } from '@jetbrains/kotlin-web-site-ui/out/components/typo
 import Button from '@rescui/button';
 import { ThemeProvider } from '@rescui/ui-contexts';
 import cn from 'classnames';
-import { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 import { isGrantOpen } from '../../utlis';
 import { KtlLayout } from '../KtlLayout';
 import * as styles from './grantsBanner.module.css';
 
 interface GrantsBannerProps {
-  text: string;
+  children: ReactNode;
   action?: string;
   url?: string;
-  until?: string;
 }
 
-export const GrantsBanner: FC<GrantsBannerProps> = ({ text, action = 'Apply', url = '/grants', until }) => {
+export const GrantsBanner: FC<GrantsBannerProps> = ({ children, action = 'Apply', url = '/grants' }) => {
   const textCn = useTextStyles('dark');
   const isShortButton = useMM();
 
   // Hide the banner once the grant program has closed.
-  if (!isGrantOpen(until)) {
+  if (!isGrantOpen()) {
     return null;
   }
 
@@ -33,7 +32,7 @@ export const GrantsBanner: FC<GrantsBannerProps> = ({ text, action = 'Apply', ur
     <ThemeProvider theme="dark">
       <section className={styles.section}>
         <KtlLayout spacing className={styles.banner}>
-          <p className={cn(styles.text, textCn('ktl-text-1'))}>{text}</p>
+          <p className={cn(styles.text, textCn('ktl-text-1'))}>{children}</p>
           <Button className={styles.button} mode="outline" size={isShortButton ? 'm' : 'l'} href={url}>
             {action}
           </Button>

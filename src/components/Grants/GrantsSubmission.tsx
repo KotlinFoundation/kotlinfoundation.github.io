@@ -1,11 +1,10 @@
-import { isGrantOpen, parseUntil } from '../../utlis';
+import { lastDayGrants, isGrantOpen } from '../../utlis';
 import { Link } from '../Link';
 import { MODERN_SHORT_CODES } from '../Markdown';
 import { GrantsAction, GrantsActionProps } from './GrantsAction';
 
 type GrantsSubmissionOpenProps = Omit<GrantsActionProps, 'url'> & {
   url: string;
-  until?: string;
 };
 
 type GrantsSubmissionCloseProps = Omit<GrantsActionProps, 'url'> & {
@@ -22,10 +21,8 @@ export function GrantsSubmission({ url, ...props }: GrantsSubmissionProps) {
   return <GrantsSubmissionClose {...props} />;
 }
 
-function GrantsSubmissionOpen({ url, until, ...props }: GrantsSubmissionOpenProps) {
-  const untilDate = parseUntil(until);
-
-  if (!isGrantOpen(until)) {
+function GrantsSubmissionOpen({ url, ...props }: GrantsSubmissionOpenProps) {
+  if (!isGrantOpen()) {
     return <GrantsSubmissionClose {...props} />;
   }
 
@@ -33,16 +30,7 @@ function GrantsSubmissionOpen({ url, until, ...props }: GrantsSubmissionOpenProp
     <GrantsAction theme="dark" action="Application form" url={url} target={'_blank'} {...props}>
       <MODERN_SHORT_CODES.p>
         To submit your project, fill in the application form.
-        {!isNaN(untilDate.getTime()) && (
-          <>
-            <br className="hide--mm" /> The first round of submissions closes{' '}
-            {untilDate.toLocaleDateString('en-GB', {
-              day: 'numeric',
-              month: 'long',
-            })}
-            .
-          </>
-        )}
+        <br className="hide--mm" /> Applications for the first round are accepted through {lastDayGrants()}.
       </MODERN_SHORT_CODES.p>
     </GrantsAction>
   );

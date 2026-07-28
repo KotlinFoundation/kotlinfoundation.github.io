@@ -55,15 +55,13 @@ export function GrantsTitle(props: HTMLAttributes<HTMLHeadingElement>) {
   return <h1 {...cls(props, 'ktf-h2', styles.intro)} />;
 }
 
-type GrantsHighlightProps = HTMLAttributes<HTMLDivElement> & {
-  until?: string;
-};
+type GrantsHighlightProps = HTMLAttributes<HTMLDivElement>;
 
-export function GrantsHighlight({ until, ...props }: GrantsHighlightProps) {
+export function GrantsHighlight(props: GrantsHighlightProps) {
   const textCn = useTextStyles();
 
   // Hide the highlight once the grant program has closed.
-  if (!isGrantOpen(until)) {
+  if (!isGrantOpen()) {
     return null;
   }
 
