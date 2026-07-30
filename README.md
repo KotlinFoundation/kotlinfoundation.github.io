@@ -5,6 +5,7 @@
 - [Define Page Metadata](#define-page-metadata)
 - [How to Add a news post](#how-to-add-a-news-post)
 - [Define Post metadata and images](#define-post-metadata-and-images)
+- [How to Open or Close the Grant Program](#how-to-open-or-close-the-grant-program)
 - [Deploy Changes](#deploy-changes)
 - [How to Run the Site Locally](#how-to-run-the-site-locally)
 - [Set up Your Development Environment](#set-up-your-development-environment)
@@ -98,6 +99,28 @@ This block will be parsed as YAML. The params are:
 - `socialImage` - a string relative path value to custom image for socials.
 
 [See example](src/pages/news/first-silver-members/)
+
+## How to Open or Close the Grant Program
+
+### To open the program
+
+Make two changes:
+
+1. In `src/pages/grants.mdx`, set the Google Form URL in the `<GrantsSubmission>` component:
+   ```mdx
+   <GrantsSubmission
+     url="https://docs.google.com/forms/..."
+   />
+   ```
+
+2. In `src/utlis/index.tsx`, set the last day of the program (inclusive) in `DD-MM-YYYY` format:
+   ```ts
+   export const GRANT_PROGRAM_LAST_DAY = '29-07-2026';
+   ```
+
+### To close the program
+
+Nothing to do — once the deadline date passes, the site automatically switches to the "submissions closed" state.
 
 ## Deploy Changes
 In order to publish your changes, it is enough that they are included in the master branch on GitHub.
