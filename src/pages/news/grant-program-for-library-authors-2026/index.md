@@ -1,7 +1,7 @@
 ---
 title: "Apply for the 2026 Kotlin Foundation Grant Program for Library Authors"
 date: 2026-06-15 17:00
-spoilerSize: 87
+spoilerSize: 240
 ---
 
 We’re pleased to announce that the Kotlin Foundation Grant Program is back for 2026.
