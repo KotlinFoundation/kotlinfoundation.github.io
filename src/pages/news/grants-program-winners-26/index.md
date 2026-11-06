@@ -51,4 +51,4 @@ Thank you to everyone who applied and shared their work with the committee. The 
 
 We encourage library and tool authors to keep developing their projects and watch for future rounds of the [Grants Program](/grants/).
 
-Follow the Kotlin Foundation website and social channels for updates on the program and other initiatives: [LinkedIn](https://www.linkedin.com/company/kotlinfoundation/), [Bluesky](https://bsky.app/profile/kotlinfoundation.org), and [X](https://x.com/kotlin_found).
+Follow the Kotlin Foundation website and social channels for updates on the program and other initiatives: [LinkedIn](https://www.linkedin.com/company/kotlinfoundation/), [Bluesky](https://bsky.app/profile/kotlinlang.org), and [X](https://x.com/kotlin).
